@@ -1,13 +1,13 @@
 {
 	"name": "Yuoki",
-	"version": "1.2.9",
-	"date": "2024-12-22",
+	"version": "1.2.10",
+	"date": "2025-3-23",
 	"author": "YuokiTani",
 	"contact": "https://discord.gg/fM6NjWabAA",
 	"homepage": "https://github.com/jatmn/Yuoki-Factorio-2.0",
 	"factorio_version": "2.0",
 	"dependencies": [
-		"base >= 2.0.20",
+		"base >= 2.0.24",
 		"! Yuoki_F2",
 		"! yi_engines_F2",
 		"! YuokiTweaks"
