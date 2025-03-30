@@ -1,3 +1,10 @@
+local uc_heavyoil = settings.startup["yuoki-uc-heavyoil"].value
+local uc_heavyoil_h = false
+if uc_heavyoil == false then
+    uc_heavyoil_h = true
+end
+
+
 data:extend(
 {
 	-- pure atomic constructs
@@ -11,6 +18,7 @@ data:extend(
 		subgroup = "y-atomics-f", 
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/iron2uc.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -23,6 +31,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/copper2uc.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -35,6 +44,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/wood2uc.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -47,6 +57,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/stone2uc.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -59,6 +70,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/coal2uc.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -71,6 +83,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/n42uc.png",
+		 auto_recycle = false,
 	},			
 	{
 		type = "recipe",
@@ -83,6 +96,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/fuel2uc.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -95,6 +109,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/slag2uc.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -107,6 +122,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/crystal2uc.png",
+		 auto_recycle = false,
 	},			
 
 	{
@@ -120,6 +136,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uranium2uc.png",
+		 auto_recycle = false,
 	},			
 
 	
@@ -205,6 +222,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/toxic-dust_recycle.png",
+		 auto_recycle = false,
 	},		
 	-- mud-ball-recycle
 	{
@@ -218,6 +236,7 @@ data:extend(
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
 		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/mud_recycle.png",
+		 auto_recycle = false,
 	},		
 	
 	
@@ -234,6 +253,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2copper.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -247,6 +267,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2iron.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -260,6 +281,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2wood.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -273,6 +295,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2coal.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -286,6 +309,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2stone.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -299,6 +323,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2n4.png",
+		 auto_recycle = false,
 	},		
 	{
 		type = "recipe",
@@ -312,6 +337,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2fuel.png",
+		 auto_recycle = false,
 	},		
 
 	{
@@ -326,6 +352,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2plastic.png",
+		 auto_recycle = false,
 	},		
 
 	{
@@ -340,6 +367,7 @@ data:extend(
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2uranium.png",
+		 auto_recycle = false,
 	},		
 
 
@@ -376,6 +404,7 @@ data:extend(
 		order = "m-refined-rare3",
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
+		auto_recycle = false,
 	},
 	{
 		type = "recipe",		
@@ -388,11 +417,13 @@ data:extend(
 		{
 			{type="item", name="y-unicomp-a2", amount=1},	
 		},
-		enabled = true,		
+		enabled = uc_heavyoil,
+		hidden = uc_heavyoil_h,
 		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/heavy-oil2uc.png",
 		order = "m-refined-rare3",
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
+		auto_recycle = false,
 	},
 	{
 		type = "recipe",		
@@ -410,6 +441,7 @@ data:extend(
 		order = "m-refined-rare3",
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
+		auto_recycle = false,
 	},
 	{
 		type = "recipe",		
@@ -427,6 +459,7 @@ data:extend(
 		order = "m-refined-rare3",
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
+		auto_recycle = false,
 	},
 	-- only reverse to crude-oil
 	{
@@ -445,6 +478,7 @@ data:extend(
 		order = "m-refined-rare3",
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
+		auto_recycle = false,
 	},
 	
 	
@@ -465,6 +499,7 @@ data:extend(
 		order = "m-refined-rare3",
 		subgroup = "y-atomics-f",
 		category = "yuoki-atomics",
+		auto_recycle = false,
 	},
 	-- and fluid reverse
 	{
@@ -484,6 +519,7 @@ data:extend(
 		order = "m-refined-rare3",
 		subgroup = "y-atomics-r",
 		category = "yuoki-atomics",
+		auto_recycle = false,
 	},
 				
 })

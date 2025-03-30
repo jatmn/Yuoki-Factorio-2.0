@@ -170,6 +170,7 @@ data:extend(
 		name = "y-battery-rip1",				
 		energy_required = 2.0,
 		enabled = true,
+		auto_recycle = false,
 		ingredients = {
 			{type="item", name="y-battery-single-use1", amount=10},
 			{type="item", name="y_rwtechsign", amount=1},

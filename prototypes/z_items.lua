@@ -220,18 +220,21 @@ data:extend({
    type="item", name="y_greensign", icon_size=64, icon="__Yuoki__/graphics/icons/green_sign.png", 
    group="yuoki", subgroup="y-stargate-r", order="a",  
    stack_size = 100000, default_request_amount = 1000,
+   auto_recycle = false,
 },
 --ID:305
 {
    type="item", name="ypfw_trader_sign", icon_size=64, icon="__Yuoki__/graphics/icons/trader_sign.png", 
    group="yuoki", subgroup="y-stargate-r", order="a",  
    stack_size = 100000, default_request_amount = 1000,
+   auto_recycle = false,
 },
 --ID:290
 {
    type="item", name="y_rwtechsign", icon_size=64, icon="__Yuoki__/graphics/icons/tech-sign.png", 
    group="yuoki", subgroup="y-stargate-r", order="a",  
    stack_size = 100000, default_request_amount = 1000,
+   auto_recycle = false,
 },
 --ID:289
 {
@@ -316,6 +319,7 @@ data:extend({
    type="item", name="ye_science_blue", icon_size=64, icon="__Yuoki__/graphics/icons/tech02_32.png", 
    group="yuoki", subgroup="y-stargate-r", order="a",  
    stack_size = 100000, default_request_amount = 500,
+   auto_recycle = false,
 },
 --ID:208
 {
@@ -419,6 +423,7 @@ data:extend({
    type="item", name="y-fame", icon_size=64, icon="__Yuoki__/graphics/icons/fame-icon.png", 
    group="yuoki", subgroup="y-stargate-f", order="a",  
    stack_size = 100, default_request_amount = 5,
+   auto_recycle = false,
 },
 --ID:158
 {
@@ -437,6 +442,7 @@ data:extend({
    type="item", name="y-unicomp-a2", icon_size=64, icon="__Yuoki__/graphics/icons/uni-komp-a2-icon.png", 
    group="yuoki", subgroup="y-raw-material", order="a",  
    stack_size = 500, default_request_amount = 200,
+   auto_recycle = false,
 },
 --ID:136
 {
