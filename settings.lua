@@ -30,5 +30,12 @@ data:extend({
         maximum_value = 32,
         default_value = 10,
         order = "d"
+    },
+    {
+        type = "bool-setting",
+        name = "yuoki-uc-heavyoil",
+        setting_type = "startup",
+        default_value = true,
+        order = "e"
     }
 })

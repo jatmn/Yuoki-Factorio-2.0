@@ -53,3 +53,6 @@ local prod_mod = settings.startup["yuoki-prod-mod-behaviour"].value
 if prod_mod == true then
     require("prototypes.y_prodmod_as_vanilla")
 end
+
+-- Factorio 2.0 Recycling changes
+require("prototypes.integration.yi-recycling")

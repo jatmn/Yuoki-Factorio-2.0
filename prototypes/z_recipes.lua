@@ -184,6 +184,7 @@ data:extend({
 	  icon = "__Yuoki__/graphics/icons/tech02_32.png",
 	  icon_size = 64,
 	  order = "9", group = "yuoki-atomics", subgroup = "y-stargate-4",
+	  auto_recycle = false,
 	},
 
 	--ID:344 
@@ -751,6 +752,7 @@ data:extend({
 	  icon = "__Yuoki__/graphics/icons/green_sign_retrade.png",
 	  icon_size = 64,
 	  order = "b1", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  auto_recycle = false,
 	},
 
 	--ID:220 
@@ -770,6 +772,7 @@ data:extend({
 	  icon = "__Yuoki__/graphics/icons/tech02_retrade.png",
 	  icon_size = 64,
 	  order = "b4", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  auto_recycle = false,
 	},
 
 	--ID:219 
@@ -789,6 +792,7 @@ data:extend({
 	  icon = "__Yuoki__/graphics/icons/tech-sign_retrade.png",
 	  icon_size = 64,
 	  order = "b3", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  auto_recycle = false,
 	},
 
 	--ID:218 
@@ -808,6 +812,7 @@ data:extend({
 	  icon = "__Yuoki__/graphics/icons/trader_sign_retrade.png",
 	  icon_size = 64,
 	  order = "b2", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  auto_recycle = false,
 	},
 
 	--ID:178 
@@ -827,6 +832,7 @@ data:extend({
 	  icon = "__Yuoki__/graphics/icons/fame-icon.png",
 	  icon_size = 64,
 	  order = "a", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  auto_recycle = false,
 	},
 
 	--ID:151 

@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.11
+Date: 30. 3. 2025
+  Fixes:
+    - Fixed storage volume of all liquid storage tanks.
+    - Fixed Atomics Trade recipe icon color for F7 ore.
+  Changes:
+    - Yuoki recipe for Vanilla Battery removed from recycling. This is to resolve the broken recycle process on Fulgora
+    - Removed Nature, Techanic, Science, and Merchant Signs from recycling. This means all recipes that produce one of these signs as a byproduct also can not be recycled either.
+    - Removed Reputation from recycling. This means all recipes that produce one of these signs as a byproduct also can not be recycled either.
+    - Removed Unicomp from recycling.
+    - Heavy Oil to Unicomp recipe can now be turned on and off from mod settings. On by default. You may want to disable this recipe when playing Space Age for balance reasons.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.10
 Date: 23. 3. 2025
   Updates:

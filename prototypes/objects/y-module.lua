@@ -138,6 +138,7 @@ data:extend(
 		main_product = "y_modul_green_op",
 		order = "2",
 		group = "yuoki-energy", subgroup = "y_ultimate_products",
+		auto_recycle = false,
 	},		
 	{
 		type = "module",
@@ -148,7 +149,8 @@ data:extend(
 		stack_size = 100,
 		default_request_amount = 10,
 		effect = { consumption =  -0.80},
-		limitation = production	
+		limitation = production,
+		auto_recycle = false,
 	},
 	
 	-- red-op1
