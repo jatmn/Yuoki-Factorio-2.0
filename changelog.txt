@@ -3,6 +3,7 @@ Version: 1.2.11
 Date: 30. 3. 2025
   Fixes:
     - Fixed storage volume of all liquid storage tanks.
+    - Fixed Atomics Trade recipe icon color for F7 ore.
   Changes:
     - Yuoki recipe for Vanilla Battery removed from recycling. This is to resolve the broken recycle process on Fulgora
     - Removed Nature, Techanic, Science, and Merchant Signs from recycling. This means all recipes that produce one of these signs as a byproduct also can not be recycled either.
