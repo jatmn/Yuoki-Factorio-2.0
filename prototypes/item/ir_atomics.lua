@@ -140,76 +140,6 @@ data:extend(
 	},			
 
 	
-	--[[
-	{
-		type = "recipe",
-		name = "y-battery-rip1-recipe",				
-		energy_required = 1.0,
-		enabled = true,
-		ingredients = {{"y-battery-single-use1", 10},}, 
-		result = "y-unicomp-a2",
-		result_count = 1,
-		category = "yuoki-atomics-recipe",
-		subgroup = "y-atomics-f",
-	},	
-	{
-		type = "recipe",
-		name = "y-battery-rip2-recipe",				
-		energy_required = 1.0,
-		enabled = true,
-		ingredients = {{"y-unicomp-a2", 1},}, 
-		result = "battery",
-		result_count = 5,
-		category = "yuoki-atomics-recipe",
-		subgroup = "y-atomics-r",
-	},	
-	{
-		type = "recipe",
-		name = "y_alien_artis2_recipe",				
-		energy_required = 1.0,
-		enabled = true,
-		ingredients = {{"y-unicomp-a2", 1},}, 
-		result = "alien-artifact",
-		result_count = 3,
-		category = "yuoki-atomics-recipe",
-		subgroup = "y-atomics-r",
-	},	
-
-	
-	
-	
-	{
-		type = "recipe",
-		name = "y_alien_artis1_recipe",				
-		energy_required = 1.0,
-		enabled = true,
-		ingredients = {{"alien-artifact", 3},}, 
-		result = "y-unicomp-a2",
-		result_count = 1,
-		category = "yuoki-atomics-recipe",
-		subgroup = "y-atomics-f",
-	},	
-	
-	]]
-	
-	
-	-- changed to formpress 214-1226 and to smelts 215-0103
-	--[[
-	{
-		type = "recipe",
-		name = "y-ac-richdust2uc-recipe", order="a",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {{"y-richdust", 20},}, 
-		result = "y-unicomp-a2",
-		result_count = 1,
-		subgroup = "y-ore",
-		category = "yuoki-formpress-recipe",	
-		--category = "yuoki-atomics-recipe",
-		 icon_size = 128, icon =  "__Yuoki__/graphics/icons/richdust.png",
-	},
-	]]
-
 	-- toxic-dust-recycle
 	{
 		type = "recipe",
@@ -371,21 +301,6 @@ data:extend(
 	},		
 
 
-	
-	--[[
-	{
-		type = "recipe",
-		name = "y-ac-uc2sulfur-recipe", order="b",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {{"y-unicomp-a2", 1},}, 
-		result = "sulfur",
-		result_count = 6,
-		subgroup = "y-atomics-r",
-		category = "yuoki-atomics-recipe",
-		-- icon_size = 128, icon =  "__Yuoki__/graphics/icons/atomics/uc2plastic.png",
-	},		
-	]]
 	
 	-- fluid transition
 	{
