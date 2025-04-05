@@ -113,30 +113,16 @@ local itemTable =
 --data.raw.recipe["ye_tranport_tube_green_splitter_recipe"].order = "b"
 
 -- Group 5
-data.raw.recipe["y_c11"].subgroup = "j-y-logi-5"
-data.raw.recipe["y_c22"].subgroup = "j-y-logi-5"
-data.raw.recipe["y_cg33"].subgroup = "j-y-logi-5"
-data.raw.recipe["y_sc44"].subgroup = "j-y-logi-5"
-data.raw.recipe["y_c11"].order = "a"
-data.raw.recipe["y_c22"].order = "b"
-data.raw.recipe["y_cg33"].order = "c"
-data.raw.recipe["y_sc44"].order = "d"
+
 
 -- Group 6
-data.raw.recipe["y-rare-chest-log"].subgroup = "j-y-logi-6"
-data.raw.recipe["y-rare-chest-log"].order = "b"
+
 
 -- Group 7
-data.raw.recipe["y_pc22"].subgroup = "j-y-logi-7"
-data.raw.recipe["y_bc22"].subgroup = "j-y-logi-7"
-data.raw.recipe["y_rc22"].subgroup = "j-y-logi-7"
-data.raw.recipe["y_pc22"].order = "a"
-data.raw.recipe["y_bc22"].order = "b"
-data.raw.recipe["y_rc22"].order = "c"
+
 
 -- Group 8
-data.raw.recipe["y-rare-m1bunker-log"].subgroup = "j-y-logi-8"
-data.raw.recipe["y-rare-m1bunker-log"].order = "a"
+
 
 
 -- Group 10

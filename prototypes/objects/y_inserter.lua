@@ -293,7 +293,7 @@ data:extend(
 	-- smart yuoki-inserter
 	{
 		type = "recipe",
-		name = "y_inserter_smart",
+		name = "y-inserter-smart",
 		enabled = true,
 		ingredients =
 		{
