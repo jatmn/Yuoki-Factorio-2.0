@@ -1,41 +1,40 @@
 data:extend(
 {
-
-
 	-- smart yuoki-inserter L2
 	{
 		type = "recipe",
 		name = "y_inserter_diagonal",
 		enabled = true,
 		ingredients =
-		{			
-			{type="item", name="y-inserter-smart", amount=1},      
-			--{type="item", name="green-wire", amount=2},      
-			--{type="item", name="red-wire", amount=2},     
+		{
+			{type="item", name="y-inserter-smart", amount=1},
 			{type="item", name="y-conductive-wire-1", amount=4},
-			{type="item", name="y_rwtechsign", amount=1},      			
+			{type="item", name="y_rwtechsign", amount=1},
 		},
-		results = {{type="item", name="y_inserter_diagonal", amount=1},},
+		results = {
+			{type="item", name="y_inserter_diagonal", amount=1},
+		},
+		main_product = "y_inserter_diagonal",
 		subgroup = "j-y-logi-2",
 		order = "e",
 	},
-
 	{
 		type = "item",
 		name = "y_inserter_diagonal",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_diagonal.png",		
-		group = "yuoki",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_diagonal.png",
+		group = "yuoki",
 		subgroup = "j-y-logi-2",
 		order = "e",
 		place_result = "y_inserter_diagonal",
 		stack_size = 50,
 	},
-	
 	{
 		type = "inserter",
 		name = "y_inserter_diagonal",
 		stack = true,
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_diagonal.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_diagonal.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y_inserter_diagonal"},
 		max_health = 150,
@@ -61,7 +60,7 @@ data:extend(
 		energy_per_rotation = "6.5kJ",
 		rotation_speed = 0.08,
 		energy_source = { type = "electric", usage_priority = "secondary-input", drain = "0.9kW" },
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
 		hand_base_picture =
 		{
@@ -117,11 +116,11 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/special_ins_sheet.png"
 			}
 		},
-		programmable = true,		
+		programmable = true,
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
 
 	-- smart yuoki-inserter evade inserter 
 	{
@@ -129,32 +128,35 @@ data:extend(
 		name = "y_inserter_evade_shortR",
 		enabled = true,
 		ingredients =
-		{			
-			{type="item", name="y-inserter-smart", amount=1},      
-			{type="item", name="copper-cable", amount=4},     
-			{type="item", name="y_rwtechsign", amount=1},      			
+		{
+			{type="item", name="y-inserter-smart", amount=1},
+			{type="item", name="copper-cable", amount=4},
+			{type="item", name="y_rwtechsign", amount=1},
 		},
-		results = {{type="item", name="y_inserter_evade_shortR", amount=1},},
+		results = {
+			{type="item", name="y_inserter_evade_shortR", amount=1},
+		},
+		main_product = "y_inserter_evade_shortR",
 		subgroup = "j-y-logi-2",
 		order = "f",
 	},
-
 	{
 		type = "item",
 		name = "y_inserter_evade_shortR",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_evade_right_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_evade_right_icon.png",
 		group = "yuoki",
 		subgroup = "j-y-logi-2",
 		order = "f",
 		place_result = "y_inserter_evade_shortR",
 		stack_size = 50,
 	},
-	
 	{
 		type = "inserter",
 		name = "y_inserter_evade_shortR",
 		stack = true,
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_evade_right_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_evade_right_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y_inserter_evade_shortR"},
 		max_health = 150,
@@ -180,7 +182,7 @@ data:extend(
 		energy_per_rotation = "6.5kJ",
 		rotation_speed = 0.08,
 		energy_source = { type = "electric", usage_priority = "secondary-input", drain = "0.9kW" },
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
 		hand_base_picture =
 		{
@@ -236,43 +238,47 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/special_ins_sheet.png"
 			}
 		},
-		programmable = true,		
+		programmable = true,
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
+
 	-- smart yuoki-inserter evade inserter 
 	{
 		type = "recipe",
 		name = "y_inserter_evade_shortL",
 		enabled = true,
 		ingredients =
-		{			
-			{type="item", name="y-inserter-smart", amount=1},      
-			{type="item", name="copper-cable", amount=4},     
-			{type="item", name="y_rwtechsign", amount=1},      			
+		{
+			{type="item", name="y-inserter-smart", amount=1},
+			{type="item", name="copper-cable", amount=4},
+			{type="item", name="y_rwtechsign", amount=1},
 		},
-		results = {{type="item", name="y_inserter_evade_shortL", amount=1},},
+		results = {
+			{type="item", name="y_inserter_evade_shortL", amount=1},
+		},
+		main_product = "y_inserter_evade_shortL",
 		subgroup = "j-y-logi-2",
 		order = "g",
 	},
-
 	{
 		type = "item",
 		name = "y_inserter_evade_shortL",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_evade_left_icon.png",		
-		group = "yuoki",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_evade_left_icon.png",
+		group = "yuoki",
 		subgroup = "j-y-logi-2",
 		order = "g",
 		place_result = "y_inserter_evade_shortL",
 		stack_size = 50,
 	},
-	
 	{
 		type = "inserter",
 		name = "y_inserter_evade_shortL",
 		stack = true,
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_evade_left_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_evade_left_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y_inserter_evade_shortL"},
 		max_health = 150,
@@ -298,7 +304,7 @@ data:extend(
 		energy_per_rotation = "6.5kJ",
 		rotation_speed = 0.08,
 		energy_source = { type = "electric", usage_priority = "secondary-input", drain = "0.9kW" },
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
 		hand_base_picture =
 		{
@@ -354,11 +360,10 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/special_ins_sheet.png"
 			}
 		},
-		programmable = true,				
+		programmable = true,
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
-	
-	
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
+
 })

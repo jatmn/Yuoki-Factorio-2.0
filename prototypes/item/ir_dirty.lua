@@ -36,14 +36,14 @@ data:extend(
 		subgroup = "yuoki-formpress",
 		category = "yuoki-repair",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/drillhead_repair.png",
-		order="1A",
+		icon = "__Yuoki__/graphics/icons/drillhead_repair.png",
+		order = "1A",
 	},
 	{
 		type = "item",
 		name = "y_drillhead",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/icon-5e.png",
+		icon = "__Yuoki__/graphics/icons/icon-5e.png",
 		stack_size = 50,
 		default_request_amount = 10,
 		group = "yuoki",
@@ -53,7 +53,7 @@ data:extend(
 		type = "item",
 		name = "y_drillhead_broken",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/icon-5c.png",
+		icon = "__Yuoki__/graphics/icons/icon-5c.png",
 		stack_size = 50,
 		default_request_amount = 10,
 		group = "yuoki",
@@ -95,14 +95,14 @@ data:extend(
 		subgroup = "yuoki-formpress",
 		category = "yuoki-repair",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/toolhead_repair.png",
-		order="1B",
+		icon = "__Yuoki__/graphics/icons/toolhead_repair.png",
+		order = "1B",
 	},
 	{
 		type = "item",
 		name = "y_toolhead",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/toolhead.png",
+		icon = "__Yuoki__/graphics/icons/toolhead.png",
 		stack_size = 75,
 		default_request_amount = 10,
 		group = "yuoki",
@@ -112,7 +112,7 @@ data:extend(
 		type = "item",
 		name = "y_toolhead_broken",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/toolhead_broken.png",
+		icon = "__Yuoki__/graphics/icons/toolhead_broken.png",
 		stack_size = 75,
 		default_request_amount = 10,
 		group = "yuoki",
@@ -122,7 +122,8 @@ data:extend(
 	{
 		type = "recipe",
 		name = "y-digfdirt",
-		enabled = true, energy_required = 4,
+		enabled = true,
+		energy_required = 4,
 		ingredients = {
 
 		},
@@ -131,27 +132,29 @@ data:extend(
 		},
 		main_product = "y-dirt",
 		subgroup = "y_line2",
-		category="yuoki-raw-material",
-		order="dfd1",
+		category = "yuoki-raw-material",
+		order = "dfd1",
 	},
 
 	{
 		type = "recipe",
 		name = "y-digfdirt2",
-		enabled = true, energy_required = 4,
-		ingredients = {{type="item", name="y_drillhead", amount=1},},
+		enabled = true,
+		energy_required = 4,
+		ingredients = {
+			{type="item", name="y_drillhead", amount=1},
+		},
 		results = {
 			{type="item",name="y-dirt",amount=8},
 			{type="item",name="y_drillhead_broken",amount=1}
 		},
 		main_product = "y-dirt",
 		subgroup = "y_line2",
-		category="yuoki-raw-material",
+		category = "yuoki-raw-material",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/dirt_whead.png",
-		order="dfd2",
+		icon = "__Yuoki__/graphics/icons/dirt_whead.png",
+		order = "dfd2",
 	},
-
 
 	-- washings
 	{
@@ -172,7 +175,7 @@ data:extend(
 		main_product = "y-crystal2",
 		enabled = true,
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/alien-crystal.png",
+		icon = "__Yuoki__/graphics/icons/alien-crystal.png",
 		order = "m-refined-rare3",
 		subgroup = "y_line2",
 	},
@@ -180,7 +183,9 @@ data:extend(
 	{
 		type = "recipe",
 		name = "y-wash-special",
-		category = "yuoki-archaeology-wash", enabled = true, energy_required = 6.0,
+		category = "yuoki-archaeology-wash",
+		enabled = true,
+		energy_required = 6.0,
 		ingredients = {
 			{type="item", name="y-dirt", amount=8},
 			{type="fluid", name="water", amount=1200},
@@ -190,9 +195,9 @@ data:extend(
 		},
 		main_product = "y-c_mud",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/icons/c_mud_icon.png",
+		icon = "__Yuoki__/graphics/icons/c_mud_icon.png",
 		subgroup = "y_line2",
-		order="m-refined-",
+		order = "m-refined-",
 	},
 
 })

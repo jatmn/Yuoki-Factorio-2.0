@@ -5,39 +5,41 @@ data:extend(
 	{
 		type = "recipe",
 		name = "y-inserter-fast",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/y_smart_ins_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/y_smart_ins_icon.png",
 		enabled = true,
 		ingredients =
 		{
 			{type="item", name="y_structure_element", amount=3},
-			{type="item", name="y-raw-fuelnium", amount=1},      
-			{type="item", name="y-chip-1", amount=1},      
+			{type="item", name="y-raw-fuelnium", amount=1},
+			{type="item", name="y-chip-1", amount=1},
 		},
 		results=
 		{
-			{type="item", name="y-inserter-fast", amount=1, },      	  						
-			{type="item", name="y_rwtechsign", amount=1, },      	  						
-		},				
-		main_product="y-inserter-fast",		
-		subgroup = "j-y-logi-1",				
+			{type="item", name="y-inserter-fast", amount=1, },
+			{type="item", name="y_rwtechsign", amount=1, },
+		},
+		main_product="y-inserter-fast",
+		subgroup = "j-y-logi-1",
 		order = "a",
-	},	
+	},
 	{
 		type = "item",
 		name = "y-inserter-fast",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/y_smart_ins_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/y_smart_ins_icon.png",
 		group = "yuoki",
-		subgroup = "j-y-logi-1",				
+		subgroup = "j-y-logi-1",
 		order = "a",
 		place_result = "y-inserter-fast",
 		stack_size = 50,
 	},
-
 	{
 		type = "inserter",
 		name = "y-inserter-fast",
 		stack = true,
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/y_smart_ins_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/y_smart_ins_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = { mining_time = 0.5, result = "y-inserter-fast"},
 		max_health = 150,
@@ -50,14 +52,14 @@ data:extend(
 		energy_per_movement = "6kJ",
 		energy_per_rotation = "6kJ",
 		extension_speed = 0.1,
-		rotation_speed = 0.1,		
+		rotation_speed = 0.1,
 		hand_size = 1.5,
 		energy_source =
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
 			drain = "0.75kW"
-		},		
+		},
 		fast_replaceable_group = "inserter",
 		working_sound =
 		{
@@ -100,7 +102,6 @@ data:extend(
 			width = 18,
 			height = 41,
 			shift = {-0.0625, 0},
-			
 		},
 		hand_open_picture =
 		{
@@ -142,8 +143,8 @@ data:extend(
 			}
 		},
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
 	},
 
 
@@ -151,39 +152,40 @@ data:extend(
 	{
 		type = "recipe",
 		name = "y-inserter-s4",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_red_icon.png",
+		icon_size = 64,
+		icon =  "__Yuoki__/graphics/entity/inserters/ins_red_icon.png",
 		enabled = true,
 		ingredients =
 		{
 			{type="item", name="y_structure_element", amount=3},
-			{type="item", name="y-inserter-fast", amount=1},      			    
+			{type="item", name="y-inserter-fast", amount=1},
 		},
 		results=
 		{
-			{type="item", name="y-inserter-s4", amount=1, },      	  						
-			{type="item", name="y_rwtechsign", amount=1, },      	  						
-		},				
-		main_product="y-inserter-s4",				
+			{type="item", name="y-inserter-s4", amount=1, },
+			{type="item", name="y_rwtechsign", amount=1, },
+		},
+		main_product="y-inserter-s4",
 		order = "c",
 		subgroup = "j-y-logi-1",
 	},
-
 	{
 		type = "item",
 		name = "y-inserter-s4",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_red_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_red_icon.png",
 		group = "yuoki",
-		subgroup = "j-y-logi-1",		
+		subgroup = "j-y-logi-1",
 		order = "c",
 		place_result = "y-inserter-s4",
 		stack_size = 50,
 	},
-
 	{
 		type = "inserter",
 		name = "y-inserter-s4",
 		stack = true,
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_red_icon.png",
+		icon_size = 64,
+		icon =  "__Yuoki__/graphics/entity/inserters/ins_red_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-inserter-s4"},
 		max_health = 150,
@@ -287,9 +289,10 @@ data:extend(
 			}
 		},
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
+
 	-- smart yuoki-inserter
 	{
 		type = "recipe",
@@ -297,19 +300,21 @@ data:extend(
 		enabled = true,
 		ingredients =
 		{
-			{type="item", name="y-inserter-fast", amount=1},			
-			{type="item", name="y-chip-2", amount=1},      
+			{type="item", name="y-inserter-fast", amount=1},
+			{type="item", name="y-chip-2", amount=1},
 		},
-		results = {{type="item", name="y-inserter-smart", amount=1},},
+		results = {
+			{type="item", name="y-inserter-smart", amount=1},
+		},
 		main_product = "y-inserter-smart",
 		subgroup = "j-y-logi-1",
 		order = "b",
 	},
-
 	{
 		type = "item",
 		name = "y-inserter-smart",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_cyan_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_cyan_icon.png",
 		group = "yuoki",
 		subgroup = "j-y-logi-1",
 		order = "b",
@@ -321,7 +326,8 @@ data:extend(
 		type = "inserter",
 		name = "y-inserter-smart",
 		stack = true,
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/ins_cyan_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/ins_cyan_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-inserter-smart"},
 		max_health = 150,
@@ -368,7 +374,7 @@ data:extend(
 			usage_priority = "secondary-input",
 			drain = "0.8kW"
 		},
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
 		hand_base_picture =
 		{
@@ -424,13 +430,13 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/yi_fast_sheet.png"
 			}
 		},
-		programmable = true,		
-		uses_arm_movement = "basic-inserter",			
-		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
+		programmable = true,
 		uses_arm_movement = "basic-inserter",
-	},	
+		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+		uses_arm_movement = "basic-inserter",
+	},
 
 	-- smart long yuoki-inserter
 	{
@@ -440,9 +446,11 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name="y_structure_element", amount=3},
-			{type="item", name="y-inserter-smart", amount=1},      			
+			{type="item", name="y-inserter-smart", amount=1},
 		},
-		results = {{type="item", name="y-inserter-smart-long", amount=1},},
+		results = {
+			{type="item", name="y-inserter-smart-long", amount=1},
+		},
 		main_product = "y-inserter-smart-long",
 		subgroup = "j-y-logi-1",
 		order = "c",
@@ -451,7 +459,8 @@ data:extend(
 	{
 		type = "item",
 		name = "y-inserter-smart-long",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/inserter_long_smart.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/inserter_long_smart.png",
 		group = "yuoki",
 		subgroup = "j-y-logi-1",
 		order = "c",
@@ -463,7 +472,8 @@ data:extend(
 		type = "inserter",
 		name = "y-inserter-smart-long",
 		stack = true,
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/inserter_long_smart.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/inserter_long_smart.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-inserter-smart-long"},
 		max_health = 150,
@@ -510,9 +520,8 @@ data:extend(
 			usage_priority = "secondary-input",
 			drain = "0.8kW"
 		},
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
-		filter_count = 5,
 		hand_base_picture =
 		{
 			filename = "__Yuoki__/graphics/entity/inserters/longsmart-base-s.png",
@@ -567,47 +576,48 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/limegreen_base.png"
 			}
 		},
-		programmable = true,		
-		uses_arm_movement = "basic-inserter",			
+		programmable = true,
+		uses_arm_movement = "basic-inserter",
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
-	
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
+
 	-- smart yuoki-inserter R2
 	{
 		type = "recipe",
 		name = "y_inserter_smart_rightR2",
 		enabled = true,
 		ingredients =
-		{			
-			{type="item", name="y-inserter-smart", amount=1},      
-			--{type="item", name="red-wire", amount=2},     
-			{type="item", name="y-conductive-wire-1", amount=2},      
-			{type="item", name="y_rwtechsign", amount=1},      
+		{
+			{type="item", name="y-inserter-smart", amount=1},
+			{type="item", name="y-conductive-wire-1", amount=2},
+			{type="item", name="y_rwtechsign", amount=1},
 		},
-		results = {{type="item", name="y_inserter_smart_rightR2", amount=1},},
+		results = {
+			{type="item", name="y_inserter_smart_rightR2", amount=1},
+		},
 		main_product = "y_inserter_smart_rightR2",
 		subgroup = "j-y-logi-2",
 		order = "b",
 	},
-
 	{
 		type = "item",
 		name = "y_inserter_smart_rightR2",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/special_ins_rights_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/special_ins_rights_icon.png",
 		group = "yuoki",
 		subgroup = "j-y-logi-2",
 		order = "b",
 		place_result = "y_inserter_smart_rightR2",
 		stack_size = 50,
 	},
-
 	{
 		type = "inserter",
 		name = "y_inserter_smart_rightR2",
 		stack = true,
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/special_ins_rights_icon.png",
+		icon_size = 64,
+		icon =  "__Yuoki__/graphics/entity/inserters/special_ins_rights_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y_inserter_smart_rightR2"},
 		max_health = 150,
@@ -654,9 +664,8 @@ data:extend(
 			usage_priority = "secondary-input",
 			drain = "0.8kW"
 		},
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
-		filter_count = 5,
 		hand_base_picture =
 		{
 			filename = "__Yuoki__/graphics/entity/inserters/special-base.png",
@@ -711,13 +720,12 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/special_ins_sheet.png"
 			}
 		},
-		programmable = true,		
-		uses_arm_movement = "basic-inserter",			
+		programmable = true,
+		uses_arm_movement = "basic-inserter",
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
-
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
 
 	-- smart yuoki-inserter L2
 	{
@@ -725,34 +733,35 @@ data:extend(
 		name = "y_inserter_smart_leftR2",
 		enabled = true,
 		ingredients =
-		{			
-			{type="item", name="y-inserter-smart", amount=1},      
-			--{type="item", name="red-wire", amount=2},     
-			{type="item", name="y-conductive-wire-1", amount=2},      
-			{type="item", name="y_rwtechsign", amount=1},      			
+		{
+			{type="item", name="y-inserter-smart", amount=1},
+			{type="item", name="y-conductive-wire-1", amount=2},
+			{type="item", name="y_rwtechsign", amount=1},
 		},
-		results = {{type="item", name="y_inserter_smart_leftR2", amount=1},},
+		results = {
+			{type="item", name="y_inserter_smart_leftR2", amount=1},
+		},
 		main_product = "y_inserter_smart_leftR2",
 		subgroup = "j-y-logi-2",
 		order = "a",
 	},
-
 	{
 		type = "item",
 		name = "y_inserter_smart_leftR2",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/special_ins_lefts_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/special_ins_lefts_icon.png",
 		group = "yuoki",
 		subgroup = "j-y-logi-2",
 		order = "a",
 		place_result = "y_inserter_smart_leftR2",
 		stack_size = 50,
 	},
-	
 	{
 		type = "inserter",
 		name = "y_inserter_smart_leftR2",
 		stack = true,
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/special_ins_lefts_icon.png",
+		icon_size = 64,
+		icon =  "__Yuoki__/graphics/entity/inserters/special_ins_lefts_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y_inserter_smart_leftR2"},
 		max_health = 150,
@@ -799,9 +808,8 @@ data:extend(
 			usage_priority = "secondary-input",
 			drain = "0.8kW"
 		},
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
-		filter_count = 5,
 		hand_base_picture =
 		{
 			filename = "__Yuoki__/graphics/entity/inserters/special-base.png",
@@ -856,12 +864,12 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/special_ins_sheet.png"
 			}
 		},
-		programmable = true,		
-		uses_arm_movement = "basic-inserter",			
+		programmable = true,
+		uses_arm_movement = "basic-inserter",
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
 
 	-- smart yuoki-inserter RR
 	{
@@ -871,32 +879,33 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name="y-inserter-smart", amount=1},
-			--{type="item", name="green-wire", amount=2},     
 			{type="item", name="y-conductive-wire-1", amount=2},
-			{type="item", name="y_rwtechsign", amount=1},      
+			{type="item", name="y_rwtechsign", amount=1},
 		},
-		results = {{type="item", name="y_inserter_smart_RR", amount=1},},
+		results = {
+			{type="item", name="y_inserter_smart_RR", amount=1},
+		},
 		main_product = "y_inserter_smart_RR",
 		subgroup = "j-y-logi-2",
 		order = "c",
 	},
-
 	{
 		type = "item",
 		name = "y_inserter_smart_RR",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/special_ins_right_icon.png",		
+		icon_size = 64,
+		icon =  "__Yuoki__/graphics/entity/inserters/special_ins_right_icon.png",
 		group = "yuoki",
 		subgroup = "j-y-logi-2",
 		order = "c",
 		place_result = "y_inserter_smart_RR",
 		stack_size = 50,
 	},
-
 	{
 		type = "inserter",
 		name = "y_inserter_smart_RR",
 		stack = true,
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/special_ins_right_icon.png",
+		icon_size = 64,
+		icon =  "__Yuoki__/graphics/entity/inserters/special_ins_right_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y_inserter_smart_RR"},
 		max_health = 150,
@@ -943,9 +952,8 @@ data:extend(
 			usage_priority = "secondary-input",
 			drain = "0.8kW"
 		},
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
-		filter_count = 5,
 		hand_base_picture =
 		{
 			filename = "__Yuoki__/graphics/entity/inserters/special-base.png",
@@ -1000,13 +1008,12 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/special_ins_sheet.png"
 			}
 		},
-		programmable = true,		
-		uses_arm_movement = "basic-inserter",			
+		programmable = true,
+		uses_arm_movement = "basic-inserter",
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
-
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
 
 	-- smart yuoki-inserter LL
 	{
@@ -1016,32 +1023,33 @@ data:extend(
 		ingredients =
 		{
 			{type="item", name="y-inserter-smart", amount=1},
-			--{type="item", name="green-wire", amount=2},     
-			{type="item", name="y-conductive-wire-1", amount=2},   
-			{type="item", name="y_rwtechsign", amount=1},      
+			{type="item", name="y-conductive-wire-1", amount=2},
+			{type="item", name="y_rwtechsign", amount=1},
 		},
-		results = {{type="item", name="y_inserter_smart_LL", amount=1},},
+		results = {
+			{type="item", name="y_inserter_smart_LL", amount=1},
+		},
 		main_product = "y_inserter_smart_LL",
 		subgroup = "j-y-logi-2",
 		order = "d",
 	},
-
 	{
 		type = "item",
 		name = "y_inserter_smart_LL",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/special_ins_left_icon.png",		
-		group = "yuoki",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/special_ins_left_icon.png",
+		group = "yuoki",
 		subgroup = "j-y-logi-2",
 		order = "d",
 		place_result = "y_inserter_smart_LL",
 		stack_size = 50,
 	},
-	
 	{
 		type = "inserter",
 		name = "y_inserter_smart_LL",
 		stack = true,
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/inserters/special_ins_left_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/inserters/special_ins_left_icon.png",
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 0.5, result = "y_inserter_smart_LL"},
 		max_health = 150,
@@ -1088,9 +1096,8 @@ data:extend(
 			usage_priority = "secondary-input",
 			drain = "0.8kW"
 		},
-		extension_speed = 0.1,		
+		extension_speed = 0.1,
 		fast_replaceable_group = "inserter",
-		filter_count = 5,
 		hand_base_picture =
 		{
 			filename = "__Yuoki__/graphics/entity/inserters/special-base.png",
@@ -1145,13 +1152,11 @@ data:extend(
 				filename = "__Yuoki__/graphics/entity/inserters/special_ins_sheet.png"
 			}
 		},
-		programmable = true,		
-		uses_arm_movement = "basic-inserter",			
+		programmable = true,
+		uses_arm_movement = "basic-inserter",
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,  
-		circuit_wire_max_distance = 22.5,		
-	},	
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	},
 
-
-	
 })
