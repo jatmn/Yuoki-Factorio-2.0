@@ -8,6 +8,8 @@ Date: ?. 4. 2025
   Fixes:
     - Fixed up Atomics recipe names
     - Fixed up some of the mess in Factoriopedia
+  Changes:
+    - Added optional dependency support for Space age and Quality mods. This is for future stuff.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.11
 Date: 30. 3. 2025

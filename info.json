@@ -8,6 +8,8 @@
 	"factorio_version": "2.0",
 	"dependencies": [
 		"base >= 2.0.42",
+		"? space-age >= 2.0.43",
+		"? quality >= 2.0.43",
 		"! Yuoki_F2",
 		"! yi_engines_F2",
 		"! YuokiTweaks"
