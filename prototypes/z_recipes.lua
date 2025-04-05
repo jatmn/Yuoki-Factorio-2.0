@@ -1,14 +1,11 @@
 
---automatically generated file | fMT-Export (c)YT v0.04-216Mrz03
---export-date: 2021-Feb-07
-
 data:extend({
 
 	--ID:355 
 	{
 	  type = "recipe",
 	  name = "y_crystal_dust",
-	  category = "yrcat_trockner", -- 
+	  category = "yrcat_trockner",
 	  enabled = true,
 	  energy_required = 8.00,
 	  ingredients = {
@@ -20,14 +17,16 @@ data:extend({
 	  main_product = "y_crystal_dust",
 	  icon = "__Yuoki__/graphics/icons/yb-dusts.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki", subgroup = "y_line3",
+	  order = "0",
+	  group = "yuoki",
+	  subgroup = "y_line3",
 	},
 
 	--ID:353 
 	{
 	  type = "recipe",
 	  name = "y_richemulsion",
-	  category = "yrcat_hppump", -- 
+	  category = "yrcat_hppump",
 	  enabled = true,
 	  energy_required = 8.00,
 	  ingredients = {
@@ -39,14 +38,16 @@ data:extend({
 	  main_product = "y_richemulsion",
 	  icon = "__Yuoki__/graphics/icons/hydraulik-fluid.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki_liquids", subgroup = "y-fluid",
+	  order = "0",
+	  group = "yuoki_liquids",
+	  subgroup = "y-fluid",
 	},
 
 	--ID:352 
 	{
 	  type = "recipe",
 	  name = "y_emulsion",
-	  category = "yrcat_emulsion", -- 
+	  category = "yrcat_emulsion",
 	  enabled = true,
 	  energy_required = 4.00,
 	  ingredients = {
@@ -59,14 +60,16 @@ data:extend({
 	  main_product = "y_emulsion",
 	  icon = "__Yuoki__/graphics/icons/liquid_air_i32.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki_liquids", subgroup = "y-fluid",
+	  order = "0",
+	  group = "yuoki_liquids",
+	  subgroup = "y-fluid",
 	},
 
 	--ID:351 
 	{
 	  type = "recipe",
 	  name = "y_trockner",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -79,14 +82,16 @@ data:extend({
 	  main_product = "y_trockner",
 	  icon = "__Yuoki__/graphics/entity/base_factory_icon.png",
 	  icon_size = 64,
-	  order = "u", group = "yuoki", subgroup = "y_line1",
+	  order = "u",
+	  group = "yuoki",
+	  subgroup = "y_line1",
 	},
 
 	--ID:350 
 	{
 	  type = "recipe",
 	  name = "y_hppump",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -99,14 +104,16 @@ data:extend({
 	  main_product = "y_hppump",
 	  icon = "__Yuoki__/graphics/entity/hppump_icon.png",
 	  icon_size = 64,
-	  order = "v", group = "yuoki_liquids", subgroup = "y_refine_machinery",
+	  order = "v",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_machinery",
 	},
 
 	--ID:349 
 	{
 	  type = "recipe",
 	  name = "y_crystalizer",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -119,14 +126,16 @@ data:extend({
 	  main_product = "y_crystalizer",
 	  icon = "__Yuoki__/graphics/entity/crys_icon.png",
 	  icon_size = 64,
-	  order = "u", group = "yuoki", subgroup = "y_line1b",
+	  order = "u",
+	  group = "yuoki",
+	  subgroup = "y_line1b",
 	},
 
 	--ID:348 
 	{
 	  type = "recipe",
 	  name = "y_mixer_emu",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -140,14 +149,16 @@ data:extend({
 	  main_product = "y_mixer_emu",
 	  icon = "__Yuoki__/graphics/entity/water_mixer_icon.png",
 	  icon_size = 64,
-	  order = "u", group = "yuoki_liquids", subgroup = "y_refine_machinery",
+	  order = "u",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_machinery",
 	},
 
 	--ID:347 
 	{
 	  type = "recipe",
 	  name = "y_steinmehl",
-	  category = "y-crushing", -- 
+	  category = "y-crushing",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -159,14 +170,16 @@ data:extend({
 	  main_product = "y_steinmehl",
 	  icon = "__Yuoki__/graphics/icons/stone-dust.png",
 	  icon_size = 64,
-	  order = "f", group = "yuoki", subgroup = "y_line3",
+	  order = "f",
+	  group = "yuoki",
+	  subgroup = "y_line3",
 	},
 
 	--ID:345 
 	{
 	  type = "recipe",
 	  name = "ye_createbluesigns",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 10.00,
 	  ingredients = {
@@ -183,7 +196,9 @@ data:extend({
 	  main_product = "ye_science_blue",
 	  icon = "__Yuoki__/graphics/icons/tech02_32.png",
 	  icon_size = 64,
-	  order = "9", group = "yuoki-atomics", subgroup = "y-stargate-4",
+	  order = "9",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-4",
 	  auto_recycle = false,
 	},
 
@@ -191,7 +206,7 @@ data:extend({
 	{
 	  type = "recipe",
 	  name = "y_mox2fuelsplit",
-	  category = "yuoki-wonder", -- 
+	  category = "yuoki-wonder",
 	  enabled = true,
 	  energy_required = 20.00,
 	  ingredients = {
@@ -204,14 +219,16 @@ data:extend({
 	  main_product = "y_mox2fuelsplited",
 	  icon = "__Yuoki__/graphics/icons/mox-c_splitted_icon.png",
 	  icon_size = 64,
-	  order = "9", group = "yuoki-energy", subgroup = "y-fuel",
+	  order = "9",
+	  group = "yuoki-energy",
+	  subgroup = "y-fuel",
 	},
 
 	--ID:341 
 	{
 	  type = "recipe",
 	  name = "y_wood_wall",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 1.50,
 	  ingredients = {
@@ -223,14 +240,16 @@ data:extend({
 	  main_product = "y_wood_wall",
 	  icon = "__Yuoki__/graphics/entity/walls/wood_wall_icon.png",
 	  icon_size = 64,
-	  order = "1", group = "yuoki", subgroup = "y_defense_walls",
+	  order = "1",
+	  group = "yuoki",
+	  subgroup = "y_defense_walls",
 	},
 
 	--ID:340 
 	{
 	  type = "recipe",
 	  name = "y_mox2fuel",
-	  category = "yuoki-archaeology-wash", -- 
+	  category = "yuoki-archaeology-wash",
 	  enabled = true,
 	  energy_required = 10.00,
 	  ingredients = {
@@ -243,14 +262,16 @@ data:extend({
 	  main_product = "y_mox2fuel",
 	  icon = "__Yuoki__/graphics/icons/mox2l.png",
 	  icon_size = 64,
-	  order = "8", group = "yuoki-energy", subgroup = "y-fuel",
+	  order = "8",
+	  group = "yuoki-energy",
+	  subgroup = "y-fuel",
 	},
 
 	--ID:338 
 	{
 	  type = "recipe",
 	  name = "y_mox2mixed",
-	  category = "yuoki_mox", -- fuel-mixer
+	  category = "yuoki_mox",
 	  enabled = true,
 	  energy_required = 7.00,
 	  ingredients = {
@@ -264,14 +285,16 @@ data:extend({
 	  main_product = "y_mox2mixed",
 	  icon = "__Yuoki__/graphics/icons/mox2p.png",
 	  icon_size = 64,
-	  order = "8", group = "yuoki-energy", subgroup = "y-fuel",
+	  order = "8",
+	  group = "yuoki-energy",
+	  subgroup = "y-fuel",
 	},
 
 	--ID:337 
 	{
 	  type = "recipe",
 	  name = "y_mox1fuel",
-	  category = "yuoki-archaeology-wash", -- 
+	  category = "yuoki-archaeology-wash",
 	  enabled = true,
 	  energy_required = 10.00,
 	  ingredients = {
@@ -284,14 +307,16 @@ data:extend({
 	  main_product = "y_mox1fuel",
 	  icon = "__Yuoki__/graphics/icons/mox1f.png",
 	  icon_size = 64,
-	  order = "8", group = "yuoki-energy", subgroup = "y-fuel",
+	  order = "8",
+	  group = "yuoki-energy",
+	  subgroup = "y-fuel",
 	},
 
 	--ID:335 
 	{
 	  type = "recipe",
 	  name = "y_mox1mixed",
-	  category = "yuoki_mox", -- fuel-mixer
+	  category = "yuoki_mox",
 	  enabled = true,
 	  energy_required = 4.00,
 	  ingredients = {
@@ -305,14 +330,16 @@ data:extend({
 	  main_product = "y_mox1mixed",
 	  icon = "__Yuoki__/graphics/icons/mox1e.png",
 	  icon_size = 64,
-	  order = "8", group = "yuoki-energy", subgroup = "y-fuel",
+	  order = "8",
+	  group = "yuoki-energy",
+	  subgroup = "y-fuel",
 	},
 
 	--ID:334 
 	{
 	  type = "recipe",
 	  name = "y_moxmixer",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 5.00,
 	  ingredients = {
@@ -326,14 +353,16 @@ data:extend({
 	  main_product = "y_moxmixer",
 	  icon = "__Yuoki__/graphics/entity/boiler-sh_icon.png",
 	  icon_size = 64,
-	  order = "9", group = "yuoki", subgroup = "y_line1b",
+	  order = "9",
+	  group = "yuoki",
+	  subgroup = "y_line1b",
 	},
 
 	--ID:333 
 	{
 	  type = "recipe",
 	  name = "yi_graphite",
-	  category = "yuoki-formpress", -- 
+	  category = "yuoki-formpress",
 	  enabled = true,
 	  energy_required = 5.00,
 	  ingredients = {
@@ -346,14 +375,16 @@ data:extend({
 	  main_product = "yi_graphite",
 	  icon = "__Yuoki__/graphics/icons/graphite_rod.png",
 	  icon_size = 64,
-	  order = "u", group = "yuoki", subgroup = "yuoki-formpress",
+	  order = "u",
+	  group = "yuoki",
+	  subgroup = "yuoki-formpress",
 	},
 
 	--ID:300 
 	{
 	  type = "recipe",
 	  name = "y_signal_pole",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 1.50,
 	  ingredients = {
@@ -367,14 +398,16 @@ data:extend({
 	  main_product = "y_signal_pole",
 	  icon = "__Yuoki__/graphics/entity/signal_pole_icon.png",
 	  icon_size = 64,
-	  order = "h", group = "yuoki-energy", subgroup = "y-electric",
+	  order = "h",
+	  group = "yuoki-energy",
+	  subgroup = "y-electric",
 	},
 
 	--ID:297 
 	{
 	  type = "recipe",
 	  name = "y-orange-stuff",
-	  category = "smelting", -- all furnace stuff
+	  category = "smelting",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -386,14 +419,16 @@ data:extend({
 	  main_product = "y-orange-stuff",
 	  icon = "__Yuoki__/graphics/icons/orange-stuff.png",
 	  icon_size = 64,
-	  order = "m-refined-x2", group = "yuoki", subgroup = "yuoki-formpress",
+	  order = "m-refined-x2",
+	  group = "yuoki",
+	  subgroup = "yuoki-formpress",
 	},
 
 	--ID:296 
 	{
 	  type = "recipe",
 	  name = "y-conductive-wire-1",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -406,14 +441,16 @@ data:extend({
 	  main_product = "y-conductive-wire-1",
 	  icon = "__Yuoki__/graphics/gfx/wire_1.png",
 	  icon_size = 64,
-	  order = "pe6", group = "yuoki", subgroup = "y_parts_e",
+	  order = "pe6",
+	  group = "yuoki",
+	  subgroup = "y_parts_e",
 	},
 
 	--ID:295 
 	{
 	  type = "recipe",
 	  name = "y_structure_electric",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 4.00,
 	  ingredients = {
@@ -427,14 +464,16 @@ data:extend({
 	  main_product = "y_structure_electric",
 	  icon = "__Yuoki__/graphics/icons/caseing-n4wCable.png",
 	  icon_size = 64,
-	  order = "p-g2a", group = "yuoki", subgroup = "y-parts",
+	  order = "p-g2a",
+	  group = "yuoki",
+	  subgroup = "y-parts",
 	},
 
 	--ID:245 
 	{
 	  type = "recipe",
 	  name = "y_tile_slagbricks",
-	  category = "yuoki-formpress", -- 
+	  category = "yuoki-formpress",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -447,14 +486,16 @@ data:extend({
 	  main_product = "y_tile_slagbricks",
 	  icon = "__Yuoki__/graphics/entity/path_tiles/bricks_3.png",
 	  icon_size = 64,
-	  order = "c", group = "yuoki-energy", subgroup = "y_tiles",
+	  order = "c",
+	  group = "yuoki-energy",
+	  subgroup = "y_tiles",
 	},
 
 	--ID:244 
 	{
 	  type = "recipe",
 	  name = "y_tile_slagpattern",
-	  category = "yuoki-formpress", -- 
+	  category = "yuoki-formpress",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -466,14 +507,16 @@ data:extend({
 	  main_product = "y_tile_slagpattern",
 	  icon = "__Yuoki__/graphics/entity/path_tiles/muster_2.png",
 	  icon_size = 64,
-	  order = "b", group = "yuoki-energy", subgroup = "y_tiles",
+	  order = "b",
+	  group = "yuoki-energy",
+	  subgroup = "y_tiles",
 	},
 
 	--ID:243 
 	{
 	  type = "recipe",
 	  name = "y_tile_slagfilled",
-	  category = "yuoki-formpress", -- 
+	  category = "yuoki-formpress",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -485,14 +528,16 @@ data:extend({
 	  main_product = "y_tile_slagfilled",
 	  icon = "__Yuoki__/graphics/entity/path_tiles/pslag_icon.png",
 	  icon_size = 64,
-	  order = "a", group = "yuoki-energy", subgroup = "y_tiles",
+	  order = "a",
+	  group = "yuoki-energy",
+	  subgroup = "y_tiles",
 	},
 
 	--ID:242 
 	{
 	  type = "recipe",
 	  name = "y_slag_brick_burn",
-	  category = "smelting", -- all furnace stuff
+	  category = "smelting",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -504,14 +549,16 @@ data:extend({
 	  main_product = "stone-brick",
 	  icon = "__Yuoki__/graphics/icons/slag_brick2stone.png",
 	  icon_size = 64,
-	  order = "m", group = "yuoki", subgroup = "yuoki-formpress",
+	  order = "m",
+	  group = "yuoki",
+	  subgroup = "yuoki-formpress",
 	},
 
 	--ID:241 
 	{
 	  type = "recipe",
 	  name = "y_slag_brick",
-	  category = "yuoki-formpress", -- 
+	  category = "yuoki-formpress",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -523,14 +570,16 @@ data:extend({
 	  main_product = "y_slag_brick",
 	  icon = "__Yuoki__/graphics/icons/slag_brick.png",
 	  icon_size = 64,
-	  order = "l", group = "yuoki", subgroup = "y_line4",
+	  order = "l",
+	  group = "yuoki",
+	  subgroup = "y_line4",
 	},
 
 	--ID:240 
 	{
 	  type = "recipe",
 	  name = "y_slag_granulate",
-	  category = "y-crushing", -- 
+	  category = "y-crushing",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -542,14 +591,16 @@ data:extend({
 	  main_product = "y_slag_granulate",
 	  icon = "__Yuoki__/graphics/icons/dust_slag.png",
 	  icon_size = 64,
-	  order = "k", group = "yuoki", subgroup = "y_line3",
+	  order = "k",
+	  group = "yuoki",
+	  subgroup = "y_line3",
 	},
 
 	--ID:239 
 	{
 	  type = "recipe",
 	  name = "y_hps_steel",
-	  category = "yuoki_smelter_recipe", -- 
+	  category = "yuoki_smelter_recipe",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -565,14 +616,16 @@ data:extend({
 	  main_product = "steel-plate",
 	  icon = "__Yuoki__/graphics/icons/stahl_recipe.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki", subgroup = "yuoki-formpress",
+	  order = "0",
+	  group = "yuoki",
+	  subgroup = "yuoki-formpress",
 	},
 
 	--ID:238 
 	{
 	  type = "recipe",
 	  name = "y_hps_purecopper",
-	  category = "yuoki_smelter_recipe", -- 
+	  category = "yuoki_smelter_recipe",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -588,14 +641,16 @@ data:extend({
 	  main_product = "y_block_cold",
 	  icon = "__Yuoki__/graphics/icons/copper_recipe.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki", subgroup = "yuoki-formpress",
+	  order = "0",
+	  group = "yuoki",
+	  subgroup = "yuoki-formpress",
 	},
 
 	--ID:237 
 	{
 	  type = "recipe",
 	  name = "y_hps_pureiron",
-	  category = "yuoki_smelter_recipe", -- 
+	  category = "yuoki_smelter_recipe",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -611,14 +666,16 @@ data:extend({
 	  main_product = "y_block_cold",
 	  icon = "__Yuoki__/graphics/icons/plates_recipe.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki", subgroup = "yuoki-formpress",
+	  order = "0",
+	  group = "yuoki",
+	  subgroup = "yuoki-formpress",
 	},
 
 	--ID:236 
 	{
 	  type = "recipe",
 	  name = "y_block_heat",
-	  category = "yuoki_charger_recipe", -- 
+	  category = "yuoki_charger_recipe",
 	  enabled = true,
 	  energy_required = 5.00,
 	  ingredients = {
@@ -631,14 +688,16 @@ data:extend({
 	  main_product = "y_block_heat",
 	  icon = "__Yuoki__/graphics/entity/block_heat_icon.png",
 	  icon_size = 64,
-	  order = "t", group = "yuoki", subgroup = "y_parts_e",
+	  order = "t",
+	  group = "yuoki",
+	  subgroup = "y_parts_e",
 	},
 
 	--ID:235 
 	{
 	  type = "recipe",
 	  name = "y_block_cold",
-	  category = "yuoki-formpress", -- 
+	  category = "yuoki-formpress",
 	  enabled = true,
 	  energy_required = 4.00,
 	  ingredients = {
@@ -652,14 +711,16 @@ data:extend({
 	  main_product = "y_block_cold",
 	  icon = "__Yuoki__/graphics/entity/block_cold_icon.png",
 	  icon_size = 64,
-	  order = "s", group = "yuoki", subgroup = "y_parts_e",
+	  order = "s",
+	  group = "yuoki",
+	  subgroup = "y_parts_e",
 	},
 
 	--ID:234 
 	{
 	  type = "recipe",
 	  name = "y_smelter",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 5.00,
 	  ingredients = {
@@ -674,14 +735,16 @@ data:extend({
 	  main_product = "y_smelter",
 	  icon = "__Yuoki__/graphics/entity/smelter_icon.png",
 	  icon_size = 64,
-	  order = "t", group = "yuoki", subgroup = "y_line1b",
+	  order = "t",
+	  group = "yuoki",
+	  subgroup = "y_line1b",
 	},
 
 	--ID:233 
 	{
 	  type = "recipe",
 	  name = "y_charger",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 5.00,
 	  ingredients = {
@@ -696,14 +759,16 @@ data:extend({
 	  main_product = "y_charger",
 	  icon = "__Yuoki__/graphics/entity/charger_icon.png",
 	  icon_size = 64,
-	  order = "s", group = "yuoki", subgroup = "y_line1b",
+	  order = "s",
+	  group = "yuoki",
+	  subgroup = "y_line1b",
 	},
 
 	--ID:232 
 	{
 	  type = "recipe",
 	  name = "ypfw_trader_sign",
-	  category = "yuoki_trader_ultimate", -- Trader-Ultimates
+	  category = "yuoki_trader_ultimate",
 	  enabled = true,
 	  energy_required = 30.00,
 	  ingredients = {
@@ -714,14 +779,16 @@ data:extend({
 	  main_product = "ypfw_trader_sign",
 	  icon = "__Yuoki__/graphics/icons/trader_sign.png",
 	  icon_size = 64,
-	  order = "a", group = "yuoki", subgroup = "y-stargate-4",
+	  order = "a",
+	  group = "yuoki",
+	  subgroup = "y-stargate-4",
 	},
 
 	--ID:230 
 	{
 	  type = "recipe",
 	  name = "y_greensign_ulti",
-	  category = "yuoki_green_ultimate", -- Green-Ultimates
+	  category = "yuoki_green_ultimate",
 	  enabled = true,
 	  energy_required = 30.00,
 	  ingredients = {
@@ -732,14 +799,16 @@ data:extend({
 	  main_product = "y_greensign",
 	  icon = "__Yuoki__/graphics/icons/green_sign.png",
 	  icon_size = 64,
-	  order = "d1", group = "yuoki-energy", subgroup = "y_ultimate_products",
+	  order = "d1",
+	  group = "yuoki-energy",
+	  subgroup = "y_ultimate_products",
 	},
 
 	--ID:222 
 	{
 	  type = "recipe",
 	  name = "y_exchange_b1",
-	  category = "yuoki-stargate", -- stargate-trades
+	  category = "yuoki-stargate",
 	  enabled = true,
 	  energy_required = 1.00,
 	  ingredients = {
@@ -751,7 +820,9 @@ data:extend({
 	  main_product = "y-fame",
 	  icon = "__Yuoki__/graphics/icons/green_sign_retrade.png",
 	  icon_size = 64,
-	  order = "b1", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  order = "b1",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-f",
 	  auto_recycle = false,
 	},
 
@@ -759,7 +830,7 @@ data:extend({
 	{
 	  type = "recipe",
 	  name = "y_exchange_b4",
-	  category = "yuoki-stargate", -- stargate-trades
+	  category = "yuoki-stargate",
 	  enabled = true,
 	  energy_required = 1.00,
 	  ingredients = {
@@ -771,7 +842,9 @@ data:extend({
 	  main_product = "y-fame",
 	  icon = "__Yuoki__/graphics/icons/tech02_retrade.png",
 	  icon_size = 64,
-	  order = "b4", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  order = "b4",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-f",
 	  auto_recycle = false,
 	},
 
@@ -779,7 +852,7 @@ data:extend({
 	{
 	  type = "recipe",
 	  name = "y_exchange_b3",
-	  category = "yuoki-stargate", -- stargate-trades
+	  category = "yuoki-stargate",
 	  enabled = true,
 	  energy_required = 1.00,
 	  ingredients = {
@@ -791,7 +864,9 @@ data:extend({
 	  main_product = "y-fame",
 	  icon = "__Yuoki__/graphics/icons/tech-sign_retrade.png",
 	  icon_size = 64,
-	  order = "b3", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  order = "b3",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-f",
 	  auto_recycle = false,
 	},
 
@@ -799,7 +874,7 @@ data:extend({
 	{
 	  type = "recipe",
 	  name = "y_exchange_b2",
-	  category = "yuoki-stargate", -- stargate-trades
+	  category = "yuoki-stargate",
 	  enabled = true,
 	  energy_required = 1.00,
 	  ingredients = {
@@ -811,7 +886,9 @@ data:extend({
 	  main_product = "y-fame",
 	  icon = "__Yuoki__/graphics/icons/trader_sign_retrade.png",
 	  icon_size = 64,
-	  order = "b2", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  order = "b2",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-f",
 	  auto_recycle = false,
 	},
 
@@ -819,7 +896,7 @@ data:extend({
 	{
 	  type = "recipe",
 	  name = "yi_slayerfame",
-	  category = "yuoki-stargate", -- stargate-trades
+	  category = "yuoki-stargate",
 	  enabled = true,
 	  energy_required = 5.00,
 	  ingredients = {
@@ -831,7 +908,9 @@ data:extend({
 	  main_product = "y-fame",
 	  icon = "__Yuoki__/graphics/icons/fame-icon.png",
 	  icon_size = 64,
-	  order = "a", group = "yuoki-atomics", subgroup = "y-stargate-f",
+	  order = "a",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-f",
 	  auto_recycle = false,
 	},
 
@@ -839,7 +918,7 @@ data:extend({
 	{
 	  type = "recipe",
 	  name = "yi_construction-robot",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 4.00,
 	  ingredients = {
@@ -855,14 +934,16 @@ data:extend({
 	  main_product = "yi_construction-robot",
 	  icon = "__Yuoki__/graphics/icons/rob_con_icon.png",
 	  icon_size = 64,
-	  order = "K2", group = "yuoki", subgroup = "y-tools",
+	  order = "K2",
+	  group = "yuoki",
+	  subgroup = "y-tools",
 	},
 
 	--ID:150 
 	{
 	  type = "recipe",
 	  name = "yi_logistic-robot",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 4.00,
 	  ingredients = {
@@ -878,14 +959,16 @@ data:extend({
 	  main_product = "yi_logistic-robot",
 	  icon = "__Yuoki__/graphics/icons/rob_log_icon.png",
 	  icon_size = 64,
-	  order = "K1", group = "yuoki", subgroup = "y-tools",
+	  order = "K1",
+	  group = "yuoki",
+	  subgroup = "y-tools",
 	},
 
 	--ID:116 
 	{
 	  type = "recipe",
 	  name = "y_gauge_analog",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -897,14 +980,16 @@ data:extend({
 	  main_product = "y_gauge",
 	  icon = "__Yuoki__/graphics/icons/gauge.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki_liquids", subgroup = "y_refine_parts",
+	  order = "0",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_parts",
 	},
 
 	--ID:115 
 	{
 	  type = "recipe",
 	  name = "y_flowcheck_10",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -917,14 +1002,16 @@ data:extend({
 	  main_product = "y_flowcheck_10",
 	  icon = "__Yuoki__/graphics/icons/flow_indicator_icon.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki_liquids", subgroup = "y_refine_parts",
+	  order = "0",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_parts",
 	},
 
 	--ID:106 
 	{
 	  type = "recipe",
 	  name = "y_quantrinum_infusion",
-	  category = "yuoki-alien", -- infuser ?
+	  category = "yuoki-alien",
 	  enabled = true,
 	  energy_required = 60.00,
 	  ingredients = {
@@ -939,14 +1026,16 @@ data:extend({
 	  main_product = "y_quantrinum_infused",
 	  icon = "__Yuoki__/graphics/icons/charged_quantrinum_icon.png",
 	  icon_size = 64,
-	  order = "0", group = "vanilla", subgroup = "y-tech",
+	  order = "0",
+	  group = "vanilla",
+	  subgroup = "y-tech",
 	},
 
 	--ID:105 for recipes that uses research
 	{
 	  type = "recipe",
 	  name = "y_data_crystal",
-	  category = "yuoki-wonder", -- 
+	  category = "yuoki-wonder",
 	  enabled = true,
 	  energy_required = 8.00,
 	  ingredients = {
@@ -959,14 +1048,16 @@ data:extend({
 	  main_product = "y_crystal2_combined",
 	  icon = "__Yuoki__/graphics/icons/blue_style.png",
 	  icon_size = 64,
-	  order = "0", group = "vanilla", subgroup = "y-tech",
+	  order = "0",
+	  group = "vanilla",
+	  subgroup = "y-tech",
 	},
 
 	--ID:87 
 	{
 	  type = "recipe",
 	  name = "y_ft",
-	  category = "chemistry", -- 
+	  category = "chemistry",
 	  enabled = true,
 	  energy_required = 5.00,
 	  ingredients = {
@@ -981,14 +1072,16 @@ data:extend({
 	  main_product = "light-oil",
 	  icon = "__Yuoki__/graphics/icons/ctl_ft_32.png",
 	  icon_size = 64,
-	  order = "c2", group = "yuoki_liquids", subgroup = "y-fluid",
+	  order = "c2",
+	  group = "yuoki_liquids",
+	  subgroup = "y-fluid",
 	},
 
 	--ID:86 
 	{
 	  type = "recipe",
 	  name = "y_rawsyngas2",
-	  category = "chemistry", -- 
+	  category = "chemistry",
 	  enabled = true,
 	  energy_required = 1.50,
 	  ingredients = {
@@ -1000,14 +1093,16 @@ data:extend({
 	  main_product = "y_syngas_raw",
 	  icon = "__Yuoki__/graphics/icons/obs/h2o_c_icon.png",
 	  icon_size = 64,
-	  order = "c4", group = "yuoki_liquids", subgroup = "y-fluid",
+	  order = "c4",
+	  group = "yuoki_liquids",
+	  subgroup = "y-fluid",
 	},
 
 	--ID:83 
 	{
 	  type = "recipe",
 	  name = "y_regcatft",
-	  category = "chemistry", -- 
+	  category = "chemistry",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -1020,14 +1115,16 @@ data:extend({
 	  main_product = "y_catalyst_ft",
 	  icon = "__Yuoki__/graphics/icons/icon_regftcat32.png",
 	  icon_size = 64,
-	  order = "bb", group = "yuoki_liquids", subgroup = "y_refine_material",
+	  order = "bb",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_material",
 	},
 
 	--ID:82 
 	{
 	  type = "recipe",
 	  name = "y_regcatbp",
-	  category = "chemistry", -- 
+	  category = "chemistry",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -1040,14 +1137,16 @@ data:extend({
 	  main_product = "y_catalyst_bp",
 	  icon = "__Yuoki__/graphics/icons/icon_regbpcat28.png",
 	  icon_size = 64,
-	  order = "ba", group = "yuoki_liquids", subgroup = "y_refine_material",
+	  order = "ba",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_material",
 	},
 
 	--ID:81 
 	{
 	  type = "recipe",
 	  name = "y_coal2liquid",
-	  category = "chemistry", -- 
+	  category = "chemistry",
 	  enabled = true,
 	  energy_required = 5.00,
 	  ingredients = {
@@ -1062,14 +1161,16 @@ data:extend({
 	  main_product = "y_usedcatalyst",
 	  icon = "__Yuoki__/graphics/icons/ctl_b32.png",
 	  icon_size = 64,
-	  order = "c1", group = "yuoki_liquids", subgroup = "y-fluid",
+	  order = "c1",
+	  group = "yuoki_liquids",
+	  subgroup = "y-fluid",
 	},
 
 	--ID:80 
 	{
 	  type = "recipe",
 	  name = "y_refinehydrogen",
-	  category = "chemistry", -- 
+	  category = "chemistry",
 	  enabled = true,
 	  energy_required = 3,
 	  ingredients = {
@@ -1083,14 +1184,16 @@ data:extend({
 	  main_product = "y_hydrogen",
 	  icon = "__Yuoki__/graphics/icons/obs/hydrogen_i32.png",
 	  icon_size = 64,
-	  order = "d", group = "yuoki_liquids", subgroup = "y-fluid",
+	  order = "d",
+	  group = "yuoki_liquids",
+	  subgroup = "y-fluid",
 	},
 
 	--ID:79 
 	{
 	  type = "recipe",
 	  name = "y_rawsyngas1",
-	  category = "chemistry", -- 
+	  category = "chemistry",
 	  enabled = true,
 	  energy_required = 1.50,
 	  ingredients = {
@@ -1102,14 +1205,16 @@ data:extend({
 	  main_product = "y_syngas_raw",
 	  icon = "__Yuoki__/graphics/icons/obs/h2o_c_icon.png",
 	  icon_size = 64,
-	  order = "c3", group = "yuoki_liquids", subgroup = "y-fluid",
+	  order = "c3",
+	  group = "yuoki_liquids",
+	  subgroup = "y-fluid",
 	},
 
 	--ID:75 
 	{
 	  type = "recipe",
 	  name = "y_catalyst_ft",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -1122,14 +1227,16 @@ data:extend({
 	  main_product = "y_catalyst_ft",
 	  icon = "__Yuoki__/graphics/icons/icon_ftcat32.png",
 	  icon_size = 64,
-	  order = "ab", group = "yuoki_liquids", subgroup = "y_refine_material",
+	  order = "ab",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_material",
 	},
 
 	--ID:74 
 	{
 	  type = "recipe",
 	  name = "y_catalyst_bp",
-	  category = "crafting", -- 
+	  category = "crafting",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -1143,14 +1250,16 @@ data:extend({
 	  main_product = "y_catalyst_bp",
 	  icon = "__Yuoki__/graphics/icons/icon_bpcat28.png",
 	  icon_size = 64,
-	  order = "aa", group = "yuoki_liquids", subgroup = "y_refine_material",
+	  order = "aa",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_material",
 	},
 
 	--ID:73 
 	{
 	  type = "recipe",
 	  name = "y_granulate_wood",
-	  category = "y-crushing", -- 
+	  category = "y-crushing",
 	  enabled = true,
 	  energy_required = 2.00,
 	  ingredients = {
@@ -1162,7 +1271,9 @@ data:extend({
 	  main_product = "y_organic_dust",
 	  icon = "__Yuoki__/graphics/icons/sawdust_32.png",
 	  icon_size = 64,
-	  order = "0", group = "yuoki_liquids", subgroup = "y_refine_raws",
+	  order = "0",
+	  group = "yuoki_liquids",
+	  subgroup = "y_refine_raws",
 	},
 
 })
