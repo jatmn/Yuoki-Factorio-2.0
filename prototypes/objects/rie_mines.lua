@@ -1,7 +1,5 @@
 data:extend(
 {
-
-
 	{
 		type = "recipe",
 		name = "yi_mine_plasma",
@@ -14,9 +12,9 @@ data:extend(
 		},
 		results=
 		{
-			{type="item", name="yi_mine_plasma", amount=4, },      	  						
-			{type="item", name="ypfw_trader_sign", amount=1, },      	  						
-		},				
+			{type="item", name="yi_mine_plasma", amount=4, },
+			{type="item", name="ypfw_trader_sign", amount=1, },
+		},
 		main_product="yi_mine_plasma",
 		subgroup = "y-defense", order="t10",
 	},
@@ -24,7 +22,8 @@ data:extend(
 	{
 		type = "item",
 		name = "yi_mine_plasma",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/mine_plasma_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/mine_plasma_icon.png",
 		damage_radius = 6,
 		subgroup = "y-defense",
 		order = "t10",
@@ -36,7 +35,8 @@ data:extend(
 	{
 		type = "land-mine",
 		name = "yi_mine_plasma",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/mine_plasma_icon.png",
+		icon_size = 64,
+		icon =  "__Yuoki__/graphics/icons/mine_plasma_icon.png",
 		flags =
 		{
 			"placeable-player",
@@ -110,18 +110,18 @@ data:extend(
 		},
 		results=
 		{
-			{type="item", name="yi_mine_impact", amount=4, },      	  						
-			{type="item", name="ypfw_trader_sign", amount=1, },      	  						
-		},				
+			{type="item", name="yi_mine_impact", amount=4, },
+			{type="item", name="ypfw_trader_sign", amount=1, },
+		},
 		main_product="yi_mine_impact",
 		subgroup = "y-defense", order="t10",
 	},
-	
-	
+
 	{
 		type = "item",
 		name = "yi_mine_impact",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/mine_imp_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/mine_imp_icon.png",
 		damage_radius = 10,
 		subgroup = "y-defense",
 		order = "t9",
@@ -129,11 +129,12 @@ data:extend(
 		stack_size = 200,
 		trigger_radius = 3
 	},
-	
+
 	{
 		type = "land-mine",
 		name = "yi_mine_impact",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/mine_imp_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/mine_imp_icon.png",
 		flags =
 		{
 			"placeable-player",
@@ -195,7 +196,5 @@ data:extend(
 			}
 		},
 	},
-	
-	
-	
+
 })

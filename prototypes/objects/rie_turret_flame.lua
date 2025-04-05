@@ -21,49 +21,52 @@ data:extend({
 		{
 			type = "recipe",
 			name = "y_turret_flame",
-			 icon_size = 64, icon =  "__Yuoki__/graphics/entity/defense/turm_flamer_icon.png",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/entity/defense/turm_flamer_icon.png",
 			enabled = true,
 			ingredients =
 			{
 				{type="item", name="y_structure_element", amount=4},
-				{type="item", name="y_structure_vessel", amount=4},				
-				{type="item", name="y-basic-t1-mf", amount=2},      				
-				{type="item", name="pipe", amount=4},      
+				{type="item", name="y_structure_vessel", amount=4},
+				{type="item", name="y-basic-t1-mf", amount=2},
+				{type="item", name="pipe", amount=4},
 				{type="item", name="y_ammo_flame", amount=1},
 			},
 			results=
 			{
-				{type="item", name="y_turret_flame", amount=1, },      	  						
-				{type="item", name="y_rwtechsign", amount=3, },      	  						
-			},					
-			main_product="y_turret_flame",					
-			subgroup = "y-defense",		
+				{type="item", name="y_turret_flame", amount=1, },
+				{type="item", name="y_rwtechsign", amount=3, },
+			},
+			main_product="y_turret_flame",
+			subgroup = "y-defense",
 			order = "f1",
 		},
 
 		{
 			type = "item",
 			name = "y_turret_flame",
-			icon_size = 64, icon =  "__Yuoki__/graphics/entity/defense/turm_flamer_icon.png",			
-			group = "yuoki",			
-			subgroup = "y-defense",		
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/entity/defense/turm_flamer_icon.png",
+			group = "yuoki",
+			subgroup = "y-defense",
 			order = "f1",
 			place_result = "y_turret_flame",
 			stack_size = 10,
 		},
-		
+
 		{
 			type = "ammo-turret",
 			name = "y_turret_flame",
-			icon_size = 64, icon =  "__Yuoki__/graphics/entity/defense/turm_flamer_icon.png",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/entity/defense/turm_flamer_icon.png",
 			flags = {"placeable-player", "player-creation"},
 			minable = {mining_time = 0.5, result = "y_turret_flame"},
 			max_health = 5000,
 			resistances =
 			{
-				{ type = "physical", decrease = 4, percent = 75, },				
+				{ type = "physical", decrease = 4, percent = 75, },
 				{ type = "fire", percent = 100, },
-			},						
+			},
 			corpse = "small-remnants",
 			collision_box = {{ -0.7, -0.7}, {0.7, 0.7}},
 			selection_box = {{ -1.0, -1.0}, {1.0, 1.0}},
@@ -73,9 +76,7 @@ data:extend({
 			dying_explosion = "medium-explosion",
 			inventory_size = 2,
 			automated_ammo_count = 20,
-			
 			circuit_wire_max_distance = 7.5,
-			
 			folded_animation = (function()
 			local res = util.table.deepcopy(turret_flame)
 			res.frame_count = 1
@@ -83,13 +84,11 @@ data:extend({
 			return res
 			end)(),
 			preparing_animation = turret_flame,
-			
 			prepared_animation =
 			{
 				layers =
 				{
 					{
-						
 						filename = "__Yuoki__/graphics/entity/defense/turm_flame_sheet.png",
 						priority = "medium",
 						width = 256,
@@ -99,8 +98,7 @@ data:extend({
 						line_length = 8,
 						axially_symmetrical = false,
 						scale = 0.5,
-						shift = { 0.0, -0.325},		
-						
+						shift = { 0.0, -0.325},
 					},
 					--[[
 					{
@@ -117,9 +115,7 @@ data:extend({
 					]]
 				}
 			},
-			
 			folding_animation = (function() local res = util.table.deepcopy(turret_flame) res.run_mode = "backward" return res end)(),
-			
 			graphics_set =
 			{
 			  base_visualisation =

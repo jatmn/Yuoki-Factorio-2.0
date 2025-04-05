@@ -15,22 +15,25 @@ data:extend(
 				{type="item", name="y-pure-copper", amount=1},
 				{type="item", name="y-refined-yres1", amount=1}
 			},
-			results = {{type="item", name="y-bullet-case", amount=7},},
-			--result = "y-bullet-case",
-			--result_count = 7,
+			results = {
+				{type="item", name="y-bullet-case", amount=7},
+			},
+			main_product = "y-bullet-case",
 			subgroup = "y-ammo",
 			order = "a1"
 		},
+
 		{
 			type = "recipe",
-			name = "y-ammo-acid-medium",
+			name = "y-ammo-acid-2",
 			category = "crafting-with-fluid",
 			enabled = true,
 			energy_required = 17.5,
 			ingredients = {
 				{type="item", name="y-bullet-case", amount=5},
 				{type="item", name="copper-plate", amount=3},
-				{type = "fluid", name = "sulfuric-acid", amount = 1}},
+				{type = "fluid", name = "sulfuric-acid", amount = 1}
+			},
 			results = {
 				{type = "item", name = "y-ammo-acid-2", amount = 5},
 				{type = "item", name = "y_rwtechsign", amount = 1}
@@ -39,6 +42,7 @@ data:extend(
 			subgroup = "y-ammo",
 			order = "b1"
 		},
+
 		{
 			type = "recipe",
 			name = "y-ammo-hohlspitz",
@@ -51,9 +55,11 @@ data:extend(
 			results = {
 				{type = "item", name = "y-ammo-hohlspitz", amount = 5}
 			},
+			main_product = "y-ammo-hohlspitz",
 			subgroup = "y-ammo",
 			order = "c1"
 		},
+
 		{
 			type = "recipe",
 			name = "y-ammo-explosiv",
@@ -72,6 +78,7 @@ data:extend(
 			subgroup = "y-ammo",
 			order = "d1"
 		},
+
 		{
 			type = "recipe",
 			name = "y-ammo-poison",
@@ -90,6 +97,7 @@ data:extend(
 			subgroup = "y-ammo",
 			order = "e1"
 		},
+
 		{
 			type = "recipe",
 			name = "y-ammo-biggun",
@@ -108,6 +116,7 @@ data:extend(
 			subgroup = "y-ammo",
 			order = "f1"
 		},
+
 		{
 			type = "recipe",
 			name = "y-ammo-krakon",
@@ -126,9 +135,10 @@ data:extend(
 			subgroup = "y-ammo",
 			order = "g1"
 		},
+
 		{
 			type = "recipe",
-			name = "y_ammo_case_recipe",
+			name = "y_ammo_case",
 			category = "yuoki-formpress",
 			enabled = true,
 			energy_required = 2,
@@ -136,15 +146,17 @@ data:extend(
 				{type="item", name="y-pure-iron", amount=1},
 				{type="item", name="y-refined-yres2", amount=1}
 			},
-			results = {{type="item", name="y_ammo_case", amount=6},},
-			--result = "y_ammo_case",
-			--result_count = 6,
+			results = {
+				{type="item", name="y_ammo_case", amount=6},
+			},
+			main_product = "y_ammo_case",
 			subgroup = "y-ammo",
 			order = "a2"
 		},
+
 		{
 			type = "recipe",
-			name = "y_ammo_plasma_recipe",
+			name = "y_ammo_plasma",
 			icon_size = 64,
 			icon = "__Yuoki__/graphics/icons/capsule_plasma.png",
 			enabled = true,
@@ -161,9 +173,10 @@ data:extend(
 			subgroup = "y-ammo",
 			order = "h1"
 		},
+
 		{
 			type = "recipe",
-			name = "y_ammo_flame_recipe",
+			name = "y_ammo_flame",
 			enabled = true,
 			energy_required = 4,
 			ingredients = {
@@ -183,7 +196,7 @@ data:extend(
 
 		{
 			type = "recipe",
-			name = "y_ammo_shell_recipe",
+			name = "yi_cannon_shell",
 			enabled = true,
 			energy_required = 4,
 			ingredients = {
@@ -200,9 +213,10 @@ data:extend(
 			subgroup = "y-ammo",
 			order = "h2"
 		},
+
 		{
 			type = "recipe",
-			name = "y_ammo_artillery_recipe",
+			name = "yi_artillery_shell",
 			enabled = true,
 			energy_required = 4,
 			ingredients = {
@@ -232,6 +246,7 @@ data:extend(
 			stack_size = 250,
 			default_request_amount = 100
 		},
+
 		{
 			type = "item",
 			name = "y_ammo_case",
@@ -243,6 +258,7 @@ data:extend(
 			stack_size = 250,
 			default_request_amount = 100
 		},
+
 		{
 			type = "ammo",
 			name = "y-ammo-acid-2",
@@ -746,6 +762,5 @@ data:extend(
 			},
 			height_from_ground = 280 / 64
 		},
-	 
 	}
 )
