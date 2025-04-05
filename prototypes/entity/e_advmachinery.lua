@@ -1,5 +1,5 @@
 data:extend(
-{  
+{
 
 	--
 	{
@@ -15,19 +15,19 @@ data:extend(
 		},
 		results=
 		{
-			{type="item", name="y_crusher2", amount=1, },      	  						
-			{type="item", name="y_rwtechsign", amount=1, },      	  						
-		},		
-		main_product = "y_crusher2",						
-		subgroup = "y_line1",	
+			{type="item", name="y_crusher2", amount=1, },
+			{type="item", name="y_rwtechsign", amount=1, },
+		},
+		main_product = "y_crusher2",
+		subgroup = "y_line1",
 	},
 
 	{
 		type = "item",
 		name = "y_crusher2",
 		icon_size = 64, icon =  "__Yuoki__/graphics/entity/crusher33_icon.png",
-		group = "yuoki",		
-		subgroup = "y_line1",		
+		group = "yuoki",
+		subgroup = "y_line1",
 		order = "c1",
 		place_result = "y_crusher2",
 		stack_size = 25,
@@ -85,7 +85,7 @@ data:extend(
 			},
 
 		},
-		fluid_boxes_off_when_no_fluid_recipe = true,			
+		fluid_boxes_off_when_no_fluid_recipe = true,
 
 		module_slots = 2,
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
@@ -100,24 +100,24 @@ data:extend(
 		{
 			{type="item", name="y-heat-form-press", amount=1},
 			{type="item", name="y_structure_element", amount=3},
-			{type="item", name="y-basic-t1-mf", amount=2},      
-			{type="item", name="y-chip-1", amount=2},      
+			{type="item", name="y-basic-t1-mf", amount=2},
+			{type="item", name="y-chip-1", amount=2},
 		},
 		results=
 		{
-			{type="item", name="y_formpress2", amount=1, },      	  						
-			{type="item", name="y_rwtechsign", amount=1, },      	  						
-		},				
+			{type="item", name="y_formpress2", amount=1, },
+			{type="item", name="y_rwtechsign", amount=1, },
+		},
 		main_product = "y_formpress2",
-		subgroup = "y_line1",	
+		subgroup = "y_line1",
 	},
 
 	{
 		type = "item",
 		name = "y_formpress2",
 		icon_size = 64, icon =  "__Yuoki__/graphics/entity/fpress2_icon.png",
-		group = "yuoki",		
-		subgroup = "y_line1",		
+		group = "yuoki",
+		subgroup = "y_line1",
 		order = "c1",
 		place_result = "y_formpress2",
 		stack_size = 25,
@@ -145,7 +145,7 @@ data:extend(
 			  },
 			}
 		  }
-		},				
+		},
 		crafting_categories = {"yuoki-formpress"},
 		crafting_speed = 3,
 		energy_source = {type = "electric", input_priority = "secondary", usage_priority = "secondary-input", emissions_per_minute = { pollution = 4.8, } },
@@ -175,7 +175,7 @@ data:extend(
 			},
 
 		},
-		fluid_boxes_off_when_no_fluid_recipe = true,			
+		fluid_boxes_off_when_no_fluid_recipe = true,
 
 		module_slots = 2,
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
@@ -195,18 +195,19 @@ data:extend(
 		},
 		results=
 		{
-			{type="item", name="y_maintance_workshop", amount=1, },      	  						
-			{type="item", name="y_rwtechsign", amount=1, },      	  						
-		},						
-		subgroup = "y_line1",	
+			{type="item", name="y_maintance_workshop", amount=1, },
+			{type="item", name="y_rwtechsign", amount=1, },
+		},
+		main_product = "y_maintance_workshop",
+		subgroup = "y_line1",
 	},
 
 	{
 		type = "item",
 		name = "y_maintance_workshop",
 		icon_size = 64, icon =  "__Yuoki__/graphics/icons/maintance_workshop_icon.png",
-		group = "yuoki",		
-		subgroup = "y_line1",		
+		group = "yuoki",
+		subgroup = "y_line1",
 		order = "c1",
 		place_result = "y_maintance_workshop",
 		stack_size = 25,
@@ -221,7 +222,7 @@ data:extend(
 		max_health = 200,
 		resistances = {{type = "physical",percent = 50}},
 		collision_box = {{-1.2,-1.2},{1.2,1.2}},
-		selection_box = {{-1.5,-1.5},{1.5,1.5}},		
+		selection_box = {{-1.5,-1.5},{1.5,1.5}},
 		graphics_set =
 		{
 		  animation =
@@ -264,10 +265,9 @@ data:extend(
 			},
 
 		},
-		fluid_boxes_off_when_no_fluid_recipe = true,			
+		fluid_boxes_off_when_no_fluid_recipe = true,
 
 		module_slots = 2,
 		allowed_effects = {"consumption", "speed", "pollution"},
-	},	
-	
+	},
 })

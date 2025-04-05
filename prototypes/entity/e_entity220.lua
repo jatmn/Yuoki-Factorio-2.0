@@ -4,26 +4,7 @@ data:extend(
 	{
 		type = "recipe",
 		name = "y_chunks1",
-		category = "yrcat_crystalize", -- 
-		enabled = true,
-		energy_required = 8.00,
-		ingredients = {
-			{ type = "item", name = "y_crystal_dust", amount = 1.0, },
-			{ type = "fluid", name = "steam", amount = 100.0, },
-		},
-		results = {			
-			{ type = "item", name = "y-res1" , amount = 2.0, },
-		},		
-		main_product = "y-res1",
-		icon = "__Yuoki__/graphics/icons/uni-com-pur.png",
-		icon_size = 64,  
-		order = "r", group = "yuoki", subgroup = "y_line2",
-	},
-
-	{
-		type = "recipe",
-		name = "y_chunks2",
-		category = "yrcat_crystalize", -- 
+		category = "yrcat_crystalize",
 		enabled = true,
 		energy_required = 8.00,
 		ingredients = {
@@ -31,12 +12,35 @@ data:extend(
 			{ type = "fluid", name = "steam", amount = 100.0, },
 		},
 		results = {
-			{ type = "item", name = "y-res2" , amount = 2.0, },			
-		},		
+			{ type = "item", name = "y-res1" , amount = 2.0, },
+		},
+		main_product = "y-res1",
+		icon = "__Yuoki__/graphics/icons/uni-com-pur.png",
+		icon_size = 64,
+		order = "r",
+		group = "yuoki",
+		subgroup = "y_line2",
+	},
+
+	{
+		type = "recipe",
+		name = "y_chunks2",
+		category = "yrcat_crystalize",
+		enabled = true,
+		energy_required = 8.00,
+		ingredients = {
+			{ type = "item", name = "y_crystal_dust", amount = 1.0, },
+			{ type = "fluid", name = "steam", amount = 100.0, },
+		},
+		results = {
+			{ type = "item", name = "y-res2" , amount = 2.0, },
+		},
 		main_product = "y-res2",
 		icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png",
-		icon_size = 64,  
-		order = "s", group = "yuoki", subgroup = "y_line2",
+		icon_size = 64,
+		order = "s",
+		group = "yuoki",
+		subgroup = "y_line2",
 	},
 
 	{
@@ -48,7 +52,7 @@ data:extend(
 		max_health = 400,
 		resistances = {{type = "physical",percent = 50}},
 		collision_box = {{-1.2,-1.2},{1.2,1.2}},
-		selection_box = {{-1.5,-1.5},{1.5,1.5}},		
+		selection_box = {{-1.5,-1.5},{1.5,1.5}},
 		graphics_set =
 		{
 		  animation =
@@ -57,7 +61,7 @@ data:extend(
 			{
 			  {
 				filename = "__Yuoki__/graphics/entity/base_factory_sheet.png",
-				priority = "medium", width = 256, height = 256, frame_count = 6, shift = {0, 0}, scale=0.5, animation_speed=0.5,		
+				priority = "medium", width = 256, height = 256, frame_count = 6, shift = {0, 0}, scale=0.5, animation_speed=0.5,
 			  },
 			}
 		  }
@@ -80,7 +84,7 @@ data:extend(
 				secondary_draw_orders = { north = -1 }
 			},
 		},
-		fluid_boxes_off_when_no_fluid_recipe = true,			
+		fluid_boxes_off_when_no_fluid_recipe = true,
 		module_slots = 1,
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 	},
@@ -103,7 +107,7 @@ data:extend(
 			{
 				{
 					filename = "__Yuoki__/graphics/entity/water_mixer_sheet.png",
-					priority = "medium", width = 256, height = 256, frame_count = 16, line_length = 4, shift = {0.5, -0.5}, scale=0.5, animation_speed=0.5,		
+					priority = "medium", width = 256, height = 256, frame_count = 16, line_length = 4, shift = {0.5, -0.5}, scale=0.5, animation_speed=0.5,
 				},
 			}
 		  }
@@ -136,7 +140,7 @@ data:extend(
 				secondary_draw_orders = { north = -1 }
 			},
 		},
-		fluid_boxes_off_when_no_fluid_recipe = true,			
+		fluid_boxes_off_when_no_fluid_recipe = true,
 		module_slots = 1,
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 	},
@@ -150,7 +154,7 @@ data:extend(
 		max_health = 400,
 		resistances = {{type = "physical",percent = 50}},
 		collision_box = {{-1.2,-1.2},{1.2,1.2}},
-		selection_box = {{-1.5,-1.5},{1.5,1.5}},		
+		selection_box = {{-1.5,-1.5},{1.5,1.5}},
 		graphics_set =
 		{
 		  animation =
@@ -159,12 +163,12 @@ data:extend(
 			{
 				{
 					filename = "__Yuoki__/graphics/entity/crys.png",
-					priority = "medium", width = 256, height = 256, frame_count = 1, shift = {0.5, -0.25}, scale=0.5, animation_speed=0.5,		
-				},	
+					priority = "medium", width = 256, height = 256, frame_count = 1, shift = {0.5, -0.25}, scale=0.5, animation_speed=0.5,
+				},
 			}
 		  }
 		},
-		
+
 		crafting_categories = {"yrcat_crystalize"},
 		crafting_speed = 1.0,
 		energy_source = {type = "electric", input_priority = "secondary", usage_priority = "secondary-input", emissions_per_minute = { pollution = 10, } },
@@ -183,8 +187,8 @@ data:extend(
 				secondary_draw_orders = { north = -1 }
 			},
 		},
-		fluid_boxes_off_when_no_fluid_recipe = true,			
-			module_slots = 1,
+		fluid_boxes_off_when_no_fluid_recipe = true,
+		module_slots = 1,
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 	},
 
@@ -208,7 +212,7 @@ data:extend(
 				{
 			  		{
 						filename = "__Yuoki__/graphics/entity/hppump_n.png",
-						priority = "medium", width = 320, height = 320, frame_count = 1, shift = {0, 0}, scale=0.5, animation_speed=0.5,	
+						priority = "medium", width = 320, height = 320, frame_count = 1, shift = {0, 0}, scale=0.5, animation_speed=0.5,
 			 		},
 				}
 			},
@@ -218,7 +222,7 @@ data:extend(
 				{
 			  		{
 						filename = "__Yuoki__/graphics/entity/hppump_e.png",
-						priority = "medium", width = 320, height = 320, frame_count = 1, shift = {0, 0}, scale=0.5, animation_speed=0.5,	
+						priority = "medium", width = 320, height = 320, frame_count = 1, shift = {0, 0}, scale=0.5, animation_speed=0.5,
 			 		},
 				}
 			},
@@ -228,7 +232,7 @@ data:extend(
 				{
 			  		{
 						filename = "__Yuoki__/graphics/entity/hppump_s.png",
-						priority = "medium", width = 320, height = 320, frame_count = 1, shift = {0, 0}, scale=0.5, animation_speed=0.5,	
+						priority = "medium", width = 320, height = 320, frame_count = 1, shift = {0, 0}, scale=0.5, animation_speed=0.5,
 			 		},
 				}
 			},
@@ -238,7 +242,7 @@ data:extend(
 				{
 			  		{
 						filename = "__Yuoki__/graphics/entity/hppump_w.png",
-						priority = "medium", width = 320, height = 320, frame_count = 1, shift = {0, 0}, scale=0.5, animation_speed=0.5,	
+						priority = "medium", width = 320, height = 320, frame_count = 1, shift = {0, 0}, scale=0.5, animation_speed=0.5,
 			 		},
 				}
 			},
@@ -279,8 +283,7 @@ data:extend(
 			},
 
 		},
-		fluid_boxes_off_when_no_fluid_recipe = true,			
-
+		fluid_boxes_off_when_no_fluid_recipe = true,
 		mmodule_slots = 1,
 		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 	},
@@ -296,20 +299,24 @@ data:extend(
 		ingredients = {
 			{type = "item", name ="y-valve-direction-buffer", amount = 4},
 			{type = "item", name ="iron-plate", amount = 12}
-		}, 
+		},
 		results = {
-			{ type = "item", name = "y_mftank", amount = 1},			
-		},	
-		---result = "y_mftank", result_count = 1,
+			{ type = "item", name = "y_mftank", amount = 1},
+		},
 		main_product = "y_mftank",
-		order="tank-c5", subgroup = "y-fluid-storage",
-	},	
+		order="tank-c5",
+		subgroup = "y-fluid-storage",
+	},
 	{
 		type = "item",
 		name = "y_mftank", place_result = "y_mftank",
 		icon_size = 64, icon =  "__Yuoki__/graphics/entity/store/mftank_ico.png",
-		group = "yuoki", subgroup = "y-fluid-storage", stack_size = 15, default_request=5, order = "tank-c5",
-	},	
+		group = "yuoki",
+		subgroup = "y-fluid-storage",
+		stack_size = 15,
+		default_request=5,
+		order = "tank-c5",
+	},
 	{
 		type = "storage-tank",
 		name = "y_mftank",
@@ -324,19 +331,17 @@ data:extend(
 		fluid_box =
 		{
 			volume = 2000,
-			--base_area = 25,						
-			--base_level = 0,
 			--pipe_covers = pipecoverspictures(),
 			pipe_connections =
 			{				
 				{ flow_direction="input-output", direction = defines.direction.north, position = {0, -1}},
-				{ flow_direction="input-output", direction = defines.direction.east, position = {1, 0}},										
-				{ flow_direction="input-output", direction = defines.direction.south, position = {0, 1}},       
-				{ flow_direction="input-output", direction = defines.direction.west, position = {-1, 0}}     
-			},			
+				{ flow_direction="input-output", direction = defines.direction.east, position = {1, 0}},
+				{ flow_direction="input-output", direction = defines.direction.south, position = {0, 1}},
+				{ flow_direction="input-output", direction = defines.direction.west, position = {-1, 0}},
+			},
 			---hide_connection_info = true,
 		},
-		
+
 		two_direction_only = false,
 		window_bounding_box = {{-0.05, -0.5}, {0.05, 0.0}},
 		pictures={
@@ -350,7 +355,7 @@ data:extend(
 					height = 320,
 					scale = 0.5,
 					shift = {0, 0}
-				}			
+				}
 			},
 			fluid_background =
 			{
@@ -372,7 +377,7 @@ data:extend(
 				priority = "extra-high",
 				width = 160,
 				height = 20
-			},	
+			},
 		gas_flow =
 		{
 			filename = "__base__/graphics/entity/pipe/steam.png",
@@ -396,7 +401,7 @@ data:extend(
 				animation_speed = 0.25,
 				direction_count = 1
 			}
-		},		
+		},
 		},
 		flow_length_in_ticks = 360,
 		circuit_wire_connection_points =
@@ -450,11 +455,9 @@ data:extend(
 				}
 			}
 		},
-		circuit_wire_max_distance = 15,		
+		circuit_wire_max_distance = 15,
 	    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
 		circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
 	},
-
-
 
 })
