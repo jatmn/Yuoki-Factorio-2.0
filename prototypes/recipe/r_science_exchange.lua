@@ -1,10 +1,10 @@
 data:extend(
 {
-	
+
 	{
 	  type = "recipe",
 	  name = "y_military_science",
-	  category = "yuoki-atomics", -- 
+	  category = "yuoki-atomics",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -16,13 +16,16 @@ data:extend(
 	  },
 	  main_product = "military-science-pack",
 	  icon = "__base__/graphics/icons/military-science-pack.png",
-	  icon_size = 64,  
-	  order = "1", group = "yuoki-atomics", subgroup = "y-stargate-4",
-	},		
+	  icon_size = 64,
+	  order = "1",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-4",
+	},
+	
 	{
 	  type = "recipe",
 	  name = "y_chemical_science",
-	  category = "yuoki-atomics", -- 
+	  category = "yuoki-atomics",
 	  enabled = true,
 	  energy_required = 3.00,
 	  ingredients = {
@@ -35,14 +38,16 @@ data:extend(
 	  },
 	  main_product = "chemical-science-pack",
 	  icon = "__base__/graphics/icons/chemical-science-pack.png",
-	  icon_size = 64,  
-	  order = "2", group = "yuoki-atomics", subgroup = "y-stargate-4",
-	},		
+	  icon_size = 64,
+	  order = "2",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-4",
+	},
 
 	{
 	  type = "recipe",
 	  name = "y_production_science",
-	  category = "yuoki-atomics", -- 
+	  category = "yuoki-atomics",
 	  enabled = true,
 	  energy_required = 4.00,
 	  ingredients = {
@@ -56,46 +61,53 @@ data:extend(
 	  },
 	  main_product = "production-science-pack",
 	  icon = "__base__/graphics/icons/production-science-pack.png",
-	  icon_size = 64,  
-	  order = "3", group = "yuoki-atomics", subgroup = "y-stargate-4",
-	},		
+	  icon_size = 64,
+	  order = "3",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-4",
+	},
 
 	{
 	  type = "recipe",
 	  name = "y_high-tech_science",
-	  category = "yuoki-atomics", -- 
+	  category = "yuoki-atomics",
 	  enabled = true,
 	  energy_required = 6.00,
 	  ingredients = {
 	  	{ type = "item", name = "y-battery-single-use3", amount = 3.0, },
 	  	{ type = "item", name = "y-chip-2", amount = 3.0, },
 	  	{ type = "item", name = "y-basic-t2-mf", amount = 2.0, },
-	  	{ type = "item", name = "y_rwtechsign", amount = 4.0, },	  
+	  	{ type = "item", name = "y_rwtechsign", amount = 4.0, },
 	  },
 	  results = {
 		{ type = "item", name = "utility-science-pack", amount = 1.0, },
 	  },
 	  main_product = "utility-science-pack",
 	  icon = "__base__/graphics/icons/utility-science-pack.png",
-	  icon_size = 64,  
-	  order = "4", group = "yuoki-atomics", subgroup = "y-stargate-4",
-	},		
+	  icon_size = 64,
+	  order = "4",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-4",
+	},
+
 	{
 	  type = "recipe",
 	  name = "y_space_science",
-	  category = "yuoki-atomics", -- 
+	  category = "yuoki-atomics",
 	  enabled = true,
 	  energy_required = 10.00,
 	  ingredients = {
-	  	{ type = "item", name = "ypfw_trader_sign", amount = 6000.0, },	  
+	  	{ type = "item", name = "ypfw_trader_sign", amount = 6000.0, },
 	  },
 	  results = {
 		{ type = "item", name = "space-science-pack", amount = 3.0, },
 	  },
 	  main_product = "space-science-pack",
 	  icon = "__base__/graphics/icons/space-science-pack.png",
-	  icon_size = 64,  
-	  order = "5", group = "yuoki-atomics", subgroup = "y-stargate-4",
-	},		
-	
+	  icon_size = 64,
+	  order = "5",
+	  group = "yuoki-atomics",
+	  subgroup = "y-stargate-4",
+	},
+
 })

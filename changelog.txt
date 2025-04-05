@@ -7,6 +7,7 @@ Date: ?. 4. 2025
     - Fixed some of the jarring recipe/item groups that were inconsistent
   Fixes:
     - Fixed up Atomics recipe names
+    - Fixed up some of the mess in Factoriopedia
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.11
 Date: 30. 3. 2025
