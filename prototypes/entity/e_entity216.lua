@@ -3,7 +3,8 @@ data:extend({
 	{
 		type = "radar",
 		name = "yi_radar",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/radar_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/radar_icon.png",
 		flags = {"placeable-player", "player-creation"},
 		minable = {hardness = 0.2, mining_time = 0.5, result = "yi_radar"},
 		max_health = 250,
@@ -42,11 +43,12 @@ data:extend({
 			apparent_volume = 1.5,
 		}
 	},
-	
+
 	{
 		type = "beacon",
 		name = "yi_beacon",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/beacon_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/beacon_icon.png",
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "yi_beacon"},
 		max_health = 300,
@@ -55,7 +57,6 @@ data:extend({
 		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
 		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 		allowed_effects = {"consumption", "speed", "pollution"},
-		
 		base_picture =
 		{
 			filename = "__Yuoki__/graphics/entity/beacon_anim0001.png",
@@ -63,7 +64,6 @@ data:extend({
 			height = 160,
 			shift = { 0.6875, -0.75}
 		},
-		
 		animation =
 		{
 			filename = "__Yuoki__/graphics/entity/beacon_sheet.png",
@@ -74,9 +74,8 @@ data:extend({
 			shift = { 0.6875, -0.75},
 			animation_speed = 0.20
 		},
-		
 		animation_shadow =
-		{		
+		{
 			filename = "__Yuoki__/graphics/entity/empty32.png",
 			width = 5,
 			height = 5,
@@ -84,7 +83,7 @@ data:extend({
 			frame_count = 25,
 			shift = { 0, 0},
 			--animation_speed = 0.5		
-		},		
+		},
 		radius_visualisation_picture =
 		{
 			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
@@ -100,24 +99,20 @@ data:extend({
 		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
 		energy_usage = "720kW",
 		distribution_effectivity = 0.7, --was 0.65
+		fast_replaceable_group = "beacon",
 		module_slots = 2,
 		icons_positioning =
 			{
-			  {inventory_index = defines.inventory.lab_modules, shift = {0, 0.5}},
+				{inventory_index = defines.inventory.lab_modules, shift = {0, 0.5}},
 				{inventory_index = defines.inventory.lab_input, shift = {0, 0.0}, max_icons_per_row = 6, separation_multiplier = 0.9}
 			},
-		--module_specification =
-		--{
-		--	module_slots = 2,
-		--	module_info_icon_shift = {0, 0.5},
-		--	module_info_multi_row_initial_height_modifier = -0.3
-		--}
 	},
 
 	{
 		type = "roboport",
 		name = "yi_roboport",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/yi_roboport_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/yi_roboport_icon.png",
 		flags = {"placeable-player", "player-creation"},
 		minable = {hardness = 0.2, mining_time = 0.5, result = "yi_roboport"},
 		max_health = 750,
@@ -144,7 +139,7 @@ data:extend({
 		stationing_offset = {0, -0.5},
 		charging_offsets =
 		{
-			{0, 0}, {0, -1}, {0, 1}, 
+			{0, 0}, {0, -1}, {0, 1},
 			{-1.5, -0.5}, {1.5, -0.5}, {1.5, 1.5}, {-1.5, 1.5},
 			{-2.5, -0.5}, {2.5, -0.5}, {2.5, 1.5}, {-2.5, 1.5},
 			{-1.5,  0.0}, {1.5,  0.0}, {0, 1.5}, {0, -1.5},
@@ -177,7 +172,6 @@ data:extend({
 			animation_speed = 0.05,
 			shift = {0.5, -0.5}
 		},
-		
 		door_animation_up =
 		{
 			filename = "__Yuoki__/graphics/entity/empty25x25.png",
@@ -187,7 +181,6 @@ data:extend({
 			frame_count = 5,
 			shift = {0, 0}
 		},
-		
 		door_animation_down =
 		{
 			filename = "__Yuoki__/graphics/entity/empty25x25.png",
@@ -197,7 +190,6 @@ data:extend({
 			frame_count = 5,
 			shift = {0, 0}
 		},
-		
 		recharging_animation =
 		{
 			filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
@@ -260,13 +252,11 @@ data:extend({
 				green = {0.78125, 1.53125}
 			}
 		},
-		--circuit_connector_sprites = get_--circuit_connector_sprites({0.59375, 1.3125}, nil, 18),
 		circuit_wire_max_distance = 7.5,
 		default_available_logistic_output_signal = {type = "virtual", name = "signal-X"},
 		default_total_logistic_output_signal = {type = "virtual", name = "signal-Y"},
 		default_available_construction_output_signal = {type = "virtual", name = "signal-Z"},
 		default_total_construction_output_signal = {type = "virtual", name = "signal-T"},
-	},	
-	
-	
+	},
+
 })

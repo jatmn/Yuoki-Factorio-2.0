@@ -1,11 +1,12 @@
 
 data:extend(
-{  
+{
 
 	{
 		type = "logistic-robot",
 		name = "yi_logistic-robot",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/rob_log_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/rob_log_icon.png",
 		flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
 		minable = {hardness = 0.1, mining_time = 0.1, result = "yi_logistic-robot"},
 		max_health = 800, resistances = {{type = "physical", decrease = 5, percent = 50 },{type = "impact", decrease = 5, percent = 50 },{type = "acid", decrease = 5, percent = 50 },},		
@@ -114,14 +115,15 @@ data:extend(
 			direction_count = 16,
 			draw_as_shadow = true,
 		},
-		--working_sound = flying_robot_sounds(),		
+		--working_sound = flying_robot_sounds(),
 		cargo_centered = {0.0, 0.2},
 	},
 
 	{
 		type = "construction-robot",
 		name = "yi_construction-robot",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/rob_con_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/rob_con_icon.png",
 		flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
 		minable = {hardness = 0.1, mining_time = 0.1, result = "yi_construction-robot"},
 		max_health = 800, resistances = {{type = "physical", decrease = 5, percent = 50 },{type = "impact", decrease = 5, percent = 50 },{type = "acid", decrease = 5, percent = 50 },},		
@@ -196,7 +198,6 @@ data:extend(
 			shift = {0, 0},
 			direction_count = 1,
 			]]
-			
 			line_length = 2,
 			width = 28,
 			height = 36,
@@ -205,7 +206,6 @@ data:extend(
 			direction_count = 16,			
 			animation_speed = 0.3,
 		},
-		
 		shadow_working =
 		{
 			stripes = util.multiplystripes(2,
@@ -223,7 +223,6 @@ data:extend(
 			shift = {1.09375, 0.59375},
 			direction_count = 16
 		},
-		
 		smoke =
 		{
 			filename = "__base__/graphics/entity/smoke-construction/smoke-01.png",

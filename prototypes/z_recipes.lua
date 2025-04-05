@@ -934,9 +934,9 @@ data:extend({
 	  main_product = "yi_construction-robot",
 	  icon = "__Yuoki__/graphics/icons/rob_con_icon.png",
 	  icon_size = 64,
-	  order = "K2",
+	  order = "d",
 	  group = "yuoki",
-	  subgroup = "y-tools",
+	  subgroup = "j-y-logi-9",
 	},
 
 	--ID:150 
@@ -959,9 +959,9 @@ data:extend({
 	  main_product = "yi_logistic-robot",
 	  icon = "__Yuoki__/graphics/icons/rob_log_icon.png",
 	  icon_size = 64,
-	  order = "K1",
+	  order = "a",
 	  group = "yuoki",
-	  subgroup = "y-tools",
+	  subgroup = "j-y-logi-9",
 	},
 
 	--ID:116 
