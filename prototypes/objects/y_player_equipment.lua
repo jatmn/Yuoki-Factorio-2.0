@@ -8,16 +8,17 @@ data:extend(
 				{type="item", name="y-accumulator-b", amount=1},
 				{type="item", name="y_structure_element", amount=4}
 			},
-			results = {{type="item", name="yi_equip_shield_a", amount=1},},
+			results = {
+				{type="item", name="yi_equip_shield_a", amount=1},
+			},
 			main_product = "yi_equip_shield_a",
-			--result = "yi_equip_shield_a",
 			enabled = true,
-			--result_count = 1,
 			order = "a1",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "yuoki-wonder"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_equip_shield_b",
@@ -26,16 +27,17 @@ data:extend(
 				{type="item", name="y-accumulator-b-t2", amount=1},
 				{type="item", name="y_structure_element", amount=8}
 			},
-			results = {{type="item", name="yi_equip_shield_b", amount=1},},
+			results = {
+				{type="item", name="yi_equip_shield_b", amount=1},
+			},
 			main_product = "yi_equip_shield_b",
-			--result = "yi_equip_shield_b",
 			enabled = true,
-			--result_count = 1,
 			order = "a2",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "yuoki-wonder"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_equip_battery_a",
@@ -45,16 +47,17 @@ data:extend(
 				{type="item", name="y-chip-2", amount=6},
 				{type="item", name="y_structure_vessel", amount=2}
 			},
-			results = {{type="item", name="yi_equip_battery_a", amount=1},},
+			results = {
+				{type="item", name="yi_equip_battery_a", amount=1},
+			},
 			main_product = "yi_equip_battery_a",
-			--result = "yi_equip_battery_a",
 			enabled = true,
-			--result_count = 1,
 			order = "b1",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "yuoki-wonder"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_equip_generator_a",
@@ -65,16 +68,17 @@ data:extend(
 				{type="item", name="y-basic-t2-mf", amount=8},
 				{type="item", name="y_structure_vessel", amount=8}
 			},
-			results = {{type="item", name="yi_equip_generator_a", amount=1},},
+			results = {
+				{type="item", name="yi_equip_generator_a", amount=1},
+			},
 			main_product = "yi_equip_generator_a",
-			--result = "yi_equip_generator_a",
 			enabled = true,
-			--result_count = 1,
 			order = "c1",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "yuoki-wonder"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_equip_legs_a",
@@ -85,16 +89,17 @@ data:extend(
 				{type="item", name="y-bluegear", amount=8},
 				{type="item", name="y-chip-2", amount=2}
 			},
-			results = {{type="item", name="yi_equip_legs_a", amount=1},},
+			results = {
+				{type="item", name="yi_equip_legs_a", amount=1},
+			},
 			main_product = "yi_equip_legs_a",
-			--result = "yi_equip_legs_a",
 			enabled = true,
-			--result_count = 1,
 			order = "d1",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "yuoki-wonder"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_minigun",
@@ -104,16 +109,17 @@ data:extend(
 				{type="item", name="y_structure_element", amount=4},
 				{type="item", name="y-bluegear", amount=3}
 			},
-			results = {{type="item", name="yi_minigun", amount=1},},
+			results = {
+				{type="item", name="yi_minigun", amount=1},
+			},
 			main_product = "yi_minigun",
-			--result = "yi_minigun",
 			enabled = true,
-			--result_count = 1,
 			order = "w1",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "yuoki-wonder"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_lasergun",
@@ -123,16 +129,17 @@ data:extend(
 				{type="item", name="y-crystal-cnd", amount=1},
 				{type="item", name="y_structure_element", amount=3},
 			},
-			results = {{type="item", name="yi_lasergun", amount=1},},
+			results = {
+				{type="item", name="yi_lasergun", amount=1},
+			},
 			main_product = "yi_lasergun",
-			--result = "yi_lasergun",
 			enabled = true,
-			--result_count = 1,
 			order = "w2",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "yuoki-wonder"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_ammo_energie",
@@ -142,16 +149,17 @@ data:extend(
 				{type="item", name="y_structure_element", amount=2},
 				{type="item", name="y-conductive-wire-1", amount=1}
 			},
-			results = {{type="item", name="yi_ammo_energie", amount=10},},
+			results = {
+				{type="item", name="yi_ammo_energie", amount=10},
+			},
 			main_product = "yi_ammo_energie",
-			--result = "yi_ammo_energie",
 			enabled = true,
-			--result_count = 10,
 			order = "x1",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "crafting"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_equip_roboport",
@@ -162,16 +170,17 @@ data:extend(
 				{type="item", name="y_compensator_25", amount=2},
 				{type="item", name="yi_equip_battery_a", amount=1}
 			},
-			results = {{type="item", name="yi_equip_roboport", amount=1},},
+			results = {
+				{type="item", name="yi_equip_roboport", amount=1},
+			},
 			main_product = "yi_equip_roboport",
-			--result = "yi_equip_roboport",
 			enabled = true,
-			--result_count = 1,
 			order = "e1",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
 			category = "yuoki-wonder"
 		},
+
 		{
 			type = "recipe",
 			name = "yi_equip_pld",
@@ -181,23 +190,100 @@ data:extend(
 				{type="item", name="y_rwtechsign", amount=300},
 				{type="item", name="y_structure_element", amount=6}
 			},
-			results = {{type="item", name="yi_pld_equipment", amount=1},},
+			results = {
+				{type="item", name="yi_pld_equipment", amount=1},
+			},
 			main_product = "yi_pld_equipment",
-			--result = "yi_pld_equipment",
 			enabled = true,
-			--result_count = 1,
 			order = "f1",
 			group = "yuoki-energy",
 			subgroup = "y_personal_equip",
-			category = "yuoki-wonder"
+			category = "yuoki-wonder"},
+
+		{
+			type = "item",
+			name = "yi_equip_shield_a",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/armor/panz4_32.png",
+			order = "a1",
+			stack_size = 15,
+			place_as_equipment_result = "yi_equip_shield_a",
+			group = "yuoki-energy",
+			subgroup = "y_personal_equip"
 		},
-		{type = "item", name = "yi_equip_shield_a", icon_size = 64, icon = "__Yuoki__/graphics/armor/panz4_32.png", order = "a1", stack_size = 15, place_as_equipment_result = "yi_equip_shield_a", group = "yuoki-energy", subgroup = "y_personal_equip"},
-		{type = "item", name = "yi_equip_shield_b", icon_size = 64, icon = "__Yuoki__/graphics/armor/panz5_32.png", order = "a2", stack_size = 15, place_as_equipment_result = "yi_equip_shield_b", group = "yuoki-energy", subgroup = "y_personal_equip"},
-		{type = "item", name = "yi_equip_battery_a", icon_size = 64, icon = "__Yuoki__/graphics/armor/lfg13.png", order = "b1", stack_size = 15, place_as_equipment_result = "yi_equip_battery_a", group = "yuoki-energy", subgroup = "y_personal_equip"},
-		{type = "item", name = "yi_equip_generator_a", icon_size = 64, icon = "__Yuoki__/graphics/armor/energy_icon.png", order = "c1", stack_size = 15, place_as_equipment_result = "yi_equip_generator_a", group = "yuoki-energy", subgroup = "y_personal_equip"},
-		{type = "item", name = "yi_equip_legs_a", icon_size = 64, icon = "__Yuoki__/graphics/armor/exo1_icon_e.png", order = "d1", stack_size = 15, place_as_equipment_result = "yi_equip_legs_a", group = "yuoki-energy", subgroup = "y_personal_equip"},
-		{type = "item", name = "yi_equip_roboport", icon_size = 64, icon = "__Yuoki__/graphics/armor/mobile_roboport_32.png", order = "e1", stack_size = 15, place_as_equipment_result = "yi_equip_roboport", group = "yuoki-energy", subgroup = "y_personal_equip"},
-		{type = "item", name = "yi_pld_equipment", icon_size = 64, icon = "__Yuoki__/graphics/armor/personal_laser_defense_icon.png", order = "f1", stack_size = 15, place_as_equipment_result = "yi_pld_equipment", group = "yuoki-energy", subgroup = "y_personal_equip"},
+
+		{
+			type = "item",
+			name = "yi_equip_shield_b",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/armor/panz5_32.png",
+			order = "a2",
+			stack_size = 15,
+			place_as_equipment_result = "yi_equip_shield_b",
+			group = "yuoki-energy",
+			subgroup = "y_personal_equip"
+		},
+
+		{
+			type = "item",
+			name = "yi_equip_battery_a",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/armor/lfg13.png",
+			order = "b1",
+			stack_size = 15,
+			place_as_equipment_result = "yi_equip_battery_a",
+			group = "yuoki-energy",
+			subgroup = "y_personal_equip"
+		},
+
+		{
+			type = "item",
+			name = "yi_equip_generator_a",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/armor/energy_icon.png",
+			order = "c1",
+			stack_size = 15,
+			place_as_equipment_result = "yi_equip_generator_a",
+			group = "yuoki-energy",
+			subgroup = "y_personal_equip"
+		},
+
+		{
+			type = "item",
+			name = "yi_equip_legs_a",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/armor/exo1_icon_e.png",
+			order = "d1",
+			stack_size = 15,
+			place_as_equipment_result = "yi_equip_legs_a",
+			group = "yuoki-energy",
+			subgroup = "y_personal_equip"
+		},
+
+		{
+			type = "item",
+			name = "yi_equip_roboport",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/armor/mobile_roboport_32.png",
+			order = "e1",
+			stack_size = 15,
+			place_as_equipment_result = "yi_equip_roboport",
+			group = "yuoki-energy",
+			subgroup = "y_personal_equip"
+		},
+
+		{
+			type = "item",
+			name = "yi_pld_equipment",
+			icon_size = 64,
+			icon = "__Yuoki__/graphics/armor/personal_laser_defense_icon.png",
+			order = "f1",
+			stack_size = 15,
+			place_as_equipment_result = "yi_pld_equipment",
+			group = "yuoki-energy",
+			subgroup = "y_personal_equip"
+		},
+
 		{
 			type = "energy-shield-equipment",
 			name = "yi_equip_shield_a",
@@ -222,6 +308,7 @@ data:extend(
 			energy_per_shield = "30kJ",
 			categories = {"armor"}
 		},
+
 		{
 			type = "energy-shield-equipment",
 			name = "yi_equip_shield_b",
@@ -246,6 +333,7 @@ data:extend(
 			energy_per_shield = "30kJ",
 			categories = {"armor"}
 		},
+
 		{
 			type = "battery-equipment",
 			name = "yi_equip_battery_a",
@@ -269,6 +357,7 @@ data:extend(
 			},
 			categories = {"armor"}
 		},
+
 		{
 			type = "generator-equipment",
 			name = "yi_equip_generator_a",
@@ -290,6 +379,7 @@ data:extend(
 			power = "1.6MW",
 			categories = {"armor"}
 		},
+
 		-- schnelle Beine
 		{
 			type = "movement-bonus-equipment",
@@ -313,6 +403,7 @@ data:extend(
 			movement_bonus = 0.275,
 			categories = {"armor"}
 		},
+
 		-- Minigun
 		{
 			type = "gun",
@@ -322,7 +413,6 @@ data:extend(
 			subgroup = "y_personal_equip",
 			group = "yuoki-energy",
 			order = "a[basic-clips]-b[submachine-gun]",
-			
 			attack_parameters = {
 				type = "projectile",
 				ammo_category = "bullet",
@@ -350,6 +440,7 @@ data:extend(
 			},
 			stack_size = 100
 		},
+
 		-- Lasergun
 		{
 			type = "gun",
@@ -359,7 +450,6 @@ data:extend(
 			subgroup = "y_personal_equip",
 			group = "yuoki-energy",
 			order = "c[railgun]",
-			
 			attack_parameters = {
 				type = "projectile",
 				ammo_category = "plasma",
@@ -377,6 +467,7 @@ data:extend(
 			},
 			stack_size = 10
 		},
+
 		{
 			type = "ammo",
 			name = "yi_ammo_energie",
@@ -414,6 +505,7 @@ data:extend(
 			order = "c[railgun]",
 			stack_size = 1000
 		},
+
 		{
 			type = "projectile",
 			name = "p2",
@@ -440,6 +532,7 @@ data:extend(
 				priority = "high"
 			}
 		},
+
 		{
 			type = "roboport-equipment",
 			name = "yi_equip_roboport",
@@ -484,6 +577,7 @@ data:extend(
 			charging_threshold_distance = 5,
 			categories = {"armor"}
 		},
+
 		{
 			type = "active-defense-equipment",
 			name = "yi_pld_equipment",

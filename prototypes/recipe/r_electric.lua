@@ -129,7 +129,7 @@ data:extend(
 	-- basic cell empty
 	{
 		type = "recipe",
-		name = "y-battery-singleuse1",
+		name = "y-battery-single-use1",
 		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
@@ -147,7 +147,7 @@ data:extend(
 	-- loaded cell
 	{
 		type = "recipe",
-		name = "y-battery-singleuse2",
+		name = "y-battery-single-use2",
 		energy_required = 4.0,
 		enabled = true,
 		ingredients = {
@@ -306,7 +306,7 @@ data:extend(
 	-- Medium T2
 	{
 		type = "recipe",
-		name = "y-accumulator-mt2",
+		name = "y-accumulator-m-t2",
 		energy_required = 6.0,
 		enabled = true,
 		ingredients = {
@@ -326,7 +326,7 @@ data:extend(
 
 	{
 		type = "recipe",
-		name = "y-accumulator-bt2",
+		name = "y-accumulator-b-t2",
 		energy_required = 8.0,
 		enabled = true,
 		ingredients = {
@@ -347,7 +347,7 @@ data:extend(
 	-- Tier 3 - Accumulators - AQE
 	{
 		type = "recipe",
-		name = "y-accumulator-btx",
+		name = "y-accumulator-b-tx",
 		category="yuoki-wonder";
 		energy_required = 12.0,
 		enabled = true,

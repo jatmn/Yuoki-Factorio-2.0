@@ -8,6 +8,7 @@ Date: ?. 4. 2025
   Fixes:
     - Fixed up Atomics recipe names
     - Fixed up some of the mess in Factoriopedia
+    - Fixed YI Beacon fast replace group
   Changes:
     - Added optional dependency support for Space age and Quality mods. This is for future stuff.
 ---------------------------------------------------------------------------------------------------

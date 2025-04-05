@@ -1,5 +1,5 @@
 data:extend(
-	{	
+	{
 		{
 			type = "boiler",
 			name = "y-boiler-iv",
@@ -20,7 +20,6 @@ data:extend(
 				height = 2,
 				base_level = -1,
 				pipe_connections = {
-					--{ type = "input-output", position = { 0, -2.0} },
 					{flow_direction = "input-output", direction = defines.direction.east, position = {1, 0}},
 					{flow_direction = "input-output", direction = defines.direction.south, position = {0, 1}},
 					{flow_direction = "input-output", direction = defines.direction.west, position = {-1, 0}}
@@ -66,7 +65,6 @@ data:extend(
 							scale = 0.5
 						},
 					},
-				
 					east = {
 						structure =
 						{
@@ -107,7 +105,7 @@ data:extend(
 			fast_replaceable_group = "y-boiler",
 			next_upgrade = "y_boiler4_tech"
 		},
-  
+
 		-- big steam-turbine
 		{
 			type = "generator",
@@ -565,6 +563,7 @@ data:extend(
 				shift = {0.00, -0.35}
 			}
 		},
+
 		-- stirling solar-dish
 		{
 			type = "solar-panel",
@@ -590,6 +589,7 @@ data:extend(
 			},
 			production = "75kW"
 		},
+
 		-- Alien-Solar 1
 		{
 			type = "solar-panel",

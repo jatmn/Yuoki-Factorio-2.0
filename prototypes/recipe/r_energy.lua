@@ -1,7 +1,5 @@
 data:extend(
-{	
-
-	
+{
 	-- Little Stirling Engine	
 	--[[
 	{
@@ -24,33 +22,37 @@ data:extend(
 		group="yuoki",
 		subgroup = "y-parts",		
 	},	
-	]]	
-	
+	]]
+
 	{
 		type = "recipe",
-		name = "y-solar-dish",
+		name = "y-stirling-solar-dish",
 		ingredients = {
 			{type="item", name="y-chip-1", amount=3},
 			{type="item", name="y-heat-pipe", amount=2},
 			{type="item", name="steel-plate", amount=3},
 		},
-		results = {{type="item", name="y-stirling-solar-dish", amount=2},},
-		--result = "y-stirling-solar-dish",
-		enabled = true,		
-		--result_count = 1,
+		results = {
+			{type="item", name="y-stirling-solar-dish", amount=2},
+		},
+		main_product = "y-stirling-solar-dish",
+		enabled = true,
 		order="e-za",
 		group="yuoki-energy",
 		subgroup = "y-energy-2",
-	},		
+	},
 	{
 		type = "item",
 		name = "y-stirling-solar-dish",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/stir-solar-dish-icon.png",		
-		order = "e-za", group="yuoki-energy", subgroup = "y-energy-2",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/stir-solar-dish-icon.png",
+		order = "e-za",
+		group="yuoki-energy",
+		subgroup = "y-energy-2",
 		place_result = "y-stirling-solar-dish",
 		stack_size = 25,
-	},	
-	
+	},
+
 	{
 		type = "recipe",
 		name = "y_alien_solar",
@@ -61,22 +63,26 @@ data:extend(
 			{type="item", name="y-chip-1", amount=30},
 			{type="item", name="y_rwtechsign", amount=20},
 		},
-		results = {{type="item", name="y_alien_solar", amount=1},},
-		--result = "y_alien_solar",
-		enabled = true,		
-		--result_count = 1,
+		results = {
+			{type="item", name="y_alien_solar", amount=1},
+		},
+		main_product = "y_alien_solar",
+		enabled = true,
 		order="e-zb",
 		group="yuoki-energy",
 		subgroup = "y-energy-2",
-	},					
+	},
 	{
 		type = "item",
 		name = "y_alien_solar",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/yi_alien_solar_icon.png",		
-		order = "zb", group="yuoki-energy", subgroup = "y-energy-2",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/yi_alien_solar_icon.png",
+		order = "zb",
+		group="yuoki-energy",
+		subgroup = "y-energy-2",
 		place_result = "y_alien_solar",
 		stack_size = 25,
-	},			
+	},
 
 	{
 		type = "recipe",
@@ -88,58 +94,70 @@ data:extend(
 			{type="item", name="y-quantrinum", amount=4},
 			{type="item", name="y_rwtechsign", amount=30},
 		},
-		results = {{type="item", name="y_alien_solar2", amount=1},},
-		--result = "y_alien_solar2",
-		enabled = true,		
-		--result_count = 1,
+		results = {
+			{type="item", name="y_alien_solar2", amount=1},
+		},
+		main_product = "y_alien_solar2",
+		enabled = true,
 		order="e-zc",
 		group="yuoki-energy",
 		subgroup = "y-energy-2",
-	},					
+	},			
 	{
 		type = "item",
 		name = "y_alien_solar2",
-		icon_size = 64, icon =  "__Yuoki__/graphics/entity/yi_alien_solar2_icon.png",		
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/yi_alien_solar2_icon.png",
 		order = "zc", group="yuoki-energy", subgroup = "y-energy-2",
 		place_result = "y_alien_solar2",
 		stack_size = 15,
-	},			
-	
-	
+	},
+
 	-- small electric generator
 	{
 		type = "recipe",
 		name = "y-seg",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/energy-t2/seg_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/energy-t2/seg_icon.png",
 		ingredients = {
 			{type="item", name="y-basic-t2-mf", amount=1},
 			{type="item", name="y-unicomp-raw", amount=2},
 			{type="item", name="y-chip-1", amount=2},
 			{type="item", name="y-unicomp-a2", amount=1}
-		},		
-		results = { {type="item", name="y-seg", amount=1,}, {type="item", name="y_rwtechsign", amount=1,}, },		
+		},
+		results = {
+			{type="item", name="y-seg", amount=1,},
+			{type="item", name="y_rwtechsign", amount=1,},
+		},
 		main_product = "y-seg",
-		enabled = true,						
-		group="yuoki-energy", subgroup = "y-boiler",	
+		enabled = true,			
+		group="yuoki-energy",
+		subgroup = "y-boiler",
 		order="g-1",
-	},	
+	},
+
 	-- medium-s electric generator
 	{
 		type = "recipe",
 		name = "y-meg-s",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/energy-t2/meg-s-icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/energy-t2/meg-s-icon.png",
 		ingredients = {
 			{type="item", name="y-basic-t2-mf", amount=2},
 			{type="item", name="y-unicomp-raw", amount=6},
 			{type="item", name="y-chip-2", amount=3},
 			{type="item", name="y-unicomp-a2", amount=2}
 		},
-		results = { {type="item", name="y-meg-s", amount=1,}, {type="item", name="y_rwtechsign", amount=3,}, },				
+		results = {
+			{type="item", name="y-meg-s", amount=1,},
+			{type="item", name="y_rwtechsign", amount=3,},
+		},
 		main_product = "y-meg-s",
-		enabled = true,						
-		group="yuoki-energy", subgroup = "y-boiler",					
+		enabled = true,
+		group="yuoki-energy",
+		subgroup = "y-boiler",
 		order="g-2",
-	},	
+	},
 
 	-- big electric generator
 	{
@@ -152,13 +170,16 @@ data:extend(
 			{type="item", name="y-unicomp-a2", amount=4},
 			{type="item", name="y_rwtechsign", amount=3},
 		},
-		results = {{type="item", name="y-beg", amount=1},},
-		--result = "y-beg",
-		enabled = true,		
-		--result_count = 1,		
-		group="yuoki-energy", subgroup = "y-boiler",	
+		results = {
+			{type="item", name="y-beg", amount=1},
+		},
+		main_product = "y-beg",
+		enabled = true,
+		group="yuoki-energy",
+		subgroup = "y-boiler",
 		order="g-3",
-	},	
+	},
+
 	-- huge electric generator
 	{
 		type = "recipe",
@@ -171,29 +192,37 @@ data:extend(
 			{type="item", name="y-bluegear", amount=8},
 			{type="item", name="y_rwtechsign", amount=7},
 		},
-		results = {{type="item", name="y-heg", amount=1},},
-		--result = "y-heg",
-		enabled = true,		
-		--result_count = 1,		
-		group="yuoki-energy", subgroup = "y-boiler",					
+		results = {
+			{type="item", name="y-heg", amount=1},
+		},
+		main_product = "y-heg",
+		enabled = true,	
+		group="yuoki-energy",
+		subgroup = "y-boiler",
 		order="g-4",
-	},		
+	},
+
 	{
 		type = "recipe",
 		name = "y-boiler-iv",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/boiler3mw_icon2.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/boiler3mw_icon2.png",
 		ingredients = {
 			{type="item", name="steel-plate", amount=3},
 			{type="item", name="y_structure_element", amount=8},
 			{type="item", name="y_gauge", amount=1},
 			{type="item", name="y-pipe-hc", amount=8}
 		},
-		results = { {type="item", name="y-boiler-iv", amount=1,}, {type="item", name="y_rwtechsign", amount=2,}, },						
-		main_product = "y-boiler-iv",		
+		results = {
+			{type="item", name="y-boiler-iv", amount=1,},
+			{type="item", name="y_rwtechsign", amount=2,},
+		},		
+		main_product = "y-boiler-iv",
 		group = "yuoki-energy",
-		subgroup = "y-boiler",					
+		subgroup = "y-boiler",
 		order="b-1",
 	},
+
 	--y-obninsk-reactor
 	{
 		type = "recipe",
@@ -206,12 +235,15 @@ data:extend(
 			{type="item", name="y_gauge", amount=4},
 			{type="item", name="y_rwtechsign", amount=20},
 		},
-		results = {{type="item", name="y-obninsk-reactor", amount=1},},
-		--result = "y-obninsk-reactor",
-		group = "yuoki-energy", subgroup = "y-boiler",					
+		results = {
+			{type="item", name="y-obninsk-reactor", amount=1},
+		},
+		main_product = "y-obninsk-reactor",
+		group = "yuoki-energy",
+		subgroup = "y-boiler",
 		order="b-2",
 	},
-		
+
 	-- Generators	
 	--y-obninsk-turbine (rensuir)
 	{
@@ -224,12 +256,17 @@ data:extend(
 			{type="item", name="y-pipe-ec", amount=10},
 			{type="item", name="y-quantrinum", amount=3},
 			{type="item", name="y_rwtechsign", amount=50},
-		},		
-		results = { {type="item", name="y-obninsk-turbine", amount=1,}, {type="item", name="ye_science_blue", amount=2,}, },								
-		main_product = "y-obninsk-turbine",					
-		group = "yuoki-energy", subgroup = "y-boiler",	
-		order="s3",	
-	},	
+		},
+		results = {
+			{type="item", name="y-obninsk-turbine", amount=1,},
+			{type="item", name="ye_science_blue", amount=2,},
+		},
+		main_product = "y-obninsk-turbine",
+		group = "yuoki-energy",
+		subgroup = "y-boiler",
+		order="s3",
+	},
+
 	{
 		type = "recipe",
 		name = "y-notfall-generator-s2",
@@ -238,28 +275,37 @@ data:extend(
 			{type="item", name="iron-gear-wheel", amount=2},
 			{type="item", name="copper-plate", amount=4},
 		},
-		results = {{type="item", name="y-notfall-generator-s2", amount=1},},
-		--result = "y-notfall-generator-s2",
-		enabled = true,		
-		--result_count = 1,
-		group = "yuoki-energy", subgroup = "y-boiler", order="s1",	
+		results = {
+			{type="item", name="y-notfall-generator-s2", amount=1},
+		},
+		main_product = "y-notfall-generator-s2",
+		enabled = true,
+		group = "yuoki-energy",
+		subgroup = "y-boiler",
+		order="s1",
 	},
+
 	-- big (ab Jan/2015 standard-steam-turbine)
 	{
 		type = "recipe",
 		name = "y-steam-turbine",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/steam_turbine_n3_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/steam_turbine_n3_icon.png",
 		ingredients = {
 			{type="item", name="engine-unit", amount=2},
 			{type="item", name="y_structure_element", amount=10},
 			{type="item", name="y-heat-pipe", amount=3},
 			{type="item", name="y-unicomp-raw", amount=3},
-		},		
-		results = { {type="item", name="y-steam-turbine", amount=1,}, {type="item", name="y_rwtechsign", amount=2,}, },								
-		main_product = "y-steam-turbine",		
-		enabled = true,				
-		group = "yuoki-energy", subgroup = "y-boiler", order="s2",	
-	},	
-	
-	
+		},
+		results = {
+			{type="item", name="y-steam-turbine", amount=1,},
+			{type="item", name="y_rwtechsign", amount=2,},
+		},
+		main_product = "y-steam-turbine",
+		enabled = true,
+		group = "yuoki-energy",
+		subgroup = "y-boiler",
+		order="s2",
+	},
+
 })

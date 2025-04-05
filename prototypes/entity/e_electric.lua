@@ -4,11 +4,13 @@ data:extend(
 	{
 		type = "electric-pole",
 		name = "y_signal_pole",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/signal_pole_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/signal_pole_icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y_signal_pole"},
 		max_health = 250,
-		corpse = "medium-remnants", resistances = {{type = "fire",percent = 90}},
+		corpse = "medium-remnants",
+		resistances = {{type = "fire",percent = 90}},
 		collision_box = {{-0.25, -0.25}, {0.25, 0.25}},
 		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 		drawing_box = {{-0.5, -1.5}, {0.5, 0.5}},
@@ -55,14 +57,12 @@ data:extend(
 			width = 224,
 			height = 46
 		},
-		
 		radius_visualisation_picture =
 		{
 			filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
 			width = 12,
 			height = 12,
 		},
-		
 		red_wire_picture =
 		{
 			filename = "__base__/graphics/entity/small-electric-pole/red-wire.png",
@@ -78,17 +78,17 @@ data:extend(
 			height = 46
 		}
 	},
-	
-	
-	
+
 	{
 		type = "electric-pole",
 		name = "y-substation-m",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/substation-icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/substation-icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-substation-m"},
 		max_health = 250,
-		corpse = "medium-remnants", resistances = {{type = "fire",percent = 90}},
+		corpse = "medium-remnants",
+		resistances = {{type = "fire",percent = 90}},
 		collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
 		selection_box = {{-1, -1}, {1, 1}},
 		drawing_box = {{-1, -1.5}, {1, 1}},
@@ -161,11 +161,13 @@ data:extend(
 	{
 		type = "electric-pole",
 		name = "y-substation-h",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/entity/substation-h-icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/entity/substation-h-icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-substation-h"},
 		max_health = 250,
-		corpse = "medium-remnants", resistances = {{type = "fire",percent = 90}},
+		corpse = "medium-remnants",
+		resistances = {{type = "fire",percent = 90}},
 		collision_box = {{-0.8, -0.8}, {0.8, 0.8}},
 		selection_box = {{-1, -1}, {1, 1}},
 		drawing_box = {{-1, -1.5}, {1, 1}},
@@ -234,11 +236,12 @@ data:extend(
 			height = 46
 		}
 	},
-	
+
 	{
 		type = "accumulator",
 		name = "y-accumulator-m",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/gfx/medium_accu_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/gfx/medium_accu_icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-accumulator-m"},
 		max_health = 250,
@@ -307,11 +310,13 @@ data:extend(
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = {type = "virtual", name = "signal-A"},
-	},  
+	},
+
 	{
 		type = "accumulator",
 		name = "y-accumulator-b",
-		icon_size = 64, icon =  "__Yuoki__/graphics/gfx/accu_b_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/gfx/accu_b_icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-accumulator-b"},
 		max_health = 300,
@@ -367,14 +372,14 @@ data:extend(
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 22.5,
 		default_output_signal = {type = "virtual", name = "signal-A"},
-		
-	},  
+	},
 
 	-- tier 1.5		
 	{
 		type = "accumulator",
 		name = "y-ups-flywheel-b",
-		icon_size = 64, icon =  "__Yuoki__/graphics/gfx/accflywheel_b_icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/gfx/accflywheel_b_icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-ups-flywheel-b"},
 		max_health = 250,
@@ -438,14 +443,14 @@ data:extend(
 		},
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
-		default_output_signal = {type = "virtual", name = "signal-A"},
-		
-	},  
-		
+		default_output_signal = {type = "virtual", name = "signal-A"},	
+	},
+
 	{
 		type = "accumulator",
 		name = "y-accumulator-m-t2",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/gfx/mcd-icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/gfx/mcd-icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-accumulator-m-t2"},
 		max_health = 250,
@@ -512,12 +517,13 @@ data:extend(
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = {type = "virtual", name = "signal-A"},
-		
-	},  
+	},
+
 	{
 		type = "accumulator",
 		name = "y-accumulator-b-t2",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/gfx/bcd-icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/gfx/bcd-icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-accumulator-b-t2"},
 		max_health = 300,
@@ -582,12 +588,13 @@ data:extend(
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = {type = "virtual", name = "signal-A"},
-		
-	},  
+	},
+
 	{
 		type = "accumulator",
 		name = "y-accumulator-b-tx",
-		icon_size = 64, icon =  "__Yuoki__/graphics/gfx/aqe-icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/gfx/aqe-icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-accumulator-b-tx"},
 		max_health = 300,
@@ -650,13 +657,13 @@ data:extend(
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = {type = "virtual", name = "signal-A"},
-		
-	},  
-	
+	},
+
 	{
 		type = "accumulator",
 		name = "y-accumulator-crystal-m",
-		icon_size = 64, icon =  "__Yuoki__/graphics/gfx/accu_crystal-m-icon.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/gfx/accu_crystal-m-icon.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 0.5, result = "y-accumulator-crystal-m"},
 		max_health = 350,
@@ -721,9 +728,8 @@ data:extend(
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = {type = "virtual", name = "signal-A"},
-		
-	},  	
-	
+	},
+
 	-- compensator
 	{
 		type = "accumulator",
@@ -794,9 +800,6 @@ data:extend(
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = {type = "virtual", name = "signal-A"},
-		
-	},  	
-	
-	
-	
+	},
+
 })
