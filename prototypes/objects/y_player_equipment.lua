@@ -183,7 +183,7 @@ data:extend(
 
 		{
 			type = "recipe",
-			name = "yi_equip_pld",
+			name = "yi_pld_equipment",
 			energy_required = 3,
 			ingredients = {
 				{type="item", name="y_turret_laser22f12", amount=1},

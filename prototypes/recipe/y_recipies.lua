@@ -47,7 +47,7 @@ data:extend(
 	-- new-coal-things 215-0103
 	{
 		type = "recipe",
-		name = "y-coaldust",
+		name = "y-coal-dust",
 		enabled = true,
 		energy_required = 2,
 		category = "y-crushing",

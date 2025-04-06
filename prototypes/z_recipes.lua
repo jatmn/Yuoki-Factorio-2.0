@@ -205,7 +205,7 @@ data:extend({
 	--ID:344 
 	{
 	  type = "recipe",
-	  name = "y_mox2fuelsplit",
+	  name = "y_mox2fuelsplited",
 	  category = "yuoki-wonder",
 	  enabled = true,
 	  energy_required = 20.00,
