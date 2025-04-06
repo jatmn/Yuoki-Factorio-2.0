@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.12
-Date: ?. 4. 2025
+Date: 5. 4. 2025
   Updates:
     - Code cleanup for Atomics recipes
     - Code cleanup for some recipe/item groups
