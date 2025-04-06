@@ -603,7 +603,7 @@ data:extend(
 			width = 12,
 			height = 12,
 		},
-		fast_replaceable_group = "mining-drill",
+		fast_replaceable_group = "big-mining-drill",
 	},
 
 	-- Mastercrafted Boiler	- green
@@ -646,7 +646,7 @@ data:extend(
 		max_health = 400,
 		corpse = "small-remnants",
 		resistances = { { type = "fire", percent = 80 } },
-		fast_replaceable_group = "pipe",
+		fast_replaceable_group = "y-boiler",
 		collision_box = {{-1.25, -1.25}, {1.25, 1.25}},
 		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 		mode = "output-to-separate-pipe",

@@ -280,7 +280,7 @@ data:extend(
 			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
 			width = 12, height = 12,
 		},
-		fast_replaceable_group = "mining-drill",
+		fast_replaceable_group = "big-mining-drill",
 	},
 	
 	{

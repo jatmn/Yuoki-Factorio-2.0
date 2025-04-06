@@ -5,6 +5,7 @@ Date: ?. 4. 2025
     - Code cleanup for Atomics recipes
     - Code cleanup for some recipe/item groups
     - Fixed some of the jarring recipe/item groups that were inconsistent
+    - YI E2 Mining Dril (and Mastercraft version) now part of fast replace group of Big mining drill
   Fixes:
     - Fixed up Atomics recipe names
     - Fixed up some of the mess in Factoriopedia
