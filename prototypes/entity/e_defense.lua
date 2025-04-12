@@ -122,7 +122,7 @@ data:extend(
 			attack_parameters = {
 				type = "projectile",
 				damage_modifier = 4,
-				ammo_category = "electric",
+				ammo_category = "laser", -- "electric",
 				cooldown = 5,
 				damage = 3,
 				projectile_center = {0, 0},

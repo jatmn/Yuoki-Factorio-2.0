@@ -146,9 +146,10 @@ data:extend(
 		},
 		results = {
 			{type="item",name="y-dirt",amount=8},
-			{type="item",name="y_drillhead_broken",amount=1}
+			{type="item",name="y_drillhead_broken",amount=1, ignored_by_stats = 1, ignored_by_productivity = 1}
 		},
 		main_product = "y-dirt",
+		allow_productivity = true,
 		subgroup = "y_line2",
 		category = "yuoki-raw-material",
 		icon_size = 64,

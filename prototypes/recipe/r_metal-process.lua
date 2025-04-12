@@ -90,10 +90,11 @@ data:extend(
 		},
 		results=
 		{
-			{type="item", name="y-crush-yres1", amount=12, },
-			{type="item", name="y_toolhead_broken", amount=1, },
+			{type="item", name="y-crush-yres1", amount=12,},
+			{type="item", name="y_toolhead_broken", amount=1, ignored_by_stats = 1, ignored_by_productivity = 1},
 		},
 		main_product = "y-crush-yres1",
+		allow_productivity = true,
 		enabled = true,
 		order = "crush_b-2",
 		subgroup = "y_line3",
@@ -112,9 +113,10 @@ data:extend(
 		results=
 		{
 			{type="item", name="y-crush-yres2", amount=12, },
-			{type="item", name="y_toolhead_broken", amount=1, },
+			{type="item", name="y_toolhead_broken", amount=1, ignored_by_stats = 1, ignored_by_productivity = 1},
 		},
 		main_product = "y-crush-yres2",
+		allow_productivity = true,
 		enabled = true,
 		order = "crush_g-2",
 		subgroup = "y_line3",
@@ -355,10 +357,11 @@ data:extend(
 		results=
 		{
 			{type="item", name="y-pure-copper", amount=12 },
-			{type="item", name="y_toolhead_broken", amount=1 },
+			{type="item", name="y_toolhead_broken", amount=1, ignored_by_stats = 1, ignored_by_productivity = 1 },
 			{type="fluid", name="y-con_water", amount=50 }
 		},
 		main_product = "y-pure-copper",
+		allow_productivity = true,
 		enabled = true,
 		icon_size = 64,
 		icon =  "__Yuoki__/graphics/icons/pure_copper_wt.png",
@@ -379,10 +382,11 @@ data:extend(
 		results=
 		{
 			{type="item", name="y-pure-iron", amount=12 },
-			{type="item", name="y_toolhead_broken", amount=1 },
+			{type="item", name="y_toolhead_broken", amount=1, ignored_by_stats = 1, ignored_by_productivity = 1 },
 			{type="fluid", name="y-con_water", amount=50 }
 		},
 		main_product = "y-pure-iron",
+		allow_productivity = true,
 		enabled = true,
 		icon_size = 64,
 		icon =  "__Yuoki__/graphics/icons/pure_iron_wt.png",

@@ -497,8 +497,8 @@ data:extend(
 			},
 		},	
 		fluid_boxes_off_when_no_fluid_recipe = true,
-		module_slots = 2,
-		allowed_effects = {"consumption", "speed", "pollution"},
+		module_slots = 3,
+		allowed_effects = {"consumption", "speed", "pollution", "productivity"},
 		fast_replaceable_group = "j-washer",
 	},
 

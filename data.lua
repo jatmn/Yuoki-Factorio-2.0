@@ -1,5 +1,7 @@
 require "util"
 
+require("lib.yi-tools")
+
 require("prototypes.z_groups")
 require("prototypes.fuel_categorys")
 require("prototypes.entity.e_storeage")

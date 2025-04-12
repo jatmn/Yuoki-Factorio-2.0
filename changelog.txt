@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.13
+Date: 11. 4. 2025
+  Updates:
+    - Turrets are now boosted by Space Age Bonus Damage Research
+    - Yuoki ammo types now are boosted by Space Age Bonus Damage Research
+  Fixes:
+    - Cannon Turret Ammo is now named
+    - D-ZTT damage type corrected to Laser as it should be, and now is boosted by Laser research Bonus
+  Changes:
+    - N4 and F7 Crushing with Technic recipes now allow Productivity modules without duplicating the toolhead
+    - Improved Dirt Digging recipe now allows Productivity modules without duplicating the drillhead
+    - Pure Iron and Copper recipes that boost with toolhead, now allow Productivity modules without duplicating the toolhead
+    - Mastercraft Washer now allows for Productivity modules
+    - Mastercraft Washer module slots increased to 3 so that it had more than regular Washer
+---------------------------------------------------------------------------------------------------
 Version: 1.2.12
 Date: 5. 4. 2025
   Updates:
