@@ -7,7 +7,7 @@ script.on_init(function()
 			created_items["yi_equip_battery_a"] = 1
 			created_items["yi_equip_generator_a"] = 1
 			created_items["yi_equip_roboport"] = 1
-			created_items["yi_construction-robot"] = 50
+			created_items["yi_construction-robot"] = 25
 			remote.call("freeplay", "set_created_items", created_items)
 		end
 	end

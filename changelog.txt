@@ -2,6 +2,7 @@
 Version: 1.2.14
 Date: 27. 4. 2025
   Changes:
+    - Changed Start with YI Suite option to only start with 25 Yi Constructor robots, made no sense to start with 50 as you only could use 25.
     - Reformat all code using Stylua, attempting to keep this format moving forward as the code is a heavy mix of styles over the years. This should have zero impact to the mod itself just my sanity working on it.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.13
