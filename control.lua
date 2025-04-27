@@ -1,13 +1,11 @@
 --require "defines"
-require ("scripts.add_yi_suit")
+require("scripts.add_yi_suit")
 
-remote.add_interface("yuoki",  
-{
+remote.add_interface("yuoki", {
 	spawn = function()
-	game.regenerate_entity("y-res1")
-	game.regenerate_entity("y-res2")
-	end
-
+		game.regenerate_entity("y-res1")
+		game.regenerate_entity("y-res2")
+	end,
 })
 
 --[[

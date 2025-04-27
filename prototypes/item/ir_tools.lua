@@ -1,39 +1,38 @@
-data:extend(
-{
+data:extend({
 
 	-- recipe
 	{
 		type = "recipe",
-		name = "y-repair-durotal",		
+		name = "y-repair-durotal",
 		enabled = true,
 		energy_required = 3,
 		ingredients = {
-			{type="item", name="repair-pack", amount=1},
-			{type="item", name="y-unicomp-raw", amount=1},
+			{ type = "item", name = "repair-pack", amount = 1 },
+			{ type = "item", name = "y-unicomp-raw", amount = 1 },
 		},
-		results = {{type="item", name="y-repair-durotal", amount=1},},
+		results = { { type = "item", name = "y-repair-durotal", amount = 1 } },
 		main_product = "y-repair-durotal",
 		--result = "y-repair-durotal",
-		group="yuoki",
+		group = "yuoki",
 		subgroup = "y-tools",
-		order="rt-1",
-	},		
+		order = "rt-1",
+	},
 	{
 		type = "recipe",
-		name = "y-repair-krakon",		
+		name = "y-repair-krakon",
 		enabled = true,
 		energy_required = 3,
 		ingredients = {
-			{type="item", name="repair-pack", amount=1},
-			{type="item", name="y-unicomp-a2", amount=1},
+			{ type = "item", name = "repair-pack", amount = 1 },
+			{ type = "item", name = "y-unicomp-a2", amount = 1 },
 		},
-		results = {{type="item", name="y-repair-krakon", amount=1},},
+		results = { { type = "item", name = "y-repair-krakon", amount = 1 } },
 		main_product = "y-repair-krakon",
 		--result = "y-repair-krakon",
-		group="yuoki",
+		group = "yuoki",
 		subgroup = "y-tools",
-		order="rt-2",
-	},		
+		order = "rt-2",
+	},
 	--[[
 	{
 		type = "recipe",
@@ -46,23 +45,23 @@ data:extend(
 		subgroup = "y-tools",
 		order="wt-1",
 	},	
-	]]	
+	]]
 	{
 		type = "recipe",
-		name = "y_repair_quantrinum",		
+		name = "y_repair_quantrinum",
 		enabled = true,
 		energy_required = 5,
 		ingredients = {
-			{type="item", name="repair-pack", amount=1},
-			{type="item", name="y-quantrinum", amount=1},
+			{ type = "item", name = "repair-pack", amount = 1 },
+			{ type = "item", name = "y-quantrinum", amount = 1 },
 		},
-		results = {{type="item", name="y_repair_quantrinum", amount=1},},
+		results = { { type = "item", name = "y_repair_quantrinum", amount = 1 } },
 		main_product = "y_repair_quantrinum",
 		--result = "y_repair_quantrinum",
-		group="yuoki",
+		group = "yuoki",
 		subgroup = "y-tools",
-		order="rt-3",
-	},		
+		order = "rt-3",
+	},
 	--[[
 	{
 		type = "recipe",
@@ -75,43 +74,49 @@ data:extend(
 		subgroup = "y-tools",
 		order="wt-2",
 	},	
-	]]	
+	]]
 
-	-- items	
+	-- items
 	{
 		type = "repair-tool",
 		name = "y-repair-durotal",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/repair-durotal-icon.png",
-		group="yuoki",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/repair-durotal-icon.png",
+		group = "yuoki",
 		subgroup = "y-tools",
 		order = "b[repair]-a[repair-pack]",
 		speed = 3,
 		durability = 400,
-		stack_size = 75, default_request_amount = 10,
+		stack_size = 75,
+		default_request_amount = 10,
 	},
 	{
 		type = "repair-tool",
 		name = "y-repair-krakon",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/repair-krakon-icon.png",
-		group="yuoki",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/repair-krakon-icon.png",
+		group = "yuoki",
 		subgroup = "y-tools",
 		order = "b[repair]-a[repair-pack]",
 		speed = 5,
 		durability = 750,
-		stack_size = 75, default_request_amount = 10,
+		stack_size = 75,
+		default_request_amount = 10,
 	},
 	{
 		type = "repair-tool",
 		name = "y_repair_quantrinum",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/repair_quantrinum.png",
-		group="yuoki",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/repair_quantrinum.png",
+		group = "yuoki",
 		subgroup = "y-tools",
 		order = "b[repair]-a[repair-pack]",
 		speed = 25,
 		durability = 7500,
-		stack_size = 25, default_request_amount = 2,
+		stack_size = 25,
+		default_request_amount = 2,
 	},
-	
+
 	--[[
 	{
 		type = "mining-tool",
@@ -161,5 +166,5 @@ data:extend(
 		speed = 20,
 		stack_size = 20,
 	},	
-	]]	
+	]]
 })

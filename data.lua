@@ -1,4 +1,4 @@
-require "util"
+require("util")
 
 require("lib.yi-tools")
 
@@ -71,13 +71,12 @@ require("prototypes.z_recipes")
 -- overwrite hopefully
 require("prototypes.objects._tiles")
 
-
 --require("Yuoki_0234_data-updates")
 require("prototypes.item.y_stacksizes")
 --require("y_config")
 
 --add list of Yuoki intermeidate producrs to vanilla intermediates (thank you Codec)
-require ("prototypes.y_intermediates_list")
+require("prototypes.y_intermediates_list")
 
 --load configurable character options from settings file
 data.raw["character"]["character"].inventory_size = settings.startup["yuoki-inventory-size"].value

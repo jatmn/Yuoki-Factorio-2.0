@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
 	--recipe
 	{
 		type = "recipe",
@@ -7,11 +6,11 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-refined-yres1", amount=2},
-			{type="item", name="iron-plate", amount=5},
+			{ type = "item", name = "y-refined-yres1", amount = 2 },
+			{ type = "item", name = "iron-plate", amount = 5 },
 		},
 		results = {
-			{type="item", name="y_sc11", amount=1},
+			{ type = "item", name = "y_sc11", amount = 1 },
 		},
 		main_product = "y_sc11",
 		group = "yuoki",
@@ -25,11 +24,11 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_structure_element", amount=2},
-			{type="item", name="iron-plate", amount=2},
+			{ type = "item", name = "y_structure_element", amount = 2 },
+			{ type = "item", name = "iron-plate", amount = 2 },
 		},
 		results = {
-			{type="item", name="y_c22", amount=1},
+			{ type = "item", name = "y_c22", amount = 1 },
 		},
 		main_product = "y_c22",
 		group = "yuoki",
@@ -44,12 +43,12 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_structure_element", amount=2},
-			{type="item", name="iron-plate", amount=2},
-			{type="item", name="y-chip-2", amount=1},
+			{ type = "item", name = "y_structure_element", amount = 2 },
+			{ type = "item", name = "iron-plate", amount = 2 },
+			{ type = "item", name = "y-chip-2", amount = 1 },
 		},
 		results = {
-			{type="item", name="y_pc22", amount=1},
+			{ type = "item", name = "y_pc22", amount = 1 },
 		},
 		main_product = "y_pc22",
 		subgroup = "j-y-logi-7",
@@ -62,12 +61,12 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_structure_element", amount=2},
-			{type="item", name="iron-plate", amount=2},
-			{type="item", name="y-chip-2", amount=1},
+			{ type = "item", name = "y_structure_element", amount = 2 },
+			{ type = "item", name = "iron-plate", amount = 2 },
+			{ type = "item", name = "y-chip-2", amount = 1 },
 		},
 		results = {
-			{type="item", name="y_rc22", amount=1},
+			{ type = "item", name = "y_rc22", amount = 1 },
 		},
 		main_product = "y_rc22",
 		subgroup = "j-y-logi-7",
@@ -80,11 +79,11 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_structure_element", amount=4},
-			{type="item", name="steel-plate", amount=2},
+			{ type = "item", name = "y_structure_element", amount = 4 },
+			{ type = "item", name = "steel-plate", amount = 2 },
 		},
 		results = {
-			{type="item", name="y_cg33", amount=1},
+			{ type = "item", name = "y_cg33", amount = 1 },
 		},
 		main_product = "y_cg33",
 		group = "yuoki",
@@ -99,11 +98,11 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_structure_element", amount=8},
-			{type="item", name="steel-plate", amount=3},
+			{ type = "item", name = "y_structure_element", amount = 8 },
+			{ type = "item", name = "steel-plate", amount = 3 },
 		},
 		results = {
-			{type="item", name="y_sc44", amount=1},
+			{ type = "item", name = "y_sc44", amount = 1 },
 		},
 		main_product = "y_sc44",
 		group = "yuoki",
@@ -119,17 +118,16 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_sc11", amount=1},
-			{type="item", name="y-conductive-wire-1", amount=2},
-			{type="item", name="y-chip-1", amount=1},
+			{ type = "item", name = "y_sc11", amount = 1 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 2 },
+			{ type = "item", name = "y-chip-1", amount = 1 },
 		},
 		group = "yuoki",
 		subgroup = "j-y-logi-6",
 		order = "b",
-		results=
-		{
-			{type="item", name="y-rare-chest-log", amount=1, },
-			{type="item", name="y_rwtechsign", amount=1, },
+		results = {
+			{ type = "item", name = "y-rare-chest-log", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-rare-chest-log",
 	},
@@ -139,94 +137,91 @@ data:extend(
 		name = "y-rare-m1bunker-log",
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/store/y-cl33-icon.png",
-		energy_required = 3.0, enabled = true,
+		energy_required = 3.0,
+		enabled = true,
 		ingredients = {
-			{type="item", name="y_cg33", amount=1},
-			{type="item", name="y-chip-1", amount=1},
-			{type="item", name="y-conductive-wire-1", amount=8},
+			{ type = "item", name = "y_cg33", amount = 1 },
+			{ type = "item", name = "y-chip-1", amount = 1 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 8 },
 		},
-		group = "yuoki", subgroup = "j-y-logi-8", order = "a",
-		results=
-		{
-			{type="item", name="y-rare-m1bunker-log", amount=1, },
-			{type="item", name="y_rwtechsign", amount=1, },
+		group = "yuoki",
+		subgroup = "j-y-logi-8",
+		order = "a",
+		results = {
+			{ type = "item", name = "y-rare-m1bunker-log", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-rare-m1bunker-log",
 	},
 
-		-- Requester Recipe (JATMN)
-		{
-			type = "recipe",
-			name = "j-dl-request",
-			icon_size = 32,
-			icon = "__Yuoki__/graphics/entity/store/Durotal-Logistics-Requester-Icon.png",
-			energy_required = 3.0,
-			enabled = true,
-			ingredients = {
-				{type="item", name="y_sc11",  amount=1},
-				{type="item", name="y-conductive-wire-1",  amount=2},
-				{type="item", name="y-chip-1",  amount=1},
-			},
-			group = "j_yuoki_logistics",
-			subgroup = "j-y-logi-6",
-			order = "d",
-			results=
-			{
-				{type="item", name="j-dl-request", amount=1, },
-				{type="item", name="y_rwtechsign", amount=1, },
-			},
-			main_product = "j-dl-request",
+	-- Requester Recipe (JATMN)
+	{
+		type = "recipe",
+		name = "j-dl-request",
+		icon_size = 32,
+		icon = "__Yuoki__/graphics/entity/store/Durotal-Logistics-Requester-Icon.png",
+		energy_required = 3.0,
+		enabled = true,
+		ingredients = {
+			{ type = "item", name = "y_sc11", amount = 1 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 2 },
+			{ type = "item", name = "y-chip-1", amount = 1 },
 		},
-
-		-- Provider Recipe (JATMN)
-			{
-			type = "recipe",
-			name = "j-dl-provider",
-			icon_size = 32,
-			icon = "__Yuoki__/graphics/entity/store/Durotal-Logistics-Provider-Icon.png",
-			energy_required = 3.0,
-			enabled = true,
-			ingredients = {
-				{type="item", name="y_sc11",  amount=1},
-				{type="item", name="y-conductive-wire-1",  amount=2},
-				{type="item", name="y-chip-1", amount=1},
-			},
-			group = "j_yuoki_logistics",
-			subgroup = "j-y-logi-6",
-			order = "a",
-			results=
-			{
-				{type="item", name="j-dl-provider", amount=1, },
-				{type="item", name="y_rwtechsign", amount=1, },
-			},
-			main_product = "j-dl-provider",
+		group = "j_yuoki_logistics",
+		subgroup = "j-y-logi-6",
+		order = "d",
+		results = {
+			{ type = "item", name = "j-dl-request", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
+		main_product = "j-dl-request",
+	},
 
-		-- Buffer Recipe (JATMN)
-		{
-			type = "recipe",
-			name = "j-dl-buffer",
-			icon_size = 32,
-			icon = "__Yuoki__/graphics/entity/store/Durotal-Logistics-Buffer-Icon.png",
-			energy_required = 3.0,
-			enabled = true,
-			ingredients = {
-				{type="item", name="y_sc11",  amount=1},
-				{type="item", name="y-conductive-wire-1", amount=2},
-				{type="item", name="y-chip-1",  amount=1},
-			},
-			group = "j_yuoki_logistics",
-			subgroup = "j-y-logi-6",
-			order = "c",
-			results=
-			{
-				{type="item", name="j-dl-buffer", amount=1, },
-				{type="item", name="y_rwtechsign", amount=1, },
-			},
-			main_product = "j-dl-buffer",
+	-- Provider Recipe (JATMN)
+	{
+		type = "recipe",
+		name = "j-dl-provider",
+		icon_size = 32,
+		icon = "__Yuoki__/graphics/entity/store/Durotal-Logistics-Provider-Icon.png",
+		energy_required = 3.0,
+		enabled = true,
+		ingredients = {
+			{ type = "item", name = "y_sc11", amount = 1 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 2 },
+			{ type = "item", name = "y-chip-1", amount = 1 },
 		},
+		group = "j_yuoki_logistics",
+		subgroup = "j-y-logi-6",
+		order = "a",
+		results = {
+			{ type = "item", name = "j-dl-provider", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
+		},
+		main_product = "j-dl-provider",
+	},
 
-
+	-- Buffer Recipe (JATMN)
+	{
+		type = "recipe",
+		name = "j-dl-buffer",
+		icon_size = 32,
+		icon = "__Yuoki__/graphics/entity/store/Durotal-Logistics-Buffer-Icon.png",
+		energy_required = 3.0,
+		enabled = true,
+		ingredients = {
+			{ type = "item", name = "y_sc11", amount = 1 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 2 },
+			{ type = "item", name = "y-chip-1", amount = 1 },
+		},
+		group = "j_yuoki_logistics",
+		subgroup = "j-y-logi-6",
+		order = "c",
+		results = {
+			{ type = "item", name = "j-dl-buffer", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
+		},
+		main_product = "j-dl-buffer",
+	},
 
 	-- new chest 1x1
 	{
@@ -333,7 +328,7 @@ data:extend(
 		default_request_amount = 5,
 	},
 	-- Provider	(JATMN)
-		{
+	{
 		type = "item",
 		name = "j-dl-provider",
 		icon_size = 32,

@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
 	--[[
 	{
 		type = "recipe",
@@ -63,36 +62,35 @@ data:extend(
 		order = "c-c",
 		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/wood-gas.png",
 	},  
-	]]		
+	]]
 	{
 		type = "recipe",
 		name = "y-sulfuric-acid",
 		category = "yuoki-archaeology-wash",
 		--category = "chemistry",
 		energy_required = 4,
-		ingredients ={
-			{type="item", name="y-toxic-dust", amount=12,},
-			{type="fluid", name="water", amount=20,},
+		ingredients = {
+			{ type = "item", name = "y-toxic-dust", amount = 12 },
+			{ type = "fluid", name = "water", amount = 20 },
 		},
-		results={{type="fluid", name="sulfuric-acid", amount=10, },},
-		-- icon_size = 64, icon =  "__Yuoki__/graphics/gfx/carbon_dioxide.png",		
+		results = { { type = "fluid", name = "sulfuric-acid", amount = 10 } },
+		-- icon_size = 64, icon =  "__Yuoki__/graphics/gfx/carbon_dioxide.png",
 		group = "yuoki",
 		subgroup = "y-fluid",
 		enabled = true,
 		order = "c-d",
 	},
-	
+
 	{
 		type = "recipe",
 		name = "y-water-gen-fluid",
-		category = "yuoki-watergen",		
+		category = "yuoki-watergen",
 		energy_required = 2,
 		ingredients = {},
-		results={{type="fluid", name="water", amount=1200, },},		
+		results = { { type = "fluid", name = "water", amount = 1200 } },
 		group = "yuoki",
 		subgroup = "y-fluid",
 		enabled = true,
 		order = "c-e",
 	},
-		
 })

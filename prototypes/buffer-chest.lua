@@ -9,7 +9,7 @@ local recipe = table.deepcopy(data.raw.recipe.y_rc22)
 -- Poke values for new entity
 recipe.name = "y_bc22"
 --recipe.results = "y_bc22"
-recipe.results = {{type="item", name="y_bc22", amount=1}}
+recipe.results = { { type = "item", name = "y_bc22", amount = 1 } }
 recipe.main_product = "y_bc22"
 
 --Copy item data for Yuoki Requester Chest and customise for new entity
@@ -25,6 +25,6 @@ entity.logistic_mode = "buffer"
 entity.picture.filename = "__Yuoki__/graphics/y-bc22.png"
 entity.minable.result = "y_bc22"
 
-data:extend({recipe})
-data:extend({item})
-data:extend({entity})
+data:extend({ recipe })
+data:extend({ item })
+data:extend({ entity })

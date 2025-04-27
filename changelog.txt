@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.14
+Date: 27. 4. 2025
+  Changes:
+    - Reformat all code using Stylua, attempting to keep this format moving forward as the code is a heavy mix of styles over the years. This should have zero impact to the mod itself just my sanity working on it.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.13
 Date: 11. 4. 2025
   Updates:

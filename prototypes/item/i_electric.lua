@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
 	{
 		type = "item",
 		name = "y_chip_plate",
@@ -110,7 +109,7 @@ data:extend(
 		type = "item",
 		name = "y-accumulator-b",
 		icon_size = 64,
-		icon =  "__Yuoki__/graphics/gfx/accu_b_icon.png",
+		icon = "__Yuoki__/graphics/gfx/accu_b_icon.png",
 		subgroup = "y-energy-2",
 		order = "ac-3",
 		place_result = "y-accumulator-b",
@@ -191,5 +190,4 @@ data:extend(
 		subgroup = "y-energy-2",
 		order = "ac-8",
 	},
-
 })
