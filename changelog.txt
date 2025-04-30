@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
-Date: 27. 4. 2025
+Date: 00. 4. 2025
+  Updates:
+    - Added Vanilla (ALPHA!) overhaul setting. This will replace some vanilla recipes with required Yuoki items. Warning use as your own risk, updates will likely break your factory. Please share feedback if you use it!
   Changes:
     - Changed Start with YI Suite option to only start with 25 Yi Constructor robots, made no sense to start with 50 as you only could use 25.
     - Reformat all code using Stylua, attempting to keep this format moving forward as the code is a heavy mix of styles over the years. This should have zero impact to the mod itself just my sanity working on it.

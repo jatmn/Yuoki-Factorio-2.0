@@ -1,17 +1,24 @@
 data:extend({
 	{
 		type = "bool-setting",
+		name = "yuoki-vanilla-overhaul",
+		setting_type = "startup",
+		default_value = false,
+		order = "a",
+	},
+	{
+		type = "bool-setting",
 		name = "yuoki-prod-mod-behaviour",
 		setting_type = "startup",
 		default_value = true,
-		order = "a",
+		order = "b",
 	},
 	{
 		type = "bool-setting",
 		name = "yuoki-start-with-yi-suit",
 		setting_type = "startup",
 		default_value = false,
-		order = "b",
+		order = "c",
 	},
 	{
 		type = "int-setting",
@@ -20,7 +27,7 @@ data:extend({
 		minimum_value = 80,
 		maximum_value = 150,
 		default_value = 80,
-		order = "c",
+		order = "d",
 	},
 	{
 		type = "int-setting",
@@ -29,13 +36,13 @@ data:extend({
 		minimum_value = 10,
 		maximum_value = 32,
 		default_value = 10,
-		order = "d",
+		order = "e",
 	},
 	{
 		type = "bool-setting",
 		name = "yuoki-uc-heavyoil",
 		setting_type = "startup",
 		default_value = true,
-		order = "e",
+		order = "f",
 	},
 })
