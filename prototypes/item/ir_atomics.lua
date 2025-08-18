@@ -573,4 +573,24 @@ data:extend({
 		category = "yuoki-atomics",
 		auto_recycle = false,
 	},
+
+	-- contaminated water to unicomp
+	{
+		type = "recipe",
+		name = "j-cw2uc-recipe",
+		energy_required = 5,
+		ingredients = {
+			{ type = "fluid", name = "y-con_water", amount = 9100 },
+		},
+		results = {
+			{ type = "item", name = "y-unicomp-a2", amount = 1 },
+		},
+		main_product = "y-unicomp-a2",
+		enabled = true,
+		icon_size = 128,
+		icon = "__Yuoki__/graphics/icons/atomics/cw2uc.png",
+		order = "a",
+		subgroup = "j-y-atomics-3",
+		category = "yuoki-atomics",
+	},
 })

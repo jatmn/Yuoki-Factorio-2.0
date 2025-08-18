@@ -1,4 +1,5 @@
 data:extend({
+	--[[
 	{
 		type = "bool-setting",
 		name = "yuoki-vanilla-overhaul",
@@ -6,6 +7,7 @@ data:extend({
 		default_value = false,
 		order = "a",
 	},
+	]]--
 	{
 		type = "bool-setting",
 		name = "yuoki-prod-mod-behaviour",

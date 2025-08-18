@@ -25,6 +25,33 @@ data:extend({
 		subgroup = "j-y-logi-9",
 	},
 
+	{
+		type = "recipe",
+		name = "j_yi_roboport1",
+		category = "yuoki-wonder",
+		enabled = true,
+		energy_required = 5.00,
+		ingredients = {
+			{ type = "item", name = "y_structure_element", amount = 5 },
+			{ type = "item", name = "yi_magnetron", amount = 1 },
+			{ type = "item", name = "y-ups-flywheel-b", amount = 2 },
+			{ type = "item", name = "y-basic-t1-mf", amount = 2 },
+			{ type = "item", name = "y_rwtechsign", amount = 2 },
+		},
+		results = {
+			{ type = "item", name = "j_yi_roboport1", amount = 1 },
+			{ type = "item", name = "ypfw_trader_sign", amount = 1 },
+		},
+		main_product = "j_yi_roboport1",
+		icon_size = 64,
+		icons = {
+			{ icon = "__Yuoki__/graphics/gfx/aqe-icon.png", tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 }, scale = 0.5 },
+		},
+		order = "2",
+		group = "yuoki",
+		subgroup = "j-y-logi-9",
+	},
+
 	--
 	{
 		type = "recipe",

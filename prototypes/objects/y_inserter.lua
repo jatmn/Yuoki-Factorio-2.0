@@ -34,7 +34,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y-inserter-fast",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/y_smart_ins_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -167,7 +167,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y-inserter-s4",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/ins_red_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -273,8 +273,9 @@ data:extend({
 		name = "y-inserter-smart",
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-inserter-fast", amount = 1 },
-			{ type = "item", name = "y-chip-2", amount = 1 },
+			{ type = "item", name = "y-inserter-fast", amount = 1, },
+			{ type = "item", name = "y-chip-2", amount = 2, },
+			{ type = "item", name = "y-infused-uca2", amount = 1, }
 		},
 		results = {
 			{ type = "item", name = "y-inserter-smart", amount = 1 },
@@ -298,7 +299,12 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y-inserter-smart",
-		stack = true,
+		bulk = true,
+		stack_size_bonus = 4,
+		grab_less_to_match_belt_stack = true,
+		wait_for_full_hand = true,
+		enter_drop_mode_if_held_stack_spoiled = true,
+		max_belt_stack_size = 4,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/ins_cyan_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -398,7 +404,6 @@ data:extend({
 		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
 		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
 		circuit_wire_max_distance = 22.5,
-		uses_arm_movement = "basic-inserter",
 	},
 
 	-- smart long yuoki-inserter
@@ -433,7 +438,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y-inserter-smart-long",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/inserter_long_smart.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -566,7 +571,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y_inserter_smart_rightR2",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/special_ins_rights_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -699,7 +704,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y_inserter_smart_leftR2",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/special_ins_lefts_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -832,7 +837,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y_inserter_smart_RR",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/special_ins_right_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -965,7 +970,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y_inserter_smart_LL",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/special_ins_left_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },

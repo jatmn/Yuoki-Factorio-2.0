@@ -30,7 +30,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y_inserter_diagonal",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/ins_diagonal.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -143,7 +143,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y_inserter_evade_shortR",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/ins_evade_right_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
@@ -256,7 +256,7 @@ data:extend({
 	{
 		type = "inserter",
 		name = "y_inserter_evade_shortL",
-		stack = true,
+		bulk = true,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/inserters/ins_evade_left_icon.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },

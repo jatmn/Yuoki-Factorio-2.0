@@ -525,6 +525,25 @@ data:extend({
 		default_request_amount = 6,
 		place_result = "yi_roboport",
 	},
+	-- the 8080 - JATMN
+	{
+		type = "item",
+		name = "j_yi_roboport1",
+		icon_size = 64,
+		icons = {
+			{
+				icon = "__Yuoki__/graphics/gfx/aqe-icon.png",
+				tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 },
+				scale = 0.5,
+			},
+		},
+		group = "yuoki",
+		subgroup = "j-y-logi-9",
+		order = "2",
+		stack_size = 25,
+		default_request_amount = 5,
+		place_result = "j_yi_roboport1",
+	},
 	--ID:276
 	{
 		type = "item",
@@ -564,6 +583,19 @@ data:extend({
 		default_request_amount = 5,
 		place_result = "yi_logistic-robot",
 	},
+	-- Logistic bot 2 - (JATMN)
+	{
+		type = "item",
+		name = "j_logistic2-robot",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/j_logistic2-robot_icon.png",
+		group = "yuoki",
+		subgroup = "j-y-logi-9",
+		order = "a2",
+		stack_size = 50,
+		default_request_amount = 5,
+		place_result = "j_logistic2-robot",
+	},
 	--ID:260
 	{
 		type = "item",
@@ -576,6 +608,20 @@ data:extend({
 		stack_size = 100,
 		default_request_amount = 5,
 		place_result = "yi_construction-robot",
+	},
+	-- Construction bot 2 - (JATMN)
+	{
+		type = "item",
+		name = "j_construction2-robot",
+		icon_size = 64,
+		icons = { { icon = "__Yuoki__/graphics/icons/rob_con_icon.png", tint = { r = 224 / 255, g = 158 / 255, b = 158
+			/ 255 } } },
+		group = "yuoki",
+		subgroup = "j-y-logi-9",
+		order = "d2",
+		stack_size = 50,
+		default_request_amount = 5,
+		place_result = "j_construction2-robot",
 	},
 	--ID:238
 	{

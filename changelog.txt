@@ -1,11 +1,18 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
-Date: 00. 4. 2025
-  Updates:
-    - Added Vanilla (ALPHA!) overhaul setting. This will replace some vanilla recipes with required Yuoki items. Warning use as your own risk, updates will likely break your factory. Please share feedback if you use it!
+Date: 00. 8. 2025
+  Additions:
+    - Contaminated water to Unicomp recipe added from Fixes Mod
+    - Added the 8080 logistics and construction network expander ports from Fixes Mod
+    - Added turbo bots from Fixes Mod
+  Fixes:
+    - Fixed Yuoki inserters to be bulk (stack) class like they were in 1.0 - No they wont stack belts.
   Changes:
     - Changed Start with YI Suite option to only start with 25 Yi Constructor robots, made no sense to start with 50 as you only could use 25.
     - Reformat all code using Stylua, attempting to keep this format moving forward as the code is a heavy mix of styles over the years. This should have zero impact to the mod itself just my sanity working on it.
+    - Prototype 41 - former "filter inserter" is now a stack inserter. Should stack belts when that research is unlocked, still need to verify this though. Recipe changed as well.
+  Known Issues:
+    - Yes I know logi and construction class bots have broken images when doing construction and that their shadows need fixed.... 
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.13
 Date: 11. 4. 2025

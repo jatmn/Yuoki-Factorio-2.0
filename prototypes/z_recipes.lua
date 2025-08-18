@@ -935,6 +935,31 @@ data:extend({
 		group = "yuoki",
 		subgroup = "j-y-logi-9",
 	},
+	-- Construction 2 bot - (JATMN)
+	{
+		type = "recipe",
+		name = "j_construction2-robot",
+		category = "crafting",
+		enabled = true,
+		energy_required = 240,
+		ingredients = {
+			{ type = "item", name = "y-crystal-cnd", amount = 1.0 },
+			{ type = "item", name = "y-basic-t2-mf", amount = 4.0 },
+			{ type = "item", name = "yi_construction-robot", amount = 5.0 },
+			{ type = "item", name = "y-chip-2", amount = 2.0 },
+		},
+		results = {
+			{ type = "item", name = "j_construction2-robot", amount = 1.0 },
+			{ type = "item", name = "ye_science_blue", amount = 1.0 },
+		},
+		main_product = "j_construction2-robot",
+		icons = { { icon = "__Yuoki__/graphics/icons/rob_con_icon.png", tint = { r = 224 / 255, g = 158 / 255, b = 158
+			/ 255 } } },
+		icon_size = 64,
+		order = "d",
+		group = "yuoki",
+		subgroup = "j-y-logi-9",
+	},
 
 	--ID:150
 	{
@@ -957,6 +982,30 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/rob_log_icon.png",
 		icon_size = 64,
 		order = "a",
+		group = "yuoki",
+		subgroup = "j-y-logi-9",
+	},
+	-- logistics 2 bot - (JATMN)
+	{
+		type = "recipe",
+		name = "j_logistic2-robot",
+		category = "crafting",
+		enabled = true,
+		energy_required = 240,
+		ingredients = {
+			{ type = "item", name = "y-crystal-cnd", amount = 1.0 },
+			{ type = "item", name = "y-basic-t2-mf", amount = 4.0 },
+			{ type = "item", name = "yi_logistic-robot", amount = 5.0 },
+			{ type = "item", name = "y-chip-2", amount = 2.0 },
+		},
+		results = {
+			{ type = "item", name = "j_logistic2-robot", amount = 1.0 },
+			{ type = "item", name = "ye_science_blue", amount = 1.0 },
+		},
+		main_product = "j_logistic2-robot",
+		icon = "__Yuoki__/graphics/icons/j_logistic2-robot_icon.png",
+		icon_size = 64,
+		order = "a2",
 		group = "yuoki",
 		subgroup = "j-y-logi-9",
 	},
