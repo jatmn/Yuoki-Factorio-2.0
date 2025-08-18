@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.14
-Date: 00. 8. 2025
+Date: 17. 8. 2025
   Additions:
     - Contaminated water to Unicomp recipe added from Fixes Mod
     - Added the 8080 logistics and construction network expander ports from Fixes Mod
