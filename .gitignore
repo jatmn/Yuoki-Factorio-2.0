@@ -3,6 +3,9 @@ graphics/desktop.ini
 graphics/entity/desktop.ini
 graphics/icons/atomics/desktop.ini
 **/Thumbs.db/
+**/**/Thumbs.db/
+**/**/**/Thumbs.db/
+**/**/**/**/Thumbs.db/
 Thumbs.db
 
 
