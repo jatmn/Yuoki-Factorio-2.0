@@ -263,8 +263,8 @@ data:extend({
 		minable = { mining_time = 1, result = "y-notfall-generator-s2" },
 		max_health = 300,
 		corpse = "small-remnants",
-		effectivity = 1.0,
-		fluid_usage_per_tick = 0.4,
+		effectivity = 1.2,
+		fluid_usage_per_tick = 0.75,
 		resistances = {
 			{
 				type = "fire",
@@ -273,7 +273,7 @@ data:extend({
 		},
 		collision_box = { { -1.3, -0.9 }, { 1.3, 0.9 } },
 		selection_box = { { -1.5, -1.0 }, { 1.5, 1.0 } },
-		maximum_temperature = 265,
+		maximum_temperature = 165,
 		fluid_box = {
 			volume = 200,
 			base_area = 1,

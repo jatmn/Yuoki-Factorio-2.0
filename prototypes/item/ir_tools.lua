@@ -88,7 +88,6 @@ data:extend({
 		speed = 3,
 		durability = 400,
 		stack_size = 75,
-		default_request_amount = 10,
 	},
 	{
 		type = "repair-tool",
@@ -101,7 +100,6 @@ data:extend({
 		speed = 5,
 		durability = 750,
 		stack_size = 75,
-		default_request_amount = 10,
 	},
 	{
 		type = "repair-tool",
@@ -114,7 +112,6 @@ data:extend({
 		speed = 25,
 		durability = 7500,
 		stack_size = 25,
-		default_request_amount = 2,
 	},
 
 	--[[

@@ -26,7 +26,7 @@ require("prototypes.entity.e_entity220")
 
 require("prototypes.item.i_ores")
 require("prototypes.item.i_fluids")
-require("prototypes.item.ir_atomics")
+
 require("prototypes.item.i_electric")
 require("prototypes.item.i_energy")
 require("prototypes.item.i_pipes")
@@ -70,6 +70,8 @@ require("prototypes.z_recipes")
 
 -- overwrite hopefully
 require("prototypes.objects._tiles")
+
+require("prototypes.item.ir_atomics")
 
 --require("Yuoki_0234_data-updates")
 require("prototypes.item.y_stacksizes")

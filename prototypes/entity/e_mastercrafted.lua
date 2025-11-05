@@ -139,7 +139,6 @@ data:extend({
 		subgroup = "y_mastercrafted",
 		place_result = "y_steam_turbine_mc",
 		stack_size = 20,
-		default_request_amount = 5,
 	},
 	{
 		type = "generator",
@@ -256,7 +255,6 @@ data:extend({
 		subgroup = "y_mastercrafted",
 		place_result = "y_steam_turbine_gr",
 		stack_size = 20,
-		default_request_amount = 5,
 	},
 	{
 		type = "generator",
@@ -376,7 +374,6 @@ data:extend({
 		subgroup = "y_mastercrafted",
 		place_result = "y_mc_underground_drill",
 		stack_size = 20,
-		default_request_amount = 5,
 	},
 	{
 		type = "assembling-machine",
@@ -451,7 +448,6 @@ data:extend({
 		subgroup = "y_mastercrafted",
 		place_result = "y_mc_dirtwasher",
 		stack_size = 20,
-		default_request_amount = 5,
 	},
 	{
 		type = "assembling-machine",
@@ -581,7 +577,6 @@ data:extend({
 		subgroup = "y_mastercrafted",
 		place_result = "y_mc_e2_mining_drill",
 		stack_size = 20,
-		default_request_amount = 5,
 	},
 	{
 		type = "mining-drill",
@@ -678,7 +673,6 @@ data:extend({
 		order = "b[steam-power]-a3",
 		place_result = "y_boiler4_mc",
 		stack_size = 15,
-		default_request_amount = 4,
 	},
 	{
 		type = "boiler",
@@ -811,7 +805,6 @@ data:extend({
 		order = "b[steam-power]-a4",
 		place_result = "y_boiler4_tech",
 		stack_size = 15,
-		default_request_amount = 4,
 	},
 	{
 		type = "boiler",

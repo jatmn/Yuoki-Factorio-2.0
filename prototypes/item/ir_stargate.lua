@@ -32,7 +32,6 @@ data:extend({
 		fuel_category = "chemical",
 		fuel_value = "10GJ",
 		stack_size = 500,
-		default_request_amount = 10,
 	},
 
 	-- fame recipe
@@ -76,7 +75,6 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/fame-icon.png",
 		subgroup = "y-stargate-f",
 		stack_size = 10000,
-		default_request_amount = 10,
 	},
 
 	-- stargate recipe

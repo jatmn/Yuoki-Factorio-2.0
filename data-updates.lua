@@ -54,5 +54,13 @@ if prod_mod == true then
 	require("prototypes.y_prodmod_as_vanilla")
 end
 
--- Factorio 2.0 Recycling changes
-require("prototypes.integration.yi-recycling")
+
+
+-- Factorio Space Age updates
+require("prototypes.integration.space-age.yi-recycling") -- Factorio 2.0 Recycling changes
+require("prototypes.integration.space-age.r_metal-process") -- Metal Processing recipe updates
+require("prototypes.integration.space-age.e_advmachinery") -- Advanced Machineery updates
+require("prototypes.integration.space-age.y-module") -- Update speed modules
+
+require("prototypes.integration.space-age.ir_atomics") -- Atomics recipe updates
+

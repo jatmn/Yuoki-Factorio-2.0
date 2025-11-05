@@ -87,25 +87,7 @@ data:extend({
 			return res
 		end)(),
 
-		graphics_set = {
-			base_visualisation = {
-				animation = {
-					layers = {
-						{
-							filename = "__Yuoki__/graphics/entity/defense/zzt-sheet.png",
-							priority = "high",
-							width = 160,
-							height = 160,
-							shift = { 0.31, -0.75 },
-							direction_count = 64,
-							frame_count = 1,
-							line_length = 8,
-							axially_symmetrical = false,
-						},
-					},
-				},
-			},
-		},
+		graphics_set = blank_sprite,
 
 		--[[
 			base_picture =
@@ -196,25 +178,7 @@ data:extend({
 			return res
 		end)(),
 
-		graphics_set = {
-			base_visualisation = {
-				animation = {
-					layers = {
-						{
-							filename = "__Yuoki__/graphics/entity/defense/laser22f12-h-sheet.png",
-							priority = "high",
-							width = 128,
-							height = 128,
-							shift = { 0.1875, -0.625 },
-							direction_count = 64,
-							frame_count = 1,
-							line_length = 8,
-							axially_symmetrical = false,
-						},
-					},
-				},
-			},
-		},
+		graphics_set = blank_sprite,
 
 		attack_parameters = {
 			type = "beam",

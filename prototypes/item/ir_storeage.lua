@@ -233,7 +233,6 @@ data:extend({
 		subgroup = "j-y-logi-5",
 		place_result = "y_sc11",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- new chest 2x2
 	{
@@ -244,7 +243,6 @@ data:extend({
 		subgroup = "j-y-logi-5",
 		place_result = "y_c22",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- new chest 3x3
 	{
@@ -255,7 +253,6 @@ data:extend({
 		subgroup = "j-y-logi-5",
 		place_result = "y_cg33",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- new chest 4x4
 	{
@@ -267,7 +264,6 @@ data:extend({
 		subgroup = "j-y-logi-5",
 		place_result = "y_sc44",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- new requester 2x2
 	{
@@ -278,7 +274,6 @@ data:extend({
 		subgroup = "j-y-logi-7",
 		place_result = "y_rc22",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- new provider 2x2
 	{
@@ -289,7 +284,6 @@ data:extend({
 		subgroup = "j-y-logi-7",
 		place_result = "y_pc22",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- logistic chest 1x1
 	{
@@ -301,7 +295,6 @@ data:extend({
 		subgroup = "j-y-logi-6",
 		place_result = "y-rare-chest-log",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- logistic chest 3x3
 	{
@@ -313,7 +306,6 @@ data:extend({
 		group = "yuoki",
 		subgroup = "j-y-logi-8",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- Requester (JATMN)
 	{
@@ -325,7 +317,6 @@ data:extend({
 		subgroup = "j-y-logi-6",
 		place_result = "j-dl-request",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- Provider	(JATMN)
 	{
@@ -337,7 +328,6 @@ data:extend({
 		subgroup = "j-y-logi-6",
 		place_result = "j-dl-provider",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 	-- Buffer Recipe (JATMN)
 	{
@@ -349,6 +339,5 @@ data:extend({
 		subgroup = "j-y-logi-6",
 		place_result = "j-dl-buffer",
 		stack_size = 30,
-		default_request_amount = 5,
 	},
 })

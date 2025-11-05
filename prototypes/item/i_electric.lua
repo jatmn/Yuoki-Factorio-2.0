@@ -7,7 +7,7 @@ data:extend({
 		subgroup = "y_parts_e",
 		order = "a-0",
 		stack_size = 250,
-		default_request_amount = 50,
+		weight = 2 * kg,
 	},
 
 	{
@@ -18,7 +18,6 @@ data:extend({
 		subgroup = "y-parts",
 		order = "a-0",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 
 	{
@@ -29,7 +28,6 @@ data:extend({
 		subgroup = "y-electric",
 		order = "a-1",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 
 	{
@@ -42,7 +40,6 @@ data:extend({
 		fuel_category = "chemical",
 		fuel_value = "18MJ",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 
 	{
@@ -55,7 +52,6 @@ data:extend({
 		fuel_category = "chemical",
 		fuel_value = "38MJ",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 
 	{
@@ -66,7 +62,6 @@ data:extend({
 		subgroup = "y-electric",
 		order = "a-4",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 
 	{
@@ -78,7 +73,6 @@ data:extend({
 		order = "a[energy]-d[substation]-1",
 		place_result = "y-substation-m",
 		stack_size = 25,
-		default_request_amount = 15,
 	},
 
 	{
@@ -89,8 +83,8 @@ data:extend({
 		subgroup = "y-lamps",
 		order = "a[energy]-d[substation]-2",
 		place_result = "y-substation-h",
-		stack_size = 25,
-		default_request_amount = 15,
+		stack_size = 24,
+		weight = 200 * kg,
 	},
 
 	{
@@ -102,7 +96,6 @@ data:extend({
 		order = "ac-1",
 		place_result = "y-accumulator-m",
 		stack_size = 50,
-		default_request_amount = 15,
 	},
 
 	{
@@ -114,7 +107,6 @@ data:extend({
 		order = "ac-3",
 		place_result = "y-accumulator-b",
 		stack_size = 30,
-		default_request_amount = 15,
 	},
 
 	{
@@ -122,7 +114,6 @@ data:extend({
 		name = "y-ups-flywheel-b",
 		place_result = "y-ups-flywheel-b",
 		stack_size = 30,
-		default_request_amount = 10,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/gfx/accflywheel_b_icon.png",
 		subgroup = "y-energy-2",
@@ -134,11 +125,11 @@ data:extend({
 		name = "y-accumulator-m-t2",
 		place_result = "y-accumulator-m-t2",
 		stack_size = 50,
-		default_request_amount = 10,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/gfx/mcd-icon.png",
 		subgroup = "y-energy-2",
 		order = "ac-2",
+		weight = 20 * kg,
 	},
 
 	{
@@ -146,7 +137,6 @@ data:extend({
 		name = "y-accumulator-b-t2",
 		place_result = "y-accumulator-b-t2",
 		stack_size = 25,
-		default_request_amount = 10,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/gfx/bcd-icon.png",
 		subgroup = "y-energy-2",
@@ -158,7 +148,6 @@ data:extend({
 		name = "y-accumulator-b-tx",
 		place_result = "y-accumulator-b-tx",
 		stack_size = 25,
-		default_request_amount = 10,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/gfx/aqe-icon.png",
 		subgroup = "y-energy-2",
@@ -171,11 +160,11 @@ data:extend({
 		name = "y-accumulator-crystal-m",
 		place_result = "y-accumulator-crystal-m",
 		stack_size = 25,
-		default_request_amount = 10,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/gfx/accu_crystal-m-icon.png",
 		subgroup = "y-energy-2",
 		order = "ac-6",
+		weight = 40 * kg,
 	},
 
 	-- compensator 25
@@ -184,7 +173,6 @@ data:extend({
 		name = "y_compensator_25",
 		place_result = "y_compensator_25",
 		stack_size = 15,
-		default_request_amount = 5,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/gfx/compensator25-icon.png",
 		subgroup = "y-energy-2",

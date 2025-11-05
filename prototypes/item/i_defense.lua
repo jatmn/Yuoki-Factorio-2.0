@@ -9,7 +9,7 @@ data:extend({
 		order = "a[wall]-a[wall]-a",
 		place_result = "y-mud-wall",
 		stack_size = 100,
-		default_request_amount = 90,
+		weight = 10 * kg,
 	},
 
 	{
@@ -22,7 +22,6 @@ data:extend({
 		subgroup = "y_defense_walls",
 		place_result = "y-rare-wall-basic",
 		stack_size = 100,
-		default_request_amount = 90,
 	},
 	{
 		type = "item",
@@ -34,7 +33,6 @@ data:extend({
 		subgroup = "y_defense_walls",
 		place_result = "y-rare-wall-adv",
 		stack_size = 100,
-		default_request_amount = 90,
 	},
 	{
 		type = "item",
@@ -46,7 +44,6 @@ data:extend({
 		subgroup = "y_defense_walls",
 		place_result = "y-wall-forcefield",
 		stack_size = 100,
-		default_request_amount = 90,
 	},
 
 	{
@@ -59,7 +56,6 @@ data:extend({
 		subgroup = "y_defense_walls",
 		order = "a[wall]-a[wall]-c",
 		stack_size = 80,
-		default_request_amount = 60,
 	},
 
 	{
@@ -71,7 +67,7 @@ data:extend({
 		order = "b[turret]-c[gun-turret]",
 		place_result = "y-laser-def-s4",
 		stack_size = 50,
-		default_request_amount = 10,
+		weight = 20 * kg,
 	},
 
 	{
@@ -83,7 +79,7 @@ data:extend({
 		order = "b[turret]-c[gun-turret]",
 		place_result = "y_turret_gun1f12",
 		stack_size = 50,
-		default_request_amount = 10,
+		weight = 20 * kg,
 	},
 	{
 		type = "item",
@@ -94,7 +90,6 @@ data:extend({
 		order = "b[turret]-c[gun-turret]",
 		place_result = "y_turret_gun2f12",
 		stack_size = 50,
-		default_request_amount = 10,
 	},
 
 	{
@@ -106,7 +101,7 @@ data:extend({
 		order = "b[turret]-c[gun-turret]",
 		place_result = "y_turret_laser22f12",
 		stack_size = 50,
-		default_request_amount = 10,
+		weight = 20 * kg,
 	},
 	-- y_weapon-ztt
 	{
@@ -118,6 +113,5 @@ data:extend({
 		order = "b[turret]-c[gun-turret]",
 		place_result = "y-weapon-ztt",
 		stack_size = 50,
-		default_request_amount = 5,
 	},
 })

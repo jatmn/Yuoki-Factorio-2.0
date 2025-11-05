@@ -10,7 +10,6 @@ data:extend({
 		subgroup = "y_erfolge",
 		place_result = "yi_obelisk_A3_5X",
 		stack_size = 50,
-		default_request_amount = 10,
 		order = "la",
 	},
 
@@ -54,7 +53,6 @@ data:extend({
 
 		energy_usage_per_tick = "25kW",
 		light = { intensity = 0.8, size = 100 },
-		--light = {intensity = 0.9, size = 70},
 		picture_off = {
 			filename = "__Yuoki__/graphics/entity/lamps/yi_obelisk_3.5off.png",
 			priority = "high",
@@ -85,7 +83,6 @@ data:extend({
 		subgroup = "y_erfolge",
 		place_result = "yi_bug1",
 		stack_size = 50,
-		default_request_amount = 10,
 		order = "2a",
 	},
 
@@ -126,12 +123,10 @@ data:extend({
 			type = "electric",
 			input_priority = "secondary",
 			usage_priority = "secondary-input",
-			-- emissions_per_minute = { pollution = -12.5,}
 		},
 
 		energy_usage_per_tick = "25kW",
 		light = { intensity = 0.35, size = 15, color = { r = 0.8, g = 0.0, b = 0.0 } },
-		--light = {intensity = 0.9, size = 70},
 		picture_off = {
 			filename = "__Yuoki__/graphics/entity/lamps/statue_bug1_off.png",
 			priority = "high",
@@ -162,7 +157,6 @@ data:extend({
 		subgroup = "y_erfolge",
 		place_result = "yi_hny1",
 		stack_size = 10,
-		default_request_amount = 10,
 		order = "2a",
 	},
 	-- recipe
@@ -237,7 +231,6 @@ data:extend({
 		subgroup = "y_erfolge",
 		place_result = "yi_hny2",
 		stack_size = 10,
-		default_request_amount = 10,
 		order = "4b",
 	},
 	-- recipe

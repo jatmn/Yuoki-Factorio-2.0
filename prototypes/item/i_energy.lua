@@ -9,7 +9,6 @@ data:extend({
 		order = "b[steam-power]-a3",
 		place_result = "y-boiler-iv",
 		stack_size = 10,
-		default_request_amount = 2,
 	},
 	{
 		type = "item",
@@ -21,7 +20,6 @@ data:extend({
 		order = "b[steam-power]-a4",
 		place_result = "y-obninsk-reactor",
 		stack_size = 5,
-		default_request_amount = 2,
 	},
 	{
 		type = "item",
@@ -33,7 +31,6 @@ data:extend({
 		order = "s3",
 		place_result = "y-obninsk-turbine",
 		stack_size = 5,
-		default_request_amount = 2,
 	},
 	{
 		type = "item",
@@ -45,7 +42,6 @@ data:extend({
 		order = "s2",
 		place_result = "y-steam-turbine",
 		stack_size = 20,
-		default_request_amount = 2,
 	},
 	{
 		type = "item",
@@ -57,7 +53,6 @@ data:extend({
 		order = "s1",
 		place_result = "y-notfall-generator-s2",
 		stack_size = 25,
-		default_request_amount = 2,
 	},
 
 	-- small electric generator
@@ -66,7 +61,6 @@ data:extend({
 		name = "y-seg",
 		place_result = "y-seg",
 		stack_size = 15,
-		default_request_amount = 2,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/energy-t2/seg-s_icon.png",
 		group = "yuoki-energy",
@@ -79,7 +73,6 @@ data:extend({
 		name = "y-seg-p",
 		place_result = "y-seg-p",
 		stack_size = 15,
-		default_request_amount = 2,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/energy-t2/seg-p_icon.png",
 		group = "yuoki-energy",
@@ -93,7 +86,6 @@ data:extend({
 		name = "y-meg-s",
 		place_result = "y-meg-s",
 		stack_size = 15,
-		default_request_amount = 2,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/energy-t2/meg-s-icon.png",
 		group = "yuoki-energy",
@@ -106,7 +98,6 @@ data:extend({
 		name = "y-beg",
 		place_result = "y-beg",
 		stack_size = 15,
-		default_request_amount = 2,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/energy-t2/beg_icon.png",
 		group = "yuoki-energy",
@@ -119,7 +110,6 @@ data:extend({
 		name = "y-heg",
 		place_result = "y-heg",
 		stack_size = 15,
-		default_request_amount = 2,
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/energy-t2/heg-icon.png",
 		group = "yuoki-energy",

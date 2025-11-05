@@ -12,9 +12,8 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-speed-module-1", amount = 1 } },
 		main_product = "y-speed-module-1",
-		--result = "y-speed-module-1",
-		--result_count = 1,
 		order = "m-1a",
+		auto_recycle = true,
 	},
 	-- items
 	{
@@ -27,9 +26,8 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-1a",
 		stack_size = 100,
-		default_request_amount = 10,
-		--effect = { speed = {bonus = 0.125}, pollution = {bonus = 0.075}, }
 		effect = { speed = 0.125, pollution = 0.075 },
+		weight = 20 * kg,
 	},
 	-- recipes
 	{
@@ -52,6 +50,7 @@ data:extend({
 		order = "m-2a",
 		subgroup = "y-module",
 	},
+
 	-- items
 	{
 		type = "module",
@@ -63,8 +62,8 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-2a",
 		stack_size = 100,
-		default_request_amount = 10,
 		effect = { speed = 0.25, pollution = 0.15 },
+		weight = 20 * kg,
 	},
 
 	-- greens
@@ -80,9 +79,8 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-green-module-1", amount = 1 } },
 		main_product = "y-green-module-1",
-		--result = "y-green-module-1",
-		--result_count = 1,
 		order = "m-1b",
+		auto_recycle = true,
 	},
 	{
 		type = "module",
@@ -94,9 +92,9 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-1b",
 		stack_size = 100,
-		default_request_amount = 10,
 		effect = { consumption = -0.25 },
 		limitation = production,
+		weight = 20 * kg,
 	},
 
 	-- green-2
@@ -130,9 +128,9 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-2b",
 		stack_size = 100,
-		default_request_amount = 10,
 		effect = { consumption = -0.35 },
 		limitation = production,
+		weight = 20 * kg,
 	},
 
 	-- green-op ultimate
@@ -167,10 +165,10 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-2c",
 		stack_size = 100,
-		default_request_amount = 10,
 		effect = { consumption = -0.80 },
 		limitation = production,
 		auto_recycle = false,
+		weight = 20 * kg,
 	},
 
 	-- red-op1
@@ -194,6 +192,7 @@ data:extend({
 		main_product = "y_modul_science",
 		order = "m-5b",
 		subgroup = "y-module",
+		
 	},
 	{
 		type = "module",
@@ -205,10 +204,9 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-5b",
 		stack_size = 100,
-		default_request_amount = 20,
 		effect = { productivity = 0.30, consumption = 1.0, pollution = -0.1 },
-		--limitation = productivitymodulelimitation(),
 		limitation_message_key = "production-module-usable-only-on-intermediates",
+		weight = 20 * kg,
 	},
 
 	-- red-op2
@@ -226,7 +224,6 @@ data:extend({
 		},
 		results = {
 			{ type = "item", name = "y_modul_red2", amount = 1 },
-			--{type="item", name="y_rwtechsign", amount=1, },
 		},
 		main_product = "y_modul_red2",
 		order = "m-5a",
@@ -242,9 +239,9 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-5a",
 		stack_size = 100,
-		default_request_amount = 10,
 		effect = { speed = 0.325, consumption = -0.20 },
 		limitation = production,
+		weight = 20 * kg,
 	},
 
 	-- pink ->dropped ->revieved 0509-215
@@ -261,8 +258,6 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-pink-module-1", amount = 1 } },
 		main_product = "y-pink-module-1",
-		--result = "y-pink-module-1",
-		--result_count = 1,
 		order = "m-4a",
 	},
 
@@ -276,10 +271,9 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-4a",
 		stack_size = 100,
-		default_request_amount = 20,
 		effect = { productivity = 0.05, consumption = 0.125, pollution = -0.075 },
-		--limitation = productivitymodulelimitation(),
 		limitation_message_key = "production-module-usable-only-on-intermediates",
+		weight = 20 * kg,
 	},
 
 	{
@@ -299,7 +293,6 @@ data:extend({
 			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-pink-module-2",
-		--result_count = 1,
 		order = "m-4b",
 		subgroup = "y-module",
 	},
@@ -314,10 +307,9 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-4b",
 		stack_size = 100,
-		default_request_amount = 20,
 		effect = { productivity = 0.125, consumption = 0.2, pollution = -0.15 },
-		--limitation = productivitymodulelimitation(),
 		limitation_message_key = "production-module-usable-only-on-intermediates",
+		weight = 20 * kg,
 	},
 
 	{
@@ -333,8 +325,6 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-pink-module-3", amount = 1 } },
 		main_product = "y-pink-module-3",
-		--result = "y-pink-module-3",
-		--result_count = 1,
 		order = "m-4c",
 	},
 
@@ -348,9 +338,8 @@ data:extend({
 		subgroup = "y-module",
 		order = "m-4c",
 		stack_size = 100,
-		default_request_amount = 20,
 		effect = { productivity = 0.20, consumption = 0.275, pollution = -0.2 },
-		--limitation = productivitymodulelimitation(),
 		limitation_message_key = "production-module-usable-only-on-intermediates",
+		weight = 20 * kg,
 	},
 })

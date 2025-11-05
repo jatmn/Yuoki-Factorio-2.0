@@ -9,7 +9,6 @@ data:extend({
 		fuel_category = "chemical",
 		fuel_value = "18MJ",
 		stack_size = 830,
-		default_request_amount = 100,
 	},
 	{
 		type = "item",
@@ -21,7 +20,6 @@ data:extend({
 		fuel_category = "chemical",
 		fuel_value = "57MJ",
 		stack_size = 350,
-		default_request_amount = 50,
 	},
 	{
 		type = "item",
@@ -32,7 +30,6 @@ data:extend({
 		subgroup = "y-fuel",
 		--fuel_category = {"chemical"}, fuel_value = "25MJ",
 		stack_size = 400,
-		default_request_amount = 50,
 	},
 	{
 		type = "item",
@@ -44,7 +41,6 @@ data:extend({
 		fuel_category = "chemical",
 		fuel_value = "40MJ",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 	{
 		type = "item",
@@ -56,7 +52,6 @@ data:extend({
 		fuel_category = "chemical",
 		fuel_value = "10MJ",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 	{
 		type = "item",
@@ -68,7 +63,6 @@ data:extend({
 		fuel_category = "chemical",
 		fuel_value = "40MJ",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 
 	{
@@ -79,7 +73,6 @@ data:extend({
 		group = "yuoki",
 		subgroup = "yuoki-archaeology",
 		stack_size = 700,
-		default_request_amount = 100,
 	},
 	{
 		type = "item",
@@ -89,6 +82,7 @@ data:extend({
 		group = "yuoki",
 		subgroup = "yuoki-archaeology",
 		stack_size = 500,
+		weight = 2 * kg,
 	},
 
 	{
@@ -101,7 +95,7 @@ data:extend({
 		--fuel_category = {"chemical"},
 		--fuel_value = "10MJ",
 		stack_size = 500,
-		default_request_amount = 100,
+		weight = 2 * kg,
 	},
 
 	{
@@ -112,6 +106,6 @@ data:extend({
 		group = "yuoki",
 		subgroup = "yuoki-formpress",
 		stack_size = 1000,
-		default_request_amount = 200,
+		weight = 1 * kg,
 	},
 })

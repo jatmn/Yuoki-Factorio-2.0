@@ -125,6 +125,5 @@ data:extend({
 		order = "p-g6",
 		subgroup = "y_parts_e",
 		stack_size = 100,
-		default_request_amount = 20,
 	},
 })

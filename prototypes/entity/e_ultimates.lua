@@ -105,7 +105,6 @@ data:extend({
 		order = "a0",
 		place_result = "ye_science_ultimate",
 		stack_size = 1,
-		default_request_amount = 1,
 	},
 
 	{
@@ -170,7 +169,6 @@ data:extend({
 		order = "a2",
 		place_result = "y_trade_ultimate",
 		stack_size = 1,
-		default_request_amount = 1,
 	},
 	{
 		type = "assembling-machine",

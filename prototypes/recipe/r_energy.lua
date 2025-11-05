@@ -80,7 +80,8 @@ data:extend({
 		group = "yuoki-energy",
 		subgroup = "y-energy-2",
 		place_result = "y_alien_solar",
-		stack_size = 25,
+		stack_size = 24,
+		weight = 250 * kg,
 	},
 
 	{
@@ -111,7 +112,7 @@ data:extend({
 		group = "yuoki-energy",
 		subgroup = "y-energy-2",
 		place_result = "y_alien_solar2",
-		stack_size = 15,
+		stack_size = 14,
 	},
 
 	-- small electric generator

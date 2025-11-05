@@ -284,7 +284,6 @@ data:extend({
 		order = "pipe-hc",
 		subgroup = "y-pipe",
 		stack_size = 150,
-		default_request_amount = 50,
 	},
 	{
 		type = "item",
@@ -295,7 +294,6 @@ data:extend({
 		order = "pipe-hc",
 		subgroup = "y-pipe",
 		stack_size = 150,
-		default_request_amount = 50,
 	},
 	{
 		type = "item",
@@ -306,7 +304,6 @@ data:extend({
 		order = "pipe-ec",
 		subgroup = "y-pipe",
 		stack_size = 150,
-		default_request_amount = 50,
 	},
 	{
 		type = "item",
@@ -317,7 +314,6 @@ data:extend({
 		order = "pipe-ec",
 		subgroup = "y-pipe",
 		stack_size = 150,
-		default_request_amount = 50,
 	},
 	-- grüne Pipes - 26.4.2022
 	{
@@ -329,7 +325,6 @@ data:extend({
 		order = "pipe-green",
 		subgroup = "y-pipe",
 		stack_size = 100,
-		default_request_amount = 50,
 	},
 	{
 		type = "item",
@@ -340,7 +335,6 @@ data:extend({
 		order = "pipe-green-u",
 		subgroup = "y-pipe",
 		stack_size = 100,
-		default_request_amount = 50,
 	},
 
 	{

@@ -10,7 +10,6 @@ data:extend({
 		subgroup = "y-lamps",
 		place_result = "y-tinylamp",
 		stack_size = 50,
-		default_request_amount = 10,
 		order = "la",
 	},
 
@@ -23,7 +22,6 @@ data:extend({
 		subgroup = "y-lamps",
 		place_result = "y-powerlamp",
 		stack_size = 50,
-		default_request_amount = 10,
 		order = "lb",
 	},
 
@@ -36,7 +34,6 @@ data:extend({
 		subgroup = "y-lamps",
 		place_result = "y-lamp-alien",
 		stack_size = 40,
-		default_request_amount = 10,
 		order = "lc",
 	},
 
@@ -61,7 +58,6 @@ data:extend({
 		subgroup = "y-lamps",
 		stack_size = 50,
 		order = "2a",
-		default_request_amount = 10,
 	},
 	{
 		type = "item",
@@ -72,7 +68,6 @@ data:extend({
 		subgroup = "y-lamps",
 		stack_size = 50,
 		order = "2b",
-		default_request_amount = 10,
 	},
 	{
 		type = "item",
@@ -83,7 +78,6 @@ data:extend({
 		subgroup = "y-lamps",
 		stack_size = 50,
 		order = "2c",
-		default_request_amount = 10,
 	},
 	{
 		type = "item",
@@ -94,7 +88,6 @@ data:extend({
 		subgroup = "y-lamps",
 		stack_size = 50,
 		order = "2d",
-		default_request_amount = 10,
 	},
 
 	-- recipe
@@ -110,7 +103,6 @@ data:extend({
 		subgroup = "y-lamps",
 		results = { { type = "item", name = "y-tinylamp", amount = 1 } },
 		main_product = "y-tinylamp",
-		--result = "y-tinylamp",
 		order = "la",
 	},
 	{
@@ -147,8 +139,6 @@ data:extend({
 		subgroup = "y-lamps",
 		results = { { type = "item", name = "y-lamp-alien", amount = 3 } },
 		main_product = "y-lamp-alien",
-		--result = "y-lamp-alien",
-		--result_count = 3,
 		order = "lc",
 	},
 	{
@@ -186,7 +176,6 @@ data:extend({
 		order = "2a",
 		results = { { type = "item", name = "y_lamp_red", amount = 1 } },
 		main_product = "y_lamp_red",
-		--result = "y_lamp_red",
 	},
 	{
 		type = "recipe",
@@ -200,7 +189,6 @@ data:extend({
 		order = "2b",
 		results = { { type = "item", name = "y_lamp_green", amount = 1 } },
 		main_product = "y_lamp_green",
-		--result = "y_lamp_green",
 	},
 	{
 		type = "recipe",
@@ -214,7 +202,6 @@ data:extend({
 		order = "2c",
 		results = { { type = "item", name = "y_lamp_blue", amount = 1 } },
 		main_product = "y_lamp_blue",
-		--result = "y_lamp_blue",
 	},
 	{
 		type = "recipe",
@@ -228,7 +215,6 @@ data:extend({
 		order = "2d",
 		results = { { type = "item", name = "y_lamp_yellow", amount = 1 } },
 		main_product = "y_lamp_yellow",
-		--result = "y_lamp_yellow",
 	},
 
 	-- entity

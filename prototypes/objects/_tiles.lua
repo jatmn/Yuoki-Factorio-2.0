@@ -11,7 +11,6 @@ data:extend({
 		subgroup = "y_tiles",
 		order = "c",
 		stack_size = 500,
-		default_request_amount = 150,
 		place_as_tile = { result = "y_tile_slagbricks", condition_size = 2, condition = { layers = { water_tile = true } } },
 	},
 	{
@@ -23,7 +22,6 @@ data:extend({
 		subgroup = "y_tiles",
 		order = "b",
 		stack_size = 500,
-		default_request_amount = 150,
 		place_as_tile = { result = "y_tile_slagpattern", condition_size = 2, condition = { layers = { water_tile = true } } },
 	},
 
@@ -36,7 +34,6 @@ data:extend({
 		subgroup = "y_tiles",
 		order = "a",
 		stack_size = 500,
-		default_request_amount = 150,
 		place_as_tile = { result = "y_tile_slagfilled", condition_size = 2, condition = { layers = { water_tile = true } } },
 	},
 
@@ -49,8 +46,8 @@ data:extend({
 		subgroup = "y-raw-material",
 		order = "a",
 		stack_size = 2500,
-		default_request_amount = 150,
 		place_as_tile = { result = "y_tile_slagstones", condition_size = 2, condition = { layers = { water_tile = true } } },
+		weight = 0.4 * kg,
 	},
 
 	{
@@ -62,9 +59,11 @@ data:extend({
 		subgroup = "y-raw-material",
 		order = "a",
 		stack_size = 500,
-		default_request_amount = 150,
 		place_as_tile = { result = "y_tile_blue", condition_size = 2, condition = { layers = { water_tile = true } } },
+		weight = 2 * kg,
+		
 	},
+
 
 	{
 		type = "tile",
@@ -73,9 +72,7 @@ data:extend({
 		minable = { hardness = 0.2, mining_time = 0.5, result = "y_tile_slagbricks" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
 		collision_mask = tile_collision_masks.ground(),
-		--collision_mask = {"ground-tile"},
 		walking_speed_modifier = 1.3,
-		--layer = 59,
 		layer = 11,
 		layer_group = "ground-artificial",
 		decorative_removal_probability = 1.0,
@@ -113,7 +110,6 @@ data:extend({
 			},
 		},
 		walking_sound = concrete_sounds,
-		--pollution_absorption_per_second = 0,
 		map_color = { r = 90, g = 70, b = 50 },
 		ageing = 0,
 		vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
@@ -125,7 +121,6 @@ data:extend({
 		minable = { hardness = 0.2, mining_time = 0.5, result = "y_tile_slagpattern" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
 		collision_mask = tile_collision_masks.ground(),
-		--collision_mask = {"ground-tile"},
 		walking_speed_modifier = 1.3,
 		layer = 59,
 		decorative_removal_probability = 1.0,
@@ -163,7 +158,6 @@ data:extend({
 			},
 		},
 		walking_sound = concrete_sounds,
-		--pollution_absorption_per_second = 0,
 		map_color = { r = 90, g = 70, b = 50 },
 		ageing = 0,
 		vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
@@ -176,7 +170,6 @@ data:extend({
 		minable = { hardness = 0.2, mining_time = 0.5, result = "y_tile_slagfilled" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
 		collision_mask = tile_collision_masks.ground(),
-		--collision_mask = {"ground-tile"},
 		walking_speed_modifier = 1.3,
 		layer = 59,
 		decorative_removal_probability = 1.0,
@@ -226,7 +219,6 @@ data:extend({
 			},
 		},
 		walking_sound = concrete_sounds,
-		--pollution_absorption_per_second = 0,
 		map_color = { r = 90, g = 70, b = 50 },
 		ageing = 0,
 		vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
@@ -239,7 +231,6 @@ data:extend({
 		minable = { hardness = 0.2, mining_time = 0.5, result = "y-slag" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
 		collision_mask = tile_collision_masks.ground(),
-		--collision_mask = {"ground-tile"},
 		walking_speed_modifier = 1.2,
 		layer = 59,
 		decorative_removal_probability = 1.0,
@@ -277,7 +268,6 @@ data:extend({
 			},
 		},
 		walking_sound = concrete_sounds,
-		--pollution_absorption_per_second = 0,
 		map_color = { r = 50, g = 50, b = 50 },
 		ageing = 0,
 		vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
@@ -290,9 +280,9 @@ data:extend({
 		minable = { mining_time = 0.5, result = "y-unicomp-raw" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
 		collision_mask = tile_collision_masks.ground(),
-		--collision_mask = {"ground-tile"},
-		walking_speed_modifier = 1.2,
-		layer = 59,
+		walking_speed_modifier = 2,
+		layer = 18,
+		-- layer = 59,
 		decorative_removal_probability = 0.1,
 		variants = {
 			main = {
@@ -328,7 +318,6 @@ data:extend({
 			},
 		},
 		walking_sound = concrete_sounds,
-		--pollution_absorption_per_second = 0,
 		map_color = { r = 0, g = 0, b = 100 },
 		ageing = 1,
 		vehicle_friction_modifier = stone_path_vehicle_speed_modifier,

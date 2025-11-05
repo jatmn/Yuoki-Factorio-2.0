@@ -10,7 +10,6 @@ data:extend({
 		subgroup = "y_line3",
 		order = "f",
 		stack_size = 200,
-		default_request_amount = 20,
 	},
 	--ID:416
 	{
@@ -22,7 +21,7 @@ data:extend({
 		subgroup = "yuoki-archaeology",
 		order = "f",
 		stack_size = 250,
-		default_request_amount = 50,
+		weight = 2 * kg,
 	},
 	--ID:415
 	{
@@ -34,7 +33,6 @@ data:extend({
 		subgroup = "y_refine_machinery",
 		order = "u",
 		stack_size = 25,
-		default_request_amount = 2,
 		place_result = "y_mixer_emu",
 	},
 	--ID:413
@@ -47,7 +45,6 @@ data:extend({
 		subgroup = "y_line1b",
 		order = "u",
 		stack_size = 25,
-		default_request_amount = 2,
 		place_result = "y_crystalizer",
 	},
 	--ID:412
@@ -60,7 +57,6 @@ data:extend({
 		subgroup = "y_refine_machinery",
 		order = "v",
 		stack_size = 25,
-		default_request_amount = 2,
 		place_result = "y_hppump",
 	},
 	--ID:410
@@ -73,7 +69,6 @@ data:extend({
 		subgroup = "y_line1b",
 		order = "u",
 		stack_size = 25,
-		default_request_amount = 2,
 		place_result = "y_trockner",
 	},
 	--ID:408
@@ -86,7 +81,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "9",
 		stack_size = 200,
-		default_request_amount = 5,
 		fuel_value = "600MJ",
 		fuel_category = "chemical",
 	},
@@ -100,7 +94,6 @@ data:extend({
 		subgroup = "y_defense_walls",
 		order = "1",
 		stack_size = 150,
-		default_request_amount = 50,
 		fuel_value = "16MJ",
 		fuel_category = "chemical",
 		place_result = "y_wood_wall",
@@ -115,7 +108,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "8",
 		stack_size = 200,
-		default_request_amount = 25,
 		fuel_value = "7GJ",
 		fuel_category = "yfusion",
 	},
@@ -129,7 +121,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "8",
 		stack_size = 100,
-		default_request_amount = 15,
 	},
 	--ID:398
 	{
@@ -141,7 +132,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "8",
 		stack_size = 100,
-		default_request_amount = 15,
 	},
 	--ID:397
 	{
@@ -153,7 +143,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "8",
 		stack_size = 400,
-		default_request_amount = 25,
 		fuel_value = "1GJ",
 		fuel_category = "yfusion",
 	},
@@ -167,7 +156,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "9",
 		stack_size = 100,
-		default_request_amount = 5,
 	},
 	--ID:395
 	{
@@ -179,7 +167,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "8",
 		stack_size = 100,
-		default_request_amount = 15,
 	},
 	--ID:394
 	{
@@ -191,7 +178,6 @@ data:extend({
 		subgroup = "y_line1b",
 		order = "9",
 		stack_size = 25,
-		default_request_amount = 5,
 		place_result = "y_moxmixer",
 	},
 	--ID:392
@@ -204,7 +190,6 @@ data:extend({
 		subgroup = "yuoki-formpress",
 		order = "u",
 		stack_size = 100,
-		default_request_amount = 15,
 	},
 	--ID:359
 	{
@@ -216,7 +201,6 @@ data:extend({
 		subgroup = "y_parts_e",
 		order = "a",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 	--ID:358
 	{
@@ -228,7 +212,6 @@ data:extend({
 		subgroup = "y-electric",
 		order = "h",
 		stack_size = 100,
-		default_request_amount = 10,
 		place_result = "y_signal_pole",
 	},
 	--ID:356
@@ -240,8 +223,8 @@ data:extend({
 		group = "yuoki",
 		subgroup = "y-raw-material",
 		order = "a",
-		stack_size = 750,
-		default_request_amount = 150,
+		stack_size = 800,
+		weight = 1.25 * kg,
 	},
 	--ID:355
 	{
@@ -253,7 +236,6 @@ data:extend({
 		subgroup = "y_parts_e",
 		order = "pe6",
 		stack_size = 250,
-		default_request_amount = 50,
 	},
 	--ID:354
 	{
@@ -265,7 +247,6 @@ data:extend({
 		subgroup = "y_parts_e",
 		order = "p-g2a",
 		stack_size = 150,
-		default_request_amount = 50,
 	},
 	--ID:321
 	{
@@ -277,7 +258,6 @@ data:extend({
 		subgroup = "y_tiles",
 		order = "c",
 		stack_size = 500,
-		default_request_amount = 500,
 	},
 	--ID:320
 	{
@@ -289,7 +269,6 @@ data:extend({
 		subgroup = "y_tiles",
 		order = "b",
 		stack_size = 500,
-		default_request_amount = 500,
 	},
 	--ID:319
 	{
@@ -301,7 +280,6 @@ data:extend({
 		subgroup = "y_tiles",
 		order = "a",
 		stack_size = 500,
-		default_request_amount = 500,
 	},
 	--ID:318
 	{
@@ -313,7 +291,7 @@ data:extend({
 		subgroup = "yuoki-formpress",
 		order = "l",
 		stack_size = 400,
-		default_request_amount = 30,
+		weight = 2.5 * kg,
 	},
 	--ID:317
 	{
@@ -324,8 +302,8 @@ data:extend({
 		group = "yuoki",
 		subgroup = "yuoki-archaeology",
 		order = "k",
-		stack_size = 700,
-		default_request_amount = 100,
+		stack_size = 800,
+		weight = 1.25 * kg,
 	},
 	--ID:316
 	{
@@ -337,7 +315,7 @@ data:extend({
 		subgroup = "yuoki-formpress",
 		order = "pc",
 		stack_size = 250,
-		default_request_amount = 50,
+		weight = 2 * kg,
 	},
 	--ID:315
 	{
@@ -349,7 +327,7 @@ data:extend({
 		subgroup = "yuoki-formpress",
 		order = "pi",
 		stack_size = 250,
-		default_request_amount = 50,
+		weight = 2 * kg,
 	},
 	--ID:314
 	{
@@ -361,7 +339,7 @@ data:extend({
 		subgroup = "yuoki-archaeology",
 		order = "a",
 		stack_size = 500,
-		default_request_amount = 100,
+		weight = 2 * kg,
 	},
 	--ID:313
 	{
@@ -372,8 +350,8 @@ data:extend({
 		group = "yuoki",
 		subgroup = "y-parts",
 		order = "t",
-		stack_size = 225,
-		default_request_amount = 25,
+		stack_size = 250,
+		weight = 4 * kg,
 	},
 	--ID:312
 	{
@@ -384,8 +362,8 @@ data:extend({
 		group = "yuoki",
 		subgroup = "y-parts",
 		order = "s",
-		stack_size = 225,
-		default_request_amount = 25,
+		stack_size = 250,
+		weight = 4 * kg,
 	},
 	--ID:311
 	{
@@ -397,8 +375,8 @@ data:extend({
 		subgroup = "y_line1b",
 		order = "t",
 		stack_size = 25,
-		default_request_amount = 2,
 		place_result = "y_smelter",
+		weight = 1000 * kg,
 	},
 	--ID:310
 	{
@@ -410,7 +388,6 @@ data:extend({
 		subgroup = "y_line1b",
 		order = "a",
 		stack_size = 25,
-		default_request_amount = 2,
 		place_result = "y_charger",
 	},
 	--ID:306
@@ -423,7 +400,6 @@ data:extend({
 		subgroup = "y-stargate-r",
 		order = "a",
 		stack_size = 100000,
-		default_request_amount = 1000,
 		auto_recycle = false,
 	},
 	--ID:305
@@ -436,7 +412,6 @@ data:extend({
 		subgroup = "y-stargate-r",
 		order = "a",
 		stack_size = 100000,
-		default_request_amount = 1000,
 		auto_recycle = false,
 	},
 	--ID:290
@@ -449,8 +424,7 @@ data:extend({
 		subgroup = "y-stargate-r",
 		order = "a",
 		stack_size = 100000,
-		default_request_amount = 1000,
-		auto_recycle = false,
+		auto_recycle = true,
 	},
 	--ID:289
 	{
@@ -462,7 +436,7 @@ data:extend({
 		subgroup = "y_parts_e",
 		order = "ac-2",
 		stack_size = 250,
-		default_request_amount = 100,
+		weight = 2 * kg,
 	},
 	--ID:288
 	{
@@ -474,7 +448,6 @@ data:extend({
 		subgroup = "y_parts_e",
 		order = "ac-1",
 		stack_size = 250,
-		default_request_amount = 100,
 	},
 	--ID:287
 	{
@@ -486,7 +459,6 @@ data:extend({
 		subgroup = "y-parts",
 		order = "p-g5",
 		stack_size = 50,
-		default_request_amount = 50,
 	},
 	--ID:286
 	{
@@ -498,7 +470,6 @@ data:extend({
 		subgroup = "y-parts",
 		order = "p-g4",
 		stack_size = 50,
-		default_request_amount = 50,
 	},
 	--ID:278
 	{
@@ -510,7 +481,6 @@ data:extend({
 		subgroup = "y-parts",
 		order = "a",
 		stack_size = 100,
-		default_request_amount = 50,
 	},
 	--ID:277
 	{
@@ -522,7 +492,6 @@ data:extend({
 		subgroup = "j-y-logi-9",
 		order = "1",
 		stack_size = 25,
-		default_request_amount = 6,
 		place_result = "yi_roboport",
 	},
 	-- the 8080 - JATMN
@@ -541,7 +510,6 @@ data:extend({
 		subgroup = "j-y-logi-9",
 		order = "2",
 		stack_size = 25,
-		default_request_amount = 5,
 		place_result = "j_yi_roboport1",
 	},
 	--ID:276
@@ -554,7 +522,6 @@ data:extend({
 		subgroup = "y_line1b",
 		order = "a",
 		stack_size = 25,
-		default_request_amount = 6,
 		place_result = "yi_beacon",
 	},
 	--ID:275
@@ -567,7 +534,6 @@ data:extend({
 		subgroup = "y_line1b",
 		order = "a",
 		stack_size = 25,
-		default_request_amount = 5,
 		place_result = "yi_radar",
 	},
 	--ID:261
@@ -580,7 +546,6 @@ data:extend({
 		subgroup = "j-y-logi-9",
 		order = "a",
 		stack_size = 100,
-		default_request_amount = 5,
 		place_result = "yi_logistic-robot",
 	},
 	-- Logistic bot 2 - (JATMN)
@@ -593,8 +558,8 @@ data:extend({
 		subgroup = "j-y-logi-9",
 		order = "a2",
 		stack_size = 50,
-		default_request_amount = 5,
 		place_result = "j_logistic2-robot",
+		weight = 20 * kg,
 	},
 	--ID:260
 	{
@@ -606,7 +571,6 @@ data:extend({
 		subgroup = "j-y-logi-9",
 		order = "d",
 		stack_size = 100,
-		default_request_amount = 5,
 		place_result = "yi_construction-robot",
 	},
 	-- Construction bot 2 - (JATMN)
@@ -620,8 +584,8 @@ data:extend({
 		subgroup = "j-y-logi-9",
 		order = "d2",
 		stack_size = 50,
-		default_request_amount = 5,
 		place_result = "j_construction2-robot",
+		weight = 20 * kg,
 	},
 	--ID:238
 	{
@@ -633,7 +597,6 @@ data:extend({
 		subgroup = "y_refine_parts",
 		order = "a",
 		stack_size = 100,
-		default_request_amount = 5,
 	},
 	--ID:237
 	{
@@ -645,7 +608,6 @@ data:extend({
 		subgroup = "y_refine_parts",
 		order = "a",
 		stack_size = 30,
-		default_request_amount = 5,
 		place_result = "y_flowcheck_10",
 	},
 	--ID:224
@@ -658,7 +620,6 @@ data:extend({
 		subgroup = "y-stargate-r",
 		order = "a",
 		stack_size = 100000,
-		default_request_amount = 500,
 		auto_recycle = false,
 	},
 	--ID:208
@@ -670,8 +631,8 @@ data:extend({
 		group = "yuoki",
 		subgroup = "y-raw-material",
 		order = "a",
-		stack_size = 750,
-		default_request_amount = 100,
+		stack_size = 800,
+		weight = 1.25 * kg,
 	},
 	--ID:207
 	{
@@ -683,7 +644,6 @@ data:extend({
 		subgroup = "y-raw-material",
 		order = "a",
 		stack_size = 25,
-		default_request_amount = 20,
 	},
 	--ID:206
 	{
@@ -694,8 +654,8 @@ data:extend({
 		group = "yuoki",
 		subgroup = "y-raw-material",
 		order = "a",
-		stack_size = 220,
-		default_request_amount = 50,
+		stack_size = 250,
+		weight = 4 * kg,
 	},
 	--ID:177
 	{
@@ -707,7 +667,6 @@ data:extend({
 		subgroup = "y_refine_material",
 		order = "ca",
 		stack_size = 300,
-		default_request_amount = 20,
 	},
 	--ID:176
 	{
@@ -719,7 +678,6 @@ data:extend({
 		subgroup = "y_refine_material",
 		order = "b1",
 		stack_size = 450,
-		default_request_amount = 20,
 	},
 	--ID:174
 	{
@@ -731,7 +689,6 @@ data:extend({
 		subgroup = "y-parts",
 		order = "p-g1",
 		stack_size = 150,
-		default_request_amount = 70,
 	},
 	--ID:173
 	{
@@ -743,7 +700,6 @@ data:extend({
 		subgroup = "yuoki-archaeology",
 		order = "a",
 		stack_size = 5000,
-		default_request_amount = 500,
 	},
 	--ID:172
 	{
@@ -755,7 +711,6 @@ data:extend({
 		subgroup = "y_refine_material",
 		order = "a1",
 		stack_size = 700,
-		default_request_amount = 70,
 	},
 	--ID:171
 	{
@@ -767,7 +722,7 @@ data:extend({
 		subgroup = "y-raw-material",
 		order = "a",
 		stack_size = 500,
-		default_request_amount = 75,
+		weight = 2 * kg,
 	},
 	--ID:170
 	{
@@ -779,7 +734,6 @@ data:extend({
 		subgroup = "y_refine_material",
 		order = "cc",
 		stack_size = 320,
-		default_request_amount = 25,
 	},
 	--ID:169
 	{
@@ -791,7 +745,6 @@ data:extend({
 		subgroup = "y_refine_material",
 		order = "cb",
 		stack_size = 280,
-		default_request_amount = 25,
 	},
 	--ID:168
 
@@ -805,7 +758,6 @@ data:extend({
 		subgroup = "y-parts",
 		order = "p-g2",
 		stack_size = 150,
-		default_request_amount = 75,
 	},
 	--ID:166
 	{
@@ -817,7 +769,6 @@ data:extend({
 		subgroup = "y-parts",
 		order = "p-g6",
 		stack_size = 150,
-		default_request_amount = 50,
 	},
 	--ID:165
 	{
@@ -829,7 +780,7 @@ data:extend({
 		subgroup = "y-raw-material",
 		order = "a",
 		stack_size = 500,
-		default_request_amount = 50,
+		weight = 20 * kg,
 	},
 	--ID:164
 	{
@@ -841,7 +792,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "a",
 		stack_size = 100,
-		default_request_amount = 50,
 		fuel_value = "3MJ",
 		fuel_category = "chemical",
 	},
@@ -855,7 +805,6 @@ data:extend({
 		subgroup = "y-stargate-f",
 		order = "a",
 		stack_size = 100,
-		default_request_amount = 5,
 		auto_recycle = false,
 	},
 	--ID:158
@@ -868,7 +817,6 @@ data:extend({
 		subgroup = "y-parts",
 		order = "p-g3",
 		stack_size = 100,
-		default_request_amount = 50,
 	},
 	--ID:138
 	{
@@ -880,7 +828,7 @@ data:extend({
 		subgroup = "y-raw-material",
 		order = "w-quantrinum",
 		stack_size = 25,
-		default_request_amount = 10,
+		weight = 40 * kg,
 	},
 	--ID:137
 	{
@@ -892,8 +840,8 @@ data:extend({
 		subgroup = "y-raw-material",
 		order = "a",
 		stack_size = 500,
-		default_request_amount = 200,
 		auto_recycle = false,
+		weight = 2 * kg,
 	},
 	--ID:136
 	{
@@ -905,7 +853,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "a",
 		stack_size = 50,
-		default_request_amount = 15,
 		fuel_value = "3GJ",
 		fuel_category = "chemical",
 	},

@@ -117,26 +117,7 @@ data:extend({
 			return res
 		end)(),
 
-		graphics_set = {
-			base_visualisation = {
-				animation = {
-					layers = {
-						{
-							filename = "__Yuoki__/graphics/entity/defense/turm_plasma_sheet.png",
-							priority = "high",
-							width = 256,
-							height = 256,
-							direction_count = 64,
-							frame_count = 1,
-							line_length = 8,
-							axially_symmetrical = false,
-							scale = 0.5,
-							shift = { 0.0, -0.0 },
-						},
-					},
-				},
-			},
-		},
+		graphics_set = blank_sprite,
 
 		attack_parameters = {
 			range = 35,

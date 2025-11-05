@@ -44,9 +44,9 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/icon-5e.png",
 		stack_size = 50,
-		default_request_amount = 10,
 		group = "yuoki",
 		subgroup = "yuoki-formpress",
+		weight = 20 * kg,
 	},
 	{
 		type = "item",
@@ -54,9 +54,9 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/icon-5c.png",
 		stack_size = 50,
-		default_request_amount = 10,
 		group = "yuoki",
 		subgroup = "yuoki-formpress",
+		weight = 20 * kg,
 	},
 
 	-- Toolhead
@@ -103,9 +103,9 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/toolhead.png",
 		stack_size = 75,
-		default_request_amount = 10,
 		group = "yuoki",
 		subgroup = "yuoki-formpress",
+		weight = 13.33 * kg,
 	},
 	{
 		type = "item",
@@ -113,9 +113,9 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/toolhead_broken.png",
 		stack_size = 75,
-		default_request_amount = 10,
 		group = "yuoki",
 		subgroup = "yuoki-formpress",
+		weight = 13.33 * kg,
 	},
 
 	{

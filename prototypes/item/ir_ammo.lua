@@ -242,7 +242,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "a1",
 		stack_size = 250,
-		default_request_amount = 100,
 	},
 
 	{
@@ -254,7 +253,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "a2",
 		stack_size = 250,
-		default_request_amount = 100,
 	},
 
 	{
@@ -294,7 +292,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "b1",
 		stack_size = 200,
-		default_request_amount = 50,
 	},
 	{
 		type = "ammo",
@@ -327,7 +324,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "c1",
 		stack_size = 200,
-		default_request_amount = 50,
 	},
 	{
 		type = "ammo",
@@ -362,7 +358,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "d1",
 		stack_size = 200,
-		default_request_amount = 50,
 	},
 	{
 		type = "ammo",
@@ -395,7 +390,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "e1",
 		stack_size = 200,
-		default_request_amount = 50,
 	},
 	{
 		type = "ammo",
@@ -428,7 +422,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "f1",
 		stack_size = 200,
-		default_request_amount = 50,
 	},
 	{
 		type = "ammo",
@@ -461,7 +454,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "g1",
 		stack_size = 200,
-		default_request_amount = 50,
 	},
 	{
 		type = "ammo",
@@ -507,7 +499,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "h1",
 		stack_size = 200,
-		default_request_amount = 50,
 	},
 	{
 		type = "ammo",
@@ -532,7 +523,6 @@ data:extend({
 		subgroup = "y-ammo",
 		order = "h2",
 		stack_size = 200,
-		default_request_amount = 50,
 	},
 	{
 		type = "ammo",

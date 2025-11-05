@@ -393,10 +393,10 @@ data:extend({
 		energy_required = 4.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-pure-copper", amount = 1 },
+			{ type = "item", name = "y-pure-copper", amount = 2 },
 		},
 		results = {
-			{ type = "item", name = "copper-plate", amount = 2 },
+			{ type = "item", name = "copper-plate", amount = 5 },
 		},
 		main_product = "copper-plate",
 		icon_size = 64,
@@ -410,10 +410,10 @@ data:extend({
 		energy_required = 4.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-pure-iron", amount = 1 },
+			{ type = "item", name = "y-pure-iron", amount = 2 },
 		},
 		results = {
-			{ type = "item", name = "iron-plate", amount = 2 },
+			{ type = "item", name = "iron-plate", amount = 5 },
 		},
 		main_product = "iron-plate",
 		icon_size = 64,

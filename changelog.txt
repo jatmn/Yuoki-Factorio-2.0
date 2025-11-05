@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.16
+Date: 4. 11. 2025
+  Space Age:
+    - Molten Copper and Iron recipes from Pure Copper and Iron in Foundry (Icons are placeholders for now!)
+    - Added Atomic's recipes: Calcite, Tungsten ore, and Holmium ore
+    - Electric Crusher changes: Increased power to 655kw, now uses Space Age Crusher sound effects, supports asteroid crushing recipes on platform or on planet!
+    - Updated weight values of various items to prevent rockets from delivering partial stack remainders, this resulted in some default stack size adjustments. Open to feedback on these changes.
+  Updates:
+    - Changed how Atomic's recipe icons are created (less photoshop work for me and easier to integrate with other mods later) This also is why there is a reduced file size for the mod itself.
+  Fixes:
+    - Turrets no longer have ghost turret barrels (Thanks Rau771)
+    - Fixed shadows under YI Logistiker and YI Constructor bots (Turbos too)
+    - Fixed YI Constructor bot image flashing (Turbos too)
+    - Fixed a few broken locals
+  Changes:
+    - Some legacy code cleanup...
+    - Small Turbine Generator-S steam consumption changed from 24/s to 45/s and max temp from 265c to 165c, power output 1.6MW
+    - Copper Plate from Pure Copper / Iron Plate from Pure Iron recipes have been changed to 2 pure = 5 plate in furnace, to be more viable mid-late game
+---------------------------------------------------------------------------------------------------
 Version: 1.2.15
 Date: 24. 8. 2025
   Fixes:

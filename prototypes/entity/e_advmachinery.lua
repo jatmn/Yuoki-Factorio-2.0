@@ -59,7 +59,7 @@ data:extend({
 				},
 			},
 		},
-		crafting_categories = { "y-crushing" },
+		crafting_categories = { "y-crushing"},
 		crafting_speed = 3.5,
 		energy_source = {
 			type = "electric",
@@ -67,7 +67,7 @@ data:extend({
 			usage_priority = "secondary-input",
 			emissions_per_minute = { pollution = 3.75 },
 		},
-		energy_usage = "250kW",
+		energy_usage = "250kW", --250wK
 		ingredient_count = 4,
 		fluid_boxes = {
 			{

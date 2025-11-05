@@ -6,7 +6,6 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/quantrinum.png",
 		group = "yuoki",
 		stack_size = 25,
-		default_request_amount = 15,
 	},
 
 	-- compressed dirt -> lachnan crystal
@@ -17,7 +16,6 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/crystal_3.png",
 		group = "yuoki",
 		stack_size = 500,
-		default_request_amount = 20,
 	},
 
 	{
@@ -27,7 +25,6 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/uni-komp-a2-icon.png",
 		subgroup = "y-raw-material",
 		stack_size = 2500,
-		default_request_amount = 100,
 	},
 	-- dust
 	{
@@ -37,7 +34,7 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/dust-blue.png",
 		subgroup = "yuoki-archaeology",
 		stack_size = 1000,
-		default_request_amount = 100,
+		weight = 1 * kg,
 	},
 	{
 		type = "item",
@@ -46,7 +43,7 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/dust-green.png",
 		subgroup = "yuoki-archaeology",
 		stack_size = 1000,
-		default_request_amount = 100,
+		weight = 1 * kg,
 	},
 	-- pellets
 	{
@@ -56,7 +53,7 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/n4pellets_icon.png",
 		subgroup = "y-raw-material",
 		stack_size = 600,
-		default_request_amount = 50,
+		weight = 5 * kg,
 	},
 	{
 		type = "item",
@@ -65,7 +62,7 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/f7pellets_icon.png",
 		subgroup = "y-raw-material",
 		stack_size = 600,
-		default_request_amount = 50,
+		weight = 5 * kg,
 	},
 	-- blaue Brocken
 	{
@@ -75,7 +72,7 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/uni-komp-n4-icon.png",
 		subgroup = "y-raw-material",
 		stack_size = 500,
-		default_request_amount = 50,
+		weight = 2 * kg,
 	},
 	-- raw-fuelnium (shard)
 	{
@@ -85,7 +82,6 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/crystal_energy.png",
 		subgroup = "y-raw-material",
 		stack_size = 900,
-		default_request_amount = 20,
 	},
 	-- fuelnium
 	{
@@ -97,7 +93,6 @@ data:extend({
 		stack_size = 335,
 		fuel_category = "yfusion",
 		fuel_value = "300MJ",
-		default_request_amount = 20,
 	},
 	-- infused dry-mud
 	{
@@ -109,6 +104,5 @@ data:extend({
 		stack_size = 625,
 		fuel_category = "chemical",
 		fuel_value = "80MJ",
-		default_request_amount = 100,
 	},
 })
