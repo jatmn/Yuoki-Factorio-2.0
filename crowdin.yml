@@ -1,0 +1,6 @@
+"files": [
+  {
+    "source": "/locale/en/Yuoki.cfg",
+    "translation": "/locale/%two_letters_code%/%original_file_name%",
+  }
+]
