@@ -1,14 +1,13 @@
-
-data:extend(
-{
+data:extend({
 	{
 		type = "item",
 		name = "y-res2",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/yi-res-2-pur.png",
+		icon_size = 64,
+		icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png",
 		subgroup = "raw-resource",
 		order = "r",
 		stack_size = 250,
-	},	
+	},
 
 	--[[
 	{
@@ -68,5 +67,4 @@ data:extend(
 		map_color = {r=0.85, g=0.85, b=0.2}
 	}
 ]]
-	
 })

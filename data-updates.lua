@@ -51,8 +51,16 @@ data.raw["logistic-container"]["y-rare-m1bunker-log"].logistic_slots_count = 1
 --read productivity module setting and call script if true
 local prod_mod = settings.startup["yuoki-prod-mod-behaviour"].value
 if prod_mod == true then
-    require("prototypes.y_prodmod_as_vanilla")
+	require("prototypes.y_prodmod_as_vanilla")
 end
 
--- Factorio 2.0 Recycling changes
-require("prototypes.integration.yi-recycling")
+
+
+-- Factorio Space Age updates
+require("prototypes.integration.space-age.yi-recycling") -- Factorio 2.0 Recycling changes
+require("prototypes.integration.space-age.r_metal-process") -- Metal Processing recipe updates
+require("prototypes.integration.space-age.e_advmachinery") -- Advanced Machineery updates
+require("prototypes.integration.space-age.y-module") -- Update speed modules
+
+require("prototypes.integration.space-age.ir_atomics") -- Atomics recipe updates
+

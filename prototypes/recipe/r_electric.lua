@@ -1,5 +1,4 @@
-data:extend(
-{	
+data:extend({
 	--[[
 	{
 		type = "recipe",
@@ -19,14 +18,14 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-orange-stuff", amount=4},
-			{type="item", name="y-refined-yres2", amount=2}
+			{ type = "item", name = "y-orange-stuff", amount = 4 },
+			{ type = "item", name = "y-refined-yres2", amount = 2 },
 		},
 		results = {
-			{type="item", name="y-conductive-coil-1", amount=3},
+			{ type = "item", name = "y-conductive-coil-1", amount = 3 },
 		},
 		main_product = "y-conductive-coil-1",
-		order="p-w-b",
+		order = "p-w-b",
 		subgroup = "y_parts_e",
 	},
 
@@ -36,14 +35,14 @@ data:extend(
 		energy_required = 4.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-refined-yres2", amount=1},
-			{type="item", name="y-crush-yres1", amount=3},
+			{ type = "item", name = "y-refined-yres2", amount = 1 },
+			{ type = "item", name = "y-crush-yres1", amount = 3 },
 		},
 		results = {
-			{type="item", name="y_dotzetron", amount=3},
+			{ type = "item", name = "y_dotzetron", amount = 3 },
 		},
 		main_product = "y_dotzetron",
-		order="p-c-6",
+		order = "p-c-6",
 		subgroup = "y_parts_e",
 	},
 
@@ -53,14 +52,14 @@ data:extend(
 		energy_required = 4.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-refined-yres2", amount=1},
-			{type="item", name="y-richdust", amount=3},
+			{ type = "item", name = "y-refined-yres2", amount = 1 },
+			{ type = "item", name = "y-richdust", amount = 3 },
 		},
 		results = {
-			{type="item", name="y_chip_plate", amount=1},
+			{ type = "item", name = "y_chip_plate", amount = 1 },
 		},
 		main_product = "y_chip_plate",
-		order="p-c-0",
+		order = "p-c-0",
 		subgroup = "y_parts_e",
 	},
 
@@ -70,14 +69,14 @@ data:extend(
 		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_chip_plate", amount=1},
-			{type="item", name="y-orange-stuff", amount=2},
+			{ type = "item", name = "y_chip_plate", amount = 1 },
+			{ type = "item", name = "y-orange-stuff", amount = 2 },
 		},
 		results = {
-			{type="item", name="y-chip-1", amount=1},
+			{ type = "item", name = "y-chip-1", amount = 1 },
 		},
 		main_product = "y-chip-1",
-		order="p-c-a",
+		order = "p-c-a",
 		subgroup = "y_parts_e",
 	},
 
@@ -89,16 +88,16 @@ data:extend(
 		energy_required = 3,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_chip_plate", amount=2},
-			{type="item", name="y_dotzetron", amount=2},
-			{type="item", name="y-orange-stuff", amount=4},
+			{ type = "item", name = "y_chip_plate", amount = 2 },
+			{ type = "item", name = "y_dotzetron", amount = 2 },
+			{ type = "item", name = "y-orange-stuff", amount = 4 },
 		},
 		results = {
-			{type="item", name="y-chip-2", amount=1,},
-			{type="item", name="y_rwtechsign", amount=1,},
+			{ type = "item", name = "y-chip-2", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
-		main_product="y-chip-2",
-		order="p-c-b",
+		main_product = "y-chip-2",
+		order = "p-c-b",
 		subgroup = "y_parts_e",
 	},
 
@@ -110,19 +109,18 @@ data:extend(
 		energy_required = 1.5,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-pure-copper", amount=2},
-			{type="item", name="y-heat-pipe", amount=1},
-			{type="item", name="y-richdust", amount=3},
+			{ type = "item", name = "y-pure-copper", amount = 2 },
+			{ type = "item", name = "y-heat-pipe", amount = 1 },
+			{ type = "item", name = "y-richdust", amount = 3 },
 		},
 		results = {
-			{type="item", name="yi_magnetron", amount=1,},
-			{type="item", name="y_rwtechsign", amount=1,},
+			{ type = "item", name = "yi_magnetron", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
-		main_product="yi_magnetron",
-		order="p-c-b",
+		main_product = "yi_magnetron",
+		order = "p-c-b",
 		subgroup = "y_parts_e",
 	},
-
 
 	-- new battery-concept from 215-0101
 	-- basic-cell + combine cells
@@ -133,15 +131,15 @@ data:extend(
 		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-crush-yres2", amount=3},
-			{type="item", name="coal", amount=1},
-			{type="item", name="iron-plate", amount=1},
+			{ type = "item", name = "y-crush-yres2", amount = 3 },
+			{ type = "item", name = "coal", amount = 1 },
+			{ type = "item", name = "iron-plate", amount = 1 },
 		},
 		results = {
-			{type="item", name="y-battery-single-use1", amount=3},
+			{ type = "item", name = "y-battery-single-use1", amount = 3 },
 		},
 		main_product = "y-battery-single-use1",
-		order="p-b-a",
+		order = "p-b-a",
 	},
 
 	-- loaded cell
@@ -151,13 +149,13 @@ data:extend(
 		energy_required = 4.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-battery-single-use1", amount=1},
+			{ type = "item", name = "y-battery-single-use1", amount = 1 },
 		},
 		results = {
-			{type="item", name="y-battery-single-use2", amount=1},
+			{ type = "item", name = "y-battery-single-use2", amount = 1 },
 		},
 		main_product = "y-battery-single-use2",
-		order="p-b-b",
+		order = "p-b-b",
 	},
 
 	-- block loaded cells
@@ -169,14 +167,14 @@ data:extend(
 		energy_required = 4.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-battery-single-use2", amount=2},
-			{type="item", name="y-conductive-wire-1", amount=1 },
+			{ type = "item", name = "y-battery-single-use2", amount = 2 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 1 },
 		},
 		results = {
-			{type="item", name="y-battery-single-use3", amount=1,},
+			{ type = "item", name = "y-battery-single-use3", amount = 1 },
 		},
-		main_product="y-battery-single-use3",
-		order="p-b-c",
+		main_product = "y-battery-single-use3",
+		order = "p-b-c",
 		subgroup = "y-electric",
 	},
 
@@ -188,11 +186,11 @@ data:extend(
 		enabled = true,
 		auto_recycle = false,
 		ingredients = {
-			{type="item", name="y-battery-single-use1", amount=10},
-			{type="item", name="y_rwtechsign", amount=1},
+			{ type = "item", name = "y-battery-single-use1", amount = 10 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		results = {
-			{type="item", name="battery", amount=5},
+			{ type = "item", name = "battery", amount = 5 },
 		},
 		main_product = "battery",
 	},
@@ -206,16 +204,16 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-battery-single-use3", amount=3},
-			{type="item", name="y-pure-copper", amount=3 },
-			{type="item", name="y-chip-1", amount=1 },
+			{ type = "item", name = "y-battery-single-use3", amount = 3 },
+			{ type = "item", name = "y-pure-copper", amount = 3 },
+			{ type = "item", name = "y-chip-1", amount = 1 },
 		},
 		results = {
-			{type="item", name="y_blocked_capa", amount=1,},
-			{type="item", name="y_rwtechsign", amount=1,},
+			{ type = "item", name = "y_blocked_capa", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y_blocked_capa",
-		order="p-b-d",
+		order = "p-b-d",
 		subgroup = "y-electric",
 	},
 
@@ -227,17 +225,17 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="steel-plate", amount=14},
-			{type="item", name="y-conductive-wire-1", amount=6},
-			{type="item", name="y-chip-1", amount=1},
-			{type="item", name="y-unicomp-a2", amount=2},
+			{ type = "item", name = "steel-plate", amount = 14 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 6 },
+			{ type = "item", name = "y-chip-1", amount = 1 },
+			{ type = "item", name = "y-unicomp-a2", amount = 2 },
 		},
 		results = {
-			{type="item", name="y-substation-m", amount=1,},
-			{type="item", name="y_rwtechsign", amount=1,},
+			{ type = "item", name = "y-substation-m", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
-		main_product="y-substation-m",
-		order="e-e-a",
+		main_product = "y-substation-m",
+		order = "e-e-a",
 		subgroup = "y-electric",
 	},
 
@@ -247,17 +245,17 @@ data:extend(
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-substation-m", amount=1},
-			{type="item", name="y-conductive-wire-1", amount=8},
-			{type="item", name="y-chip-2", amount=4},
-			{type="item", name="y_quantrinum_infused", amount=1},
-			{type="item", name="y_rwtechsign", amount=3},
+			{ type = "item", name = "y-substation-m", amount = 1 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 8 },
+			{ type = "item", name = "y-chip-2", amount = 4 },
+			{ type = "item", name = "y_quantrinum_infused", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 3 },
 		},
 		results = {
-			{type="item", name="y-substation-h", amount=1},
+			{ type = "item", name = "y-substation-h", amount = 1 },
 		},
 		main_product = "y-substation-h",
-		order="e-e-b",
+		order = "e-e-b",
 		subgroup = "y-electric",
 	},
 
@@ -268,14 +266,14 @@ data:extend(
 		energy_required = 6.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_blocked_capa", amount=3},
-			{type="item", name="y-conductive-coil-1", amount=4},
+			{ type = "item", name = "y_blocked_capa", amount = 3 },
+			{ type = "item", name = "y-conductive-coil-1", amount = 4 },
 		},
 		results = {
-			{type="item", name="y-accumulator-m", amount=1},
+			{ type = "item", name = "y-accumulator-m", amount = 1 },
 		},
 		main_product = "y-accumulator-m",
-		order="ac-1",
+		order = "ac-1",
 		subgroup = "y-energy-2",
 	},
 
@@ -288,21 +286,21 @@ data:extend(
 		energy_required = 8.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_blocked_capa", amount=5},
-			{type="item", name="y_structure_electric", amount=3},
-			{type="item", name="y-conductive-coil-1", amount=4},
-			{type="item", name="y-heat-pipe", amount=8},
+			{ type = "item", name = "y_blocked_capa", amount = 5 },
+			{ type = "item", name = "y_structure_electric", amount = 3 },
+			{ type = "item", name = "y-conductive-coil-1", amount = 4 },
+			{ type = "item", name = "y-heat-pipe", amount = 8 },
 		},
 		results = {
-			{type="item", name="y-accumulator-b", amount=1,},
-			{type="item", name="y_rwtechsign", amount=3,},
+			{ type = "item", name = "y-accumulator-b", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 3 },
 		},
-		main_product="y-accumulator-b",
-		order="ac-3",
+		main_product = "y-accumulator-b",
+		order = "ac-3",
 		subgroup = "y-energy-2",
 	},
 
-	-- Tier 2 - Accumulators	
+	-- Tier 2 - Accumulators
 	-- Medium T2
 	{
 		type = "recipe",
@@ -310,17 +308,17 @@ data:extend(
 		energy_required = 6.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-accumulator-m", amount=1},
-			{type="item", name="y-chip-2", amount=2},
-			{type="item", name="y-crystal-cnd", amount=2},
-			{type="item", name="y_rwtechsign", amount=2},
+			{ type = "item", name = "y-accumulator-m", amount = 1 },
+			{ type = "item", name = "y-chip-2", amount = 2 },
+			{ type = "item", name = "y-crystal-cnd", amount = 2 },
+			{ type = "item", name = "y_rwtechsign", amount = 2 },
 		},
 		results = {
-			{type="item", name="y-accumulator-m-t2", amount=1,},
-			{type="item", name="y_greensign", amount=1,},
+			{ type = "item", name = "y-accumulator-m-t2", amount = 1 },
+			{ type = "item", name = "y_greensign", amount = 1 },
 		},
-		main_product="y-accumulator-m-t2",
-		order="ac-2",
+		main_product = "y-accumulator-m-t2",
+		order = "ac-2",
 		subgroup = "y-energy-2",
 	},
 
@@ -330,17 +328,17 @@ data:extend(
 		energy_required = 8.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-accumulator-b", amount=1},
-			{type="item", name="y-chip-2", amount=4},
-			{type="item", name="y-crystal-cnd", amount=3},
-			{type="item", name="y_rwtechsign", amount=5},
+			{ type = "item", name = "y-accumulator-b", amount = 1 },
+			{ type = "item", name = "y-chip-2", amount = 4 },
+			{ type = "item", name = "y-crystal-cnd", amount = 3 },
+			{ type = "item", name = "y_rwtechsign", amount = 5 },
 		},
 		results = {
-			{type="item", name="y-accumulator-b-t2", amount=1,},
-			{type="item", name="y_greensign", amount=3,},
+			{ type = "item", name = "y-accumulator-b-t2", amount = 1 },
+			{ type = "item", name = "y_greensign", amount = 3 },
 		},
-		main_product="y-accumulator-b-t2",
-		order="ac-4",
+		main_product = "y-accumulator-b-t2",
+		order = "ac-4",
 		subgroup = "y-energy-2",
 	},
 
@@ -348,46 +346,46 @@ data:extend(
 	{
 		type = "recipe",
 		name = "y-accumulator-b-tx",
-		category="yuoki-wonder";
+		category = "yuoki-wonder",
 		energy_required = 12.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_structure_element", amount=8},
-			{type="item", name="y-chip-2", amount=4},
-			{type="item", name="y-raw-fuelnium", amount=10},
-			{type="item", name="y-quantrinum", amount=2},
-			{type="item", name="y-infused-uca2", amount=2},
-			{type="item", name="y_rwtechsign", amount=10},
+			{ type = "item", name = "y_structure_element", amount = 8 },
+			{ type = "item", name = "y-chip-2", amount = 4 },
+			{ type = "item", name = "y-raw-fuelnium", amount = 10 },
+			{ type = "item", name = "y-quantrinum", amount = 2 },
+			{ type = "item", name = "y-infused-uca2", amount = 2 },
+			{ type = "item", name = "y_rwtechsign", amount = 10 },
 		},
 		results = {
-			{type="item", name="y-accumulator-b-tx", amount=1,},
-			{type="item", name="ye_science_blue", amount=3,},
+			{ type = "item", name = "y-accumulator-b-tx", amount = 1 },
+			{ type = "item", name = "ye_science_blue", amount = 3 },
 		},
-		main_product="y-accumulator-b-tx",
-		order="ac-5",
+		main_product = "y-accumulator-b-tx",
+		order = "ac-5",
 		subgroup = "y-energy-2",
 	},
 
-	-- Tier 4 - Accumulators - Crystal	
+	-- Tier 4 - Accumulators - Crystal
 	{
 		type = "recipe",
 		name = "y-accumulator-crystal-m",
-		category="yuoki-wonder";
+		category = "yuoki-wonder",
 		energy_required = 20.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_structure_element", amount=12},
-			{type="item", name="y_quantrinum_infused", amount=2},
-			{type="item", name="y_crystal2_combined", amount=20},
-			{type="item", name="y_compensator_25", amount=1},
-			{type="item", name="y_rwtechsign", amount=50},
+			{ type = "item", name = "y_structure_element", amount = 12 },
+			{ type = "item", name = "y_quantrinum_infused", amount = 2 },
+			{ type = "item", name = "y_crystal2_combined", amount = 20 },
+			{ type = "item", name = "y_compensator_25", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 50 },
 		},
 		results = {
-			{type="item", name="y-accumulator-crystal-m", amount=1,},
-			{type="item", name="ye_science_blue", amount=5,},
+			{ type = "item", name = "y-accumulator-crystal-m", amount = 1 },
+			{ type = "item", name = "ye_science_blue", amount = 5 },
 		},
-		main_product="y-accumulator-crystal-m",
-		order="ac-6",
+		main_product = "y-accumulator-crystal-m",
+		order = "ac-6",
 		subgroup = "y-energy-2",
 	},
 
@@ -400,17 +398,17 @@ data:extend(
 		energy_required = 12.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y_blocked_capa", amount=4},
-			{type="item", name="y-conductive-coil-1", amount=4},
-			{type="item", name="y-basic-t1-mf", amount=2},
-			{type="item", name="y-chip-1", amount=1},
+			{ type = "item", name = "y_blocked_capa", amount = 4 },
+			{ type = "item", name = "y-conductive-coil-1", amount = 4 },
+			{ type = "item", name = "y-basic-t1-mf", amount = 2 },
+			{ type = "item", name = "y-chip-1", amount = 1 },
 		},
 		results = {
-			{type="item", name="y-ups-flywheel-b", amount=1,},
-			{type="item", name="y_rwtechsign", amount=1,},
+			{ type = "item", name = "y-ups-flywheel-b", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
-		main_product="y-ups-flywheel-b",
-		order="ac-7",
+		main_product = "y-ups-flywheel-b",
+		order = "ac-7",
 		subgroup = "y-energy-2",
 	},
 
@@ -421,18 +419,17 @@ data:extend(
 		energy_required = 5.0,
 		enabled = true,
 		ingredients = {
-			{type="item", name="y-substation-m", amount=1},
-			{type="item", name="y-conductive-wire-1", amount=4},
-			{type="item", name="y-chip-2", amount=2},
-			{type="item", name="y_blocked_capa", amount=2},
-			{type="item", name="y_rwtechsign", amount=2},
+			{ type = "item", name = "y-substation-m", amount = 1 },
+			{ type = "item", name = "y-conductive-wire-1", amount = 4 },
+			{ type = "item", name = "y-chip-2", amount = 2 },
+			{ type = "item", name = "y_blocked_capa", amount = 2 },
+			{ type = "item", name = "y_rwtechsign", amount = 2 },
 		},
 		results = {
-			{type="item", name="y_compensator_25", amount=1},
+			{ type = "item", name = "y_compensator_25", amount = 1 },
 		},
 		main_product = "y_compensator_25",
-		order="ac-8",
+		order = "ac-8",
 		subgroup = "y-energy-2",
 	},
-
 })

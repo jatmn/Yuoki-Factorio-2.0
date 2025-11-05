@@ -1,4 +1,43 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.16
+Date: 4. 11. 2025
+  Space Age:
+    - Molten Copper and Iron recipes from Pure Copper and Iron in Foundry (Icons are placeholders for now!)
+    - Added Atomic's recipes: Calcite, Tungsten ore, and Holmium ore
+    - Electric Crusher changes: Increased power to 655kw, now uses Space Age Crusher sound effects, supports asteroid crushing recipes on platform or on planet!
+    - Updated weight values of various items to prevent rockets from delivering partial stack remainders, this resulted in some default stack size adjustments. Open to feedback on these changes.
+  Updates:
+    - Changed how Atomic's recipe icons are created (less photoshop work for me and easier to integrate with other mods later) This also is why there is a reduced file size for the mod itself.
+  Fixes:
+    - Turrets no longer have ghost turret barrels (Thanks Rau771)
+    - Fixed shadows under YI Logistiker and YI Constructor bots (Turbos too)
+    - Fixed YI Constructor bot image flashing (Turbos too)
+    - Fixed a few broken locals
+  Changes:
+    - Some legacy code cleanup...
+    - Small Turbine Generator-S steam consumption changed from 24/s to 45/s and max temp from 265c to 165c, power output 1.6MW
+    - Copper Plate from Pure Copper / Iron Plate from Pure Iron recipes have been changed to 2 pure = 5 plate in furnace, to be more viable mid-late game
+---------------------------------------------------------------------------------------------------
+Version: 1.2.15
+Date: 24. 8. 2025
+  Fixes:
+    - Accidently made optional DLC required.. fixed now.
+---------------------------------------------------------------------------------------------------
+Version: 1.2.14
+Date: 17. 8. 2025
+  Additions:
+    - Contaminated water to Unicomp recipe added from Fixes Mod
+    - Added the 8080 logistics and construction network expander ports from Fixes Mod
+    - Added turbo bots from Fixes Mod
+  Fixes:
+    - Fixed Yuoki inserters to be bulk (stack) class like they were in 1.0 - No they wont stack belts.
+  Changes:
+    - Changed Start with YI Suite option to only start with 25 Yi Constructor robots, made no sense to start with 50 as you only could use 25.
+    - Reformat all code using Stylua, attempting to keep this format moving forward as the code is a heavy mix of styles over the years. This should have zero impact to the mod itself just my sanity working on it.
+    - Prototype 41 - former "filter inserter" is now a stack inserter. Should stack belts when that research is unlocked, still need to verify this though. Recipe changed as well.
+  Known Issues:
+    - Yes I know logi and construction class bots have broken images when doing construction and that their shadows need fixed.... 
+---------------------------------------------------------------------------------------------------
 Version: 1.2.13
 Date: 11. 4. 2025
   Updates:

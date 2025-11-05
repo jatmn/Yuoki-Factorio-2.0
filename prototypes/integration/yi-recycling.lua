@@ -1,4 +1,0 @@
--- Build recipe list to allow/not-allow rcycling 
--- recipe.auto_recycle = false
---data.raw.recipe["y-battery-rip1"].auto_recycle = false
--- will revisit.. this does not work after data.lua stage..
