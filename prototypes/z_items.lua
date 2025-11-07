@@ -347,11 +347,28 @@ data:extend({
 		name = "y_block_heat",
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/entity/block_heat_icon.png",
+		pictures = {
+			layers = {
+				{
+					size = 64,
+					filename = "__Yuoki__/graphics/entity/block_heat_icon.png",
+					scale = 0.5,
+					mipmap_count = 1,
+				},
+				{
+					draw_as_light = true,
+					size = 64,
+					filename = "__Yuoki__/graphics/entity/block_heat_icon.png",
+					scale = 0.5,
+				},
+			},
+		},
 		group = "yuoki",
 		subgroup = "y-parts",
 		order = "t",
 		stack_size = 250,
 		weight = 4 * kg,
+		auto_recycle = false,
 	},
 	--ID:312
 	{
@@ -364,6 +381,7 @@ data:extend({
 		order = "s",
 		stack_size = 250,
 		weight = 4 * kg,
+		auto_recycle = false,
 	},
 	--ID:311
 	{
@@ -578,8 +596,12 @@ data:extend({
 		type = "item",
 		name = "j_construction2-robot",
 		icon_size = 64,
-		icons = { { icon = "__Yuoki__/graphics/icons/rob_con_icon.png", tint = { r = 224 / 255, g = 158 / 255, b = 158
-			/ 255 } } },
+		icons = {
+			{
+				icon = "__Yuoki__/graphics/icons/rob_con_icon.png",
+				tint = { r = 224 / 255, g = 158 / 255, b = 158 / 255 },
+			},
+		},
 		group = "yuoki",
 		subgroup = "j-y-logi-9",
 		order = "d2",

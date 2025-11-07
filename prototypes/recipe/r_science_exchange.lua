@@ -11,7 +11,7 @@ data:extend({
 			{ type = "item", name = "y-ammo-hohlspitz", amount = 5.0 },
 		},
 		results = {
-			{ type = "item", name = "military-science-pack", amount = 1.0 },
+			{ type = "item", name = "military-science-pack", amount = 2.0 },
 		},
 		main_product = "military-science-pack",
 		icon = "__base__/graphics/icons/military-science-pack.png",
@@ -19,6 +19,7 @@ data:extend({
 		order = "1",
 		group = "yuoki-atomics",
 		subgroup = "y-stargate-4",
+		allow_productivity = true,
 	},
 
 	{
@@ -33,7 +34,7 @@ data:extend({
 			{ type = "item", name = "engine-unit", amount = 1.0 },
 		},
 		results = {
-			{ type = "item", name = "chemical-science-pack", amount = 1.0 },
+			{ type = "item", name = "chemical-science-pack", amount = 2.0 },
 		},
 		main_product = "chemical-science-pack",
 		icon = "__base__/graphics/icons/chemical-science-pack.png",
@@ -41,6 +42,7 @@ data:extend({
 		order = "2",
 		group = "yuoki-atomics",
 		subgroup = "y-stargate-4",
+		allow_productivity = true,
 	},
 
 	{
@@ -56,7 +58,7 @@ data:extend({
 			{ type = "item", name = "y_rwtechsign", amount = 2.0 },
 		},
 		results = {
-			{ type = "item", name = "production-science-pack", amount = 1.0 },
+			{ type = "item", name = "production-science-pack", amount = 2.0 },
 		},
 		main_product = "production-science-pack",
 		icon = "__base__/graphics/icons/production-science-pack.png",
@@ -64,6 +66,7 @@ data:extend({
 		order = "3",
 		group = "yuoki-atomics",
 		subgroup = "y-stargate-4",
+		allow_productivity = true,
 	},
 
 	{
@@ -79,7 +82,7 @@ data:extend({
 			{ type = "item", name = "y_rwtechsign", amount = 4.0 },
 		},
 		results = {
-			{ type = "item", name = "utility-science-pack", amount = 1.0 },
+			{ type = "item", name = "utility-science-pack", amount = 2.0 },
 		},
 		main_product = "utility-science-pack",
 		icon = "__base__/graphics/icons/utility-science-pack.png",
@@ -87,6 +90,7 @@ data:extend({
 		order = "4",
 		group = "yuoki-atomics",
 		subgroup = "y-stargate-4",
+		allow_productivity = true,
 	},
 
 	{
@@ -99,7 +103,7 @@ data:extend({
 			{ type = "item", name = "ypfw_trader_sign", amount = 6000.0 },
 		},
 		results = {
-			{ type = "item", name = "space-science-pack", amount = 3.0 },
+			{ type = "item", name = "space-science-pack", amount = 6.0 },
 		},
 		main_product = "space-science-pack",
 		icon = "__base__/graphics/icons/space-science-pack.png",
@@ -107,5 +111,6 @@ data:extend({
 		order = "5",
 		group = "yuoki-atomics",
 		subgroup = "y-stargate-4",
+		allow_productivity = true,
 	},
 })

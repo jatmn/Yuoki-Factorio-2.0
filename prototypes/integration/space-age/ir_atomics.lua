@@ -1,4 +1,7 @@
 if mods["space-age"] then
+	data.raw["assembling-machine"]["y-atomic-constructor"].allowed_effects =
+		{ "consumption", "speed", "productivity", "pollution", "quality" }
+
 	data:extend({
 		-- Calcite
 		{
@@ -18,6 +21,7 @@ if mods["space-age"] then
 			category = "yuoki-atomics",
 			icons = yi.lib.recipe.atomics.item_down("calcite"),
 			auto_recycle = false,
+			allow_quality = false,
 		},
 
 		{
@@ -37,6 +41,7 @@ if mods["space-age"] then
 			category = "yuoki-atomics",
 			icons = yi.lib.recipe.atomics.item_up("calcite"),
 			auto_recycle = false,
+			allow_quality = false,
 		},
 
 		-- Tungsten ore
@@ -57,6 +62,7 @@ if mods["space-age"] then
 			category = "yuoki-atomics",
 			icons = yi.lib.recipe.atomics.item_down("tungsten-ore"),
 			auto_recycle = false,
+			allow_quality = false,
 		},
 
 		{
@@ -76,6 +82,7 @@ if mods["space-age"] then
 			category = "yuoki-atomics",
 			icons = yi.lib.recipe.atomics.item_up("tungsten-ore"),
 			auto_recycle = false,
+			allow_quality = false,
 		},
 
 		-- Holmium ore
@@ -96,6 +103,7 @@ if mods["space-age"] then
 			category = "yuoki-atomics",
 			icons = yi.lib.recipe.atomics.item_down("holmium-ore"),
 			auto_recycle = false,
+			allow_quality = false,
 		},
 
 		{
@@ -115,6 +123,7 @@ if mods["space-age"] then
 			category = "yuoki-atomics",
 			icons = yi.lib.recipe.atomics.item_up("holmium-ore"),
 			auto_recycle = false,
+			allow_quality = false,
 		},
 	})
 end

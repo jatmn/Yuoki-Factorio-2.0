@@ -60,13 +60,27 @@ data:extend({
 			shift = { 0.6875, -0.75 },
 		},
 		animation = {
-			filename = "__Yuoki__/graphics/entity/beacon_sheet.png",
-			width = 160,
-			height = 160,
-			line_length = 5,
-			frame_count = 25,
-			shift = { 0.6875, -0.75 },
-			animation_speed = 0.20,
+			layers = {
+				{
+					filename = "__Yuoki__/graphics/entity/beacon_sheet.png",
+					width = 160,
+					height = 160,
+					line_length = 5,
+					frame_count = 25,
+					shift = { 0.6875, -0.75 },
+					animation_speed = 0.20,
+				},
+				{
+					filename = "__Yuoki__/graphics/entity/beacon_sheet.png",
+					draw_as_light = true,
+					width = 160,
+					height = 160,
+					line_length = 5,
+					frame_count = 25,
+					shift = { 0.6875, -0.75 },
+					animation_speed = 0.20,
+				},
+			},
 		},
 		animation_shadow = {
 			filename = "__Yuoki__/graphics/entity/empty32.png",
@@ -78,9 +92,10 @@ data:extend({
 			--animation_speed = 0.5
 		},
 		radius_visualisation_picture = {
-			filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
-			width = 12,
-			height = 12,
+			filename = "__base__/graphics/entity/beacon/beacon-radius-visualization.png",
+			priority = "extra-high-no-scale",
+			width = 10,
+			height = 10,
 		},
 		supply_area_distance = 5,
 		energy_source = {
@@ -255,7 +270,11 @@ data:extend({
 		name = "j_yi_roboport1",
 		icon_size = 64,
 		icons = {
-			{ icon = "__Yuoki__/graphics/gfx/aqe-icon.png", tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 }, scale = 0.5 },
+			{
+				icon = "__Yuoki__/graphics/gfx/aqe-icon.png",
+				tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 },
+				scale = 0.5,
+			},
 		},
 		flags = { "placeable-player", "player-creation" },
 		minable = { hardness = 0.2, mining_time = 0.5, result = "j_yi_roboport1" },

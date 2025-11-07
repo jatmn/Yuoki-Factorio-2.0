@@ -1,4 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.17
+Date: 7. 11. 2025
+  Space Age:
+    - Cimota Restructor now accepts Quality modules, but only for science pack recipes
+    - Atomic Quantum Composer now accepts Quality modules
+    - Frank & Peppe now has 50% productivity built-in
+    - Frank & Peppe now sounds like a foundry
+    - Hot and Cold Heat Blocks, cant be recycled
+    - Crusher now uses Space Age Crusher sound effects
+    - YI Beacon Module Slots and Range is now impacted by Quality, reminder efficiency is fixed at 0.7
+  Fixes:
+    - Fixed the broken water generation recipe name and description
+    - Frank & Peppe related recipes now have main product identification fixed
+    - YI Beacon coverage range now uses correct indicator area for Beacon
+  Changes:
+    - F7 Ore patches (yellow resource) now Glow at night like Uranium Ore does!
+    - Frank & Peppe now glows!
+    - Frank & Peppe now accepts productivity modules, Cold Heat Storage Block is not impacted by productivity in Frank & Peppe
+    - Hot Heat Storage Blocks now glow!
+    - Zaydon Charger now glows!
+    - YI Beacon now glows!
+    - YI Science Pack recipes now allow productivity module use.
+    - YI Science Pack recipes now produce double the science packs, most only produced 1 science before.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.16
 Date: 4. 11. 2025
   Space Age:

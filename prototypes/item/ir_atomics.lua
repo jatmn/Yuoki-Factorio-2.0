@@ -23,6 +23,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("iron-ore"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -42,6 +43,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("copper-ore"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -61,6 +63,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("wood"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -80,6 +83,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("stone"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -99,6 +103,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("coal"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -118,6 +123,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("y-res1"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -137,6 +143,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("y-res2"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -156,6 +163,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("y-slag"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -175,6 +183,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("y-crystal2"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -194,6 +203,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("uranium-ore"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	-- toxic-dust-recycle
@@ -214,6 +224,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("y-toxic-dust"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	-- mud-ball-recycle
@@ -234,6 +245,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("y-dry_mud"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	-- reverse atomic transfers and ++
@@ -254,6 +266,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("copper-ore"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -273,6 +286,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("iron-ore"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -292,6 +306,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("wood"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -311,6 +326,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("coal"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -330,6 +346,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("stone"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -349,6 +366,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("y-res1"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -368,6 +386,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("y-res2"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -387,6 +406,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("plastic-bar"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -406,6 +426,7 @@ data:extend({
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_up("uranium-ore"),
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	-- fluid transition
@@ -426,6 +447,7 @@ data:extend({
 		subgroup = "j-y-atomics-10",
 		category = "yuoki-atomics",
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -446,6 +468,7 @@ data:extend({
 		subgroup = "j-y-atomics-10",
 		category = "yuoki-atomics",
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -465,6 +488,7 @@ data:extend({
 		subgroup = "j-y-atomics-10",
 		category = "yuoki-atomics",
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	{
@@ -484,6 +508,7 @@ data:extend({
 		subgroup = "j-y-atomics-10",
 		category = "yuoki-atomics",
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	-- only reverse to crude-oil
@@ -504,6 +529,7 @@ data:extend({
 		subgroup = "j-y-atomics-14",
 		category = "yuoki-atomics",
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	-- full fluid transition
@@ -525,6 +551,7 @@ data:extend({
 		subgroup = "j-y-atomics-1",
 		category = "yuoki-atomics",
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	-- and fluid reverse
@@ -546,6 +573,7 @@ data:extend({
 		subgroup = "j-y-atomics-1",
 		category = "yuoki-atomics",
 		auto_recycle = false,
+		allow_quality = false,
 	},
 
 	-- contaminated water to unicomp
@@ -565,5 +593,7 @@ data:extend({
 		order = "a",
 		subgroup = "j-y-atomics-10",
 		category = "yuoki-atomics",
+		auto_recycle = false,
+		allow_quality = false,
 	},
 })

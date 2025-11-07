@@ -87,7 +87,13 @@ data:extend({
 		},
 		results = {
 			{ type = "item", name = "y-crush-yres1", amount = 12 },
-			{ type = "item", name = "y_toolhead_broken", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
+			{
+				type = "item",
+				name = "y_toolhead_broken",
+				amount = 1,
+				ignored_by_stats = 1,
+				ignored_by_productivity = 1,
+			},
 		},
 		main_product = "y-crush-yres1",
 		allow_productivity = true,
@@ -108,7 +114,13 @@ data:extend({
 		},
 		results = {
 			{ type = "item", name = "y-crush-yres2", amount = 12 },
-			{ type = "item", name = "y_toolhead_broken", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
+			{
+				type = "item",
+				name = "y_toolhead_broken",
+				amount = 1,
+				ignored_by_stats = 1,
+				ignored_by_productivity = 1,
+			},
 		},
 		main_product = "y-crush-yres2",
 		allow_productivity = true,
@@ -349,7 +361,13 @@ data:extend({
 		},
 		results = {
 			{ type = "item", name = "y-pure-copper", amount = 12 },
-			{ type = "item", name = "y_toolhead_broken", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
+			{
+				type = "item",
+				name = "y_toolhead_broken",
+				amount = 1,
+				ignored_by_stats = 1,
+				ignored_by_productivity = 1,
+			},
 			{ type = "fluid", name = "y-con_water", amount = 50 },
 		},
 		main_product = "y-pure-copper",
@@ -373,7 +391,13 @@ data:extend({
 		},
 		results = {
 			{ type = "item", name = "y-pure-iron", amount = 12 },
-			{ type = "item", name = "y_toolhead_broken", amount = 1, ignored_by_stats = 1, ignored_by_productivity = 1 },
+			{
+				type = "item",
+				name = "y_toolhead_broken",
+				amount = 1,
+				ignored_by_stats = 1,
+				ignored_by_productivity = 1,
+			},
 			{ type = "fluid", name = "y-con_water", amount = 50 },
 		},
 		main_product = "y-pure-iron",

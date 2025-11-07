@@ -73,51 +73,114 @@ local function resource(resource_parameters, autoplace_parameters)
 		coverage = 0.02
 	end
 
-	return {
-		type = "resource",
-		name = resource_parameters.name,
-		icon = "__Yuoki__/graphics/icons/" .. resource_parameters.name .. ".png",
-		icon_size = 64,
-		icon_mipmaps = 1,
-		flags = { "placeable-neutral" },
-		order = "a-b-" .. resource_parameters.order,
-		tree_removal_probability = 0.8,
-		tree_removal_max_distance = 32 * 32,
-		minable = {
-			mining_particle = "stone-particle",
-			-- mining_particle = resource_parameters.name .. "-particle",
-			mining_time = resource_parameters.mining_time,
-			result = resource_parameters.name,
-		},
-		walking_sound = resource_parameters.walking_sound,
-		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		-- autoplace = autoplace_settings(name, order, coverage),
-		autoplace = resource_autoplace.resource_autoplace_settings({
-			name = resource_parameters.name,
-			order = resource_parameters.order,
-			base_density = autoplace_parameters.base_density,
-			has_starting_area_placement = true,
-			regular_rq_factor_multiplier = autoplace_parameters.regular_rq_factor_multiplier,
-			starting_rq_factor_multiplier = autoplace_parameters.starting_rq_factor_multiplier,
-			candidate_spot_count = autoplace_parameters.candidate_spot_count,
-		}),
-		-- stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
-		stage_counts = { 4000, 2000, 1500, 900, 300, 75, 25, 10 },
-		stages = {
+	if resource_parameters.name == "y-res2" then
+		return {
 
-			sheet = {
-				filename = "__Yuoki__/graphics/entity/resources/" .. resource_parameters.name .. ".png",
-				priority = "extra-high",
-				width = gfx_size,
-				height = gfx_size,
-				frame_count = frame_count,
-				variation_count = 8,
+			type = "resource",
+			name = resource_parameters.name,
+			icon = "__Yuoki__/graphics/icons/" .. resource_parameters.name .. ".png",
+			icon_size = 64,
+			icon_mipmaps = 1,
+			flags = { "placeable-neutral" },
+			order = "a-b-" .. resource_parameters.order,
+			tree_removal_probability = 0.8,
+			tree_removal_max_distance = 32 * 32,
+			minable = {
+				mining_particle = "stone-particle",
+				-- mining_particle = resource_parameters.name .. "-particle",
+				mining_time = resource_parameters.mining_time,
+				result = resource_parameters.name,
 			},
-		},
-		map_color = resource_parameters.map_color,
-		mining_visualisation_tint = resource_parameters.mining_visualisation_tint,
-	}
+			walking_sound = resource_parameters.walking_sound,
+			collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
+			selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+			autoplace = resource_autoplace.resource_autoplace_settings({
+				name = resource_parameters.name,
+				order = resource_parameters.order,
+				base_density = autoplace_parameters.base_density,
+				has_starting_area_placement = true,
+				regular_rq_factor_multiplier = autoplace_parameters.regular_rq_factor_multiplier,
+				starting_rq_factor_multiplier = autoplace_parameters.starting_rq_factor_multiplier,
+				candidate_spot_count = autoplace_parameters.candidate_spot_count,
+			}),
+			stage_counts = { 4000, 2000, 1500, 900, 300, 75, 25, 10 },
+			stages = {
+
+				sheet = {
+					filename = "__Yuoki__/graphics/entity/resources/" .. resource_parameters.name .. ".png",
+					priority = "extra-high",
+					width = gfx_size,
+					height = gfx_size,
+					frame_count = frame_count,
+					variation_count = 8,
+				},
+			},
+			stages_effect = {
+				sheet = {
+					filename = "__Yuoki__/graphics/entity/resources/" .. resource_parameters.name .. "-glow.png",
+					priority = "extra-high",
+					width = gfx_size,
+					height = gfx_size,
+					frame_count = frame_count,
+					variation_count = 8,
+					scale = 0.9,
+					blend_mode = "additive",
+					flags = { "light" },
+				},
+			},
+			effect_animation_period = 5,
+			effect_animation_period_deviation = 1,
+			effect_darkness_multiplier = 3.6,
+			min_effect_alpha = 0.2,
+			max_effect_alpha = 0.3,
+			map_color = resource_parameters.map_color,
+			mining_visualisation_tint = resource_parameters.mining_visualisation_tint,
+		}
+	else
+		return {
+			type = "resource",
+			name = resource_parameters.name,
+			icon = "__Yuoki__/graphics/icons/" .. resource_parameters.name .. ".png",
+			icon_size = 64,
+			icon_mipmaps = 1,
+			flags = { "placeable-neutral" },
+			order = "a-b-" .. resource_parameters.order,
+			tree_removal_probability = 0.8,
+			tree_removal_max_distance = 32 * 32,
+			minable = {
+				mining_particle = "stone-particle",
+				-- mining_particle = resource_parameters.name .. "-particle",
+				mining_time = resource_parameters.mining_time,
+				result = resource_parameters.name,
+			},
+			walking_sound = resource_parameters.walking_sound,
+			collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
+			selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+			autoplace = resource_autoplace.resource_autoplace_settings({
+				name = resource_parameters.name,
+				order = resource_parameters.order,
+				base_density = autoplace_parameters.base_density,
+				has_starting_area_placement = true,
+				regular_rq_factor_multiplier = autoplace_parameters.regular_rq_factor_multiplier,
+				starting_rq_factor_multiplier = autoplace_parameters.starting_rq_factor_multiplier,
+				candidate_spot_count = autoplace_parameters.candidate_spot_count,
+			}),
+			stage_counts = { 4000, 2000, 1500, 900, 300, 75, 25, 10 },
+			stages = {
+
+				sheet = {
+					filename = "__Yuoki__/graphics/entity/resources/" .. resource_parameters.name .. ".png",
+					priority = "extra-high",
+					width = gfx_size,
+					height = gfx_size,
+					frame_count = frame_count,
+					variation_count = 8,
+				},
+			},
+			map_color = resource_parameters.map_color,
+			mining_visualisation_tint = resource_parameters.mining_visualisation_tint,
+		}
+	end
 end
 
 data:extend({

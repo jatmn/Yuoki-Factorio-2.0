@@ -609,7 +609,7 @@ data:extend({
 		},
 		results = {
 			{ type = "item", name = "steel-plate", amount = 6.0 },
-			{ type = "item", name = "y_block_cold", amount = 1.0 },
+			{ type = "item", name = "y_block_cold", amount = 1.0, ignored_by_stats = 1, ignored_by_productivity = 1 },
 			{ type = "item", name = "y-slag", amount = 8.0 },
 		},
 		main_product = "steel-plate",
@@ -633,11 +633,11 @@ data:extend({
 			{ type = "item", name = "y-pure-copper", amount = 9.0 },
 		},
 		results = {
-			{ type = "item", name = "y_block_cold", amount = 1.0 },
+			{ type = "item", name = "y_block_cold", amount = 1.0, ignored_by_stats = 1, ignored_by_productivity = 1 },
 			{ type = "item", name = "copper-plate", amount = 18.0 },
 			{ type = "item", name = "y-slag", amount = 4.0 },
 		},
-		main_product = "y_block_cold",
+		main_product = "copper-plate",
 		icon = "__Yuoki__/graphics/icons/copper_recipe.png",
 		icon_size = 64,
 		order = "0",
@@ -658,11 +658,11 @@ data:extend({
 			{ type = "item", name = "y_block_heat", amount = 1.0 },
 		},
 		results = {
-			{ type = "item", name = "y_block_cold", amount = 1.0 },
+			{ type = "item", name = "y_block_cold", amount = 1.0, ignored_by_stats = 1, ignored_by_productivity = 1 },
 			{ type = "item", name = "y-slag", amount = 4.0 },
 			{ type = "item", name = "iron-plate", amount = 18.0 },
 		},
-		main_product = "y_block_cold",
+		main_product = "iron-plate",
 		icon = "__Yuoki__/graphics/icons/plates_recipe.png",
 		icon_size = 64,
 		order = "0",
@@ -690,6 +690,8 @@ data:extend({
 		order = "t",
 		group = "yuoki",
 		subgroup = "y_parts_e",
+		allow_quality = false,
+		auto_recycle = false,
 	},
 
 	--ID:235
@@ -713,6 +715,8 @@ data:extend({
 		order = "s",
 		group = "yuoki",
 		subgroup = "y_parts_e",
+		allow_quality = false,
+		auto_recycle = false,
 	},
 
 	--ID:234
