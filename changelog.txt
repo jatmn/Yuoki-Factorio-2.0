@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.18
+Date: 10. 11. 2025
+  Integrations:
+    - Bob's Ores - Atomic's recipes added for Bob's Ores resources
+    - Krastorio 2 - Atomic's recipes added for K2 resources
+    - Krastorio 2 - Atomic's recipe icons for science changed to K2 tech cards, left names the same though
+    - Krastorio 2 Spaced Out - Atomic's recipes added for K2 resources
+    - Krastorio 2 Spaced Out - Atomic's recipe icons for science changed to K2 tech cards, left names the same though
+    - Omnimatter - Atomic's recipe added for Omnite
+    - Planet Omnia - Atomic's recipe added for Omnite
+    - Factorio & Conquer: Tiberian Dawn - Atomic's recipes added for Green Tiberium
+  Changes:
+    - Some legacy code cleanup...
+    - Reworked Atomic's crafting groups to make room for Integration recipes
+    - Refactored Atomic's recipe code to make adding Integration recipes easier later 
+    - Refactored existing Atomic's recipes code to simplify future updates
+    - Cleaned up and removed inactive recipes from local/en
+---------------------------------------------------------------------------------------------------
 Version: 1.2.17
 Date: 7. 11. 2025
   Space Age:

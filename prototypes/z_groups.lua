@@ -122,22 +122,22 @@ data:extend({
 	-- Atomic's New Sub Groups to re-arrange the crafting menu!
 	-- The unused subgroups are for future use with optional proliferation mode(s) coming soon(tm)
 	-- (JATMN)
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1a", name = "j-y-atomics-1" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1b", name = "j-y-atomics-2" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1c", name = "j-y-atomics-3" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1d", name = "j-y-atomics-4" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1e", name = "j-y-atomics-5" },
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1a", name = "j-y-atomics-1" }, -- Unicomp 2 Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1b", name = "j-y-atomics-2" }, -- Vanilla solid resources to Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1c", name = "j-y-atomics-3" }, -- Space Age solid resources to Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1d", name = "j-y-atomics-4" }, -- Integration Overhaul mods solid resources to Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1e", name = "j-y-atomics-5" }, -- Yuoki Crafted resources to Unicomp
 	{ type = "item-subgroup", group = "yuoki-atomics", order = "1f", name = "j-y-atomics-6" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1g", name = "j-y-atomics-7" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1h", name = "j-y-atomics-8" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1i", name = "j-y-atomics-9" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-10" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-11" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-12" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-13" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-14" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-15" },
-	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-16" },
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1g", name = "j-y-atomics-7" }, -- Vanilla liquid resources to Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1h", name = "j-y-atomics-8" }, -- Space Age liquid resources to Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1i", name = "j-y-atomics-9" }, -- Integration Overhaul mods liquid resources to Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-10" }, 
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-11" }, -- Vanilla solid resources from Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-12" }, -- Space Age solid resources from Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-13" }, -- Integration Overhaul mods solid resources from Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-14" }, -- Vanilla liquid resources from Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-15" }, -- Integration Overhaul mods liquid resources from Unicomp
+	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-16" }, -- Vanilla Crafted resources from Unicomp
 	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-17" },
 	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-18" },
 	{ type = "item-subgroup", group = "yuoki-atomics", order = "1j", name = "j-y-atomics-19" },

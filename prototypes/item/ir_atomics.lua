@@ -6,145 +6,14 @@ end
 
 data:extend({
 	-- pure atomic constructs
-	{
-		type = "recipe",
-		name = "y-ac-iron2uc",
-		order = "d",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "iron-ore", amount = 20 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-2",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("iron-ore"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-copper2uc",
-		order = "e",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "copper-ore", amount = 20 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-2",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("copper-ore"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-wood2uc",
-		order = "a",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "wood", amount = 20 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-2",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("wood"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-stone2uc",
-		order = "b",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "stone", amount = 20 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-2",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("stone"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-coal2uc",
-		order = "c",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "coal", amount = 20 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-2",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("coal"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-uc42uc",
-		order = "g",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-res1", amount = 10 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-2",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("y-res1"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-fuel2uc",
-		order = "h",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-res2", amount = 10 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-2",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("y-res2"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
+	yi.lib.recipe.atomics.recipes_make_item("iron-ore", 64, 20, 1, "ore"),
+	yi.lib.recipe.atomics.recipes_make_item("copper-ore", 64, 20, 1, "ore"),
+	yi.lib.recipe.atomics.recipes_make_item("wood", 64, 20, 1, "ore"),
+	yi.lib.recipe.atomics.recipes_make_item("stone", 64, 20, 1, "ore"),
+	yi.lib.recipe.atomics.recipes_make_item("coal", 64, 20, 1, "ore"),
+	yi.lib.recipe.atomics.recipes_make_item("y-res1", 64, 10, 1, "ore"),
+	yi.lib.recipe.atomics.recipes_make_item("y-res2", 64, 10, 1, "ore"),
+	yi.lib.recipe.atomics.recipes_make_item("uranium-ore", 64, 12, 1, "ore"),
 
 	{
 		type = "recipe",
@@ -182,26 +51,6 @@ data:extend({
 		subgroup = "j-y-atomics-5",
 		category = "yuoki-atomics",
 		icons = yi.lib.recipe.atomics.item_down("y-crystal2"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y_ac_uran2uc",
-		order = "f",
-		energy_required = 4.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "uranium-ore", amount = 12 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-2",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("uranium-ore"),
 		auto_recycle = false,
 		allow_quality = false,
 	},
@@ -249,145 +98,7 @@ data:extend({
 	},
 
 	-- reverse atomic transfers and ++
-	{
-		type = "recipe",
-		name = "y-ac-uc2copper",
-		order = "e",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "copper-ore", amount = 20 },
-		},
-		main_product = "copper-ore",
-		subgroup = "j-y-atomics-11",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("copper-ore"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
 
-	{
-		type = "recipe",
-		name = "y-ac-uc2iron",
-		order = "d",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "iron-ore", amount = 20 },
-		},
-		main_product = "iron-ore",
-		subgroup = "j-y-atomics-11",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("iron-ore"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-uc2wood",
-		order = "a",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "wood", amount = 20 },
-		},
-		main_product = "wood",
-		subgroup = "j-y-atomics-11",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("wood"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-uc2coal",
-		order = "c",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "coal", amount = 20 },
-		},
-		main_product = "coal",
-		subgroup = "j-y-atomics-11",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("coal"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-uc2stone",
-		order = "b",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "stone", amount = 20 },
-		},
-		main_product = "stone",
-		subgroup = "j-y-atomics-11",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("stone"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-uc2uc4",
-		order = "h",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "y-res1", amount = 10 },
-		},
-		main_product = "y-res1",
-		subgroup = "j-y-atomics-11",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("y-res1"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-ac-uc2fuel",
-		order = "i",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "y-res2", amount = 10 },
-		},
-		main_product = "y-res2",
-		subgroup = "j-y-atomics-11",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("y-res2"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
 
 	{
 		type = "recipe",
@@ -409,25 +120,6 @@ data:extend({
 		allow_quality = false,
 	},
 
-	{
-		type = "recipe",
-		name = "y_ac_uc2uranore",
-		order = "f",
-		energy_required = 4.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "uranium-ore", amount = 12 },
-		},
-		main_product = "uranium-ore",
-		subgroup = "j-y-atomics-11",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("uranium-ore"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
 
 	-- fluid transition
 	{
@@ -444,7 +136,7 @@ data:extend({
 		enabled = true,
 		icons = yi.lib.recipe.atomics.fluid_down("light-oil"),
 		order = "b",
-		subgroup = "j-y-atomics-10",
+		subgroup = "j-y-atomics-7",
 		category = "yuoki-atomics",
 		auto_recycle = false,
 		allow_quality = false,
@@ -465,7 +157,7 @@ data:extend({
 		hidden = uc_heavyoil_h,
 		icons = yi.lib.recipe.atomics.fluid_down("heavy-oil"),
 		order = "c",
-		subgroup = "j-y-atomics-10",
+		subgroup = "j-y-atomics-7",
 		category = "yuoki-atomics",
 		auto_recycle = false,
 		allow_quality = false,
@@ -485,7 +177,7 @@ data:extend({
 		enabled = true,
 		icons = yi.lib.recipe.atomics.fluid_down("lubricant"),
 		order = "e",
-		subgroup = "j-y-atomics-10",
+		subgroup = "j-y-atomics-7",
 		category = "yuoki-atomics",
 		auto_recycle = false,
 		allow_quality = false,
@@ -505,7 +197,7 @@ data:extend({
 		enabled = true,
 		icons = yi.lib.recipe.atomics.fluid_down("petroleum-gas"),
 		order = "d",
-		subgroup = "j-y-atomics-10",
+		subgroup = "j-y-atomics-7",
 		category = "yuoki-atomics",
 		auto_recycle = false,
 		allow_quality = false,
@@ -591,7 +283,7 @@ data:extend({
 		enabled = true,
 		icons = yi.lib.recipe.atomics.fluid_down("y-con_water"),
 		order = "a",
-		subgroup = "j-y-atomics-10",
+		subgroup = "j-y-atomics-7",
 		category = "yuoki-atomics",
 		auto_recycle = false,
 		allow_quality = false,

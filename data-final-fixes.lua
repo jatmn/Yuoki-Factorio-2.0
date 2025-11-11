@@ -63,28 +63,6 @@ local itemTable = {
 	{ "y-toxic-dust", 1, false },
 }
 
--- This is really broken in 2.0 will re-visit later
--- JATMN 11/24/2024
-
---if deadlock_stacking then
---	for _, item in ipairs(itemTable) do
---		if data.raw.item[item[1]] then
---            if item[3] then
---    			deadlock.add_stack(item[1], "___Yuoki__/graphics/stacks/"..item[1].."-stack.png", "deadlock-stacking-"..item[2],32)
---            else
---                deadlock.add_stack(item[1], nil, "deadlock-stacking-"..item[2],32)
---            end
---		end
---	end
---end
-
---if deadlock_crating then
---  for _, item in pairs(itemTable) do
---    if data.raw.item[item[1]] then
---      deadlock_crating.add_crate(item[1], "deadlock-crating-"..item[2])
---    end
---  end
---end
 
 -- Build out YI Logistics (JATMN)
 -- From Fixes Mod
@@ -216,3 +194,10 @@ data.raw["inserter"]["y-inserter-smart"].enter_drop_mode_if_held_stack_spoiled =
 data.raw["inserter"]["y-inserter-smart"].max_belt_stack_size = 4
 
 end
+
+require("prototypes.integration.bobores._all") 					-- Integraton - Bob's Ores
+require("prototypes.integration.krastorio2._all") 				-- Integraton - Krastorio 2
+require("prototypes.integration.krastorio2-spaced-out._all") 	-- Integraton - Krastorio 2 Spaced Out
+require("prototypes.integration.omnimatter._all") 				-- Integraton - Omnimatter
+require("prototypes.integration.omnia._all") 					-- Integraton - Planet Omnia
+require("prototypes.integration.factorio-tiberium._all") 		-- Integraton - Factorio & Conquer: Tiberian Dawn
