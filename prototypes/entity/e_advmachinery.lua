@@ -59,7 +59,7 @@ data:extend({
 				},
 			},
 		},
-		crafting_categories = { "y-crushing"},
+		crafting_categories = { "y-crushing" },
 		crafting_speed = 3.5,
 		energy_source = {
 			type = "electric",
@@ -99,6 +99,9 @@ data:extend({
 
 		module_slots = 2,
 		allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+		quality_affects_module_slots = true,
+		quality_affects_energy_usage = true,
+		energy_usage_quality_multiplier = yi_energy_usage_quality_multiplier,
 	},
 
 	{
@@ -201,6 +204,9 @@ data:extend({
 
 		module_slots = 2,
 		allowed_effects = { "consumption", "speed", "productivity", "pollution" },
+		quality_affects_module_slots = true,
+		quality_affects_energy_usage = true,
+		energy_usage_quality_multiplier = yi_energy_usage_quality_multiplier,
 	},
 
 	--

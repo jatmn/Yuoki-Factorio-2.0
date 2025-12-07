@@ -163,6 +163,9 @@ data:extend({
 		allowed_effects = { "consumption", "speed", "productivity", "pollution" },
 		fast_replaceable_group = "j-washer",
 		next_upgrade = "y_mc_dirtwasher",
+		quality_affects_module_slots = true,
+		quality_affects_energy_usage = true,
+		energy_usage_quality_multiplier = yi_energy_usage_quality_multiplier,
 	},
 
 	-- Outpost Mining Drill
@@ -373,6 +376,9 @@ data:extend({
 		module_slots = 4,
 		allowed_effects = { "consumption", "speed", "productivity", "pollution" },
 		order = "w[wonders]",
+		quality_affects_module_slots = true,
+		quality_affects_energy_usage = true,
+		energy_usage_quality_multiplier = yi_energy_usage_quality_multiplier,
 	},
 
 	{
@@ -434,7 +440,6 @@ data:extend({
 			},
 		},
 
-		--crafting_categories = {"crafting", "advanced-crafting", "crafting-width-fluid","yuoki-import-bobores-wonder-recipe"},
 		crafting_categories = { "yuoki-atomics" },
 		crafting_speed = 2.0,
 		energy_source = {
@@ -447,6 +452,9 @@ data:extend({
 		module_slots = 2,
 		allowed_effects = { "consumption", "speed", "productivity", "pollution" },
 		order = "a[atomics]",
+		quality_affects_module_slots = true,
+		quality_affects_energy_usage = true,
+		energy_usage_quality_multiplier = yi_energy_usage_quality_multiplier,
 	},
 
 	{
@@ -529,6 +537,9 @@ data:extend({
 		module_slots = 2,
 		allowed_effects = { "consumption", "speed", "productivity", "pollution" },
 		order = "a[atomics]",
+		quality_affects_module_slots = true,
+		quality_affects_energy_usage = true,
+		energy_usage_quality_multiplier = yi_energy_usage_quality_multiplier,
 	},
 
 	-- water generator - solid fuel

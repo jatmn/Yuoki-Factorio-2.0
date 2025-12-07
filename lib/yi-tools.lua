@@ -308,3 +308,17 @@ function yi.lib.recipe.crushing.asteroid_2(icon_name1, size1, icon_name2, size2,
 		}
 	end
 end
+
+if mods["space-age"] then
+yi_energy_usage_quality_multiplier = {
+	normal = 1,
+	uncommon = 1.15,
+	rare = 1.25,
+	epic = 1.35,
+	legendary = 1.45,
+}
+else
+yi_energy_usage_quality_multiplier = {
+	normal = 1
+}
+end

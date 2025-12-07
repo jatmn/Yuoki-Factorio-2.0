@@ -12,12 +12,9 @@ data:extend({
 		corpse = "wall-remnants",
 		repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
 		mined_sound = sound_variations("__base__/sound/car-wood-impact", 5, 0.7),
-		--mined_sound = {filename = "__base__/sound/car-wood-impact.ogg"},
-		-- factorio 0.13 start
 		repair_speed_modifier = 2,
 		fast_replaceable_group = "wall",
 		vehicle_impact_sound = sound_variations("__base__/sound/car-stone-impact", 5, 0.7),
-		--vehicle_impact_sound = {filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0},
 		connected_wall_visualization = {
 			filename = "__core__/graphics/arrows/underground-lines.png",
 			priority = "high",
@@ -31,14 +28,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-green.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -78,14 +73,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-red.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -123,7 +116,6 @@ data:extend({
 		circuit_wire_max_distance = default_circuit_wire_max_distance,
 		default_output_signal = data.is_demo and { type = "virtual", name = "signal-green" }
 			or { type = "virtual", name = "signal-G" },
-		-- factorio 0.13 - end
 		resistances = {
 			{ type = "physical", decrease = 2, percent = 20 },
 			{ type = "impact", decrease = 30, percent = 30 },
@@ -241,7 +233,6 @@ data:extend({
 		corpse = "wall-remnants",
 		repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-		-- factorio 0.13 start
 		repair_speed_modifier = 2,
 		fast_replaceable_group = "wall",
 		vehicle_impact_sound = { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
@@ -258,14 +249,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-green.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -305,14 +294,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-red.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -446,7 +433,6 @@ data:extend({
 		corpse = "wall-remnants",
 		repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-		-- factorio 0.13 start
 		repair_speed_modifier = 2,
 		fast_replaceable_group = "wall",
 		vehicle_impact_sound = { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
@@ -463,14 +449,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-green.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -510,14 +494,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-red.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -651,7 +633,6 @@ data:extend({
 		corpse = "wall-remnants",
 		repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-		-- factorio 0.13 start
 		repair_speed_modifier = 2,
 		fast_replaceable_group = "wall",
 		vehicle_impact_sound = { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
@@ -668,14 +649,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-green.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -715,14 +694,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-red.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -1079,7 +1056,7 @@ data:extend({
 			},
 		},
 	},
-	-- possible fucked by 0.13
+
 	{
 		type = "wall",
 		name = "y_wall22_hardic",
@@ -1094,7 +1071,6 @@ data:extend({
 		corpse = "wall-remnants",
 		repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-		-- factorio 0.13 start
 		repair_speed_modifier = 2,
 		fast_replaceable_group = "wall",
 		vehicle_impact_sound = { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
@@ -1111,14 +1087,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-green.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -1158,14 +1132,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-red.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},

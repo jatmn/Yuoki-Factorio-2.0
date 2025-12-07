@@ -1,20 +1,27 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.19
+Version: 1.2.20
 Date: 7. 12. 2025
   Space Age:
     - New Quality module, Yuoki Style!
     - Quantrinum - Can now be quality
     - Alien Infuser, Cimota Restructor - Now accepts quality modules
     - Added Atomic's recipe: Scrap
+    - Added New Crushing recipes to Asteroid Reprocessing to produce both N4-Material Chunk and F7-Material Chunk
+    - Quality now affects Module slots and Energy usage (Increased usage) of Cimota Restructor, Washer, Mastercrafted Washer, Atomic Quantum Composer, Alien Infuser, Electric Crusher, Electric Form Press
   Integrations:
     - Simplified the Krastorio 2 and Krastorio 2 Spaced Out Integration support code and removed redundancy.
     - Krastorio 2 and Krastorio 2 Spaced Out updates are combined in release notes from here unless otherwise stated. I will also refer to the mods as K2.
     - K2 - Small Turbine Generator-S steam consumption reduced to match changes to K2's boilers power output has also scaled down but maintains 3:4 ratio
   Updates:
-    - Passive Vitduo Defense System - Has been updated to do minor knockback and stun damage when attached. Additionally shows electric shock beam showing where the damage came from.
+    - Passive Vitduo Defense System - Has been updated to do minor knockback and stun damage when attacked. Additionally shows electric shock beam showing where the damage came from. No astroid impacts will not trigger these effects.
     - Make Mines great again! - Plasma Mine Base damage 100 -> 350, Poison Mine base damage 30 -> 150, mineammo category added to mines so they received damage boosting when research boosts vanilla mines.
+    - Migrated the legacy changelog from the mod portal page to the correct location of the changelog
   Fixes:
+    - Not really a fix but notes here for those that saw 1.2.19 released, that was a incomplete release and was taken down 1.2.20 includes all changes that was in 1.2.19 release as well.
     - Poison Mines were missing there secondary effect of Impact damage, that has been added back.
+    - Fixed A2 Pipes was incorrectly set to 200 vs 130 volume as intented
+    - Fixed N4 Pipes was incorrectly set to 200 vs 80 volume as intended
+    - Fixed Green Pipes was incorrectly set to 200 vs 100 volume as intented
   Changes:
     - Some legacy code cleanup...
 ---------------------------------------------------------------------------------------------------
@@ -417,3 +424,134 @@ Version: 0.7.79
 Version: 0.7.78
   Major Features:
     - first version for factorio 0.17.0
+---------------------------------------------------------------------------------------------------
+Version: 0.6.75
+  Changes:
+    - fixes some old problems
+---------------------------------------------------------------------------------------------------
+Version: 0.6.74
+  Changes:
+    - Happy New Year
+---------------------------------------------------------------------------------------------------
+Version: 0.6.73
+  Changes:
+    - MC Boiler now working and outputs 270°C steam
+    - Boiler 3M6/4 outputs 250°C steam
+    - Turbines consume 250°C, MC-Turbine 270°C -> result = higher MW-outputs
+    - Generators fixed MF-Temperatures 200°C-400°C -> result = lower MW-output but still strong
+    - added Steam-Overheater - overheats steam up to 1000°C (input steam any temperature)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.72
+  Changes:
+    - 0.16 compatible
+---------------------------------------------------------------------------------------------------
+Version: 0.5.70
+  Changes:
+    - fixes Fluid-Valve, Flow-Trigger, Buffer-Tank rotation
+---------------------------------------------------------------------------------------------------
+Version: 0.5.69
+  Changes:
+    - compatible with factorio 0.15.10
+---------------------------------------------------------------------------------------------------
+Version: 0.4.63
+  Changes:
+    - recipes for gun-turrets changed, can now handcrafted agian
+    - recipes for laser-turrets use wired-capaciters instead of accumulators
+    - missing UI descriptions reactivated
+    - robots have now 400 health and physical-resistence (not shown ingame)
+    - icons changes for better view
+    - Big Advanced Accumulator - yeah animation is back (forum-post contrast ?)
+    - fix Special Drill vibration (forum-post) and hopefully also jitter removed
+    - hardic-wall gfx fixed (now it connect's in intended way - after 1.5 years)
+    - YI-Atomics Icons all one style
+    - Flame-Thrower-Turret reactivated
+    - fixed some pipe-gfx
+    - changed graphic Underground Tank 9.000
+    - changed graphic Underground Tank 15.000, also now holds 24.000 units
+    - changes the selection-box - basements
+    - many recipes changed to give different signs
+    - Roboport high-resolution, fixed view-angle
+  Additions:
+    - slag can now used as tile (just place it)
+    - Signal-Connector (pole for wire with long connection range)
+    - basement-ground-floor lamp (4x4)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.62
+  Changes:
+    - ground floor lamps have no collision-box and can placed/removed with robots
+    - repair-icons and smelter-product-icons changed, to get better visual feedback
+    - plasma-capsules can used in Energy-Gun
+    - weapon energy cartridges also taken from plasma-turrets
+    - power-armor inventory-boni changed
+    - YI-Roboports transfer much more charge-power
+    - retrade from Reputation into Signs removed
+    - both "brown"-modules removed
+    - removed some leftovers (SCD-Accumulators, Steam-Powerplant, SS-Turbine-P and -T)
+  Additions:
+    - electric structure element (for later recipe-changes)
+    - Techanic-Module (similar to old better brown module)
+    - Science-Module (better productivity)
+    - mastercrafted green boiler 4M2/4 (green 3M6/4)
+    - YI-Personal-Roboport to get YI-Robots charged
+    - new Basement-Decoration-Set (Theme)
+    - basement-factory
+    - ground-floor lamp (2x2)
+    - 7 basement-tiles 5x5
+    - 1 basement-tile 4x4
+---------------------------------------------------------------------------------------------------
+Version: 0.4.61
+  Changes:
+    - moved and added YI-PFW Power-Armor + Equipment into YI
+---------------------------------------------------------------------------------------------------
+Version: 0.4.60
+  Changes:
+    - recipe-lines and icons in better order
+    - new IWE-Fluid, produced in Water-Mixer (Liquids-Tab)
+    - YI-Chemical-Turret (Flame-Thrower) removed
+    - light-radius higher from Floor-Lamps
+---------------------------------------------------------------------------------------------------
+Version: 0.4.59
+  Changes:
+    - 0.14 compatible + small changes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.58
+  Changes:
+    - changed values roboport and robot to match factorio 0.13 energy-consumption
+    - added some more use for slag (visit forum for more information)
+    - added a smelting-concept for faster iron-, copper-plate and steel-production
+    - tweaked toolhead dirt-digging
+    - tweaked repair-recipes and maintance-workshop work
+---------------------------------------------------------------------------------------------------
+Version: 0.3.57
+  Changes:
+    - fix Obninsk pipe-connection (0.13.9 patch)
+    - YI-Inserter changed to stack-inserter
+    - dircet battery-recipe changed empty battery->unicomp->vanilla-battery - prevents crazy raw-value calcs
+    - alien-artifacts now unicomp->alien-artifacts->unicomp (bad solution i know) - reduce crazy raw-value calcs
+---------------------------------------------------------------------------------------------------
+Version: 0.3.56
+  Changes:
+    - fix missing circuit accumulator connection
+    - add/fix some missing descriptions
+    - add circuit connection for Pipe-Valve
+    - add new Fluid Buffer Station (please see forum for details)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.55
+  Changes:
+    - icons for mastercrafts changed
+    - burner-miner now 5x5 with improved stats and gfx
+    - new bug-statue / obelisk crafting removed
+---------------------------------------------------------------------------------------------------
+Version: 0.3.54
+  Changes:
+    - AQE build fix
+---------------------------------------------------------------------------------------------------
+Version: 0.3.53
+  Changes:
+    - spawn more YI-Ore (if it spawn)
+  Additions:
+    - obelisk (A3.5X)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.52
+  Changes:
+    - fixes spawning Nuatreel (green stuff)

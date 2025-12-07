@@ -713,7 +713,6 @@ data:extend({
 		max_health = 50,
 		corpse = "pipe-remnants",
 		dying_explosion = "pipe-explosion",
-		--icon_draw_specification = {scale = 0.5},
 		resistances = {
 			{
 				type = "fire",
@@ -727,23 +726,16 @@ data:extend({
 		fast_replaceable_group = "pipe",
 		collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
 		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		--damaged_trigger_effect = hit_effects.entity(),
 		fluid_box = {
 			volume = 200,
 			pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
 			pipe_connections = {
-				--{ direction = defines.direction.north, position = {0, 0} },
 				{ direction = defines.direction.east, position = { 0, 0 } },
-				--{ direction = defines.direction.sout, position = {0, 0} },
 				{ direction = defines.direction.west, position = { 0, 0 } },
 			},
 			hide_connection_info = true,
 		},
-		--impact_category = "metal",
 		pictures = pipepictures_hv(),
-		--working_sound = sounds.pipe,
-		--open_sound = sounds.metal_small_open,
-		--close_sound = sounds.metal_small_close,
 
 		horizontal_window_bounding_box = { { -0.25, -0.28125 }, { 0.25, 0.15625 } },
 		vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
@@ -759,7 +751,6 @@ data:extend({
 		max_health = 50,
 		corpse = "pipe-remnants",
 		dying_explosion = "pipe-explosion",
-		--icon_draw_specification = {scale = 0.5},
 		resistances = {
 			{
 				type = "fire",
@@ -773,23 +764,16 @@ data:extend({
 		fast_replaceable_group = "pipe",
 		collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
 		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		--damaged_trigger_effect = hit_effects.entity(),
 		fluid_box = {
 			volume = 200,
 			pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
 			pipe_connections = {
 				{ direction = defines.direction.north, position = { 0, 0 } },
-				--{ direction = defines.direction.east, position = {0, 0} },
 				{ direction = defines.direction.south, position = { 0, 0 } },
-				--{ direction = defines.direction.west, position = {0, 0} }
 			},
 			hide_connection_info = true,
 		},
-		--impact_category = "metal",
 		pictures = pipepictures_hv(),
-		--working_sound = sounds.pipe,
-		--open_sound = sounds.metal_small_open,
-		--close_sound = sounds.metal_small_close,
 
 		horizontal_window_bounding_box = { { -0.25, -0.28125 }, { 0.25, 0.15625 } },
 		vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
@@ -942,9 +926,8 @@ data:extend({
 		fast_replaceable_group = "pipe",
 		collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
 		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		--damaged_trigger_effect = hit_effects.entity(),
 		fluid_box = {
-			volume = 200,
+			volume = 80,
 			pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
 			pipe_connections = {
 				{ direction = defines.direction.north, position = { 0, 0 } },
@@ -954,11 +937,7 @@ data:extend({
 			},
 			hide_connection_info = true,
 		},
-		--impact_category = "metal",
 		pictures = pipepictures_hv(),
-		--working_sound = sounds.pipe,
-		--open_sound = sounds.metal_small_open,
-		--close_sound = sounds.metal_small_close,
 
 		horizontal_window_bounding_box = { { -0.25, -0.28125 }, { 0.25, 0.15625 } },
 		vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
@@ -989,9 +968,8 @@ data:extend({
 		fast_replaceable_group = "pipe",
 		collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
 		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		--damaged_trigger_effect = hit_effects.entity(),
 		fluid_box = {
-			volume = 200,
+			volume = 80,
 			--pipe_covers = pipecoverspictures(),
 			pipe_connections = {
 				{ direction = defines.direction.north, position = { 0, 0 } },
@@ -1005,9 +983,6 @@ data:extend({
 			hide_connection_info = true,
 		},
 		impact_category = "metal",
-		--working_sound = sounds.pipe,
-		--open_sound = sounds.metal_small_open,
-		--close_sound = sounds.metal_small_close,
 		pictures = {
 			north = {
 				filename = "__Yuoki__/graphics/entity/pipe-hc/u_pipe_gu_b.png",
@@ -1130,9 +1105,8 @@ data:extend({
 		fast_replaceable_group = "pipe",
 		collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
 		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		--damaged_trigger_effect = hit_effects.entity(),
 		fluid_box = {
-			volume = 200,
+			volume = 130,
 			pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
 			pipe_connections = {
 				{ direction = defines.direction.north, position = { 0, 0 } },
@@ -1142,11 +1116,7 @@ data:extend({
 			},
 			hide_connection_info = true,
 		},
-		--impact_category = "metal",
 		pictures = pipepictures_ec(),
-		--working_sound = sounds.pipe,
-		--open_sound = sounds.metal_small_open,
-		--close_sound = sounds.metal_small_close,
 
 		horizontal_window_bounding_box = { { -0.25, -0.28125 }, { 0.25, 0.15625 } },
 		vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
@@ -1177,9 +1147,8 @@ data:extend({
 		fast_replaceable_group = "pipe",
 		collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
 		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		--damaged_trigger_effect = hit_effects.entity(),
 		fluid_box = {
-			volume = 200,
+			volume = 130,
 			--pipe_covers = pipecoverspictures(),
 			pipe_connections = {
 				{ direction = defines.direction.north, position = { 0, 0 } },
@@ -1193,9 +1162,6 @@ data:extend({
 			hide_connection_info = true,
 		},
 		impact_category = "metal",
-		--working_sound = sounds.pipe,
-		--open_sound = sounds.metal_small_open,
-		--close_sound = sounds.metal_small_close,
 		pictures = {
 			north = {
 				filename = "__Yuoki__/graphics/entity/pipe-hc/u_pipe_gu.png",
@@ -1592,16 +1558,6 @@ data:extend({
 			volume = 24000,
 			base_area = 800,
 			base_level = 0,
-
-			--[[
-			pipe_connections =
-			{				
-				{ type="input", position = {-2, 0},},
-				{ type="input", position = { 2, 0} },						
-				{ position = {0, -2} },       
-				{ position = {0, 2} },        
-			},			
-			]]
 			pipe_connections = {
 				{ direction = defines.direction.north, position = { 1.5, -1.6 } },
 				{ direction = defines.direction.east, position = { 1.5, -1.5 } },
@@ -2132,9 +2088,8 @@ data:extend({
 		fast_replaceable_group = "pipe",
 		collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
 		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		--damaged_trigger_effect = hit_effects.entity(),
 		fluid_box = {
-			volume = 200,
+			volume = 100,
 			pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
 			pipe_connections = {
 				{ direction = defines.direction.north, position = { 0, 0 } },
@@ -2144,11 +2099,7 @@ data:extend({
 			},
 			hide_connection_info = true,
 		},
-		--impact_category = "metal",
 		pictures = pipepictures_green(),
-		--working_sound = sounds.pipe,
-		--open_sound = sounds.metal_small_open,
-		--close_sound = sounds.metal_small_close,
 
 		horizontal_window_bounding_box = { { -0.25, -0.28125 }, { 0.25, 0.15625 } },
 		vertical_window_bounding_box = { { -0.28125, -0.5 }, { 0.03125, 0.125 } },
@@ -2179,9 +2130,8 @@ data:extend({
 		fast_replaceable_group = "pipe",
 		collision_box = { { -0.29, -0.29 }, { 0.29, 0.2 } },
 		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		--damaged_trigger_effect = hit_effects.entity(),
 		fluid_box = {
-			volume = 200,
+			volume = 100,
 			--pipe_covers = pipecoverspictures(),
 			pipe_connections = {
 				{ direction = defines.direction.north, position = { 0, 0 } },
@@ -2195,9 +2145,6 @@ data:extend({
 			hide_connection_info = true,
 		},
 		impact_category = "metal",
-		--working_sound = sounds.pipe,
-		--open_sound = sounds.metal_small_open,
-		--close_sound = sounds.metal_small_close,
 		pictures = {
 			north = {
 				filename = "__Yuoki__/graphics/entity/pipe-hc/g_pipe_uo.png",
