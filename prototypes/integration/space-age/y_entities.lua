@@ -12,4 +12,8 @@ if mods["space-age"] then
 
 	data.raw["assembling-machine"]["y-atomic-quantum-composer"].allowed_effects =
 		{ "consumption", "speed", "productivity", "pollution", "quality" }
+	data.raw["assembling-machine"]["y-alien-infuser"].allowed_effects =
+		{ "consumption", "speed", "productivity", "pollution", "quality" }
+	data.raw["assembling-machine"]["y-atomic-constructor"].allowed_effects =
+		{ "consumption", "speed", "productivity", "pollution", "quality" }
 end

@@ -843,6 +843,7 @@ data:extend({
 			},
 		},
 	},
+
 	{
 		type = "wall",
 		name = "y-wall-forcefield",
@@ -856,7 +857,6 @@ data:extend({
 		corpse = "wall-remnants",
 		repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-		-- factorio 0.13 start
 		repair_speed_modifier = 2,
 		fast_replaceable_group = "wall",
 		vehicle_impact_sound = { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
@@ -873,14 +873,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-green.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -920,14 +918,12 @@ data:extend({
 				priority = "extra-high",
 				width = 38,
 				height = 24,
-				--frames = 4, -- this is optional, it will default to 4 for Sprite4Way
 				shift = util.by_pixel(-2, -24),
 				hr_version = {
 					filename = "__base__/graphics/entity/wall/hr-wall-diode-red.png",
 					priority = "extra-high",
 					width = 72,
 					height = 44,
-					--frames = 4,
 					shift = util.by_pixel(-1, -23),
 					scale = 0.5,
 				},
@@ -965,6 +961,7 @@ data:extend({
 		circuit_wire_max_distance = default_circuit_wire_max_distance,
 		default_output_signal = data.is_demo and { type = "virtual", name = "signal-green" }
 			or { type = "virtual", name = "signal-G" },
+
 		attack_reaction = {
 			{
 				---- how far the mirroring works
@@ -977,11 +974,25 @@ data:extend({
 				action = {
 					type = "direct",
 					action_delivery = {
-						type = "instant",
-						target_effects = {
-							type = "damage",
-							---- always use at least 0.1 damage
-							damage = { amount = 3, type = "laser" },
+						{
+							type = "instant",
+							target_effects = {
+								{
+									type = "create-sticker",
+									sticker = "stun-sticker",
+								},
+								{
+									type = "push-back",
+									distance = 1,
+								},
+							},
+						},
+						{
+							type = "beam",
+							beam = "electric-beam-no-sound",
+							max_length = 1,
+							duration = 1,
+							source_offset = { 0, -1.31439 },
 						},
 					},
 				},
@@ -1068,99 +1079,6 @@ data:extend({
 			},
 		},
 	},
-	--[[ fucked by update
-	{
-		type = "electric-turret",
-		name = "y-wall-forcefield-a",
-		 icon_size = 64, icon =  "__Yuoki__/graphics/icons/wall-forcefield-a-icon.png",		
-		flags = { "placeable-player", "placeable-enemy", "player-creation"},
-		minable = { mining_time = 0.5, result = "y-wall-forcefield-a" },
-		max_health = 700,
-		corpse = "small-remnants",
-		collision_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-		selection_box = {{ -0.4, -0.4}, {0.4, 0.4}},
-		rotation_speed = 0.01,
-		preparing_speed = 0.05,
-		dying_explosion = "medium-explosion",
-		folding_speed = 0.05,
-		resistances =
-		{
-			{ type = "physical", decrease = 5, percent = 90 },
-			{ type = "explosion", decrease = 2, percent = 50 },
-			{ type = "fire", percent = 100 },
-			{ type = "acid", percent = 80 },
-		},			
-		
-		energy_source =
-		{
-			type = "electric",
-			buffer_capacity = "1800kJ",
-			input_flow_limit = "800kW",
-			drain = "2kW",
-			usage_priority = "primary-input"
-		},
-		
-		folded_animation = (function()
-		local res = util.table.deepcopy(y_vds_a)
-		res.frame_count = 1
-		res.line_length = 1
-		return res
-		end)(),
-		
-		preparing_animation = y_vds_a,
-		prepared_animation =
-		{
-			filename = "__Yuoki__/graphics/entity/wall-forcefield-ae.png",
-			priority = "medium", width = 48, height = 48, shift = {0.25, 0},
-			direction_count = 1,
-			frame_count = 1,
-			line_length = 1,
-			axially_symmetrical = false,
-			
-		},
-		
-		folding_animation = (function()
-		local res = util.table.deepcopy(y_vds_a)
-		res.run_mode = "backward"
-		return res
-		end)(),
-		
-		attack_parameters =
-		{
-			type = "projectile",
-			damage_modifier = 1,
-			
-			ammo_category = "electric",
-			cooldown = 12,
-			--damage = 1.0,
-			projectile_center = {0, 0},
-			projectile_creation_distance = 0.2,
-			range = 8,
-			sound = {{ filename = "__base__/sound/fight/laser-1.ogg", volume = 0.1 }},
-			ammo_type =
-			{
-				type = "projectile",
-				category = "laser-turret",
-				energy_consumption = "100kJ",
-				action =
-				{
-					{
-						type = "direct",
-						action_delivery =
-						{
-							{
-								type = "projectile",
-								projectile = "laser",
-								starting_speed = 0.25,
-							}
-						}
-					}
-				}
-			},
-		},
-		order="a";
-	},		
-	]]
 	-- possible fucked by 0.13
 	{
 		type = "wall",

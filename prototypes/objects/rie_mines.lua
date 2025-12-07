@@ -40,7 +40,8 @@ data:extend({
 			"placeable-player",
 			"placeable-enemy",
 			"player-creation",
-			--"placeable-off-grid"
+			--"placeable-off-grid",
+			"not-on-map",
 		},
 		minable = { mining_time = 1, result = "yi_mine_plasma" },
 		max_health = 25,
@@ -63,6 +64,7 @@ data:extend({
 			scale = 0.5,
 		},
 		trigger_radius = 3.5,
+		ammo_category = "landmine",
 		action = {
 			type = "direct",
 			action_delivery = {
@@ -74,13 +76,12 @@ data:extend({
 						action = {
 							type = "area",
 							radius = 8,
-							perimeter = 8,
-							--collision_mask = { "player-layer" },
+							force = "enemy",
 							action_delivery = {
 								type = "instant",
 								target_effects = {
 									type = "damage",
-									damage = { amount = 100, type = "plasma" },
+									damage = { amount = 350, type = "plasma" },
 								},
 							},
 						},
@@ -133,7 +134,8 @@ data:extend({
 			"placeable-player",
 			"placeable-enemy",
 			"player-creation",
-			--"placeable-off-grid"
+			--"placeable-off-grid",
+			"not-on-map",
 		},
 		minable = { mining_time = 1, result = "yi_mine_impact" },
 		max_health = 25,
@@ -156,6 +158,7 @@ data:extend({
 			scale = 0.5,
 		},
 		trigger_radius = 3.5,
+		ammo_category = "landmine",
 		action = {
 			type = "direct",
 			action_delivery = {
@@ -167,14 +170,12 @@ data:extend({
 						action = {
 							type = "area",
 							radius = 8,
-							perimeter = 8,
-							--collision_mask = { "player-layer" },
+							force = "enemy",
 							action_delivery = {
 								type = "instant",
 								target_effects = {
-									type = "damage",
-									damage = { amount = 30, type = "impact" },
-									damage = { amount = 30, type = "poison" },
+									{ type = "damage", damage = { amount = 150, type = "poison" } },
+									{ type = "damage", damage = { amount = 150, type = "impact" } },
 								},
 							},
 						},

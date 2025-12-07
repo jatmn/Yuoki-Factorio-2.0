@@ -1079,6 +1079,7 @@ data:extend({
 		order = "0",
 		group = "vanilla",
 		subgroup = "y-tech",
+		allow_quality = true,
 	},
 
 	--ID:105 for recipes that uses research

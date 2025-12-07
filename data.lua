@@ -61,6 +61,7 @@ require("prototypes.objects.y_erfolge")
 require("prototypes.objects.y_player_styles")
 require("prototypes.objects.y_player_styles_items")
 require("prototypes.objects.y_player_equipment")
+require("prototypes.integration.space-age._data") -- Data stage stuff for Space Age
 
 -- autobuilds
 require("prototypes.z_fluids")

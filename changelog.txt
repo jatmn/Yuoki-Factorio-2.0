@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.19
+Date: 7. 12. 2025
+  Space Age:
+    - New Quality module, Yuoki Style!
+    - Quantrinum - Can now be quality
+    - Alien Infuser, Cimota Restructor - Now accepts quality modules
+    - Added Atomic's recipe: Scrap
+  Integrations:
+    - Simplified the Krastorio 2 and Krastorio 2 Spaced Out Integration support code and removed redundancy.
+    - Krastorio 2 and Krastorio 2 Spaced Out updates are combined in release notes from here unless otherwise stated. I will also refer to the mods as K2.
+    - K2 - Small Turbine Generator-S steam consumption reduced to match changes to K2's boilers power output has also scaled down but maintains 3:4 ratio
+  Updates:
+    - Passive Vitduo Defense System - Has been updated to do minor knockback and stun damage when attached. Additionally shows electric shock beam showing where the damage came from.
+    - Make Mines great again! - Plasma Mine Base damage 100 -> 350, Poison Mine base damage 30 -> 150, mineammo category added to mines so they received damage boosting when research boosts vanilla mines.
+  Fixes:
+    - Poison Mines were missing there secondary effect of Impact damage, that has been added back.
+  Changes:
+    - Some legacy code cleanup...
+---------------------------------------------------------------------------------------------------
 Version: 1.2.18
 Date: 10. 11. 2025
   Integrations:

@@ -117,7 +117,7 @@ end
 -- 		64 			- icon size of existing item
 -- 		10 			- how many units of item for the recipe (example 10x iron-ore)
 -- 		1 			- how many units of Unicomp is the results (usually this is 1)
---		ore			- sub_group classification this is optional.. 
+--		ore			- sub_group classification this is optional..
 --						(Values: ore, ore-space-age, ore-int)
 function yi.lib.recipe.atomics.recipes_make_item(icon_name, size, item_amount, uni_amount, sub_group)
 	local item_n = icon_name
@@ -126,19 +126,19 @@ function yi.lib.recipe.atomics.recipes_make_item(icon_name, size, item_amount, u
 	local unicomp = uni_amount or 1
 	local group1 = "j-y-atomics-4"
 	local group2 = "j-y-atomics-13"
-		if sub_group == "ore" then					-- Vanilla ores
-			group1 = "j-y-atomics-2"
-			group2 = "j-y-atomics-11"
-		elseif sub_group == "ore-space-age" then	-- Space Age ores
-			group1 = "j-y-atomics-3"
-			group2 = "j-y-atomics-12"
-		elseif sub_group == "ore-int" then			-- Integration ores
-			group1 = "j-y-atomics-4"
-			group2 = "j-y-atomics-13"
-		else 										-- not specified defaults to Integration ores
-			group1 = "j-y-atomics-4"
-			group2 = "j-y-atomics-13"
-		end
+	if sub_group == "ore" then -- Vanilla ores
+		group1 = "j-y-atomics-2"
+		group2 = "j-y-atomics-11"
+	elseif sub_group == "ore-space-age" then -- Space Age ores
+		group1 = "j-y-atomics-3"
+		group2 = "j-y-atomics-12"
+	elseif sub_group == "ore-int" then -- Integration ores
+		group1 = "j-y-atomics-4"
+		group2 = "j-y-atomics-13"
+	else -- not specified defaults to Integration ores
+		group1 = "j-y-atomics-4"
+		group2 = "j-y-atomics-13"
+	end
 
 	local item_recipe = {
 		type = "recipe",
@@ -191,7 +191,7 @@ end
 -- 		64 			- icon size of existing item
 -- 		80 			- how many units of item for the recipe (example 10x iron-ore)
 -- 		1 			- how many units of Unicomp is the results (usually this is 1)
---		fluid		- sub_group classification this is optional.. 
+--		fluid		- sub_group classification this is optional..
 --						(Values: fluid, fluid-space-age, fluid-int)
 function yi.lib.recipe.atomics.recipes_make_fluid(icon_name, size, item_amount, uni_amount, sub_group)
 	local item_n = icon_name
@@ -200,19 +200,19 @@ function yi.lib.recipe.atomics.recipes_make_fluid(icon_name, size, item_amount, 
 	local unicomp = uni_amount or 1
 	local group1 = "j-y-atomics-9"
 	local group2 = "j-y-atomics-15"
-		if sub_group == "fluid" then				-- Vanilla fluids
-			group1 = "j-y-atomics-7"
-			group2 = "j-y-atomics-14"
-		elseif sub_group == "fluid-space-age" then	-- Space Age fluids
-			group1 = "j-y-atomics-8"
-			group2 = "j-y-atomics-14"
-		elseif sub_group == "fluid-int" then		-- Integration fluids
-			group1 = "j-y-atomics-9"
-			group2 = "j-y-atomics-15"
-		else 										-- not specified defaults to Integration fluids
-			group1 = "j-y-atomics-9"
-			group2 = "j-y-atomics-15"
-		end
+	if sub_group == "fluid" then -- Vanilla fluids
+		group1 = "j-y-atomics-7"
+		group2 = "j-y-atomics-14"
+	elseif sub_group == "fluid-space-age" then -- Space Age fluids
+		group1 = "j-y-atomics-8"
+		group2 = "j-y-atomics-14"
+	elseif sub_group == "fluid-int" then -- Integration fluids
+		group1 = "j-y-atomics-9"
+		group2 = "j-y-atomics-15"
+	else -- not specified defaults to Integration fluids
+		group1 = "j-y-atomics-9"
+		group2 = "j-y-atomics-15"
+	end
 
 	local item_recipe = {
 		type = "recipe",
@@ -257,4 +257,54 @@ function yi.lib.recipe.atomics.recipes_make_fluid(icon_name, size, item_amount, 
 
 	data:extend({ item_recipe, uni_recipe })
 	return item_recipe, uni_recipe
+end
+
+-- Crushing
+if not yi.lib.recipe.crushing then
+	yi.lib.recipe.crushing = {}
+end
+
+-- Used to make icons for Asteroid Chunk(2) -> resource recipes
+function yi.lib.recipe.crushing.asteroid_2(icon_name1, size1, icon_name2, size2, icon_name3, size3)
+	local item_name1 = data.raw.item[icon_name1].icon
+	local image_size1 = size1 or 64
+	local item_name2 = data.raw.item[icon_name2].icon
+	local image_size2 = size2 or 64
+	local item_name3 = data.raw.item[icon_name3].icon
+	local image_size3 = size3 or 64
+	if type(icon_name1) == "string" then
+		return {
+			{
+				icon = item_name1,
+				icon_size = image_size1,
+				scale = 0.2,
+				shift = { -8, -8 },
+			},
+			{
+				icon = item_name1,
+				icon_size = image_size1,
+				scale = 0.2,
+				shift = { 8, -8 },
+			},
+
+			{
+				icon = item_name2,
+				icon_size = image_size2,
+				scale = 0.2,
+				shift = { -8, 8 },
+			},
+			{
+				icon = item_name2,
+				icon_size = image_size2,
+				scale = 0.2,
+				shift = { 8, 8 },
+			},
+			{
+				icon = item_name3,
+				icon_size = image_size3,
+				scale = 0.35,
+				shift = { 0, 0 },
+			},
+		}
+	end
 end

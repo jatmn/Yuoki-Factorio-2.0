@@ -196,8 +196,7 @@ data.raw["inserter"]["y-inserter-smart"].max_belt_stack_size = 4
 end
 
 require("prototypes.integration.bobores._all") 					-- Integraton - Bob's Ores
-require("prototypes.integration.krastorio2._all") 				-- Integraton - Krastorio 2
-require("prototypes.integration.krastorio2-spaced-out._all") 	-- Integraton - Krastorio 2 Spaced Out
+require("prototypes.integration.krastorio2._all") 				-- Integraton - Krastorio 2 & Krastorio 2 Spaced Out
 require("prototypes.integration.omnimatter._all") 				-- Integraton - Omnimatter
 require("prototypes.integration.omnia._all") 					-- Integraton - Planet Omnia
 require("prototypes.integration.factorio-tiberium._all") 		-- Integraton - Factorio & Conquer: Tiberian Dawn
