@@ -75,12 +75,20 @@ end
 
 -- Used to make icons for Fluid -> Unicomp recipes
 function yi.lib.recipe.atomics.fluid_down(icon_name, size)
-	local item_name = data.raw.fluid[icon_name].icon
-	local image_size = size or 64
+	local fluid = data.raw.fluid[icon_name]
+	local fluid_name
+	local image_size
+	if fluid.icons then
+		fluid_name = fluid.icons[1].icon
+		image_size = fluid.icons[1].icon_size or size or 64
+	else
+		fluid_name = fluid.icon
+		image_size = fluid.icon_size or size or 64
+	end
 	if type(icon_name) == "string" then
 		return {
 			{
-				icon = item_name,
+				icon = fluid_name,
 				icon_size = image_size,
 			},
 			{
@@ -94,12 +102,20 @@ end
 
 -- Used to make icons for Unicomp -> Fluid recipes
 function yi.lib.recipe.atomics.fluid_up(icon_name, size)
-	local item_name = data.raw.fluid[icon_name].icon
-	local image_size = size or 64
+	local fluid = data.raw.fluid[icon_name]
+	local fluid_name
+	local image_size
+	if fluid.icons then
+		fluid_name = fluid.icons[1].icon
+		image_size = fluid.icons[1].icon_size or size or 64
+	else
+		fluid_name = fluid.icon
+		image_size = fluid.icon_size or size or 64
+	end
 	if type(icon_name) == "string" then
 		return {
 			{
-				icon = item_name,
+				icon = fluid_name,
 				icon_size = image_size,
 			},
 			{
