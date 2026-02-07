@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.21
+Date: 7. 2. 2026
+  Integrations:
+    - Bob's Ores / Bob's Ores + Angel's - fixed missing Atomic's recipe for Thorium ore
+    - Bob's Ores + Angel's Refining - fixed missing Atomic's recipes for Bob's Ores
+    - Angel's Refining - Yi slag is now same item as Angel's slag
+    - Angel's Petrochemical Processing - Updated Atomics icons to match related Angel's liquids/gas's, still uses old naming sorry for the confusion. Maybe next update?
+  Changes:
+    - Removed optional dependencies for overhaul mods and added them to the mod description to address Circular Dependency loops by those same mods.
+    - LOTS of code refactoring and expansion of internal functions library...
+---------------------------------------------------------------------------------------------------
 Version: 1.2.20
 Date: 7. 12. 2025
   Space Age:
