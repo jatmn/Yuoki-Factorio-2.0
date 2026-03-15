@@ -368,32 +368,23 @@ data:extend({
 		default_request = 5,
 		order = "tank-c5",
 	},
-	{
-		type = "storage-tank",
-		name = "y_mftank",
-		icon_size = 64,
+	yi.lib.entity.make_storage_tank("y_mftank", {
 		icon = "__Yuoki__/graphics/entity/store/mftank_ico.png",
+		health = 500,
+		capacity = 2000,
+		connections = {
+			{ flow_direction = "input-output", direction = defines.direction.north, position = { 0, -1 } },
+			{ flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } },
+			{ flow_direction = "input-output", direction = defines.direction.south, position = { 0, 1 } },
+			{ flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } },
+		},
 		flags = { "placeable-player", "player-creation" },
 		minable = { mining_time = 0.5, result = "y_mftank" },
-		max_health = 500,
-		corpse = "small-remnants",
 		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-
-		fluid_box = {
-			volume = 2000,
-			--pipe_covers = pipecoverspictures(),
-			pipe_connections = {
-				{ flow_direction = "input-output", direction = defines.direction.north, position = { 0, -1 } },
-				{ flow_direction = "input-output", direction = defines.direction.east, position = { 1, 0 } },
-				{ flow_direction = "input-output", direction = defines.direction.south, position = { 0, 1 } },
-				{ flow_direction = "input-output", direction = defines.direction.west, position = { -1, 0 } },
-			},
-			---hide_connection_info = true,
-		},
-
-		two_direction_only = false,
 		window_bounding_box = { { -0.05, -0.5 }, { 0.05, 0.0 } },
+		flow_length_in_ticks = 360,
+		two_direction_only = false,
 		pictures = {
 			picture = {
 				sheet = {
@@ -447,7 +438,6 @@ data:extend({
 				},
 			},
 		},
-		flow_length_in_ticks = 360,
 		circuit_wire_connection_points = {
 			{
 				shadow = {
@@ -491,7 +481,5 @@ data:extend({
 			},
 		},
 		circuit_wire_max_distance = 15,
-		circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-		circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
-	},
+	}),
 })

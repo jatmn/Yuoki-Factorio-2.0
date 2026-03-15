@@ -4,227 +4,58 @@ if uc_heavyoil == false then
 	uc_heavyoil_h = true
 end
 
-data:extend({
-	-- pure atomic constructs
-	yi.lib.recipe.atomics.recipes_make_item("iron-ore", 64, 20, 1, "ore"),
-	yi.lib.recipe.atomics.recipes_make_item("copper-ore", 64, 20, 1, "ore"),
-	yi.lib.recipe.atomics.recipes_make_item("wood", 64, 20, 1, "ore"),
-	yi.lib.recipe.atomics.recipes_make_item("stone", 64, 20, 1, "ore"),
-	yi.lib.recipe.atomics.recipes_make_item("coal", 64, 20, 1, "ore"),
-	yi.lib.recipe.atomics.recipes_make_item("y-res1", 64, 10, 1, "ore"),
-	yi.lib.recipe.atomics.recipes_make_item("y-res2", 64, 10, 1, "ore"),
-	yi.lib.recipe.atomics.recipes_make_item("uranium-ore", 64, 12, 1, "ore"),
+-- Paired ore recipes (call data:extend internally)
+yi.lib.recipe.atomics.recipes_make_item("iron-ore", 64, 20, 1, "ore")
+yi.lib.recipe.atomics.recipes_make_item("copper-ore", 64, 20, 1, "ore")
+yi.lib.recipe.atomics.recipes_make_item("wood", 64, 20, 1, "ore")
+yi.lib.recipe.atomics.recipes_make_item("stone", 64, 20, 1, "ore")
+yi.lib.recipe.atomics.recipes_make_item("coal", 64, 20, 1, "ore")
+yi.lib.recipe.atomics.recipes_make_item("y-res1", 64, 10, 1, "ore")
+yi.lib.recipe.atomics.recipes_make_item("y-res2", 64, 10, 1, "ore")
+yi.lib.recipe.atomics.recipes_make_item("uranium-ore", 64, 12, 1, "ore")
 
-	{
-		type = "recipe",
-		name = "y-ac-slag2uc",
-		order = "a",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-slag", amount = 100 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-5",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("y-slag"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
+-- Configuration tables for repetitive recipes
+local waste_item_recipes = {
+	{ recipe_name = "y-ac-slag2uc", item_name = "y-slag", amount = 100, order = "a" },
+	{ recipe_name = "y-ac-toxic2uc", item_name = "y-toxic-dust", amount = 70, order = "b" },
+	{ recipe_name = "y-ac-mud2uc", item_name = "y-dry_mud", amount = 30, order = "c" },
+	{ recipe_name = "y-ac-crystal2uc", item_name = "y-crystal2", amount = 100, order = "d" },
+}
 
+local fluid_down_recipes = {
+	{ recipe_name = "y-lightoil2uc", fluid_name = "light-oil", amount = 100, order = "b", enabled = true },
 	{
-		type = "recipe",
-		name = "y-ac-crystal2uc",
-		order = "d",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-crystal2", amount = 100 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-5",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("y-crystal2"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	-- toxic-dust-recycle
-	{
-		type = "recipe",
-		name = "y-ac-toxic2uc",
-		order = "b",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-toxic-dust", amount = 70 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-5",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("y-toxic-dust"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	-- mud-ball-recycle
-	{
-		type = "recipe",
-		name = "y-ac-mud2uc",
+		recipe_name = "y-heavyoil2uc",
+		fluid_name = "heavy-oil",
+		amount = 100,
 		order = "c",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-dry_mud", amount = 30 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		subgroup = "j-y-atomics-5",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_down("y-dry_mud"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	-- reverse atomic transfers and ++
-
-
-	{
-		type = "recipe",
-		name = "y-ac-uc2plastic",
-		order = "a",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "plastic-bar", amount = 8 },
-		},
-		main_product = "plastic-bar",
-		subgroup = "j-y-atomics-16",
-		category = "yuoki-atomics",
-		icons = yi.lib.recipe.atomics.item_up("plastic-bar"),
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-
-	-- fluid transition
-	{
-		type = "recipe",
-		name = "y-lightoil2uc",
-		energy_required = 5,
-		ingredients = {
-			{ type = "fluid", name = "light-oil", amount = 100 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		enabled = true,
-		icons = yi.lib.recipe.atomics.fluid_down("light-oil"),
-		order = "b",
-		subgroup = "j-y-atomics-7",
-		category = "yuoki-atomics",
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	{
-		type = "recipe",
-		name = "y-heavyoil2uc",
-		energy_required = 5,
-		ingredients = {
-			{ type = "fluid", name = "heavy-oil", amount = 100 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
 		enabled = uc_heavyoil,
 		hidden = uc_heavyoil_h,
-		icons = yi.lib.recipe.atomics.fluid_down("heavy-oil"),
-		order = "c",
-		subgroup = "j-y-atomics-7",
-		category = "yuoki-atomics",
-		auto_recycle = false,
-		allow_quality = false,
 	},
+	{ recipe_name = "y-lubricant2uc", fluid_name = "lubricant", amount = 95, order = "e", enabled = true },
+	{ recipe_name = "y-petroleum", fluid_name = "petroleum-gas", amount = 100, order = "d", enabled = true },
+}
 
+local single_up_recipes = {
 	{
-		type = "recipe",
-		name = "y-lubricant2uc",
-		energy_required = 5,
-		ingredients = {
-			{ type = "fluid", name = "lubricant", amount = 95 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		enabled = true,
-		icons = yi.lib.recipe.atomics.fluid_down("lubricant"),
-		order = "e",
-		subgroup = "j-y-atomics-7",
-		category = "yuoki-atomics",
-		auto_recycle = false,
-		allow_quality = false,
+		type = "item",
+		recipe_name = "y-ac-uc2plastic",
+		name = "plastic-bar",
+		amount = 8,
+		order = "a",
+		subgroup = "j-y-atomics-16",
 	},
-
 	{
-		type = "recipe",
-		name = "y-petroleum",
-		energy_required = 5,
-		ingredients = {
-			{ type = "fluid", name = "petroleum-gas", amount = 100 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		enabled = true,
-		icons = yi.lib.recipe.atomics.fluid_down("petroleum-gas"),
-		order = "d",
-		subgroup = "j-y-atomics-7",
-		category = "yuoki-atomics",
-		auto_recycle = false,
-		allow_quality = false,
-	},
-
-	-- only reverse to crude-oil
-	{
-		type = "recipe",
-		name = "y-uc2crudeoil",
-		energy_required = 5,
-		ingredients = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		results = {
-			{ type = "fluid", name = "crude-oil", amount = 80 },
-		},
-		main_product = "crude-oil",
-		enabled = true,
-		icons = yi.lib.recipe.atomics.fluid_up("crude-oil"),
+		type = "fluid",
+		recipe_name = "y-uc2crudeoil",
+		name = "crude-oil",
+		amount = 80,
 		order = "a",
 		subgroup = "j-y-atomics-14",
-		category = "yuoki-atomics",
-		auto_recycle = false,
-		allow_quality = false,
 	},
+}
 
-	-- full fluid transition
+local liquid_uc2_recipes = {
 	{
 		type = "recipe",
 		name = "y-uc2liquid",
@@ -245,8 +76,6 @@ data:extend({
 		auto_recycle = false,
 		allow_quality = false,
 	},
-
-	-- and fluid reverse
 	{
 		type = "recipe",
 		name = "y-liquid2uc",
@@ -267,25 +96,102 @@ data:extend({
 		auto_recycle = false,
 		allow_quality = false,
 	},
+}
 
-	-- contaminated water to unicomp
-	{
-		type = "recipe",
-		name = "j-cw2uc-recipe",
-		energy_required = 5,
-		ingredients = {
-			{ type = "fluid", name = "y-con_water", amount = 9100 },
-		},
-		results = {
-			{ type = "item", name = "y-unicomp-a2", amount = 1 },
-		},
-		main_product = "y-unicomp-a2",
-		enabled = true,
-		icons = yi.lib.recipe.atomics.fluid_down("y-con_water"),
-		order = "a",
-		subgroup = "j-y-atomics-7",
-		category = "yuoki-atomics",
-		auto_recycle = false,
-		allow_quality = false,
-	},
-})
+-- Build recipe list
+local recipes = {}
+
+-- Add waste item→unicomp recipes
+for _, config in ipairs(waste_item_recipes) do
+	table.insert(
+		recipes,
+		yi.lib.recipe.atomics.make_down_item(
+			config.recipe_name,
+			config.item_name,
+			config.amount,
+			config.order,
+			"j-y-atomics-5",
+			nil, -- size (default)
+			true, -- enabled
+			nil, -- hidden
+			2.0 -- energy_required
+		)
+	)
+end
+
+-- Add fluid→unicomp recipes
+for _, config in ipairs(fluid_down_recipes) do
+	table.insert(
+		recipes,
+		yi.lib.recipe.atomics.make_down_fluid(
+			config.recipe_name,
+			config.fluid_name,
+			config.amount,
+			config.order,
+			"j-y-atomics-7",
+			nil, -- size (default)
+			config.enabled,
+			config.hidden,
+			5.0 -- energy_required
+		)
+	)
+end
+
+-- Add single up recipes
+for _, config in ipairs(single_up_recipes) do
+	if config.type == "item" then
+		table.insert(
+			recipes,
+			yi.lib.recipe.atomics.make_up_item(
+				config.recipe_name,
+				config.name,
+				config.amount,
+				config.order,
+				config.subgroup,
+				nil, -- size (default)
+				true, -- enabled
+				nil, -- hidden
+				2.0 -- energy_required
+			)
+		)
+	elseif config.type == "fluid" then
+		table.insert(
+			recipes,
+			yi.lib.recipe.atomics.make_up_fluid(
+				config.recipe_name,
+				config.name,
+				config.amount,
+				config.order,
+				config.subgroup,
+				nil, -- size (default)
+				true, -- enabled
+				nil, -- hidden
+				5.0 -- energy_required
+			)
+		)
+	end
+end
+
+-- Add contaminated water recipe (special naming)
+table.insert(
+	recipes,
+	yi.lib.recipe.atomics.make_down_fluid(
+		"j-cw2uc-recipe",
+		"y-con_water",
+		9100,
+		"a",
+		"j-y-atomics-7",
+		nil, -- size (default)
+		true, -- enabled
+		nil, -- hidden
+		5.0 -- energy_required
+	)
+)
+
+-- Add liquid-uc2 recipes (custom icons, keep manual)
+for _, recipe in ipairs(liquid_uc2_recipes) do
+	table.insert(recipes, recipe)
+end
+
+-- Extend all recipes
+data:extend(recipes)

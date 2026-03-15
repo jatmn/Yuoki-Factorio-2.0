@@ -2,12 +2,18 @@ if mods["angelsrefining"] then
 	yi.lib.recipe.replace_ingredient_in_all("y-slag", "angels-slag")
 	yi.lib.recipe.atomics.update_auto_icon("angels-slag", "y-ac-slag2uc", "down")
 
-	yi.lib.recipe.replace_result("y-smelt-crush-res1", "y-slag", "angels-slag", 1)
-	yi.lib.recipe.replace_result("y-smelt-crush-res2", "y-slag", "angels-slag", 1)
-	yi.lib.recipe.replace_result("y-press-richdust", "y-slag", "angels-slag", 1)
-	yi.lib.recipe.replace_result("y_hps_purecopper", "y-slag", "angels-slag", 1)
-	yi.lib.recipe.replace_result("y_hps_pureiron", "y-slag", "angels-slag", 1)
-	yi.lib.recipe.replace_result("y_hps_steel", "y-slag", "angels-slag", 1)
+	local recipe_replacements = {
+		"y-smelt-crush-res1",
+		"y-smelt-crush-res2",
+		"y-press-richdust",
+		"y_hps_purecopper",
+		"y_hps_pureiron",
+		"y_hps_steel",
+	}
+
+	for _, recipe_name in ipairs(recipe_replacements) do
+		yi.lib.recipe.replace_result(recipe_name, "y-slag", "angels-slag", 1)
+	end
 
 	yi.lib.item.hide("y-slag")
 
