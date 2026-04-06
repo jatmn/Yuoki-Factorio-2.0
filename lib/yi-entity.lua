@@ -1302,3 +1302,131 @@ function yi.lib.entity.make_logistic_container(name, config)
 
 	return entity
 end
+
+-- ============================================================================
+-- Inserter Helper Functions
+-- ============================================================================
+
+-- Returns shadow picture tables for inserters
+function yi.lib.entity.make_inserter_shadow_pictures()
+	return {
+		hand_base_shadow = {
+			filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
+			priority = "extra-high",
+			width = 8,
+			height = 33,
+		},
+		hand_closed_shadow = {
+			filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
+			priority = "extra-high",
+			width = 18,
+			height = 41,
+		},
+		hand_open_shadow = {
+			filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
+			priority = "extra-high",
+			width = 18,
+			height = 41,
+		},
+	}
+end
+
+-- Returns working sound config for inserters
+-- @param variant "long" or "fast" inserter sound
+function yi.lib.entity.make_inserter_working_sound(variant)
+	local sound_files
+	if variant == "fast" then
+		sound_files = {
+			"__base__/sound/inserter-fast-1.ogg",
+			"__base__/sound/inserter-fast-2.ogg",
+			"__base__/sound/inserter-fast-3.ogg",
+			"__base__/sound/inserter-fast-4.ogg",
+			"__base__/sound/inserter-fast-5.ogg",
+		}
+	else
+		-- "long" is the default
+		sound_files = {
+			"__base__/sound/inserter-long-handed-1.ogg",
+			"__base__/sound/inserter-long-handed-2.ogg",
+			"__base__/sound/inserter-long-handed-3.ogg",
+			"__base__/sound/inserter-long-handed-4.ogg",
+			"__base__/sound/inserter-long-handed-5.ogg",
+		}
+	end
+
+	local sound = {}
+	for _, filename in ipairs(sound_files) do
+		table.insert(sound, { filename = filename, volume = 0.75 })
+	end
+
+	return {
+		match_progress_to_activity = true,
+		sound = sound,
+	}
+end
+
+-- Creates an inserter entity definition with common defaults
+-- @param name String name of the inserter
+-- @param config Table with inserter properties
+--   - shadow_pictures: result of make_inserter_shadow_pictures()
+--   - working_sound: result of make_inserter_working_sound()
+--   - drain: string like "0.75kW" (placed into energy_source.drain)
+--   - overrides: table of additional properties to apply directly
+--   - All other properties are applied to the entity
+function yi.lib.entity.make_inserter(name, config)
+	-- Build energy_source with drain if specified
+	local energy_source = {
+		type = "electric",
+		usage_priority = "secondary-input",
+	}
+	if config.drain then
+		energy_source.drain = config.drain
+	end
+
+	-- Build the entity with defaults
+	local entity = {
+		type = "inserter",
+		name = name,
+		icon_size = 64,
+		flags = { "placeable-neutral", "placeable-player", "player-creation" },
+		minable = { mining_time = 0.5, result = name },
+		corpse = "small-remnants",
+		collision_box = { { -0.15, -0.15 }, { 0.15, 0.15 } },
+		selection_box = { { -0.4, -0.35 }, { 0.4, 0.45 } },
+		max_health = 150,
+		fast_replaceable_group = "inserter",
+		energy_source = energy_source,
+		circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
+		circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+		circuit_wire_max_distance = 22.5,
+	}
+
+	-- Apply shadow pictures
+	if config.shadow_pictures then
+		entity.hand_base_shadow = config.shadow_pictures.hand_base_shadow
+		entity.hand_closed_shadow = config.shadow_pictures.hand_closed_shadow
+		entity.hand_open_shadow = config.shadow_pictures.hand_open_shadow
+	end
+
+	-- Apply working sound
+	if config.working_sound then
+		entity.working_sound = config.working_sound
+	end
+
+	-- Apply all other config properties
+	for k, v in pairs(config) do
+		-- Skip special keys that are handled separately
+		if k ~= "shadow_pictures" and k ~= "working_sound" and k ~= "overrides" then
+			entity[k] = v
+		end
+	end
+
+	-- Apply overrides last so they can override anything
+	if config.overrides then
+		for k, v in pairs(config.overrides) do
+			entity[k] = v
+		end
+	end
+
+	return entity
+end
