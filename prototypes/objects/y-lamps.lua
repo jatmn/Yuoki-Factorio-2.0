@@ -1,6 +1,5 @@
+-- Unique lamp items
 data:extend({
-
-	-- items
 	{
 		type = "item",
 		name = "y-tinylamp",
@@ -12,7 +11,6 @@ data:extend({
 		stack_size = 50,
 		order = "la",
 	},
-
 	{
 		type = "item",
 		name = "y-powerlamp",
@@ -24,7 +22,6 @@ data:extend({
 		stack_size = 50,
 		order = "lb",
 	},
-
 	{
 		type = "item",
 		name = "y-lamp-alien",
@@ -36,7 +33,6 @@ data:extend({
 		stack_size = 40,
 		order = "lc",
 	},
-
 	{
 		type = "item",
 		name = "yi-monument1",
@@ -48,49 +44,10 @@ data:extend({
 		stack_size = 5,
 		order = "ld",
 	},
+})
 
-	{
-		type = "item",
-		name = "y_lamp_red",
-		place_result = "y_lamp_red",
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/entity/lamps/y_lamp_red_icon.png",
-		subgroup = "y-lamps",
-		stack_size = 50,
-		order = "2a",
-	},
-	{
-		type = "item",
-		name = "y_lamp_green",
-		place_result = "y_lamp_green",
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/entity/lamps/y_lamp_green_icon.png",
-		subgroup = "y-lamps",
-		stack_size = 50,
-		order = "2b",
-	},
-	{
-		type = "item",
-		name = "y_lamp_blue",
-		place_result = "y_lamp_blue",
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/entity/lamps/y_lamp_blue_icon.png",
-		subgroup = "y-lamps",
-		stack_size = 50,
-		order = "2c",
-	},
-	{
-		type = "item",
-		name = "y_lamp_yellow",
-		place_result = "y_lamp_yellow",
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/entity/lamps/y_lamp_yellow_icon.png",
-		subgroup = "y-lamps",
-		stack_size = 50,
-		order = "2d",
-	},
-
-	-- recipe
+-- Unique lamp recipes
+data:extend({
 	{
 		type = "recipe",
 		name = "y-tinylamp",
@@ -125,7 +82,6 @@ data:extend({
 		subgroup = "y-lamps",
 		order = "lb",
 	},
-
 	{
 		type = "recipe",
 		name = "y-lamp-alien",
@@ -162,77 +118,12 @@ data:extend({
 		main_product = "yi-monument1",
 		order = "ld",
 	},
+})
 
-	-- new lamps
-	{
-		type = "recipe",
-		name = "y_lamp_red",
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y_structure_element", amount = 1 },
-			{ type = "item", name = "y-chip-1", amount = 1 },
-		},
-		subgroup = "y-lamps",
-		order = "2a",
-		results = { { type = "item", name = "y_lamp_red", amount = 1 } },
-		main_product = "y_lamp_red",
-	},
-	{
-		type = "recipe",
-		name = "y_lamp_green",
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y_structure_element", amount = 1 },
-			{ type = "item", name = "y-chip-1", amount = 1 },
-		},
-		subgroup = "y-lamps",
-		order = "2b",
-		results = { { type = "item", name = "y_lamp_green", amount = 1 } },
-		main_product = "y_lamp_green",
-	},
-	{
-		type = "recipe",
-		name = "y_lamp_blue",
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y_structure_element", amount = 1 },
-			{ type = "item", name = "y-chip-1", amount = 1 },
-		},
-		subgroup = "y-lamps",
-		order = "2c",
-		results = { { type = "item", name = "y_lamp_blue", amount = 1 } },
-		main_product = "y_lamp_blue",
-	},
-	{
-		type = "recipe",
-		name = "y_lamp_yellow",
-		enabled = true,
-		ingredients = {
-			{ type = "item", name = "y_structure_element", amount = 1 },
-			{ type = "item", name = "y-chip-1", amount = 1 },
-		},
-		subgroup = "y-lamps",
-		order = "2d",
-		results = { { type = "item", name = "y_lamp_yellow", amount = 1 } },
-		main_product = "y_lamp_yellow",
-	},
-
-	-- entity
-	{
-		type = "lamp",
-		name = "y-tinylamp",
-		icon_size = 64,
+-- Unique lamp entities using yi.lib.entity.make_lamp()
+data:extend({
+	yi.lib.entity.make_lamp("y-tinylamp", {
 		icon = "__Yuoki__/graphics/icons/lamp-1-icon.png",
-		flags = { "placeable-neutral", "player-creation" },
-		minable = { hardness = 0.2, mining_time = 0.5, result = "y-tinylamp" },
-		max_health = 50,
-		corpse = "small-remnants",
-		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		energy_source = {
-			type = "electric",
-			usage_priority = "secondary-input",
-		},
 		energy_usage_per_tick = "4kW",
 		light = { intensity = 0.8, size = 60, color = { r = 1.0, g = 0.95, b = 0.8 } },
 		picture_off = {
@@ -251,23 +142,9 @@ data:extend({
 			shift = { 0, -0.3 },
 		},
 		circuit_wire_max_distance = 14.5,
-	},
-
-	{
-		type = "lamp",
-		name = "y-powerlamp",
-		icon_size = 64,
+	}),
+	yi.lib.entity.make_lamp("y-powerlamp", {
 		icon = "__Yuoki__/graphics/entity/lamps/hl2_icon.png",
-		flags = { "placeable-neutral", "player-creation" },
-		minable = { hardness = 0.2, mining_time = 0.5, result = "y-powerlamp" },
-		max_health = 50,
-		corpse = "small-remnants",
-		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		energy_source = {
-			type = "electric",
-			usage_priority = "secondary-input",
-		},
 		energy_usage_per_tick = "10kW",
 		light = { intensity = 0.9, size = 80, color = { r = 0.95, g = 1.0, b = 0.8 } },
 		picture_off = {
@@ -287,22 +164,9 @@ data:extend({
 			shift = { 0, -0.5 },
 		},
 		circuit_wire_max_distance = 14.5,
-	},
-	{
-		type = "lamp",
-		name = "y-lamp-alien",
-		icon_size = 64,
+	}),
+	yi.lib.entity.make_lamp("y-lamp-alien", {
 		icon = "__Yuoki__/graphics/icons/alien_lampe_icon.png",
-		flags = { "placeable-neutral", "player-creation" },
-		minable = { hardness = 0.2, mining_time = 0.5, result = "y-lamp-alien" },
-		max_health = 50,
-		corpse = "small-remnants",
-		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		energy_source = {
-			type = "electric",
-			usage_priority = "secondary-input",
-		},
 		energy_usage_per_tick = "20kW",
 		light = { intensity = 0.9, size = 180, color = { r = 1.0, g = 0.9, b = 1.0 } },
 		picture_off = {
@@ -320,16 +184,11 @@ data:extend({
 			shift = { 0, -0.5 },
 		},
 		circuit_wire_max_distance = 14.5,
-	},
-
-	{
-		type = "lamp",
-		name = "yi-monument1",
-		icon_size = 64,
+	}),
+	yi.lib.entity.make_lamp("yi-monument1", {
 		icon = "__Yuoki__/graphics/entity/monument-1-icon.png",
-		flags = { "placeable-neutral", "player-creation" },
+		health = 500,
 		minable = { hardness = 0.5, mining_time = 1.0, result = "yi-monument1" },
-		max_health = 500,
 		corpse = "big-remnants",
 		collision_box = { { -2.2, -2.2 }, { 2.2, 2.2 } },
 		selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
@@ -337,7 +196,6 @@ data:extend({
 			type = "electric",
 			input_priority = "secondary",
 			usage_priority = "secondary-input",
-			-- emissions_per_minute = { pollution = -625,}
 		},
 		energy_usage_per_tick = "250kW",
 		light = { intensity = 1.0, size = 140 },
@@ -357,130 +215,25 @@ data:extend({
 			shift = { 2.0, -1.5 },
 		},
 		circuit_wire_max_distance = 22.5,
-	},
+	}),
+})
 
-	{
-		type = "lamp",
-		name = "y_lamp_red",
-		minable = { hardness = 0.2, mining_time = 0.5, result = "y_lamp_red" },
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/entity/lamps/y_lamp_red_icon.png",
-		flags = { "placeable-neutral", "player-creation" },
-		max_health = 75,
-		corpse = "small-remnants",
-		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		energy_source = { type = "electric", usage_priority = "secondary-input" },
-		energy_usage_per_tick = "5kW",
-		light = { intensity = 0.25, size = 8 },
-		--light = {intensity = 0.25, size = 2, color = {r=0.7, g=0.0, b=0.0} },
-		picture_off = {
-			filename = "__Yuoki__/graphics/entity/lamps/y_lamp_red_off.png",
-			priority = "high",
-			width = 64,
-			height = 64,
-			shift = { 0.3125, -0.125 },
-		},
-		picture_on = {
-			filename = "__Yuoki__/graphics/entity/lamps/y_lamp_red_on.png",
-			priority = "high",
-			width = 64,
-			height = 64,
-			shift = { 0.3125, -0.125 },
-		},
-		circuit_wire_max_distance = 22.5,
+-- Color lamp prototypes using library function
+local color_lamps = yi.lib.lamp.make_color_set({"red", "green", "blue", "yellow"}, {
+	health = 75,
+	energy_usage_per_tick = "5kW",
+	light = { intensity = 0.25, size = 8 },
+	circuit_wire_max_distance = 22.5,
+	picture_shift = { 0.3125, -0.125 },
+	order_prefix = "2",
+	ingredients = {
+		{ type = "item", name = "y_structure_element", amount = 1 },
+		{ type = "item", name = "y-chip-1", amount = 1 },
 	},
-	{
-		type = "lamp",
-		name = "y_lamp_green",
-		minable = { hardness = 0.2, mining_time = 0.5, result = "y_lamp_green" },
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/entity/lamps/y_lamp_green_icon.png",
-		flags = { "placeable-neutral", "player-creation" },
-		max_health = 75,
-		corpse = "small-remnants",
-		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		energy_source = { type = "electric", usage_priority = "secondary-input" },
-		energy_usage_per_tick = "5kW",
-		light = { intensity = 0.25, size = 8 },
-		--light = {intensity = 0.25, size = 2, color = {r=0.0, g=0.7, b=0.0} },
-		picture_off = {
-			filename = "__Yuoki__/graphics/entity/lamps/y_lamp_green_off.png",
-			priority = "high",
-			width = 64,
-			height = 64,
-			shift = { 0.3125, -0.125 },
-		},
-		picture_on = {
-			filename = "__Yuoki__/graphics/entity/lamps/y_lamp_green_on.png",
-			priority = "high",
-			width = 64,
-			height = 64,
-			shift = { 0.3125, -0.125 },
-		},
-		circuit_wire_max_distance = 22.5,
-	},
-	{
-		type = "lamp",
-		name = "y_lamp_yellow",
-		minable = { hardness = 0.2, mining_time = 0.5, result = "y_lamp_yellow" },
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/entity/lamps/y_lamp_yellow_icon.png",
-		flags = { "placeable-neutral", "player-creation" },
-		max_health = 75,
-		corpse = "small-remnants",
-		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		energy_source = { type = "electric", usage_priority = "secondary-input" },
-		energy_usage_per_tick = "5kW",
-		light = { intensity = 0.25, size = 8 },
-		--light = {intensity = 0.25, size = 2, color = {r=0.7, g=0.7, b=0.0} },
-		picture_off = {
-			filename = "__Yuoki__/graphics/entity/lamps/y_lamp_yellow_off.png",
-			priority = "high",
-			width = 64,
-			height = 64,
-			shift = { 0.3125, -0.125 },
-		},
-		picture_on = {
-			filename = "__Yuoki__/graphics/entity/lamps/y_lamp_yellow_on.png",
-			priority = "high",
-			width = 64,
-			height = 64,
-			shift = { 0.3125, -0.125 },
-		},
-		circuit_wire_max_distance = 22.5,
-	},
-	{
-		type = "lamp",
-		name = "y_lamp_blue",
-		minable = { hardness = 0.2, mining_time = 0.5, result = "y_lamp_blue" },
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/entity/lamps/y_lamp_blue_icon.png",
-		flags = { "placeable-neutral", "player-creation" },
-		max_health = 75,
-		corpse = "small-remnants",
-		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
-		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-		energy_source = { type = "electric", usage_priority = "secondary-input" },
-		energy_usage_per_tick = "5kW",
-		light = { intensity = 0.25, size = 8 },
-		--light = {intensity = 0.25, size = 8, color = {r=0.0, g=0.6, b=0.7} },
-		picture_off = {
-			filename = "__Yuoki__/graphics/entity/lamps/y_lamp_blue_off.png",
-			priority = "high",
-			width = 64,
-			height = 64,
-			shift = { 0.3125, -0.125 },
-		},
-		picture_on = {
-			filename = "__Yuoki__/graphics/entity/lamps/y_lamp_blue_on.png",
-			priority = "high",
-			width = 64,
-			height = 64,
-			shift = { 0.3125, -0.125 },
-		},
-		circuit_wire_max_distance = 22.5,
-	},
+})
+data:extend({
+	color_lamps.red.item, color_lamps.red.recipe, color_lamps.red.entity,
+	color_lamps.green.item, color_lamps.green.recipe, color_lamps.green.entity,
+	color_lamps.blue.item, color_lamps.blue.recipe, color_lamps.blue.entity,
+	color_lamps.yellow.item, color_lamps.yellow.recipe, color_lamps.yellow.entity,
 })

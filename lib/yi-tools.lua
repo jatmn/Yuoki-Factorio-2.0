@@ -30,6 +30,9 @@ require("lib.yi-recipe")
 -- 6. yi-migration: migration utilities (depends on yi-item)
 require("lib.yi-migration")
 
+-- 7. yi-lamps: lamp helper functions (depends on yi-entity)
+require("lib.yi-lamps")
+
 -- Set global quality multiplier variable for backward compatibility
 yi_energy_usage_quality_multiplier = yi.lib.get_quality_multiplier()
 

@@ -1430,3 +1430,84 @@ function yi.lib.entity.make_inserter(name, config)
 
 	return entity
 end
+
+-- ============================================================================
+-- Lamp Helper Functions
+-- ============================================================================
+
+-- Create a standardized lamp entity definition with Yuoki-specific enhancements.
+-- Generates lamp entities with configurable light properties and common defaults.
+-- Usage: yi.lib.entity.make_lamp("y-tinylamp", {icon="__Yuoki__/graphics/icons/lamp-1-icon.png"})
+--        yi.lib.entity.make_lamp("y-powerlamp", {energy_usage_per_tick="10kW", light={intensity=0.9, size=80}})
+--      name   - Unique name for the lamp entity (string, required)
+--      config - Configuration options (table, optional)
+--               Supported keys: icon, icon_size, health, flags, minable, corpse,
+--               collision_box, selection_box, energy_source, energy_usage_per_tick,
+--               light, picture_off, picture_on, circuit_wire_max_distance, overrides
+-- Returns: Complete lamp entity definition ready for data:extend
+function yi.lib.entity.make_lamp(name, config)
+	config = config or {}
+
+	-- Default configuration for Yuoki lamps
+	local defaults = {
+		icon_size = 64,
+		health = 50,
+		flags = {"placeable-neutral", "player-creation"},
+		minable = {hardness = 0.2, mining_time = 0.5, result = name},
+		corpse = "small-remnants",
+		collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
+		selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+		energy_source = {
+			type = "electric",
+			usage_priority = "secondary-input",
+		},
+		energy_usage_per_tick = "5kW",
+		light = {intensity = 0.25, size = 8},
+		circuit_wire_max_distance = 14.5,
+	}
+
+	-- Merge defaults with user config (user values take precedence)
+	local final = util.table.deepcopy(defaults)
+	for k, v in pairs(config) do
+		if k ~= "overrides" and k ~= "picture_off" and k ~= "picture_on" then
+			final[k] = v
+		end
+	end
+
+	-- Construct the entity definition
+	local entity = {
+		type = "lamp",
+		name = name,
+		icon_size = final.icon_size,
+		icon = final.icon,
+		flags = final.flags,
+		minable = final.minable,
+		max_health = final.health,
+		corpse = final.corpse,
+		collision_box = final.collision_box,
+		selection_box = final.selection_box,
+		energy_source = final.energy_source,
+		energy_usage_per_tick = final.energy_usage_per_tick,
+		light = final.light,
+		circuit_wire_max_distance = final.circuit_wire_max_distance,
+	}
+
+	-- Add picture_off if provided
+	if config.picture_off then
+		entity.picture_off = config.picture_off
+	end
+
+	-- Add picture_on if provided
+	if config.picture_on then
+		entity.picture_on = config.picture_on
+	end
+
+	-- Apply any additional overrides
+	if config.overrides then
+		for k, v in pairs(config.overrides) do
+			entity[k] = v
+		end
+	end
+
+	return entity
+end
