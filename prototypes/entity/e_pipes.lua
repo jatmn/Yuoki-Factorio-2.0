@@ -1,27 +1,3 @@
---- @param i integer
-local function make_visualization(i)
-	return {
-		filename = "__base__/graphics/entity/pipe/visualization.png",
-		priority = "extra-high",
-		x = i * 64,
-		size = 64,
-		scale = 0.5,
-		flags = { "icon" },
-	}
-end
-
---- @param i integer
-local function make_disabled_visualization(i)
-	return {
-		filename = "__base__/graphics/entity/pipe/disabled-visualization.png",
-		priority = "extra-high",
-		x = i * 64,
-		size = 64,
-		scale = 0.5,
-		flags = { "icon" },
-	}
-end
-
 pipepictures_hv = function()
 	-- Use centralized pipe picture generator from yi-tools library
 	return yi.lib.entity.make_pipe_pictures("__Yuoki__/graphics/entity/pipe-hc/", {
@@ -42,6 +18,9 @@ pipepictures_green = function()
 		style = "green",
 	})
 end
+
+-- Cache pipe-to-ground visualizations to avoid repeated allocations
+local cached_pipe_to_ground = yi.lib.entity.make_pipe_to_ground_visualizations()
 
 data:extend({
 
@@ -203,74 +182,8 @@ data:extend({
 					shift = { 0.1, 0.075 },
 				},
 			},
-			visualization = {
-				north = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 64,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				south = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 192,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				west = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 256,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				east = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 128,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-			},
-			disabled_visualization = {
-				north = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 64,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				south = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 192,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				west = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 256,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				east = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 128,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-			},
+			visualization = cached_pipe_to_ground.visualization,
+			disabled_visualization = cached_pipe_to_ground.disabled_visualization,
 		},
 	}),
 
@@ -336,74 +249,8 @@ data:extend({
 					shift = { 0.1, 0.075 },
 				},
 			},
-			visualization = {
-				north = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 64,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				south = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 192,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				west = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 256,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				east = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 128,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-			},
-			disabled_visualization = {
-				north = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 64,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				south = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 192,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				west = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 256,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				east = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 128,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-			},
+			visualization = cached_pipe_to_ground.visualization,
+			disabled_visualization = cached_pipe_to_ground.disabled_visualization,
 		},
 	}),
 
@@ -424,48 +271,7 @@ data:extend({
 			height = 96,
 			shift = { 0.31, 0.0 },
 		},
-		circuit_wire_connection_points = {
-			{
-				shadow = {
-					red = { 2.0, 1.0 },
-					green = { 2.0, 1.0 },
-				},
-				wire = {
-					red = { 1.0, -0.0 },
-					green = { 1.0, -0.0 },
-				},
-			},
-			{
-				shadow = {
-					red = { 0.0, 1.0 },
-					green = { 0.0, 1.0 },
-				},
-				wire = {
-					red = { -1, -0.25 },
-					green = { -1, -0.25 },
-				},
-			},
-			{
-				shadow = {
-					red = { 2.0, 1.0 },
-					green = { 2.0, 1.0 },
-				},
-				wire = {
-					red = { 1.0, -0.0 },
-					green = { 1.0, -0.0 },
-				},
-			},
-			{
-				shadow = {
-					red = { 0.0, 1.0 },
-					green = { 0.0, 1.0 },
-				},
-				wire = {
-					red = { -1, -0.25 },
-					green = { -1, -0.25 },
-				},
-			},
-		},
+		circuit_wire_connection_points = yi.lib.entity.make_standard_circuit_wire_connection_points(),
 		overrides = {
 			fluid_box = {
 				volume = 4000,
@@ -497,48 +303,7 @@ data:extend({
 			scale = 0.5,
 			shift = { 0.0, 0.25 },
 		},
-		circuit_wire_connection_points = {
-			{
-				shadow = {
-					red = { 2.0, 1.0 },
-					green = { 2.0, 1.0 },
-				},
-				wire = {
-					red = { 1.0, -0.0 },
-					green = { 1.0, -0.0 },
-				},
-			},
-			{
-				shadow = {
-					red = { 0.0, 1.0 },
-					green = { 0.0, 1.0 },
-				},
-				wire = {
-					red = { -1, -0.25 },
-					green = { -1, -0.25 },
-				},
-			},
-			{
-				shadow = {
-					red = { 2.0, 1.0 },
-					green = { 2.0, 1.0 },
-				},
-				wire = {
-					red = { 1.0, -0.0 },
-					green = { 1.0, -0.0 },
-				},
-			},
-			{
-				shadow = {
-					red = { 0.0, 1.0 },
-					green = { 0.0, 1.0 },
-				},
-				wire = {
-					red = { -1, -0.25 },
-					green = { -1, -0.25 },
-				},
-			},
-		},
+		circuit_wire_connection_points = yi.lib.entity.make_standard_circuit_wire_connection_points(),
 	}),
 	yi.lib.entity.make_storage_tank("y-tank-8000", {
 		icon = "__Yuoki__/graphics/entity/tank-8000-icon.png",
@@ -558,48 +323,7 @@ data:extend({
 			scale = 0.5,
 			shift = { 0.0, 0.0 },
 		},
-		circuit_wire_connection_points = {
-			{
-				shadow = {
-					red = { 2.0, 1.0 },
-					green = { 2.0, 1.0 },
-				},
-				wire = {
-					red = { 1.0, -0.0 },
-					green = { 1.0, -0.0 },
-				},
-			},
-			{
-				shadow = {
-					red = { 0.0, 1.0 },
-					green = { 0.0, 1.0 },
-				},
-				wire = {
-					red = { -1, -0.25 },
-					green = { -1, -0.25 },
-				},
-			},
-			{
-				shadow = {
-					red = { 2.0, 1.0 },
-					green = { 2.0, 1.0 },
-				},
-				wire = {
-					red = { 1.0, -0.0 },
-					green = { 1.0, -0.0 },
-				},
-			},
-			{
-				shadow = {
-					red = { 0.0, 1.0 },
-					green = { 0.0, 1.0 },
-				},
-				wire = {
-					red = { -1, -0.25 },
-					green = { -1, -0.25 },
-				},
-			},
-		},
+		circuit_wire_connection_points = yi.lib.entity.make_standard_circuit_wire_connection_points(),
 	}),
 
 	yi.lib.entity.make_storage_tank("y-tank-24k", {
@@ -620,48 +344,7 @@ data:extend({
 			height = 112,
 			shift = { 0.315, 0.15 },
 		},
-		circuit_wire_connection_points = {
-			{
-				shadow = {
-					red = { 2.0, 1.0 },
-					green = { 2.0, 1.0 },
-				},
-				wire = {
-					red = { 1.0, -0.0 },
-					green = { 1.0, -0.0 },
-				},
-			},
-			{
-				shadow = {
-					red = { 0.0, 1.0 },
-					green = { 0.0, 1.0 },
-				},
-				wire = {
-					red = { -1, -0.25 },
-					green = { -1, -0.25 },
-				},
-			},
-			{
-				shadow = {
-					red = { 2.0, 1.0 },
-					green = { 2.0, 1.0 },
-				},
-				wire = {
-					red = { 1.0, -0.0 },
-					green = { 1.0, -0.0 },
-				},
-			},
-			{
-				shadow = {
-					red = { 0.0, 1.0 },
-					green = { 0.0, 1.0 },
-				},
-				wire = {
-					red = { -1, -0.25 },
-					green = { -1, -0.25 },
-				},
-			},
-		},
+		circuit_wire_connection_points = yi.lib.entity.make_standard_circuit_wire_connection_points(),
 	}),
 
 	yi.lib.entity.make_storage_tank("y_flowcheck_10", {
@@ -902,74 +585,8 @@ data:extend({
 					shift = { -0.1, -0.075 },
 				},
 			},
-			visualization = {
-				north = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 64,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				south = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 192,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				west = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 256,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				east = {
-					filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
-					priority = "extra-high",
-					x = 128,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-			},
-			disabled_visualization = {
-				north = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 64,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				south = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 192,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				west = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 256,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-				east = {
-					filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
-					priority = "extra-high",
-					x = 128,
-					size = 64,
-					scale = 0.5,
-					flags = { "icon" },
-				},
-			},
+			visualization = cached_pipe_to_ground.visualization,
+			disabled_visualization = cached_pipe_to_ground.disabled_visualization,
 		},
 	}),
 })

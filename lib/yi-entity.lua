@@ -286,6 +286,52 @@ function yi.lib.entity.make_pipe_pictures(base_path, options)
 	return pictures
 end
 
+-- Generate standardized pipe-to-ground visualization sprites.
+-- Creates visualization and disabled_visualization tables for underground pipe entities.
+-- This eliminates duplication across multiple pipe-to-ground entity definitions.
+-- Usage: yi.lib.entity.make_pipe_to_ground_visualizations()
+-- Returns: Table with visualization and disabled_visualization entries for north/south/east/west
+function yi.lib.entity.make_pipe_to_ground_visualizations()
+	-- NOTE: pipe-to-ground uses a different sprite sheet (320px, 5 frames)
+	-- with indices 0-4, so we use separate local helper functions
+	local function make_ptg_visualization(i)
+		return {
+			filename = "__base__/graphics/entity/pipe-to-ground/visualization.png",
+			priority = "extra-high",
+			x = i * 64,
+			size = 64,
+			scale = 0.5,
+			flags = { "icon" },
+		}
+	end
+
+	local function make_ptg_disabled_visualization(i)
+		return {
+			filename = "__base__/graphics/entity/pipe-to-ground/disabled-visualization.png",
+			priority = "extra-high",
+			x = i * 64,
+			size = 64,
+			scale = 0.5,
+			flags = { "icon" },
+		}
+	end
+
+	return {
+		visualization = {
+			north = make_ptg_visualization(1),
+			south = make_ptg_visualization(3),
+			west = make_ptg_visualization(4),
+			east = make_ptg_visualization(2),
+		},
+		disabled_visualization = {
+			north = make_ptg_disabled_visualization(1),
+			south = make_ptg_disabled_visualization(3),
+			west = make_ptg_disabled_visualization(4),
+			east = make_ptg_disabled_visualization(2),
+		},
+	}
+end
+
 -- Create a standardized pipe entity definition.
 -- Generates pipe entities with configurable health, fluid volume, and connection patterns.
 -- Automatically sets up fluid boxes with proper pipe covers and connection info hiding.
@@ -485,6 +531,31 @@ end
 --               selection_box, window_bounding_box, flow_length_in_ticks,
 --               circuit_wire_max_distance, picture_sheet, base_area, base_level,
 --               two_direction_only, overrides
+-- Standard circuit wire connection points for Yuoki storage tanks.
+-- All storage tanks use identical circuit connection positions.
+-- Usage: yi.lib.entity.make_standard_circuit_wire_connection_points()
+-- Returns: Table with wire and shadow positions for 4 directions (north, east, south, west)
+function yi.lib.entity.make_standard_circuit_wire_connection_points()
+	return {
+		{
+			shadow = { red = { 2.0, 1.0 }, green = { 2.0, 1.0 } },
+			wire = { red = { 1.0, -0.0 }, green = { 1.0, -0.0 } },
+		},
+		{
+			shadow = { red = { 0.0, 1.0 }, green = { 0.0, 1.0 } },
+			wire = { red = { -1, -0.25 }, green = { -1, -0.25 } },
+		},
+		{
+			shadow = { red = { 2.0, 1.0 }, green = { 2.0, 1.0 } },
+			wire = { red = { 1.0, -0.0 }, green = { 1.0, -0.0 } },
+		},
+		{
+			shadow = { red = { 0.0, 1.0 }, green = { 0.0, 1.0 } },
+			wire = { red = { -1, -0.25 }, green = { -1, -0.25 } },
+		},
+	}
+end
+
 -- Returns: Complete storage tank entity definition ready for data:extend
 function yi.lib.entity.make_storage_tank(name, config)
 	config = config or {}
@@ -738,4 +809,496 @@ function yi.lib.entity.make_valve(name, config)
 	
 	-- Call make_storage_tank with the merged configuration
 	return yi.lib.entity.make_storage_tank(name, config)
+end
+
+-- ACCUMULATOR CIRCUIT HELPER FUNCTIONS
+-- Standard circuit connection point for Yuoki accumulators.
+-- All accumulators use identical circuit wire connection positions.
+-- Usage: circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point()
+-- Returns: Table with shadow/wire positions for red/green wires
+function yi.lib.entity.make_standard_accumulator_circuit_connection_point()
+	return {
+		shadow = {
+			red = { 0.984375, 1.10938 },
+			green = { 0.890625, 1.10938 },
+		},
+		wire = {
+			red = { 0.6875, 0.59375 },
+			green = { 0.6875, 0.71875 },
+		},
+	}
+end
+
+-- Standard circuit settings for Yuoki accumulators.
+-- Combines connection point, max distance, and default output signal.
+-- Usage: local circuit = yi.lib.entity.make_accumulator_circuit_settings(15.5)
+--      max_distance - Optional circuit wire max distance (number, default 15.5)
+-- Returns: Table with circuit_wire_connection_point, circuit_wire_max_distance, default_output_signal
+function yi.lib.entity.make_accumulator_circuit_settings(max_distance)
+	max_distance = max_distance or 15.5
+	return {
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
+		circuit_wire_max_distance = max_distance,
+		default_output_signal = { type = "virtual", name = "signal-A" },
+	}
+end
+
+-- Standard wire pictures for small electric poles.
+-- All Yuoki electric poles use identical base game wire graphics.
+-- Usage: local wires = yi.lib.entity.small_electric_pole_wire_pictures()
+-- Returns: Table with copper_wire_picture, green_wire_picture, radius_visualisation_picture,
+--          red_wire_picture, wire_shadow_picture
+function yi.lib.entity.small_electric_pole_wire_pictures()
+	return {
+		copper_wire_picture = {
+			filename = "__base__/graphics/entity/small-electric-pole/copper-wire.png",
+			priority = "high",
+			width = 224,
+			height = 46,
+		},
+		green_wire_picture = {
+			filename = "__base__/graphics/entity/small-electric-pole/green-wire.png",
+			priority = "high",
+			width = 224,
+			height = 46,
+		},
+		radius_visualisation_picture = {
+			filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
+			width = 12,
+			height = 12,
+		},
+		red_wire_picture = {
+			filename = "__base__/graphics/entity/small-electric-pole/red-wire.png",
+			priority = "high",
+			width = 224,
+			height = 46,
+		},
+		wire_shadow_picture = {
+			filename = "__base__/graphics/entity/small-electric-pole/wire-shadow.png",
+			priority = "high",
+			width = 224,
+			height = 46,
+		},
+	}
+end
+
+-- CONTAINER HELPER FUNCTIONS
+-- These functions help create standardized container and logistic-container entities.
+
+-- Standard circuit wire connection point for Yuoki containers.
+-- All Yuoki containers use identical circuit connection positions.
+-- Usage: circuit_wire_connection_point = yi.lib.entity.make_standard_container_circuit_wire_connection_point()
+-- Returns: Table with shadow/wire positions for red/green wires
+function yi.lib.entity.make_standard_container_circuit_wire_connection_point()
+	return {
+		shadow = {
+			red = { 0.7, -0.3 },
+			green = { 0.7, -0.3 },
+		},
+		wire = {
+			red = { 0.3, -0.8 },
+			green = { 0.3, -0.8 },
+		},
+	}
+end
+
+-- Standard sound definitions for Yuoki containers.
+-- All Yuoki containers use identical open/close sounds.
+-- Usage: yi.lib.entity.make_container_sounds()
+-- Returns: Table with open_sound and close_sound
+function yi.lib.entity.make_container_sounds()
+	return {
+		open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume = 0.65 },
+		close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
+	}
+end
+
+-- Standard wall diode properties for circuit network connections.
+-- All Yuoki walls use identical diode settings from base game.
+-- Usage: yi.lib.entity.make_wall_diodes()
+-- Returns: Table with all 16 wall_diode_* properties
+function yi.lib.entity.make_wall_diodes()
+	return {
+		wall_diode_green = util.conditional_return(not data.is_demo, {
+			sheet = {
+				filename = "__base__/graphics/entity/wall/wall-diode-green.png",
+				priority = "extra-high",
+				width = 38,
+				height = 24,
+				shift = util.by_pixel(-2, -24),
+				hr_version = {
+					filename = "__base__/graphics/entity/wall/hr-wall-diode-green.png",
+					priority = "extra-high",
+					width = 72,
+					height = 44,
+					shift = util.by_pixel(-1, -23),
+					scale = 0.5,
+				},
+			},
+		}),
+		wall_diode_green_light_top = util.conditional_return(not data.is_demo, {
+			minimum_darkness = 0.3,
+			color = { g = 1 },
+			shift = util.by_pixel(0, -30),
+			size = 1,
+			intensity = 0.3,
+		}),
+		wall_diode_green_light_right = util.conditional_return(not data.is_demo, {
+			minimum_darkness = 0.3,
+			color = { g = 1 },
+			shift = util.by_pixel(12, -23),
+			size = 1,
+			intensity = 0.3,
+		}),
+		wall_diode_green_light_bottom = util.conditional_return(not data.is_demo, {
+			minimum_darkness = 0.3,
+			color = { g = 1 },
+			shift = util.by_pixel(0, -17),
+			size = 1,
+			intensity = 0.3,
+		}),
+		wall_diode_green_light_left = util.conditional_return(not data.is_demo, {
+			minimum_darkness = 0.3,
+			color = { g = 1 },
+			shift = util.by_pixel(-12, -23),
+			size = 1,
+			intensity = 0.3,
+		}),
+		wall_diode_red = util.conditional_return(not data.is_demo, {
+			sheet = {
+				filename = "__base__/graphics/entity/wall/wall-diode-red.png",
+				priority = "extra-high",
+				width = 38,
+				height = 24,
+				shift = util.by_pixel(-2, -24),
+				hr_version = {
+					filename = "__base__/graphics/entity/wall/hr-wall-diode-red.png",
+					priority = "extra-high",
+					width = 72,
+					height = 44,
+					shift = util.by_pixel(-1, -23),
+					scale = 0.5,
+				},
+			},
+		}),
+		wall_diode_red_light_top = util.conditional_return(not data.is_demo, {
+			minimum_darkness = 0.3,
+			color = { r = 1 },
+			shift = util.by_pixel(0, -30),
+			size = 1,
+			intensity = 0.3,
+		}),
+		wall_diode_red_light_right = util.conditional_return(not data.is_demo, {
+			minimum_darkness = 0.3,
+			color = { r = 1 },
+			shift = util.by_pixel(12, -23),
+			size = 1,
+			intensity = 0.3,
+		}),
+		wall_diode_red_light_bottom = util.conditional_return(not data.is_demo, {
+			minimum_darkness = 0.3,
+			color = { r = 1 },
+			shift = util.by_pixel(0, -17),
+			size = 1,
+			intensity = 0.3,
+		}),
+		wall_diode_red_light_left = util.conditional_return(not data.is_demo, {
+			minimum_darkness = 0.3,
+			color = { r = 1 },
+			shift = util.by_pixel(-12, -23),
+			size = 1,
+			intensity = 0.3,
+		}),
+	}
+end
+
+-- Generate wall picture table from sprite configuration.
+-- Usage: yi.lib.entity.make_wall_pictures("__Mod__/graphics/entity/walls/my_wall", { ... })
+-- Parameters:
+--   base_path - Base path for sprite files (e.g., "__Yuoki__/graphics/entity/walls/wood_wall")
+--   config - Table with optional keys:
+--     width, height, shift - Sprite dimensions and shift (defaults: 64, 64, {0.40625, 0})
+--     single - Single sprite or filename string
+--     straight_vertical - Vertical straight sprites
+--     straight_horizontal - Horizontal straight sprites
+--     corner_right_down - Corner sprite
+--     corner_left_down - Corner sprite
+--     t_up - T-junction sprite
+--     ending_right - Ending sprite
+--     ending_left - Ending sprite
+-- Returns: Complete wall pictures table
+function yi.lib.entity.make_wall_pictures(base_path, config)
+	config = config or {}
+	local width = config.width or 64
+	local height = config.height or 64
+	local default_shift = config.shift or { 0.40625, 0 }
+	
+	-- Helper to create a single picture entry
+	local function make_picture(filename, shift)
+		return {
+			filename = filename,
+			priority = "extra-high",
+			width = width,
+			height = height,
+			shift = shift or default_shift,
+		}
+	end
+	
+	-- Helper to build a picture array from config (can be string, table of strings, or table of pictures)
+	local function build_pictures(value)
+		if type(value) == "string" then
+			return { make_picture(base_path .. "_" .. value) }
+		elseif type(value) == "table" then
+			local result = {}
+			for _, v in ipairs(value) do
+				if type(v) == "string" then
+					table.insert(result, make_picture(base_path .. "_" .. v))
+				else
+					-- Already a picture table
+					table.insert(result, v)
+				end
+			end
+			return result
+		elseif value == nil then
+			return {}
+		end
+		return { make_picture(base_path) }
+	end
+	
+	return {
+		single = build_pictures(config.single or "single"),
+		straight_vertical = build_pictures(config.straight_vertical),
+		straight_horizontal = build_pictures(config.straight_horizontal),
+		corner_right_down = build_pictures(config.corner_right_down),
+		corner_left_down = build_pictures(config.corner_left_down),
+		t_up = build_pictures(config.t_up),
+		ending_right = build_pictures(config.ending_right),
+		ending_left = build_pictures(config.ending_left),
+	}
+end
+
+-- Size tier defaults for containers.
+-- Each tier defines collision_box, selection_box, inventory_size, and corpse.
+-- Usage: yi.lib.entity.size_tiers.small
+local size_tiers = {
+	["1x1"] = {
+		collision_box = { { -0.35, -0.35 }, { 0.35, 0.35 } },
+		selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+		inventory_size = 60,
+		corpse = "small-remnants",
+	},
+	["2x2"] = {
+		collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+		selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
+		inventory_size = 100,
+		corpse = "small-remnants",
+	},
+	["3x3"] = {
+		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
+		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+		inventory_size = 140,
+		corpse = "medium-remnants",
+	},
+	["4x4"] = {
+		collision_box = { { -1.7, -1.7 }, { 1.7, 1.7 } },
+		selection_box = { { -2.0, -2.0 }, { 2.0, 2.0 } },
+		inventory_size = 220,
+		corpse = "big-remnants",
+	},
+}
+
+-- Create a standardized container entity definition.
+-- Generates container entities with configurable size tiers and common properties.
+-- Usage: yi.lib.entity.make_container("y_sc11", {icon="__Yuoki__/graphics/entity/store/y-c11-icon.png"})
+--        yi.lib.entity.make_container("y_c22", {size_tier="2x2", health=800, inventory_size=100})
+--      name   - Unique name for the container entity (string, required)
+--      config - Configuration options (table, optional)
+--               Supported keys: icon, icon_size, size_tier, health, flags,
+--               minable, resistances, inventory_size, picture, circuit_wire_max_distance,
+--               fast_replaceable_group, overrides
+-- Returns: Complete container entity definition ready for data:extend
+function yi.lib.entity.make_container(name, config)
+	config = config or {}
+
+	-- Default configuration
+	local defaults = {
+		icon_size = 64,
+		size_tier = "1x1",
+		health = 300,
+		flags = { "placeable-neutral", "player-creation" },
+		minable = { mining_time = 1, result = name },
+		resistances = {
+			{ type = "physical", percent = 20 },
+			{ type = "fire", percent = 50 },
+		},
+		circuit_wire_max_distance = 7.5,
+		fast_replaceable_group = "container",
+	}
+
+	-- Merge defaults with user config
+	local final = util.table.deepcopy(defaults)
+	for k, v in pairs(config) do
+		if k ~= "overrides" and k ~= "picture" then
+			final[k] = v
+		end
+	end
+
+	-- Apply size tier defaults if not overridden
+	local tier = size_tiers[final.size_tier] or size_tiers["1x1"]
+	if config.inventory_size == nil then
+		final.inventory_size = tier.inventory_size
+	end
+	if config.collision_box == nil then
+		final.collision_box = tier.collision_box
+	end
+	if config.selection_box == nil then
+		final.selection_box = tier.selection_box
+	end
+	if config.corpse == nil then
+		final.corpse = tier.corpse
+	end
+
+	-- Construct the entity definition
+	local entity = {
+		type = "container",
+		name = name,
+		icon_size = final.icon_size,
+		icon = final.icon,
+		flags = final.flags,
+		open_sound = yi.lib.entity.make_container_sounds().open_sound,
+		close_sound = yi.lib.entity.make_container_sounds().close_sound,
+		minable = final.minable,
+		max_health = final.health,
+		corpse = final.corpse,
+		resistances = final.resistances,
+		collision_box = final.collision_box,
+		selection_box = final.selection_box,
+		fast_replaceable_group = final.fast_replaceable_group,
+		inventory_size = final.inventory_size,
+		circuit_wire_connection_point = yi.lib.entity.make_standard_container_circuit_wire_connection_point(),
+		circuit_wire_max_distance = final.circuit_wire_max_distance,
+	}
+
+	-- Add picture if provided
+	if config.picture then
+		entity.picture = config.picture
+	elseif final.picture then
+		entity.picture = final.picture
+	end
+
+	-- Apply any additional overrides
+	if config.overrides then
+		for k, v in pairs(config.overrides) do
+			entity[k] = v
+		end
+	end
+
+	return entity
+end
+
+-- Create a standardized logistic-container entity definition.
+-- Generates logistic container entities with configurable mode, size tiers, and common properties.
+-- Usage: yi.lib.entity.make_logistic_container("y-rare-chest-log", {logistic_mode="storage"})
+--        yi.lib.entity.make_logistic_container("y_pc22", {logistic_mode="passive-provider", size_tier="2x2"})
+--      name   - Unique name for the logistic container entity (string, required)
+--      config - Configuration options (table, optional)
+--               Supported keys: icon, icon_size, size_tier, health, logistic_mode,
+--               logistic_slots_count, max_logistic_slots, trash_inventory_size, flags,
+--               minable, resistances, inventory_size, picture, circuit_wire_max_distance,
+--               fast_replaceable_group, vehicle_impact_sound, overrides
+-- Returns: Complete logistic container entity definition ready for data:extend
+function yi.lib.entity.make_logistic_container(name, config)
+	config = config or {}
+
+	-- Default configuration
+	local defaults = {
+		icon_size = 64,
+		size_tier = "1x1",
+		health = 300,
+		flags = { "placeable-player", "player-creation" },
+		minable = { hardness = 0.2, mining_time = 0.5, result = name },
+		resistances = {
+			{ type = "physical", percent = 20 },
+			{ type = "fire", percent = 50 },
+		},
+		inventory_size = 60,
+		trash_inventory_size = 20,
+		circuit_wire_max_distance = 7.5,
+		fast_replaceable_group = "container",
+	}
+
+	-- Merge defaults with user config
+	local final = util.table.deepcopy(defaults)
+	for k, v in pairs(config) do
+		if k ~= "overrides" and k ~= "picture" then
+			final[k] = v
+		end
+	end
+
+	-- Apply size tier defaults if not overridden
+	local tier = size_tiers[final.size_tier] or size_tiers["1x1"]
+	if config.inventory_size == nil then
+		final.inventory_size = tier.inventory_size
+	end
+	if config.collision_box == nil then
+		final.collision_box = tier.collision_box
+	end
+	if config.selection_box == nil then
+		final.selection_box = tier.selection_box
+	end
+	if config.corpse == nil then
+		final.corpse = tier.corpse
+	end
+
+	-- Construct the entity definition
+	local entity = {
+		type = "logistic-container",
+		name = name,
+		icon_size = final.icon_size,
+		icon = final.icon,
+		flags = final.flags,
+		open_sound = yi.lib.entity.make_container_sounds().open_sound,
+		close_sound = yi.lib.entity.make_container_sounds().close_sound,
+		minable = final.minable,
+		max_health = final.health,
+		corpse = final.corpse,
+		resistances = final.resistances,
+		collision_box = final.collision_box,
+		selection_box = final.selection_box,
+		fast_replaceable_group = final.fast_replaceable_group,
+		inventory_size = final.inventory_size,
+		trash_inventory_size = final.trash_inventory_size,
+		logistic_mode = final.logistic_mode,
+		circuit_wire_connection_point = yi.lib.entity.make_standard_container_circuit_wire_connection_point(),
+		circuit_wire_max_distance = final.circuit_wire_max_distance,
+	}
+
+	-- Add logistic_slots_count or max_logistic_slots if specified
+	if final.logistic_slots_count then
+		entity.logistic_slots_count = final.logistic_slots_count
+	end
+	if final.max_logistic_slots then
+		entity.max_logistic_slots = final.max_logistic_slots
+	end
+
+	-- Add vehicle_impact_sound if specified (only used by passive-provider currently)
+	if final.vehicle_impact_sound then
+		entity.vehicle_impact_sound = final.vehicle_impact_sound
+	end
+
+	-- Add picture if provided
+	if config.picture then
+		entity.picture = config.picture
+	elseif final.picture then
+		entity.picture = final.picture
+	end
+
+	-- Apply any additional overrides
+	if config.overrides then
+		for k, v in pairs(config.overrides) do
+			entity[k] = v
+		end
+	end
+
+	return entity
 end

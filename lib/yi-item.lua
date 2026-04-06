@@ -4,6 +4,11 @@ local util = require("util")
 -- https://discord.com/channels/351216213327609858/497860215010754560/1304116352017109013
 
 -- Item manipulation functions for Yuoki's Factorio mod library.
+--
+-- Error Handling Convention:
+--   - Getters (get_type, hide, remove): Return nil on not found, true on success
+--   - Setters (add, retire): Return true on success, nil on error
+--   - All functions log errors via yi.lib.error.item() when available, or log() as fallback
 if not yi then
 	yi = {}
 end
@@ -21,23 +26,30 @@ end
 -- Usage: yi.lib.item.hide("old-item")
 --        yi.lib.item.hide("y-obsolete-item")
 --      item_name - Name of item to hide (string, required)
--- Returns: Nothing (sets hidden=true on item prototype, logs error on failure)
+-- Returns: true if item was hidden, nil if item not found or invalid input
 function yi.lib.item.hide(item_name)
-	if type(item_name) == "string" then
-		-- Updated to check 2.0 item types via get_type
-		local p_type = yi.lib.item.get_type(item_name)
-		if p_type and data.raw[p_type] and data.raw[p_type][item_name] then
-			data.raw[p_type][item_name].hidden = true
-		end
-	else
-		log(debug.traceback())
-		-- yi.lib.error.item will be available when yi-error is loaded
+	if type(item_name) ~= "string" then
 		if yi.lib.error and yi.lib.error.item then
-			yi.lib.error.item(item_name)
+			yi.lib.error.item(item_name, "hide: item_name must be a string")
 		else
-			log("Error: yi.lib.error.item not available yet")
+			log("yi-item error: hide() received non-string item_name: " .. tostring(item_name))
 		end
+		return nil
 	end
+
+	local p_type = yi.lib.item.get_type(item_name)
+	if p_type and data.raw[p_type] and data.raw[p_type][item_name] then
+		data.raw[p_type][item_name].hidden = true
+		return true
+	end
+
+	-- Item not found - log error
+	if yi.lib.error and yi.lib.error.item then
+		yi.lib.error.item(item_name, "hide: item not found")
+	else
+		log("yi-item error: hide() could not find item: " .. item_name)
+	end
+	return nil
 end
 
 -- Determine the actual prototype type of an item/fluid.
@@ -72,11 +84,19 @@ end
 -- Usage: yi.lib.item.ingredient_simple({type="item", name="iron-ore", amount=2})
 --        yi.lib.item.ingredient_simple({name="water", amount=50})
 --        yi.lib.item.ingredient_simple("copper-ore")
---      inputs - Ingredient table or structure to parse (table or string, required)
---               If string, assumes type="item" and amount=1
+--      inputs - Ingredient table or item name string (table or string, required)
+--               If string, converts to {type="item", name=<string>, amount=1}
 -- Returns: Standardized ingredient table {type, name, amount} or nil if invalid
 function yi.lib.item.ingredient_simple(inputs)
 	local item = {}
+
+	-- Handle string input: convert "item-name" to {type="item", name="item-name", amount=1}
+	if type(inputs) == "string" then
+		item.name = inputs
+		item.type = "item"
+		item.amount = 1
+		return item
+	end
 
 	if type(inputs) == "table" then
 		-- Factorio 2.0: Short-hand array {"item", 1} is invalid.
@@ -84,16 +104,22 @@ function yi.lib.item.ingredient_simple(inputs)
 		if inputs.name and type(inputs.name) == "string" then
 			item.name = inputs.name
 		else
-			log(debug.traceback())
-			log("Unable to determine an ingredient name")
+			if yi.lib.error and yi.lib.error.item then
+				yi.lib.error.item(inputs, "ingredient_simple: unable to determine ingredient name")
+			else
+				log("yi-item error: unable to determine ingredient name from " .. tostring(inputs))
+			end
 			return nil
 		end
 
 		if inputs.amount and type(inputs.amount) == "number" then
 			item.amount = inputs.amount
 		else
-			log(debug.traceback())
-			log("Unable to determine an ingredient amount")
+			if yi.lib.error and yi.lib.error.item then
+				yi.lib.error.item(inputs, "ingredient_simple: unable to determine ingredient amount")
+			else
+				log("yi-item error: unable to determine ingredient amount for " .. tostring(inputs.name))
+			end
 			return nil
 		end
 
@@ -109,10 +135,16 @@ function yi.lib.item.ingredient_simple(inputs)
 		if inputs.maximum_temperature then
 			item.maximum_temperature = inputs.maximum_temperature
 		end
-	else
-		log("Inputs is not a table")
+		return item
 	end
-	return item
+
+	-- Invalid input type
+	if yi.lib.error and yi.lib.error.item then
+		yi.lib.error.item(inputs, "ingredient_simple: invalid input type, expected table or string")
+	else
+		log("yi-item error: ingredient_simple received invalid input type: " .. type(inputs))
+	end
+	return nil
 end
 
 -- Always returns "item" as the basic type.

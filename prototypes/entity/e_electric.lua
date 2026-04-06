@@ -1,3 +1,6 @@
+-- Cache small electric pole wire pictures to avoid repeated allocations
+local cached_wire_pictures = yi.lib.entity.small_electric_pole_wire_pictures()
+
 data:extend({
 	-- signal conncetor
 	{
@@ -38,35 +41,11 @@ data:extend({
 				},
 			},
 		},
-		copper_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/copper-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		green_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/green-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		radius_visualisation_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
-			width = 12,
-			height = 12,
-		},
-		red_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/red-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		wire_shadow_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/wire-shadow.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
+		copper_wire_picture = cached_wire_pictures.copper_wire_picture,
+		green_wire_picture = cached_wire_pictures.green_wire_picture,
+		radius_visualisation_picture = cached_wire_pictures.radius_visualisation_picture,
+		red_wire_picture = cached_wire_pictures.red_wire_picture,
+		wire_shadow_picture = cached_wire_pictures.wire_shadow_picture,
 	},
 
 	{
@@ -107,36 +86,11 @@ data:extend({
 				},
 			},
 		},
-		copper_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/copper-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		green_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/green-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		radius_visualisation_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
-			width = 12,
-			height = 12,
-			priority = "extra-high-no-scale",
-		},
-		red_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/red-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		wire_shadow_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/wire-shadow.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
+		copper_wire_picture = cached_wire_pictures.copper_wire_picture,
+		green_wire_picture = cached_wire_pictures.green_wire_picture,
+		radius_visualisation_picture = cached_wire_pictures.radius_visualisation_picture,
+		red_wire_picture = cached_wire_pictures.red_wire_picture,
+		wire_shadow_picture = cached_wire_pictures.wire_shadow_picture,
 	},
 
 	{
@@ -177,36 +131,11 @@ data:extend({
 				},
 			},
 		},
-		copper_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/copper-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		green_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/green-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		radius_visualisation_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
-			width = 12,
-			height = 12,
-			priority = "extra-high-no-scale",
-		},
-		red_wire_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/red-wire.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
-		wire_shadow_picture = {
-			filename = "__base__/graphics/entity/small-electric-pole/wire-shadow.png",
-			priority = "high",
-			width = 224,
-			height = 46,
-		},
+		copper_wire_picture = cached_wire_pictures.copper_wire_picture,
+		green_wire_picture = cached_wire_pictures.green_wire_picture,
+		radius_visualisation_picture = cached_wire_pictures.radius_visualisation_picture,
+		red_wire_picture = cached_wire_pictures.red_wire_picture,
+		wire_shadow_picture = cached_wire_pictures.wire_shadow_picture,
 	},
 
 	{
@@ -261,16 +190,7 @@ data:extend({
 			discharge_cooldown = 60,
 			discharge_light = { intensity = 0.7, size = 12 },
 		},
-		circuit_wire_connection_point = {
-			shadow = {
-				red = { 0.984375, 1.10938 },
-				green = { 0.890625, 1.10938 },
-			},
-			wire = {
-				red = { 0.6875, 0.59375 },
-				green = { 0.6875, 0.71875 },
-			},
-		},
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = { type = "virtual", name = "signal-A" },
@@ -328,16 +248,7 @@ data:extend({
 			discharge_cooldown = 60,
 			discharge_light = { intensity = 0.7, size = 35 },
 		},
-		circuit_wire_connection_point = {
-			shadow = {
-				red = { 0.984375, 1.10938 },
-				green = { 0.890625, 1.10938 },
-			},
-			wire = {
-				red = { 0.6875, 0.59375 },
-				green = { 0.6875, 0.71875 },
-			},
-		},
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 22.5,
 		default_output_signal = { type = "virtual", name = "signal-A" },
@@ -392,16 +303,7 @@ data:extend({
 			discharge_cooldown = 60,
 			discharge_light = { intensity = 0.7, size = 15 },
 		},
-		circuit_wire_connection_point = {
-			shadow = {
-				red = { 0.984375, 1.10938 },
-				green = { 0.890625, 1.10938 },
-			},
-			wire = {
-				red = { 0.6875, 0.59375 },
-				green = { 0.6875, 0.71875 },
-			},
-		},
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = { type = "virtual", name = "signal-A" },
@@ -457,16 +359,7 @@ data:extend({
 			discharge_cooldown = 60,
 			discharge_light = { intensity = 0.7, size = 11 },
 		},
-		circuit_wire_connection_point = {
-			shadow = {
-				red = { 0.984375, 1.10938 },
-				green = { 0.890625, 1.10938 },
-			},
-			wire = {
-				red = { 0.6875, 0.59375 },
-				green = { 0.6875, 0.71875 },
-			},
-		},
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = { type = "virtual", name = "signal-A" },
@@ -520,16 +413,7 @@ data:extend({
 			discharge_cooldown = 60,
 			discharge_light = { intensity = 0.7, size = 15 },
 		},
-		circuit_wire_connection_point = {
-			shadow = {
-				red = { 0.984375, 1.10938 },
-				green = { 0.890625, 1.10938 },
-			},
-			wire = {
-				red = { 0.6875, 0.59375 },
-				green = { 0.6875, 0.71875 },
-			},
-		},
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = { type = "virtual", name = "signal-A" },
@@ -581,16 +465,7 @@ data:extend({
 			discharge_cooldown = 60,
 			discharge_light = { intensity = 0.7, size = 15 },
 		},
-		circuit_wire_connection_point = {
-			shadow = {
-				red = { 0.984375, 1.10938 },
-				green = { 0.890625, 1.10938 },
-			},
-			wire = {
-				red = { 0.6875, 0.59375 },
-				green = { 0.6875, 0.71875 },
-			},
-		},
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = { type = "virtual", name = "signal-A" },
@@ -644,16 +519,7 @@ data:extend({
 			discharge_cooldown = 60,
 			discharge_light = { intensity = 0.7, size = 25 },
 		},
-		circuit_wire_connection_point = {
-			shadow = {
-				red = { 0.984375, 1.10938 },
-				green = { 0.890625, 1.10938 },
-			},
-			wire = {
-				red = { 0.6875, 0.59375 },
-				green = { 0.6875, 0.71875 },
-			},
-		},
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = { type = "virtual", name = "signal-A" },
@@ -709,16 +575,7 @@ data:extend({
 			discharge_cooldown = 60,
 			discharge_light = { intensity = 0.7, size = 25 },
 		},
-		circuit_wire_connection_point = {
-			shadow = {
-				red = { 0.984375, 1.10938 },
-				green = { 0.890625, 1.10938 },
-			},
-			wire = {
-				red = { 0.6875, 0.59375 },
-				green = { 0.6875, 0.71875 },
-			},
-		},
+		circuit_wire_connection_point = yi.lib.entity.make_standard_accumulator_circuit_connection_point(),
 		--circuit_connector_sprites = get_circuit_connector_sprites({0.46875, 0.5}, {0.46875, 0.8125}, 26),
 		circuit_wire_max_distance = 15.5,
 		default_output_signal = { type = "virtual", name = "signal-A" },
