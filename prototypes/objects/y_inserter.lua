@@ -39,6 +39,7 @@ data:extend({
 		extension_speed = 0.1,
 		rotation_speed = 0.1,
 		drain = "0.75kW",
+		pickup_position = { 0, -1 },
 		insert_position = { 0, 1.2 },
 		hand_base_picture = {
 			filename = "__Yuoki__/graphics/entity/inserters/yi_whi_hb.png",
@@ -111,6 +112,7 @@ data:extend({
 		extension_speed = 0.12,
 		rotation_speed = 0.02,
 		drain = "0.7kW",
+		pickup_position = { 0, -4 },
 		insert_position = { 0, 4.2 },
 		hand_base_picture = {
 			filename = "__Yuoki__/graphics/entity/inserters/yi_long_ins_base.png",
