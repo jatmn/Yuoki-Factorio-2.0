@@ -139,14 +139,12 @@ data:extend({
 		name = "y-water-gen",
 		ingredients = {
 			{ type = "item", name = "y-atomic-constructor", amount = 1 },
-			{ type = "item", name = "y-unicomp-raw", amount = 8 },
-			{ type = "item", name = "y-unicomp-a2", amount = 2 },
+			{ type = "item", name = "y_structure_vessel", amount = 4 },
+			{ type = "item", name = "y-basic-t1-mf", amount = 1 },
 		},
 		results = { { type = "item", name = "y-water-gen", amount = 1 } },
 		main_product = "y-water-gen",
-		--result = "y-water-gen",
 		enabled = true,
-		--result_count = 1,
 		subgroup = "y_refine_machinery",
 	},
 	{
@@ -158,22 +156,9 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-water-gen-e", amount = 1 } },
 		main_product = "y-water-gen-e",
-		--result = "y-water-gen-e",
 		enabled = true,
-		--result_count = 1,
 		subgroup = "y_refine_machinery",
 	},
-	--[[
-	{
-		type = "recipe",
-		name = "y_water_mixer_recipe",
-		ingredients = {{"y-water-gen",1}, {"y-basic-t1-mf",2}, {"y_structure_vessel",2} },
-		result = "y_water_mixer",
-		enabled = true,		
-		result_count = 1,		
-		subgroup = "y_refine_machinery",
-	},
-	]]
 
 	-- high tiers
 	{

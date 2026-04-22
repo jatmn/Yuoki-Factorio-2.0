@@ -1,5 +1,5 @@
 data:extend({
-
+	--[[
 	{
 		type = "recipe",
 		name = "y_old_bodenlampe",
@@ -15,7 +15,7 @@ data:extend({
 		--result = "y_old_bodenlampe",
 		order = "gf1",
 	},
-
+	]]
 	{
 		type = "item",
 		name = "y_old_bodenlampe",
@@ -26,7 +26,6 @@ data:extend({
 		place_result = "y_old_bodenlampe",
 		stack_size = 40,
 	},
-
 	{
 		type = "lamp",
 		name = "y_old_bodenlampe",
@@ -60,7 +59,6 @@ data:extend({
 			scale = 0.5,
 		},
 		circuit_wire_max_distance = 22.5,
-		--collision_mask = {"ghost-layer"},
 	},
 
 	{
@@ -73,12 +71,10 @@ data:extend({
 			{ type = "item", name = "copper-cable", amount = 3 },
 		},
 		group = "yuoki",
-		subgroup = "y_lamps_deco",
+		subgroup = "y-lamps",
 		results = { { type = "item", name = "y_lampe_neotix", amount = 1 } },
-		--result = "y_lampe_neotix",
 		order = "gf2",
 	},
-
 	{
 		type = "item",
 		name = "y_lampe_neotix",
@@ -89,7 +85,6 @@ data:extend({
 		place_result = "y_lampe_neotix",
 		stack_size = 40,
 	},
-
 	{
 		type = "lamp",
 		name = "y_lampe_neotix",
@@ -122,7 +117,6 @@ data:extend({
 			scale = 0.5,
 		},
 		circuit_wire_max_distance = 22.5,
-		--collision_mask = {"ghost-layer"},
 	},
 
 	{
@@ -135,9 +129,8 @@ data:extend({
 			{ type = "item", name = "copper-cable", amount = 3 },
 		},
 		group = "yuoki",
-		subgroup = "y_lamps_deco",
+		subgroup = "y-lamps",
 		results = { { type = "item", name = "y_lampe_yuoki", amount = 1 } },
-		--result = "y_lampe_yuoki",
 		order = "gf3",
 	},
 	{
@@ -196,9 +189,8 @@ data:extend({
 			{ type = "item", name = "y-raw-fuelnium", amount = 1 },
 		},
 		group = "yuoki",
-		subgroup = "y_lamps_deco",
+		subgroup = "y-lamps",
 		results = { { type = "item", name = "y_lampe_corner", amount = 1 } },
-		--result = "y_lampe_corner",
 		order = "gf5",
 	},
 	{
@@ -259,8 +251,7 @@ data:extend({
 			{ type = "item", name = "y-raw-fuelnium", amount = 1 },
 		},
 		group = "yuoki",
-		subgroup = "y_lamps_deco",
-		--result = "y_lampe_44basement_a",
+		subgroup = "y-lamps",
 		results = { { type = "item", name = "y_lampe_44basement_a", amount = 1 } },
 		order = "gf6",
 	},
@@ -308,7 +299,6 @@ data:extend({
 			scale = 0.5,
 		},
 		circuit_wire_max_distance = 22.5,
-		--render_layer = "floor",
 	},
 
 	{
@@ -322,9 +312,8 @@ data:extend({
 			{ type = "item", name = "y-powerlamp", amount = 4 },
 		},
 		group = "yuoki",
-		subgroup = "y_lamps_deco",
+		subgroup = "y-lamps",
 		results = { { type = "item", name = "y_lampe_44basement_b", amount = 1 } },
-		--result = "y_lampe_44basement_b",
 		order = "gf7",
 	},
 	{
@@ -337,7 +326,6 @@ data:extend({
 		place_result = "y_lampe_44basement_b",
 		stack_size = 40,
 	},
-
 	{
 		type = "lamp",
 		name = "y_lampe_44basement_b",
@@ -373,7 +361,6 @@ data:extend({
 		circuit_wire_max_distance = 22.5,
 		render_layer = "floor",
 	},
-
 	{
 		type = "recipe",
 		name = "y_lampe_66basement",
@@ -385,9 +372,8 @@ data:extend({
 			{ type = "item", name = "y-powerlamp", amount = 4 },
 		},
 		group = "yuoki",
-		subgroup = "y_lamps_deco",
+		subgroup = "y-lamps",
 		results = { { type = "item", name = "y_lampe_66basement", amount = 1 } },
-		--result = "y_lampe_66basement",
 		order = "gf8",
 	},
 	{

@@ -12,7 +12,7 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-speed-module-1", amount = 1 } },
 		main_product = "y-speed-module-1",
-		order = "m-1a",
+		order = "m-s1",
 		auto_recycle = true,
 	},
 	-- items
@@ -24,7 +24,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_blue_1.png",
 		subgroup = "y-module",
-		order = "m-1a",
+		order = "m-s1",
 		stack_size = 100,
 		effect = { speed = 0.125, pollution = 0.075 },
 		weight = 20 * kg,
@@ -39,7 +39,7 @@ data:extend({
 		enabled = true,
 		ingredients = {
 			{ type = "item", name = "y-chip-2", amount = 2 },
-			{ type = "item", name = "y-speed-module-1", amount = 2 },
+			{ type = "item", name = "y-speed-module-1", amount = 3 },
 			{ type = "item", name = "y_crystal2_combined", amount = 1 },
 		},
 		results = {
@@ -47,7 +47,7 @@ data:extend({
 			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-speed-module-2",
-		order = "m-2a",
+		order = "m-s2",
 		subgroup = "y-module",
 	},
 
@@ -60,7 +60,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_blue_2.png",
 		subgroup = "y-module",
-		order = "m-2a",
+		order = "m-s2",
 		stack_size = 100,
 		effect = { speed = 0.25, pollution = 0.15 },
 		weight = 20 * kg,
@@ -79,7 +79,7 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-green-module-1", amount = 1 } },
 		main_product = "y-green-module-1",
-		order = "m-1b",
+		order = "m-g1",
 		auto_recycle = true,
 	},
 	{
@@ -90,7 +90,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_green_1.png",
 		subgroup = "y-module",
-		order = "m-1b",
+		order = "m-g1",
 		stack_size = 100,
 		effect = { consumption = -0.25 },
 		limitation = production,
@@ -107,7 +107,7 @@ data:extend({
 		enabled = true,
 		ingredients = {
 			{ type = "item", name = "y-chip-2", amount = 2 },
-			{ type = "item", name = "y-green-module-1", amount = 2 },
+			{ type = "item", name = "y-green-module-1", amount = 3 },
 			{ type = "item", name = "y_crystal2_combined", amount = 1 },
 		},
 		results = {
@@ -115,7 +115,7 @@ data:extend({
 			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-green-module-2",
-		order = "m-2b",
+		order = "m-g2",
 		subgroup = "y-module",
 	},
 	{
@@ -126,7 +126,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_green_2.png",
 		subgroup = "y-module",
-		order = "m-2b",
+		order = "m-g2",
 		stack_size = 100,
 		effect = { consumption = -0.35 },
 		limitation = production,
@@ -138,7 +138,7 @@ data:extend({
 		type = "recipe",
 		name = "y_modul_green_op",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/op_green_module.png",
+		icon = "__Yuoki__/graphics/icons/green_sign.png",
 		category = "yuoki_green_ultimate", -- Green-Ultimates
 		energy_required = 120.0,
 		enabled = true,
@@ -150,7 +150,7 @@ data:extend({
 			{ type = "item", name = "y_modul_green_op", amount = 1 },
 		},
 		main_product = "y_modul_green_op",
-		order = "2",
+		order = "m-g3",
 		group = "yuoki-energy",
 		subgroup = "y_ultimate_products",
 		auto_recycle = false,
@@ -161,9 +161,9 @@ data:extend({
 		category = "efficiency",
 		tier = 1,
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/op_green_module.png",
+		icon = "__Yuoki__/graphics/icons/green_sign.png",
 		subgroup = "y-module",
-		order = "m-2c",
+		order = "m-g3",
 		stack_size = 100,
 		effect = { consumption = -0.80 },
 		limitation = production,
@@ -190,7 +190,7 @@ data:extend({
 			{ type = "item", name = "y_rwtechsign", amount = 5 },
 		},
 		main_product = "y_modul_science",
-		order = "m-5b",
+		order = "m-x1",
 		subgroup = "y-module",
 		
 	},
@@ -202,9 +202,9 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_science_32.png",
 		subgroup = "y-module",
-		order = "m-5b",
+		order = "m-x1",
 		stack_size = 100,
-		effect = { productivity = 0.30, consumption = 1.0, pollution = -0.1 },
+		effect = { productivity = 0.25, consumption = 1.0, pollution = -0.1 },
 		limitation_message_key = "production-module-usable-only-on-intermediates",
 		weight = 20 * kg,
 	},
@@ -218,15 +218,15 @@ data:extend({
 		energy_required = 5.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-speed-module-2", amount = 1 },
-			{ type = "item", name = "y-green-module-2", amount = 1 },
-			{ type = "item", name = "y_rwtechsign", amount = 300 },
+			{ type = "item", name = "y-speed-module-2", amount = 2 },
+			{ type = "item", name = "y-green-module-2", amount = 2 },
+			{ type = "item", name = "y_rwtechsign", amount = 250 },
 		},
 		results = {
 			{ type = "item", name = "y_modul_red2", amount = 1 },
 		},
 		main_product = "y_modul_red2",
-		order = "m-5a",
+		order = "m-y1",
 		subgroup = "y-module",
 	},
 	{
@@ -237,13 +237,50 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_techanic_32.png",
 		subgroup = "y-module",
-		order = "m-5a",
+		order = "m-x1",
 		stack_size = 100,
-		effect = { speed = 0.325, consumption = -0.20 },
+		effect = { speed = 0.30, consumption = -0.15 },
 		limitation = production,
 		weight = 20 * kg,
 	},
 
+    -- Trade Modul - 14.Jan.2025
+	--[[
+	{
+		type = "recipe",
+		name = "y_modul_trade_recipe",
+    icon_size = 64,
+    icon =  "__Yuoki__/graphics/icons/modul_trade.png",
+		energy_required = 5.0,
+    enabled = true,
+		ingredients = {
+			{type="item", name="y-speed-module-2", amount=1},
+			{type="item", name="y-green-module-2", amount=1},
+			{type="item", name="ypfw_trader_sign", amount=15}
+		},
+		results={
+			{type="item", name="y_modul_trade", amount=1 },
+		},
+		main_product = "y_modul_trade",
+		order = "m-y1",
+		subgroup = "y-module",
+	},
+	{
+		type = "module",
+		name = "y_modul_trade",
+		category = "speed",
+		tier = 1,
+		icon_size = 64,
+		icon =  "__Yuoki__/graphics/icons/modul_trade.png",
+		subgroup = "y-module",
+		order = "m-y1",
+		stack_size = 100,
+		default_request_amount = 10,
+		effect = { speed = 0.05, consumption = -0.05 , pollution = -0.5 },
+		limitation = production,
+		weight = 20 * kg,
+	},
+	]]
 	-- pink ->dropped ->revieved 0509-215
 	-- pinks
 	{
@@ -258,9 +295,8 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-pink-module-1", amount = 1 } },
 		main_product = "y-pink-module-1",
-		order = "m-4a",
+		order = "m-p1",
 	},
-
 	{
 		type = "module",
 		name = "y-pink-module-1",
@@ -269,7 +305,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_pink_1.png",
 		subgroup = "y-module",
-		order = "m-4a",
+		order = "m-p1",
 		stack_size = 100,
 		effect = { productivity = 0.05, consumption = 0.125, pollution = -0.075 },
 		limitation_message_key = "production-module-usable-only-on-intermediates",
@@ -284,8 +320,8 @@ data:extend({
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-chip-2", amount = 2 },
-			{ type = "item", name = "y-pink-module-1", amount = 2 },
+			{ type = "item", name = "y-chip-2", amount = 1 },
+			{ type = "item", name = "y-pink-module-1", amount = 3 },
 			{ type = "item", name = "y_crystal2_combined", amount = 1 },
 		},
 		results = {
@@ -293,7 +329,7 @@ data:extend({
 			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-pink-module-2",
-		order = "m-4b",
+		order = "m-p2",
 		subgroup = "y-module",
 	},
 
@@ -305,7 +341,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_pink_2.png",
 		subgroup = "y-module",
-		order = "m-4b",
+		order = "m-p2",
 		stack_size = 100,
 		effect = { productivity = 0.125, consumption = 0.2, pollution = -0.15 },
 		limitation_message_key = "production-module-usable-only-on-intermediates",
@@ -325,7 +361,7 @@ data:extend({
 		},
 		results = { { type = "item", name = "y-pink-module-3", amount = 1 } },
 		main_product = "y-pink-module-3",
-		order = "m-4c",
+		order = "m-p3",
 	},
 
 	{
@@ -336,7 +372,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/modul_pink_3.png",
 		subgroup = "y-module",
-		order = "m-4c",
+		order = "m-p3",
 		stack_size = 100,
 		effect = { productivity = 0.20, consumption = 0.275, pollution = -0.2 },
 		limitation_message_key = "production-module-usable-only-on-intermediates",

@@ -1272,7 +1272,7 @@ data:extend({
 		collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
 		selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
 		fluid_box = {
-			volume = 4000,
+			volume = 15000,
 			base_area = 150,
 			base_level = 0,
 			--pipe_covers = pipecoverspictures(),
@@ -1401,7 +1401,7 @@ data:extend({
 		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 		fluid_box = {
-			volume = 9000,
+			volume = 50000,
 			base_area = 450,
 			base_level = -1,
 			--pipe_covers = pipecoverspictures(),
@@ -1555,7 +1555,7 @@ data:extend({
 		collision_box = { { -1.7, -1.7 }, { 1.7, 1.7 } },
 		selection_box = { { -2.0, -2.0 }, { 2.0, 2.0 } },
 		fluid_box = {
-			volume = 24000,
+			volume = 80000,
 			base_area = 800,
 			base_level = 0,
 			pipe_connections = {
@@ -1947,7 +1947,7 @@ data:extend({
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 
 		fluid_box = {
-			volume = 7000,
+			volume = 10000,
 			base_area = 70,
 			base_level = 0,
 			--pipe_covers = pipecoverspictures(),

@@ -19,7 +19,7 @@ playeranimations_y1 = {
 		frame_count = 16,
 		animation_speed = 0.15,
 		shift = { 0.13, -0.25 },
-		axially_symmetrical = fals,
+		axially_symmetrical = false,
 	},
 	miningwithhands = {
 		filename = "__Yuoki__/graphics/armor/robo1_dig.png",

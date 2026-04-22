@@ -1,4 +1,4 @@
-data:extend({
+data:extend({	
 	{
 		type = "wall",
 		name = "y_wood_wall",

@@ -17,7 +17,7 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "coal-b",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/coal_brikett_32.png",
+		icon = "__Yuoki__/graphics/icons/coal_brikett.png",
 	},
 
 	{
@@ -123,6 +123,7 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/wood_brikett_32.png",
 	},
 
+	--[[
 	{
 		type = "recipe",
 		name = "y-wooden-brikett-packed",
@@ -142,7 +143,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/wood-pellets.png",
 	},
-
+	]]
 	{
 		type = "recipe",
 		name = "y-release-cwater",
@@ -183,7 +184,6 @@ data:extend({
 		subgroup = "y_line4",
 		order = "a2",
 	},
-
 	{
 		type = "recipe",
 		name = "y_mud2solidfuel",
@@ -223,7 +223,6 @@ data:extend({
 		subgroup = "y-fuel",
 		order = "a9",
 	},
-
 	{
 		type = "recipe",
 		name = "y-filtering-dust",

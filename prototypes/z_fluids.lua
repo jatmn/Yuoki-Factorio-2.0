@@ -56,7 +56,7 @@ data:extend({
 		type = "fluid",
 		name = "y_emulsion",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/liquid_air_i32.png",
+		icon = "__Yuoki__/graphics/icons/liquid_air_icon.png",
 		default_temperature = 20,
 		max_temperature = 50,
 		heat_capacity = "1kJ",

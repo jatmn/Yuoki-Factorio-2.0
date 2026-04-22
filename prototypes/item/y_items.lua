@@ -3,7 +3,7 @@ data:extend({
 		type = "item",
 		name = "y-coal-brikett",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/coal_brikett_32.png",
+		icon = "__Yuoki__/graphics/icons/coal_brikett.png",
 		group = "yuoki",
 		subgroup = "y-fuel",
 		fuel_category = "chemical",

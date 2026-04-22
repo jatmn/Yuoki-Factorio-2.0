@@ -1,17 +1,5 @@
 data:extend({
-	--[[
-	{
-		type = "recipe",
-		name = "y-conductive-wire-1-recipe",
-		energy_required = 2.0,
-		enabled = true,
-		ingredients = {{"y-orange-stuff", 1}, {"copper-plate", 1}, }, 
-		result = "y-conductive-wire-1",
-		result_count = 4,
-		order="p-w-a",	
-		subgroup = "y_parts_e",
-	},	
-	]]
+
 	{
 		type = "recipe",
 		name = "y-conductive-coil-1",
@@ -49,7 +37,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y_chip_plate",
-		energy_required = 4.0,
+		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
 			{ type = "item", name = "y-refined-yres2", amount = 1 },
@@ -66,14 +54,14 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y-chip-1",
-		energy_required = 2.0,
+		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y_chip_plate", amount = 1 },
-			{ type = "item", name = "y-orange-stuff", amount = 2 },
+			{ type = "item", name = "y_chip_plate", amount = 2 },
+			{ type = "item", name = "y-orange-stuff", amount = 4 },
 		},
 		results = {
-			{ type = "item", name = "y-chip-1", amount = 1 },
+			{ type = "item", name = "y-chip-1", amount = 2 },
 		},
 		main_product = "y-chip-1",
 		order = "p-c-a",
@@ -83,8 +71,8 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y-chip-2",
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/gfx/chip2-icon.png",
+		icon_size = 96,
+		icon = "__Yuoki__/graphics/icons/chip2-icon.png",
 		energy_required = 3,
 		enabled = true,
 		ingredients = {
@@ -131,8 +119,8 @@ data:extend({
 		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-crush-yres2", amount = 3 },
-			{ type = "item", name = "coal", amount = 1 },
+			{ type = "item", name = "y-crush-yres2", amount = 5 },
+			{ type = "item", name = "y-coal-dust", amount = 2 },
 			{ type = "item", name = "iron-plate", amount = 1 },
 		},
 		results = {
@@ -149,10 +137,10 @@ data:extend({
 		energy_required = 4.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-battery-single-use1", amount = 1 },
+			{ type = "item", name = "y-battery-single-use1", amount = 4 },
 		},
 		results = {
-			{ type = "item", name = "y-battery-single-use2", amount = 1 },
+			{ type = "item", name = "y-battery-single-use2", amount = 4 },
 		},
 		main_product = "y-battery-single-use2",
 		order = "p-b-b",
@@ -163,11 +151,11 @@ data:extend({
 		type = "recipe",
 		name = "y-battery-single-use3",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/gfx/battery_3.png",
-		energy_required = 4.0,
+		icon = "__Yuoki__/graphics/icons/battery_3.png",
+		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-battery-single-use2", amount = 2 },
+			{ type = "item", name = "y-battery-single-use2", amount = 3 },
 			{ type = "item", name = "y-conductive-wire-1", amount = 1 },
 		},
 		results = {
@@ -199,9 +187,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y_blocked_capa",
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/gfx/scd-icon.png",
-		energy_required = 3.0,
+		icon_size = 96,
+		icon = "__Yuoki__/graphics/icons/scd-icon.png",
+		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
 			{ type = "item", name = "y-battery-single-use3", amount = 3 },
@@ -225,14 +213,13 @@ data:extend({
 		energy_required = 3.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "steel-plate", amount = 14 },
+			{ type = "item", name = "y_structure_element", amount = 8 },
 			{ type = "item", name = "y-conductive-wire-1", amount = 6 },
 			{ type = "item", name = "y-chip-1", amount = 1 },
-			{ type = "item", name = "y-unicomp-a2", amount = 2 },
+			{ type = "item", name = "y_structure_electric", amount = 3 },
 		},
 		results = {
 			{ type = "item", name = "y-substation-m", amount = 1 },
-			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-substation-m",
 		order = "e-e-a",
@@ -282,7 +269,7 @@ data:extend({
 		type = "recipe",
 		name = "y-accumulator-b",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/gfx/accu_b_icon.png",
+		icon = "__Yuoki__/graphics/icons/accu_b_icon.png",
 		energy_required = 8.0,
 		enabled = true,
 		ingredients = {
@@ -393,8 +380,8 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y-ups-flywheel-b",
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/gfx/accflywheel_b_icon.png",
+		icon_size = 96,
+		icon = "__Yuoki__/graphics/icons/accflywheel_icon.png",
 		energy_required = 12.0,
 		enabled = true,
 		ingredients = {

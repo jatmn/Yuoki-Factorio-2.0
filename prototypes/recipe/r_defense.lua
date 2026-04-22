@@ -26,8 +26,7 @@ data:extend({
 		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-refined-yres1", amount = 1 },
-			{ type = "item", name = "y-slag", amount = 6 },
+			{ type = "item", name = "y_structure_element", amount = 5 },
 			{ type = "item", name = "y-mud-wall", amount = 1 },
 		},
 		results = {
@@ -46,9 +45,9 @@ data:extend({
 		energy_required = 2.0,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-orange-stuff", amount = 6 },
-			{ type = "item", name = "y-slag", amount = 6 },
-			{ type = "item", name = "y-mud-wall", amount = 1 },
+			{ type = "item", name = "y-orange-stuff", amount = 8 },
+			{ type = "item", name = "y_structure_vessel", amount = 1 },
+			{ type = "item", name = "y-rare-wall-basic", amount = 1 },
 		},
 		results = {
 			{ type = "item", name = "y-rare-wall-adv", amount = 1 },
@@ -89,7 +88,7 @@ data:extend({
 		enabled = true,
 		ingredients = {
 			{ type = "item", name = "y_structure_vessel", amount = 4 },
-			{ type = "item", name = "stone-brick", amount = 4 },
+			{ type = "item", name = "concrete", amount = 4 },
 			{ type = "item", name = "y-richdust", amount = 4 },
 		},
 		results = {
@@ -101,17 +100,16 @@ data:extend({
 		order = "w-f",
 	},
 
+	--[[
 	{
 		type = "recipe",
 		name = "y-laser-def-s4",
 		enabled = true,
 		energy_required = 4,
 		ingredients = {
-			{ type = "item", name = "y-basic-t2-mf", amount = 1 },
-			{ type = "item", name = "y_blocked_capa", amount = 2 },
+			{ type = "item", name = "y_turret_laser22f12", amount = 1 },
 			{ type = "item", name = "y-conductive-coil-1", amount = 3 },
 			{ type = "item", name = "y_wall22_hardic", amount = 1 },
-			{ type = "item", name = "y_rwtechsign", amount = 2 },
 		},
 		results = {
 			{ type = "item", name = "y-laser-def-s4", amount = 1 },
@@ -119,7 +117,7 @@ data:extend({
 		main_product = "y-laser-def-s4",
 		order = "t-c",
 	},
-
+	]]
 	{
 		type = "recipe",
 		name = "y_turret_laser22f12",

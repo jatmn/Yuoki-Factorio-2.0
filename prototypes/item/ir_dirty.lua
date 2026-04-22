@@ -122,7 +122,7 @@ data:extend({
 		type = "recipe",
 		name = "y-digfdirt",
 		enabled = true,
-		energy_required = 4,
+		energy_required = 2,
 		ingredients = {},
 		results = {
 			{ type = "item", name = "y-dirt", amount = 1 },
@@ -137,7 +137,7 @@ data:extend({
 		type = "recipe",
 		name = "y-digfdirt2",
 		enabled = true,
-		energy_required = 4,
+		energy_required = 3,
 		ingredients = {
 			{ type = "item", name = "y_drillhead", amount = 1 },
 		},
@@ -161,11 +161,11 @@ data:extend({
 		category = "yuoki-archaeology-wash",
 		energy_required = 4,
 		ingredients = {
-			{ type = "item", name = "y-dirt", amount = 7 },
-			{ type = "fluid", name = "water", amount = 175 },
+			{ type = "item", name = "y-dirt", amount = 10 },
+			{ type = "fluid", name = "water", amount = 150 },
 		},
 		results = {
-			{ type = "item", name = "stone", amount = 3 },
+			{ type = "item", name = "stone", amount = 2 },
 			{ type = "item", name = "y-crystal2", amount = 1 },
 			{ type = "fluid", name = "y-con_water", amount = 150 },
 		},
@@ -182,13 +182,13 @@ data:extend({
 		name = "y-wash-special",
 		category = "yuoki-archaeology-wash",
 		enabled = true,
-		energy_required = 6.0,
+		energy_required = 4,
 		ingredients = {
-			{ type = "item", name = "y-dirt", amount = 8 },
-			{ type = "fluid", name = "water", amount = 1200 },
+			{ type = "item", name = "y-dirt", amount = 10 },
+			{ type = "fluid", name = "water", amount = 300 },
 		},
 		results = {
-			{ type = "item", name = "y-c_mud", amount = 10 },
+			{ type = "item", name = "y-c_mud", amount = 5 },
 		},
 		main_product = "y-c_mud",
 		icon_size = 64,

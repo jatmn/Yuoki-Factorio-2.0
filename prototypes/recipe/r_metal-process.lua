@@ -12,7 +12,7 @@ data:extend({
 		},
 		results = {
 			{ type = "item", name = "y-infused-uca2", amount = 1 },
-			{ type = "item", name = "y_rwtechsign", amount = 1 },
+			{ type = "item", name = "y_rwtechsign", amount = 2 },
 		},
 		main_product = "y-infused-uca2",
 		subgroup = "y-fuel",
@@ -44,11 +44,11 @@ data:extend({
 		category = "y-crushing",
 		energy_required = 6,
 		ingredients = {
-			{ type = "item", name = "y-res1", amount = 1 },
+			{ type = "item", name = "y-res1", amount = 3 },
 			{ type = "fluid", name = "water", amount = 200 },
 		},
 		results = {
-			{ type = "item", name = "y-crush-yres1", amount = 2 },
+			{ type = "item", name = "y-crush-yres1", amount = 5 },
 		},
 		main_product = "y-crush-yres1",
 		enabled = true,
@@ -61,11 +61,11 @@ data:extend({
 		category = "y-crushing",
 		energy_required = 6,
 		ingredients = {
-			{ type = "item", name = "y-res2", amount = 1 },
+			{ type = "item", name = "y-res2", amount = 3 },
 			{ type = "fluid", name = "water", amount = 200 },
 		},
 		results = {
-			{ type = "item", name = "y-crush-yres2", amount = 2 },
+			{ type = "item", name = "y-crush-yres2", amount = 5 },
 		},
 		main_product = "y-crush-yres2",
 		enabled = true,
@@ -82,11 +82,11 @@ data:extend({
 		category = "y-crushing",
 		energy_required = 7,
 		ingredients = {
-			{ type = "item", name = "y-res1", amount = 5 },
+			{ type = "item", name = "y-res1", amount = 6 },
 			{ type = "item", name = "y_toolhead", amount = 1 },
 		},
 		results = {
-			{ type = "item", name = "y-crush-yres1", amount = 12 },
+			{ type = "item", name = "y-crush-yres1", amount = 15 },
 			{
 				type = "item",
 				name = "y_toolhead_broken",
@@ -109,11 +109,11 @@ data:extend({
 		category = "y-crushing",
 		energy_required = 7,
 		ingredients = {
-			{ type = "item", name = "y-res2", amount = 5 },
+			{ type = "item", name = "y-res2", amount = 6 },
 			{ type = "item", name = "y_toolhead", amount = 1 },
 		},
 		results = {
-			{ type = "item", name = "y-crush-yres2", amount = 12 },
+			{ type = "item", name = "y-crush-yres2", amount = 15 },
 			{
 				type = "item",
 				name = "y_toolhead_broken",
@@ -134,13 +134,13 @@ data:extend({
 		type = "recipe",
 		name = "y-mixing-rich",
 		enabled = true,
-		energy_required = 2.0,
+		energy_required = 1.25,
 		ingredients = {
-			{ type = "item", name = "y-crush-yres1", amount = 10 },
-			{ type = "item", name = "y-crush-yres2", amount = 10 },
+			{ type = "item", name = "y-crush-yres1", amount = 6 },
+			{ type = "item", name = "y-crush-yres2", amount = 6 },
 		},
 		results = {
-			{ type = "item", name = "y-richdust", amount = 20 },
+			{ type = "item", name = "y-richdust", amount = 11 },
 		},
 		main_product = "y-richdust",
 		subgroup = "y_line3",
@@ -155,7 +155,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/uni-komp-a2-icon.png",
 		enabled = true,
-		energy_required = 8.0,
+		energy_required = 7.0,
 		ingredients = {
 			{ type = "item", name = "y-richdust", amount = 20 },
 		},
@@ -174,12 +174,12 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/n4pellets_icon.png",
 		enabled = true,
-		energy_required = 4.0,
+		energy_required = 3,
 		ingredients = {
-			{ type = "item", name = "y-crush-yres1", amount = 3 },
+			{ type = "item", name = "y-crush-yres1", amount = 9 },
 		},
 		results = {
-			{ type = "item", name = "y-refined-yres1", amount = 1 },
+			{ type = "item", name = "y-refined-yres1", amount = 3 },
 			{ type = "item", name = "y-slag", amount = 1 },
 		},
 		main_product = "y-refined-yres1",
@@ -191,12 +191,12 @@ data:extend({
 		name = "y-unicomp-raw",
 		category = "yuoki-formpress",
 		enabled = true,
-		energy_required = 8.0,
+		energy_required = 6,
 		ingredients = {
-			{ type = "item", name = "y-refined-yres1", amount = 3 },
+			{ type = "item", name = "y-refined-yres1", amount = 6 },
 		},
 		results = {
-			{ type = "item", name = "y-unicomp-raw", amount = 1 },
+			{ type = "item", name = "y-unicomp-raw", amount = 2 },
 		},
 		main_product = "y-unicomp-raw",
 		subgroup = "y_line4",
@@ -209,12 +209,12 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/f7pellets_icon.png",
 		enabled = true,
-		energy_required = 6.0,
+		energy_required = 4.0,
 		ingredients = {
-			{ type = "item", name = "y-crush-yres2", amount = 2 },
+			{ type = "item", name = "y-crush-yres2", amount = 8 },
 		},
 		results = {
-			{ type = "item", name = "y-refined-yres2", amount = 1 },
+			{ type = "item", name = "y-refined-yres2", amount = 4 },
 			{ type = "item", name = "y-slag", amount = 1 },
 		},
 		main_product = "y-refined-yres2",
@@ -226,12 +226,12 @@ data:extend({
 		name = "y-raw-fuelnium",
 		category = "yuoki-formpress",
 		enabled = true,
-		energy_required = 10.0,
+		energy_required = 9.0,
 		ingredients = {
-			{ type = "item", name = "y-refined-yres2", amount = 2 },
+			{ type = "item", name = "y-refined-yres2", amount = 6 },
 		},
 		results = {
-			{ type = "item", name = "y-raw-fuelnium", amount = 1 },
+			{ type = "item", name = "y-raw-fuelnium", amount = 2 },
 		},
 		main_product = "y-raw-fuelnium",
 		subgroup = "y_line4",
@@ -243,14 +243,14 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/reactor-fuel.png",
 		enabled = true,
-		energy_required = 10,
+		energy_required = 4,
 		ingredients = {
-			{ type = "item", name = "y-raw-fuelnium", amount = 1 },
-			{ type = "item", name = "y-unicomp-raw", amount = 1 },
+			{ type = "item", name = "y-raw-fuelnium", amount = 3 },
+			{ type = "item", name = "y-unicomp-raw", amount = 3 },
 			{ type = "item", name = "iron-plate", amount = 3 },
 		},
 		results = {
-			{ type = "item", name = "y-fuel-reactor", amount = 1 },
+			{ type = "item", name = "y-fuel-reactor", amount = 2 },
 			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-fuel-reactor",
@@ -271,7 +271,7 @@ data:extend({
 			{ type = "item", name = "y-crystal2", amount = 8 },
 		},
 		results = {
-			{ type = "item", name = "y-quantrinum", amount = 1 },
+			{ type = "item", name = "y-quantrinum", amount = 2 },
 			{ type = "item", name = "ye_science_blue", amount = 1 },
 		},
 		main_product = "y-quantrinum",
@@ -294,7 +294,7 @@ data:extend({
 			{ type = "item", name = "y-crystal2", amount = 10 },
 		},
 		results = {
-			{ type = "item", name = "y-crystal-cnd", amount = 1 },
+			{ type = "item", name = "y-crystal-cnd", amount = 2 },
 			{ type = "item", name = "y_rwtechsign", amount = 1 },
 		},
 		main_product = "y-crystal-cnd",
@@ -311,7 +311,7 @@ data:extend({
 		energy_required = 3,
 		ingredients = {
 			{ type = "item", name = "copper-ore", amount = 5 },
-			{ type = "fluid", name = "water", amount = 200 },
+			{ type = "fluid", name = "water", amount = 150 },
 		},
 		results = {
 			{ type = "item", name = "y-pure-copper", amount = 3 },
@@ -333,7 +333,7 @@ data:extend({
 		energy_required = 3,
 		ingredients = {
 			{ type = "item", name = "iron-ore", amount = 5 },
-			{ type = "fluid", name = "water", amount = 200 },
+			{ type = "fluid", name = "water", amount = 150 },
 		},
 		results = {
 			{ type = "item", name = "y-pure-iron", amount = 3 },
@@ -414,13 +414,13 @@ data:extend({
 		type = "recipe",
 		name = "y-refined-copper",
 		category = "smelting",
-		energy_required = 4.0,
+		energy_required = 1.5,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-pure-copper", amount = 2 },
+			{ type = "item", name = "y-pure-copper", amount = 1 },
 		},
 		results = {
-			{ type = "item", name = "copper-plate", amount = 5 },
+			{ type = "item", name = "copper-plate", amount = 2 },
 		},
 		main_product = "copper-plate",
 		icon_size = 64,
@@ -431,13 +431,13 @@ data:extend({
 		type = "recipe",
 		name = "y-refined-iron",
 		category = "smelting",
-		energy_required = 4.0,
+		energy_required = 1.5,
 		enabled = true,
 		ingredients = {
-			{ type = "item", name = "y-pure-iron", amount = 2 },
+			{ type = "item", name = "y-pure-iron", amount = 1 },
 		},
 		results = {
-			{ type = "item", name = "iron-plate", amount = 5 },
+			{ type = "item", name = "iron-plate", amount = 2 },
 		},
 		main_product = "iron-plate",
 		icon_size = 64,

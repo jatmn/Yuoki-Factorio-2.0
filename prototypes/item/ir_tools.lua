@@ -1,5 +1,4 @@
 data:extend({
-
 	-- recipe
 	{
 		type = "recipe",
@@ -33,19 +32,6 @@ data:extend({
 		subgroup = "y-tools",
 		order = "rt-2",
 	},
-	--[[
-	{
-		type = "recipe",
-		name = "y-axe-durotal-recipe",		
-		enabled = true,
-		energy_required = 4,
-		ingredients = {{"wood", 1},{"y-unicomp-raw", 2},},
-		result = "y-axe-duro",
-		group="yuoki",
-		subgroup = "y-tools",
-		order="wt-1",
-	},	
-	]]
 	{
 		type = "recipe",
 		name = "y_repair_quantrinum",
@@ -62,20 +48,6 @@ data:extend({
 		subgroup = "y-tools",
 		order = "rt-3",
 	},
-	--[[
-	{
-		type = "recipe",
-		name = "y_quantrinum_hammer_recipe",		
-		enabled = true,
-		energy_required = 5,
-		ingredients = {{"iron-stick", 1},{"y-quantrinum", 1},},
-		result = "y_quantrinum_hammer",
-		group="yuoki",
-		subgroup = "y-tools",
-		order="wt-2",
-	},	
-	]]
-
 	-- items
 	{
 		type = "repair-tool",
@@ -114,54 +86,4 @@ data:extend({
 		stack_size = 25,
 	},
 
-	--[[
-	{
-		type = "mining-tool",
-		name = "y-axe-duro",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/hammer_std.png",
-		action =
-		{
-			type="direct",
-			action_delivery =
-			{
-				type = "instant",
-				target_effects =
-				{
-					type = "damage",
-					damage = { amount = 18 , type = "physical"}
-				}
-			}
-		},
-		durability = 8000,
-		group="yuoki",
-		subgroup = "y-tools",
-		order = "a[mining]-b[steel-axe]",
-		speed = 9,
-		stack_size = 20,
-	},	
-	{
-		type = "mining-tool",
-		name = "y_quantrinum_hammer",
-		icon_size = 64, icon =  "__Yuoki__/graphics/icons/hammer_quantrinum.png",
-		action =
-		{
-			type="direct",
-			action_delivery =
-			{
-				type = "instant",
-				target_effects =
-				{
-					type = "damage",
-					damage = { amount = 20 , type = "physical"}
-				}
-			}
-		},
-		durability = 25000,
-		group="yuoki",
-		subgroup = "y-tools",
-		order = "wt-2",
-		speed = 20,
-		stack_size = 20,
-	},	
-	]]
 })

@@ -13,6 +13,7 @@ data:extend({
 		order = "la",
 	},
 
+	--[[
 	{
 		type = "recipe",
 		name = "yi_obelisk_A3_5X",
@@ -33,6 +34,7 @@ data:extend({
 		subgroup = "y_erfolge",
 		order = "la",
 	},
+	]]
 	{
 		type = "lamp",
 		name = "yi_obelisk_A3_5X",
@@ -87,6 +89,7 @@ data:extend({
 	},
 
 	-- recipe
+	--[[
 	{
 		type = "recipe",
 		name = "yi_bug1",
@@ -107,7 +110,7 @@ data:extend({
 		subgroup = "y_erfolge",
 		order = "2a",
 	},
-
+	]]
 	{
 		type = "lamp",
 		name = "yi_bug1",
@@ -160,6 +163,7 @@ data:extend({
 		order = "2a",
 	},
 	-- recipe
+	--[[
 	{
 		type = "recipe",
 		name = "yi_hny1",
@@ -180,6 +184,7 @@ data:extend({
 		subgroup = "y_erfolge",
 		order = "4a",
 	},
+	]]
 	{
 		type = "radar",
 		name = "yi_hny1",
@@ -234,6 +239,7 @@ data:extend({
 		order = "4b",
 	},
 	-- recipe
+	--[[
 	{
 		type = "recipe",
 		name = "yi_hny2",
@@ -254,6 +260,7 @@ data:extend({
 		subgroup = "y_erfolge",
 		order = "4b",
 	},
+	]]
 	{
 		type = "assembling-machine",
 		name = "yi_hny2",

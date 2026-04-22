@@ -52,44 +52,40 @@ data:extend({
 		dying_explosion = "medium-explosion",
 		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-		allowed_effects = { "consumption", "speed", "pollution" },
+		allowed_effects = { "consumption", "speed", "pollution" },				
+		--[[
 		base_picture = {
-			filename = "__Yuoki__/graphics/entity/beacon_anim0001.png",
-			width = 160,
-			height = 160,
+			filename = "__Yuoki__/graphics/entity/beacon_place.png",
+			width = 320,
+			height = 320,
+			scale = 0.5,
 			shift = { 0.6875, -0.75 },
 		},
+		]]
 		animation = {
 			layers = {
 				{
 					filename = "__Yuoki__/graphics/entity/beacon_sheet.png",
-					width = 160,
-					height = 160,
+					width = 320,
+					height = 320,
+					scale = 0.5,
 					line_length = 5,
 					frame_count = 25,
 					shift = { 0.6875, -0.75 },
 					animation_speed = 0.20,
 				},
 				{
-					filename = "__Yuoki__/graphics/entity/beacon_sheet.png",
-					draw_as_light = true,
-					width = 160,
-					height = 160,
+					filename = "__Yuoki__/graphics/entity/beacon_shadow.png",
+					draw_as_shadow = true,
+					width = 320,
+					height = 320,
+					scale = 0.5,
 					line_length = 5,
 					frame_count = 25,
 					shift = { 0.6875, -0.75 },
 					animation_speed = 0.20,
-				},
+				},				
 			},
-		},
-		animation_shadow = {
-			filename = "__Yuoki__/graphics/entity/empty32.png",
-			width = 5,
-			height = 5,
-			line_length = 5,
-			frame_count = 25,
-			shift = { 0, 0 },
-			--animation_speed = 0.5
 		},
 		radius_visualisation_picture = {
 			filename = "__base__/graphics/entity/beacon/beacon-radius-visualization.png",
@@ -104,7 +100,7 @@ data:extend({
 		},
 		vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
 		energy_usage = "720kW",
-		distribution_effectivity = 0.7, --was 0.65
+		distribution_effectivity = 0.8, --was 0.65, 0.7
 		fast_replaceable_group = "beacon",
 		module_slots = 2,
 		icons_positioning = {
@@ -133,8 +129,8 @@ data:extend({
 		energy_source = {
 			type = "electric",
 			usage_priority = "secondary-input",
-			input_flow_limit = "25MW",
-			buffer_capacity = "800MJ",
+			input_flow_limit = "20MW",
+			buffer_capacity = "900MJ",
 		},
 		recharge_minimum = "50MJ",
 		energy_usage = "500kW",
@@ -271,7 +267,7 @@ data:extend({
 		icon_size = 64,
 		icons = {
 			{
-				icon = "__Yuoki__/graphics/gfx/aqe-icon.png",
+				icon = "__Yuoki__/graphics/icons/8080_icon.png",
 				tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 },
 				scale = 0.5,
 			},
@@ -307,12 +303,12 @@ data:extend({
 			{ 0.3, 0.45 },
 		},
 		base = {
-			filename = "__Yuoki__/graphics/gfx/aqe-unload-e.png",
-			width = 32,
-			height = 32,
-			scale = 0.6,
+			filename = "__Yuoki__/graphics/entity/8080.png",
+			width = 192,
+			height = 192,
+			scale = 0.4,
 			tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 },
-			shift = { 0.28, 0 },
+			shift = { 0.5, -0.5 },
 		},
 		base_patch = {
 			filename = "__Yuoki__/graphics/entity/empty32.png",
@@ -323,17 +319,17 @@ data:extend({
 			shift = { 0, 0 },
 		},
 		base_animation = {
-			filename = "__Yuoki__/graphics/gfx/aqe-unload-e.png",
+			filename = "__Yuoki__/graphics/entity/8080.png",
 			priority = "medium",
-			width = 140,
-			height = 115,
-			scale = 0.6,
+			width = 192,
+			height = 192,
+			scale = 0.4,
 			frame_count = 1,
 			line_length = 1,
 			animation_speed = 0.05,
 			tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 },
 			--shift = {0.5, -0.5}
-			shift = { 0.28, 0 },
+			shift = { 0.5, -0.5 },
 		},
 
 		door_animation_up = {

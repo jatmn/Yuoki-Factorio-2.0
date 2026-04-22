@@ -45,7 +45,7 @@ data:extend({
 		main_product = "j_yi_roboport1",
 		icon_size = 64,
 		icons = {
-			{ icon = "__Yuoki__/graphics/gfx/aqe-icon.png", tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 }, scale = 0.5 },
+			{ icon = "__Yuoki__/graphics/icons/8080_icon.png", tint = { r = 179 / 255, g = 198 / 255, b = 255 / 255 }, scale = 0.5 },
 		},
 		order = "2",
 		group = "yuoki",

@@ -30,6 +30,7 @@ data:extend({
 		icon = "__Yuoki__/graphics/icons/pipe-v.png",
 	},
 
+	--[[
 	{
 		type = "recipe",
 		name = "y-valve-direction-buffer",
@@ -46,7 +47,7 @@ data:extend({
 		group = "yuoki",
 		subgroup = "y-pipe",
 	},
-
+	]]
 	{
 		type = "recipe",
 		name = "y-pipe-hc",
@@ -199,6 +200,7 @@ data:extend({
 		order = "T3",
 	},
 
+	--[[
 	{
 		type = "recipe",
 		name = "y-tank-24k",
@@ -218,8 +220,7 @@ data:extend({
 		group = "yuoki",
 		subgroup = "y-fluid-storage",
 		order = "T4",
-	},
-
+	},	
 	{
 		type = "recipe",
 		name = "y_buffer_station",
@@ -240,7 +241,7 @@ data:extend({
 		subgroup = "y-fluid-storage",
 		order = "T5",
 	},
-
+	]]
 	--items
 	{
 		type = "item",
@@ -381,7 +382,6 @@ data:extend({
 		stack_size = 5,
 		order = "tank-c2",
 	},
-
 	{
 		type = "item",
 		name = "y_buffer_station",

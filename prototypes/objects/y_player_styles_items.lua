@@ -192,7 +192,7 @@ data:extend({
 		order = "a3",
 		stack_size = 1,
 		equipment_grid = "y_armor_grid_c",
-		inventory_size_bonus = 20,
+		inventory_size_bonus = 30,
 	},
 
 	{
@@ -211,7 +211,7 @@ data:extend({
 		order = "a4",
 		stack_size = 1,
 		equipment_grid = "y_walker_grid",
-		inventory_size_bonus = 30,
+		inventory_size_bonus = 40,
 	},
 
 	{
@@ -231,6 +231,6 @@ data:extend({
 		order = "a6",
 		stack_size = 1,
 		equipment_grid = "y_walker_grid_b",
-		inventory_size_bonus = 40,
+		inventory_size_bonus = 50,
 	},
 })

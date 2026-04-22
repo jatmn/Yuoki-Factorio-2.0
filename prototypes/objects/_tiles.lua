@@ -63,8 +63,6 @@ data:extend({
 		weight = 2 * kg,
 		
 	},
-
-
 	{
 		type = "tile",
 		name = "y_tile_slagbricks",
@@ -281,8 +279,7 @@ data:extend({
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
 		collision_mask = tile_collision_masks.ground(),
 		walking_speed_modifier = 2,
-		layer = 18,
-		-- layer = 59,
+		layer = 11,
 		decorative_removal_probability = 0.1,
 		variants = {
 			main = {
