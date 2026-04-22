@@ -9,8 +9,8 @@ data:extend({
 		enabled = true,		
 		result_count = 1,
 		order="p-b",
-		subgroup = "yuoki-energy-gen",	
-	},		
+		subgroup = "yuoki-energy-gen",
+	},
 	{
 		type = "item",
 		name = "y-small-stirling-engine",

@@ -222,7 +222,7 @@ data:extend({
 		selection_box = { { -1, -1 }, { 1, 1 } },
 		energy_source = {
 			type = "electric",
-			buffer_capacity = "8MJ",
+			buffer_capacity = "7MJ",
 			usage_priority = "tertiary",
 			input_flow_limit = "400kW",
 			output_flow_limit = "400kW",
@@ -289,7 +289,7 @@ data:extend({
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 		energy_source = {
 			type = "electric",
-			buffer_capacity = "32MJ",
+			buffer_capacity = "18MJ",
 			usage_priority = "tertiary",
 			input_flow_limit = "1000kW",
 			output_flow_limit = "1000kW",
@@ -357,9 +357,9 @@ data:extend({
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 		energy_source = {
 			type = "electric",
-			buffer_capacity = "24MJ",
+			buffer_capacity = "40MJ",
 			usage_priority = "tertiary",
-			input_flow_limit = "600kW",
+			input_flow_limit = "750kW",
 			output_flow_limit = "1500kW",
 		},
 
@@ -485,7 +485,7 @@ data:extend({
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 		energy_source = {
 			type = "electric",
-			buffer_capacity = "48MJ",
+			buffer_capacity = "22.5MJ",
 			usage_priority = "tertiary",
 			input_flow_limit = "1500kW",
 			output_flow_limit = "1500kW",
@@ -548,7 +548,7 @@ data:extend({
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 		energy_source = {
 			type = "electric",
-			buffer_capacity = "150MJ",
+			buffer_capacity = "80MJ",
 			usage_priority = "tertiary",
 			input_flow_limit = "2000kW",
 			output_flow_limit = "3000kW",
@@ -609,7 +609,7 @@ data:extend({
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
 		energy_source = {
 			type = "electric",
-			buffer_capacity = "250MJ",
+			buffer_capacity = "160MJ",
 			usage_priority = "tertiary",
 			input_flow_limit = "3000kW",
 			output_flow_limit = "5000kW",

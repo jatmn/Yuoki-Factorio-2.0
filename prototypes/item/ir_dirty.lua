@@ -159,7 +159,7 @@ data:extend({
 		type = "recipe",
 		name = "y-wash-dirt",
 		category = "yuoki-archaeology-wash",
-		energy_required = 6,
+		energy_required = 4,
 		ingredients = {
 			{ type = "item", name = "y-dirt", amount = 7 },
 			{ type = "fluid", name = "water", amount = 175 },

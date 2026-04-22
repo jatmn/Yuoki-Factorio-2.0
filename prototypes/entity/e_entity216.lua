@@ -139,7 +139,7 @@ data:extend({
 		recharge_minimum = "50MJ",
 		energy_usage = "500kW",
 		-- per one charge slot
-		charging_energy = "4MW",
+		charging_energy = "2MW",
 		logistics_radius = 64,
 		construction_radius = 72,
 		charge_approach_distance = 10,
