@@ -4,6 +4,7 @@ Date: 22. 4. 2026
   Additions:
     - Added new test Burner Generator: y_bg-1
   Updates:
+    - This whole release is thanks to mod creator YuokiTani who showed up with surprise updates! 
     - Large refresh of Yuoki icons and graphics across energy, electric, defense, modules, lamps, storage, tiles, ammo, signs, and materials
     - Updated accumulator, flywheel, AQE, crystal, beacon, 8080 roboport, Stirling dish, 3x3 storage, and lamp visuals to newer artwork
     - Beacon visuals updated to newer animated HR graphics with improved shadow/placement visuals
