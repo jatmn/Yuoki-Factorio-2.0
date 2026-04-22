@@ -157,7 +157,7 @@ data:extend({
 		type = "recipe",
 		name = "y_ammo_plasma",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/capsule_plasma.png",
+		icon = "__Yuoki__/graphics/icons/ammo_plasma_64.png",
 		enabled = true,
 		energy_required = 4,
 		ingredients = {
@@ -248,7 +248,7 @@ data:extend({
 		type = "item",
 		name = "y_ammo_case",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/ammo_capsel.png",
+		icon = "__Yuoki__/graphics/icons/ammo_kapsel_64.png",
 		group = "yuoki",
 		subgroup = "y-ammo",
 		order = "a2",
@@ -297,7 +297,7 @@ data:extend({
 		type = "ammo",
 		name = "y-ammo-hohlspitz",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/ammo_fire.png",
+		icon = "__Yuoki__/graphics/icons/ammo_fire_64.png",
 		ammo_category = "bullet",
 		ammo_type = {
 			--category = "bullet",
@@ -459,7 +459,7 @@ data:extend({
 		type = "ammo",
 		name = "y_ammo_plasma",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/capsule_plasma.png",
+		icon = "__Yuoki__/graphics/icons/ammo_plasma_64.png",
 		ammo_category = "plasma",
 		ammo_type = {
 			--category = "plasma",

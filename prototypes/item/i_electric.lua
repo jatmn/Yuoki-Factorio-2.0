@@ -14,7 +14,7 @@ data:extend({
 		type = "item",
 		name = "y_dotzetron",
 		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/dot_zetron_32.png",
+		icon = "__Yuoki__/graphics/icons/dot-zetron_64.png",
 		subgroup = "y-parts",
 		order = "a-0",
 		stack_size = 250,

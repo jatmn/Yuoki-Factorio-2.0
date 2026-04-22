@@ -7,7 +7,7 @@ if mods["space-age"] then
 			category = "quality",
 			tier = 1,
 			icon_size = 64,
-			icon = "__Yuoki__/graphics/icons/module_quality_1v3.png",
+			icon = "__Yuoki__/graphics/icons/modul_quality.png",
 			subgroup = "y-module",
 			order = "m-4c",
 			stack_size = 100,
