@@ -53,6 +53,7 @@ data:extend({
 		fuel_value = "10MJ",
 		stack_size = 250,
 	},
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "y-wooden-brikett-packed",
@@ -64,6 +65,7 @@ data:extend({
 		fuel_value = "40MJ",
 		stack_size = 250,
 	},
+	]]
 
 	{
 		type = "item",

@@ -1,6 +1,8 @@
+if false then
 data:extend({
 
 	-- items
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "yi_obelisk_A3_5X",
@@ -12,6 +14,7 @@ data:extend({
 		stack_size = 50,
 		order = "la",
 	},
+	]]
 
 	--[[
 	{
@@ -35,6 +38,7 @@ data:extend({
 		order = "la",
 	},
 	]]
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "lamp",
 		name = "yi_obelisk_A3_5X",
@@ -73,9 +77,11 @@ data:extend({
 		},
 		circuit_wire_max_distance = 10,
 	},
+	]]
 
 	-- the bug -1
 	-- items
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "yi_bug1",
@@ -87,6 +93,7 @@ data:extend({
 		stack_size = 50,
 		order = "2a",
 	},
+	]]
 
 	-- recipe
 	--[[
@@ -111,6 +118,7 @@ data:extend({
 		order = "2a",
 	},
 	]]
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "lamp",
 		name = "yi_bug1",
@@ -148,9 +156,11 @@ data:extend({
 		},
 		circuit_wire_max_distance = 10,
 	},
+	]]
 
 	-- feuerwerk
 	-- items
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "yi_hny1",
@@ -162,6 +172,7 @@ data:extend({
 		stack_size = 10,
 		order = "2a",
 	},
+	]]
 	-- recipe
 	--[[
 	{
@@ -185,6 +196,7 @@ data:extend({
 		order = "4a",
 	},
 	]]
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "radar",
 		name = "yi_hny1",
@@ -224,9 +236,11 @@ data:extend({
 		},
 		radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
 	},
+	]]
 
 	-- säule
 	-- items
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "yi_hny2",
@@ -238,6 +252,7 @@ data:extend({
 		stack_size = 10,
 		order = "4b",
 	},
+	]]
 	-- recipe
 	--[[
 	{
@@ -261,6 +276,7 @@ data:extend({
 		order = "4b",
 	},
 	]]
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "assembling-machine",
 		name = "yi_hny2",
@@ -300,4 +316,6 @@ data:extend({
 			},
 		},
 	},
+	]]
 })
+end

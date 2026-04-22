@@ -25,6 +25,7 @@ data:extend({
 		order = "lb",
 	},
 
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "y-lamp-alien",
@@ -36,6 +37,7 @@ data:extend({
 		stack_size = 40,
 		order = "lc",
 	},
+	]]
 
 	{
 		type = "item",
@@ -49,6 +51,7 @@ data:extend({
 		order = "ld",
 	},
 
+	--[[ disabled because the matching recipes are commented out
 	{
 		type = "item",
 		name = "y_lamp_red",
@@ -89,6 +92,7 @@ data:extend({
 		stack_size = 50,
 		order = "2d",
 	},
+	]]
 
 	-- recipe
 	{
@@ -291,6 +295,7 @@ data:extend({
 		},
 		circuit_wire_max_distance = 15,
 	},
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "lamp",
 		name = "y-lamp-alien",
@@ -328,6 +333,7 @@ data:extend({
 		},
 		circuit_wire_max_distance = 15,
 	},
+	]]
 
 	{
 		type = "lamp",
@@ -366,6 +372,7 @@ data:extend({
 		circuit_wire_max_distance = 22.5,
 	},
 
+	--[[ disabled because the matching recipes are commented out
 	{
 		type = "lamp",
 		name = "y_lamp_red",
@@ -490,4 +497,5 @@ data:extend({
 		},
 		circuit_wire_max_distance = 22.5,
 	},
+	]]
 })

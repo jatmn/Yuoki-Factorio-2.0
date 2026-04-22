@@ -127,6 +127,7 @@ data:extend({
 		order = "a",
 		call_for_help_radius = 40,
 	},
+	--[=[ y-laser-def-s4 disabled because the matching recipe is commented out
 	{
 		type = "electric-turret",
 		name = "y-laser-def-s4",
@@ -237,4 +238,5 @@ data:extend({
 		order = "a",
 		call_for_help_radius = 40,
 	},
+	]=]
 })

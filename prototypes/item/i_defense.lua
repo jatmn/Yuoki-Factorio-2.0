@@ -58,6 +58,7 @@ data:extend({
 		stack_size = 80,
 	},
 
+	--[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "y-laser-def-s4",
@@ -69,6 +70,7 @@ data:extend({
 		stack_size = 50,
 		weight = 20 * kg,
 	},
+	]]
 
 	{
 		type = "item",

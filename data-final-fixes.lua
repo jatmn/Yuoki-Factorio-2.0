@@ -57,7 +57,6 @@ local itemTable = {
 	{ "y-mixed-fuel", 1, false },
 	{ "y-mixed-fuel-loaded", 1, false },
 	{ "y-wooden-brikett", 1, false },
-	{ "y-wooden-brikett-packed", 1, false },
 	{ "y-c_mud", 1, false },
 	{ "y-dry_mud", 1, false },
 	{ "y-toxic-dust", 1, false },
