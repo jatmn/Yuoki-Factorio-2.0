@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.23
+Date: 4. 7. 2026
+  Updates:
+    - Added a couple power ratio notes for steam and mechanical force setups, mostly so future balance poking has fewer mystery numbers.
+  Fixes:
+    - Added missing names for the Burner Generator and Mechanical Force bits. No more blank spots where names should be.
+    - Bob's Ores tungsten changed names again, so the Atomic's recipe now follows the new name and should stop crashing on startup.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.22
 Date: 22. 4. 2026
   Additions:
