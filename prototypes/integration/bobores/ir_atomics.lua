@@ -37,7 +37,7 @@ if mods["bobores"] then
 	end
 
 	if settings.startup["bobmods-ores-enabletungstenore"].value == true then
-		yi.lib.recipe.atomics.recipes_make_item("bob-tungsten-ore", 32, 10, 1) -- Tungsten ore
+		yi.lib.recipe.atomics.recipes_make_item("tungsten-ore", 32, 10, 1) -- Tungsten ore
 	end
 
 	if settings.startup["bobmods-ores-enablezincore"].value == true then
@@ -64,7 +64,7 @@ if mods["bobores"] then
 		yi.lib.recipe.atomics.recipes_make_item("bob-rutile-ore", 32, 20, 1) -- Rutile ore
 		yi.lib.recipe.atomics.recipes_make_item("bob-silver-ore", 32, 20, 1) -- Silver ore
 		yi.lib.recipe.atomics.recipes_make_item("bob-tin-ore", 32, 20, 1) -- Tin ore
-		yi.lib.recipe.atomics.recipes_make_item("bob-tungsten-ore", 32, 10, 1) -- Tungsten ore
+		yi.lib.recipe.atomics.recipes_make_item("tungsten-ore", 32, 10, 1) -- Tungsten ore
 		yi.lib.recipe.atomics.recipes_make_item("bob-zinc-ore", 32, 20, 1) -- Zinc ore
 		yi.lib.recipe.atomics.recipes_make_item("bob-thorium-ore", 32, 10, 1) -- Thorium ore
 	end
