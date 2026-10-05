@@ -15,7 +15,7 @@ data:extend({
 		order = "a1",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{
@@ -34,7 +34,7 @@ data:extend({
 		order = "a2",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{
@@ -54,7 +54,7 @@ data:extend({
 		order = "b1",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{
@@ -75,7 +75,7 @@ data:extend({
 		order = "c1",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{
@@ -96,7 +96,7 @@ data:extend({
 		order = "d1",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{
@@ -116,7 +116,7 @@ data:extend({
 		order = "w1",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{
@@ -136,7 +136,7 @@ data:extend({
 		order = "w2",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{
@@ -156,7 +156,7 @@ data:extend({
 		order = "x1",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "crafting",
+		categories = { "crafting" },
 	},
 
 	{
@@ -177,7 +177,7 @@ data:extend({
 		order = "e1",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{
@@ -197,7 +197,7 @@ data:extend({
 		order = "f1",
 		group = "yuoki-energy",
 		subgroup = "y_personal_equip",
-		category = "yuoki-wonder",
+		categories = { "yuoki-wonder" },
 	},
 
 	{

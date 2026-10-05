@@ -139,7 +139,7 @@ data:extend({
 		name = "y_modul_green_op",
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/green_sign.png",
-		category = "yuoki_green_ultimate", -- Green-Ultimates
+		categories = { "yuoki_green_ultimate" }, -- Green-Ultimates
 		energy_required = 120.0,
 		enabled = true,
 		ingredients = {

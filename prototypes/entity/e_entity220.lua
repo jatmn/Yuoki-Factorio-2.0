@@ -1,9 +1,11 @@
+local assembler_pictures = require("__base__.prototypes.entity.assembler-pictures")
+
 data:extend({
 
 	{
 		type = "recipe",
 		name = "y_chunks1",
-		category = "yrcat_crystalize",
+		categories = { "yrcat_crystalize" },
 		enabled = true,
 		energy_required = 8.00,
 		ingredients = {
@@ -24,7 +26,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y_chunks2",
-		category = "yrcat_crystalize",
+		categories = { "yrcat_crystalize" },
 		enabled = true,
 		energy_required = 8.00,
 		ingredients = {
@@ -83,7 +85,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
@@ -209,7 +211,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
