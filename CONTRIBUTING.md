@@ -20,7 +20,7 @@ a PR update; rerun affected checks after repairs. See
   [issue #15](https://github.com/jatmn/Yuoki-Factorio-2.x/issues/15).
 - Python/tools: parse tracked Python files without importing or executing game
   code and run `python3 tools/test_ci_changes.py` plus
-  `python3 tools/test_pullfrog_command.py`.
+  `python3 tools/test_pullfrog_command.py` and `python3 tools/test_package.py`.
 - Workflows: run **actionlint 1.7.12**. Changes to the CI dispatcher or router
   require all lightweight checks, including the Lua configuration probes.
 - Shipped sources, metadata, locale, graphics, license notices or packaging

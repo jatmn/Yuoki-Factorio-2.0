@@ -6,7 +6,11 @@ The lightweight CI follows the merged tooling work in
 Yuoki. It runs on pull requests and pushes to `main`. The dispatcher reads the
 complete Git diff and calls only affected reusable workflows. It avoids
 GitHub's capped event path filters, does not duplicate runs on topic-branch
-pushes, and cancels superseded runs for the same PR.
+pushes, and cancels superseded runs for the same PR. Each `main` push has a
+separate concurrency group so a later documentation-only push cannot cancel
+an earlier push's incremental Lua checks. The router is loaded from the
+comparison revision, so edits to the PR's router cannot disable their own
+validation. Initial installation runs all checks when that revision has no router.
 
 ## Which checks run
 
@@ -14,7 +18,7 @@ pushes, and cancels superseded runs for the same PR.
 | --- | --- |
 | Shipped Lua | Lua syntax, Luacheck, StyLua and packaging |
 | Test-only Lua | Lua checks |
-| Python | Python AST syntax and CI/Pullfrog regressions |
+| Python | Python AST syntax and CI/Pullfrog/package regressions |
 | Pullfrog helper or its tests | Python checks and actionlint |
 | Package builder or validator | Python checks and packaging |
 | Metadata, locale, graphics and other shipped files | Packaging |
@@ -58,6 +62,7 @@ stylua --check --config-path .stylua.toml control.lua
 actionlint
 python3 tools/test_ci_changes.py
 python3 tools/test_pullfrog_command.py
+python3 tools/test_package.py
 python3 tools/package.py
 python3 tools/validate_package.py
 ```
@@ -66,8 +71,9 @@ Python CI parses every tracked `.py` file with `ast.parse` without importing
 game code. Its syntax block in `.github/workflows/python.yml` can also be run
 locally. Routing regressions use real Git histories, including a Lua change
 after 3,500 documentation files, unusual filenames, renames, deletions,
-missing revisions, and both file-type transition directions on both events.
-Lua CI runs the focused file-selection test even on Lua-workflow-only changes.
+missing revisions, router self-disable attempts, and both file-type transition
+directions on both events. Lua CI runs the focused file-selection and compiler
+tests even on Lua-workflow-only changes, including filenames beginning with `-`.
 Every workflow edit retains the existing Pullfrog authorization regression gate;
 Pullfrog helper edits also retain workflow linting.
 
@@ -78,12 +84,16 @@ tracked release sources. Ordering, timestamps and file modes are deterministic.
 It preserves `Licence.txt`, `! Thank You !.txt`, gameplay sources, migrations,
 locale and graphics. It excludes hidden files, developer docs/tools/tests,
 contributor/agent guidance and generated output. Untracked files never ship;
-stage new release files before building a local development ZIP.
+stage new release files before building a local development ZIP. Both package
+tools require regular source files contained within the checkout, including
+metadata, and reject symlinks, backslashes, drive prefixes and traversal paths.
 
 The validator checks metadata, the versioned archive root, exact tracked
 release membership and bytes, required entrypoints and notices, CRC integrity
-and the SHA256 checksum. CI attaches the ZIP/checksum for seven days. It does
-not publish releases or change mod versions.
+and the SHA256 checksum. Python CI also tests source escapes and archive-path
+safety through both real tools. CI attaches the ZIP/checksum for seven days;
+reruns replace the same run's artifact. It does not publish releases or change
+mod versions.
 
 CI has read-only contents permissions and downloads no Factorio binaries or
 dependency mods. These checks do not prove game API compatibility, save

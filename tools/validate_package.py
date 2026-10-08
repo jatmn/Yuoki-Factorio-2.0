@@ -3,16 +3,28 @@
 import argparse
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import re
+import stat
 import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def release_source(file):
+    if '\\' in file or PureWindowsPath(file).drive or any(
+        part in {'', '.', '..'} for part in file.split('/')
+    ):
+        raise ValueError(f'Unsafe release path: {file!r}')
+    source = ROOT / file
+    if not stat.S_ISREG(source.lstat().st_mode) or not source.resolve().is_relative_to(ROOT):
+        raise ValueError(f'Release source must be a regular file within the checkout: {file!r}')
+    return source
+
+
 def validate(output):
-    info = json.loads((ROOT / 'info.json').read_text())
+    info = json.loads(release_source('info.json').read_text())
     for key in ('name', 'version', 'title', 'author', 'factorio_version'):
         if not isinstance(info.get(key), str) or not info[key].strip():
             raise ValueError(f'info.json: {key} must be a nonempty string')
@@ -42,6 +54,8 @@ def validate(output):
     }
     if not required <= expected:
         raise ValueError(f'Missing required release sources: {sorted(required - expected)}')
+    for file in expected:
+        release_source(file)
     with zipfile.ZipFile(archive) as package:
         names = package.namelist()
         if len(names) != len(set(names)) or set(names) != {f'{name}/{file}' for file in expected}:
@@ -49,7 +63,7 @@ def validate(output):
         if package.testzip() is not None:
             raise ValueError('ZIP failed its CRC check')
         for file in expected:
-            if package.read(f'{name}/{file}') != (ROOT / file).read_bytes():
+            if package.read(f'{name}/{file}') != release_source(file).read_bytes():
                 raise ValueError(f'ZIP content differs from source: {file}')
     checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
     if (output / 'SHA256SUMS').read_text() != f'{checksum}  {archive.name}\n':

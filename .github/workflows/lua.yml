@@ -20,7 +20,10 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install --no-install-recommends -y lua5.2
       - name: Test Lua file selection
-        run: python3 tools/test_ci_changes.py RoutingTests.test_lua_workflow_selects_type_changes
+        run: >-
+          python3 tools/test_ci_changes.py
+          RoutingTests.test_lua_workflow_selects_type_changes
+          RoutingTests.test_lua_workflow_checks_option_like_names
       - name: Select Lua files for this event
         env:
           BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
@@ -32,7 +35,7 @@ jobs:
       - name: Check Lua syntax
         run: |
           luac5.2 -p .luacheckrc
-          xargs -0 -r -n1 luac5.2 -p < .cache/ci-lua-files
+          xargs -0 -r -n1 luac5.2 -p -- < .cache/ci-lua-files
       - name: Lint Lua
         uses: lunarmodules/luacheck@cc089e3f65acdd1ef8716cc73a3eca24a6b845e4 # v1.2.0
         with:

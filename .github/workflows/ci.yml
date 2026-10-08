@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
   cancel-in-progress: true
 
 jobs:
@@ -33,7 +33,15 @@ jobs:
           BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: |
           git diff --check "$BASE" HEAD
-          python3 tools/ci_changes.py --base "$BASE" >> "$GITHUB_OUTPUT"
+          # An edited router must not decide whether its own checks run.
+          git ls-tree "$BASE" -- tools/ci_changes.py > "$RUNNER_TEMP/ci-router-entry"
+          if [ -s "$RUNNER_TEMP/ci-router-entry" ]; then
+            git show "$BASE:tools/ci_changes.py" > "$RUNNER_TEMP/ci-router.py"
+            python3 "$RUNNER_TEMP/ci-router.py" --base "$BASE" >> "$GITHUB_OUTPUT"
+          else
+            # The initial installation has no base router: validate everything.
+            printf '%s\n' lua=true python=true package=true workflows=true >> "$GITHUB_OUTPUT"
+          fi
 
   lua:
     needs: changes

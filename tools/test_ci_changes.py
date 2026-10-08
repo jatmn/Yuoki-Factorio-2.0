@@ -2,6 +2,7 @@
 """Regressions for CI routing and Lua selection; no game or dependency mods are loaded."""
 from pathlib import Path
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -13,7 +14,70 @@ from ci_changes import classify
 ROUTER = Path(__file__).with_name('ci_changes.py').resolve()
 
 
+def workflow_block(workflow, name):
+    text = (ROUTER.parents[1] / '.github/workflows' / workflow).read_text()
+    step = text.split(f'      - name: {name}\n', 1)[1].split('      - name:', 1)[0]
+    lines = []
+    for line in step.split('        run: |\n', 1)[1].splitlines():
+        if line.strip() and not line.startswith('          '):
+            break
+        lines.append(line)
+    return textwrap.dedent('\n'.join(lines))
+
+
 class RoutingTests(unittest.TestCase):
+    def test_dispatcher_does_not_execute_changed_router(self):
+        command = workflow_block('ci.yml', 'Route the complete Git diff')
+        for has_base_router in (True, False):
+            with self.subTest(has_base_router=has_base_router), \
+                    tempfile.TemporaryDirectory(prefix='yuoki-dispatch-') as directory:
+                root = Path(directory)
+
+                def git(*args):
+                    return subprocess.check_output([
+                        'git', '-c', 'user.name=CI test', '-c', 'user.email=ci@example.invalid', *args
+                    ], cwd=root, text=True).strip()
+
+                git('init', '-q')
+                (root / 'tools').mkdir()
+                router = root / 'tools/ci_changes.py'
+                if has_base_router:
+                    shutil.copy(ROUTER, router)
+                git('add', '.'); git('commit', '--allow-empty', '-qm', 'base')
+                base = git('rev-parse', 'HEAD')
+                router.write_text('print("lua=false\\npython=false\\npackage=false\\nworkflows=false")\n')
+                (root / 'control.lua').write_text('return (\n')
+                git('add', '.'); git('commit', '-qm', 'broken Lua with disabled router')
+                output = root / 'outputs'
+                scratch = root / 'scratch'
+                scratch.mkdir()
+                subprocess.run(['bash', '-e', '-o', 'pipefail', '-c', command], cwd=root, check=True,
+                               env={**os.environ, 'BASE': base, 'GITHUB_OUTPUT': str(output),
+                                    'RUNNER_TEMP': str(scratch)})
+                self.assertEqual(set(output.read_text().splitlines()), {
+                    'lua=true', 'python=true', 'package=true', 'workflows=true'
+                })
+
+    @unittest.skipUnless(shutil.which('luac5.2'), 'Lua workflow installs the required Lua 5.2 compiler')
+    def test_lua_workflow_checks_option_like_names(self):
+        with tempfile.TemporaryDirectory(prefix='yuoki-lua-option-') as directory:
+            root = Path(directory)
+
+            def git(*args):
+                return subprocess.check_output([
+                    'git', '-c', 'user.name=CI test', '-c', 'user.email=ci@example.invalid', *args
+                ], cwd=root, text=True).strip()
+
+            git('init', '-q')
+            shutil.copy(ROUTER.parents[1] / '.luacheckrc', root / '.luacheckrc')
+            git('add', '.'); git('commit', '-qm', 'base')
+            base = git('rev-parse', 'HEAD')
+            (root / '-generated.lua').write_text('return true\n')
+            git('add', '.'); git('commit', '-qm', 'option-like Lua name')
+            for name in ('Select Lua files for this event', 'Check Lua syntax'):
+                subprocess.run(['bash', '-e', '-o', 'pipefail', '-c', workflow_block('lua.yml', name)],
+                               cwd=root, env={**os.environ, 'BASE': base}, check=True)
+
     def test_lua_workflow_selects_type_changes(self):
         workflow = ROUTER.parents[1] / '.github/workflows/lua.yml'
         step = workflow.read_text().split('      - name: Select Lua files for this event\n', 1)[1]

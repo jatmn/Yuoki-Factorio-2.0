@@ -3,15 +3,27 @@
 import argparse
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
+import stat
 import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def release_source(file):
+    if '\\' in file or PureWindowsPath(file).drive or any(
+        part in {'', '.', '..'} for part in file.split('/')
+    ):
+        raise ValueError(f'Unsafe release path: {file!r}')
+    source = ROOT / file
+    if not stat.S_ISREG(source.lstat().st_mode) or not source.resolve().is_relative_to(ROOT):
+        raise ValueError(f'Release source must be a regular file within the checkout: {file!r}')
+    return source
+
+
 def pack(output):
-    info = json.loads((ROOT / 'info.json').read_text())
+    info = json.loads(release_source('info.json').read_text())
     name = f'{info["name"]}_{info["version"]}'
     target = output / f'{name}.zip'
     tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0')
@@ -22,10 +34,11 @@ def pack(output):
                 continue
             if any(part.startswith('.') or part in {'build', '__pycache__'} for part in relative.parts):
                 continue
+            source = release_source(file)
             entry = zipfile.ZipInfo(f'{name}/{file}', date_time=(2026, 10, 8, 0, 0, 0))
             entry.compress_type = zipfile.ZIP_DEFLATED
             entry.external_attr = 0o644 << 16
-            package.writestr(entry, (ROOT / file).read_bytes())
+            package.writestr(entry, source.read_bytes())
     (output / 'SHA256SUMS').write_text(
         f'{hashlib.sha256(target.read_bytes()).hexdigest()}  {target.name}\n'
     )
