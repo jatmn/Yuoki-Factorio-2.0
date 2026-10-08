@@ -1,5 +1,5 @@
 data:extend({
-	--[[
+  --[[
 	{
 		type = "bool-setting",
 		name = "yuoki-vanilla-overhaul",
@@ -7,57 +7,57 @@ data:extend({
 		default_value = false,
 		order = "a",
 	},
-	]]--
-	{
-		type = "bool-setting",
-		name = "yuoki-prod-mod-behaviour",
-		setting_type = "startup",
-		default_value = true,
-		order = "b",
-	},
-	{
-		type = "bool-setting",
-		name = "yuoki-start-with-yi-suit",
-		setting_type = "startup",
-		default_value = false,
-		order = "c",
-	},
-	{
-		type = "int-setting",
-		name = "yuoki-inventory-size",
-		setting_type = "startup",
-		minimum_value = 80,
-		maximum_value = 150,
-		default_value = 80,
-		order = "d",
-	},
-	{
-		type = "int-setting",
-		name = "yuoki-player-reach",
-		setting_type = "startup",
-		minimum_value = 10,
-		maximum_value = 32,
-		default_value = 10,
-		order = "e",
-	},
-	{
-		type = "bool-setting",
-		name = "yuoki-uc-heavyoil",
-		setting_type = "startup",
-		default_value = true,
-		order = "f",
-	},
+	]]
+  --
+  {
+    type = "bool-setting",
+    name = "yuoki-prod-mod-behaviour",
+    setting_type = "startup",
+    default_value = true,
+    order = "b",
+  },
+  {
+    type = "bool-setting",
+    name = "yuoki-start-with-yi-suit",
+    setting_type = "startup",
+    default_value = false,
+    order = "c",
+  },
+  {
+    type = "int-setting",
+    name = "yuoki-inventory-size",
+    setting_type = "startup",
+    minimum_value = 80,
+    maximum_value = 150,
+    default_value = 80,
+    order = "d",
+  },
+  {
+    type = "int-setting",
+    name = "yuoki-player-reach",
+    setting_type = "startup",
+    minimum_value = 10,
+    maximum_value = 32,
+    default_value = 10,
+    order = "e",
+  },
+  {
+    type = "bool-setting",
+    name = "yuoki-uc-heavyoil",
+    setting_type = "startup",
+    default_value = true,
+    order = "f",
+  },
 })
 
-if mods["bobinserters"] or mods["Smart_Inserters"]
-	or mods["quick-adjustable-inserters"] or mods["Inserter_Config"] then
-	data:extend({
-		{
-			type = "bool-setting",
-			name = "yuoki-inserter-cleanup",
-			setting_type = "startup",
-			default_value = false,
-			order = "g",
-		},
-	})
+if mods["bobinserters"] or mods["Smart_Inserters"] or mods["quick-adjustable-inserters"] or mods["Inserter_Config"] then
+  data:extend({
+    {
+      type = "bool-setting",
+      name = "yuoki-inserter-cleanup",
+      setting_type = "startup",
+      default_value = false,
+      order = "g",
+    },
+  })
 end
