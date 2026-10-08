@@ -5,8 +5,7 @@ currently maintained by [jatmn](https://mods.factorio.com/user/jatmn).
 
 ## Compatibility
 
-The `release/1.3.0` branch is the Yuoki **1.3.0** release line for
-**Factorio 2.1.20 or later**. Use Yuoki **1.2.x** with Factorio 2.0.
+Yuoki **1.3.0** requires **Factorio 2.1.20 or later**. Use Yuoki **1.2.x** with Factorio 2.0.
 
 Space Age and Quality are optional. If enabled, each must be version 2.1.20
 or later. Factorio 2.1 provides recycling through the separate built-in
@@ -20,7 +19,7 @@ these are declared incompatible in [info.json](info.json).
 
 Install [Yuoki Industries](https://mods.factorio.com/mod/Yuoki) through the
 in-game mod manager, selecting a version compatible with your Factorio version.
-To test this development branch, build `Yuoki_1.3.0.zip` using the commands in
+To install from source, build `Yuoki_1.3.0.zip` using the commands in
 [Development checks](docs/development.md#installable-package), then put that ZIP
 in your Factorio mods directory. Enable only one installed copy of Yuoki.
 Back up existing saves before upgrading from Factorio 2.0.
