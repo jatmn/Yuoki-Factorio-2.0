@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path, PureWindowsPath
+import re
 import stat
 import subprocess
 import zipfile
@@ -24,6 +25,10 @@ def release_source(file):
 
 def pack(output):
     info = json.loads(release_source('info.json').read_text())
+    # Validate path-defining fields before any archive or checksum is written.
+    for key, pattern in [('name', r'[A-Za-z0-9_-]+'), ('version', r'\d+\.\d+\.\d+')]:
+        if not isinstance(info.get(key), str) or not re.fullmatch(pattern, info[key]):
+            raise ValueError(f'info.json: invalid {key}: {info.get(key)!r}')
     name = f'{info["name"]}_{info["version"]}'
     target = output / f'{name}.zip'
     tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0')

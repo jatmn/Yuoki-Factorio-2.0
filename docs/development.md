@@ -87,6 +87,9 @@ contributor/agent guidance and generated output. Untracked files never ship;
 stage new release files before building a local development ZIP. Both package
 tools require regular source files contained within the checkout, including
 metadata, and reject symlinks, backslashes, drive prefixes and traversal paths.
+The builder checks the mod name and version against the validator's rules
+before deriving or opening the output ZIP, so malformed metadata cannot
+overwrite files outside the requested output directory.
 
 The validator checks metadata, the versioned archive root, exact tracked
 release membership and bytes, required entrypoints and notices, CRC integrity

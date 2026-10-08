@@ -102,6 +102,39 @@ class PackageSourceTests(unittest.TestCase):
         self.git('add', '--', file)
         self.assert_source_rejected(file)
 
+    def test_unsafe_metadata_cannot_overwrite_outside_output(self):
+        cases = (
+            ('name', '../escaped', 'escaped_1.2.23.zip'),
+            ('version', '1/../../escaped', 'escaped.zip'),
+        )
+        # Make the version-derived intermediate directory exist so the old
+        # builder actually reaches the escaping file, rather than a setup error.
+        (self.output / 'Yuoki_1').mkdir()
+        for key, value, escaped_name in cases:
+            with self.subTest(field=key):
+                info = json.loads(self.sources['info.json'])
+                info[key] = value
+                (self.root / 'info.json').write_text(json.dumps(info))
+                escaped = self.workspace / escaped_name
+                sentinel = b'preserve preexisting outside file\n'
+                escaped.write_bytes(sentinel)
+                (self.output / 'SHA256SUMS').write_text('preserve existing checksum\n')
+                (self.output / 'Yuoki_1.2.23.zip').write_bytes(b'preserve existing package\n')
+                existing = {
+                    path.relative_to(self.output): path.read_bytes()
+                    for path in self.output.rglob('*') if path.is_file()
+                }
+                result = self.tool('package.py')
+                validation = self.tool('validate_package.py')
+                self.assertNotEqual(validation.returncode, 0, validation.stdout)
+                self.assertIn(f'info.json: invalid {key}', validation.stderr)
+                self.assertTrue(escaped.read_bytes() == sentinel, 'Preexisting outside file was overwritten')
+                self.assertEqual({
+                    path.relative_to(self.output): path.read_bytes()
+                    for path in self.output.rglob('*') if path.is_file()
+                }, existing)
+                self.assertNotEqual(result.returncode, 0, result.stdout)
+
 
 if __name__ == '__main__':
     unittest.main()
