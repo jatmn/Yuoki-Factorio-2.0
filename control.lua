@@ -1,5 +1,6 @@
 --require "defines"
 require("scripts.add_yi_suit")
+script.on_configuration_changed(require("scripts.inserter-cleanup"))
 
 remote.add_interface("yuoki", {
 	spawn = function()

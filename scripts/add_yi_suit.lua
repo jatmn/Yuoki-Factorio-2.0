@@ -1,4 +1,7 @@
+local reconcile_inserters = require("scripts.inserter-cleanup")
+
 script.on_init(function()
+	reconcile_inserters()
 	if settings.startup["yuoki-start-with-yi-suit"].value == true then
 		if remote.interfaces["freeplay"] then
 			local created_items = remote.call("freeplay", "get_created_items")
