@@ -11,7 +11,7 @@ if mods["space-age"] and mods["quality"] then
       subgroup = "y-module",
       order = "m-4c",
       stack_size = 100,
-      effect = { quality = 0.1, consumption = 2.5, productivity = 0.05 },
+      effect = { quality = 0.01, consumption = 2.5, productivity = 0.05 },
       weight = 20 * kg,
       --auto_recycle = true,
     },

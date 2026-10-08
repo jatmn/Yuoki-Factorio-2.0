@@ -730,10 +730,9 @@ data:extend({
       volume = 200,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { direction = defines.direction.east, position = { 0, 0 } },
-        { direction = defines.direction.west, position = { 0, 0 } },
+        { direction = defines.direction.east, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.west, position = { 0, 0 }, hide_connection_info = true },
       },
-      hide_connection_info = true,
     },
     pictures = pipepictures_hv(),
 
@@ -768,10 +767,9 @@ data:extend({
       volume = 200,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, 0 } },
-        { direction = defines.direction.south, position = { 0, 0 } },
+        { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.south, position = { 0, 0 }, hide_connection_info = true },
       },
-      hide_connection_info = true,
     },
     pictures = pipepictures_hv(),
 
@@ -932,12 +930,11 @@ data:extend({
       volume = 80,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, 0 } },
-        { direction = defines.direction.east, position = { 0, 0 } },
-        { direction = defines.direction.south, position = { 0, 0 } },
-        { direction = defines.direction.west, position = { 0, 0 } },
+        { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.east, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.south, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.west, position = { 0, 0 }, hide_connection_info = true },
       },
-      hide_connection_info = true,
     },
     pictures = pipepictures_hv(),
 
@@ -974,15 +971,15 @@ data:extend({
       volume = 80,
       --pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, 0 } },
+        { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
         {
           connection_type = "underground",
+          hide_connection_info = true,
           direction = defines.direction.south,
           position = { 0, 0 },
           max_underground_distance = 20,
         },
       },
-      hide_connection_info = true,
     },
     impact_category = "metal",
     pictures = {
@@ -1111,12 +1108,11 @@ data:extend({
       volume = 130,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, 0 } },
-        { direction = defines.direction.east, position = { 0, 0 } },
-        { direction = defines.direction.south, position = { 0, 0 } },
-        { direction = defines.direction.west, position = { 0, 0 } },
+        { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.east, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.south, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.west, position = { 0, 0 }, hide_connection_info = true },
       },
-      hide_connection_info = true,
     },
     pictures = pipepictures_ec(),
 
@@ -1153,15 +1149,15 @@ data:extend({
       volume = 130,
       --pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, 0 } },
+        { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
         {
           connection_type = "underground",
+          hide_connection_info = true,
           direction = defines.direction.south,
           position = { 0, 0 },
           max_underground_distance = 30,
         },
       },
-      hide_connection_info = true,
     },
     impact_category = "metal",
     pictures = {
@@ -1930,12 +1926,11 @@ data:extend({
       volume = 100,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, 0 } },
-        { direction = defines.direction.east, position = { 0, 0 } },
-        { direction = defines.direction.south, position = { 0, 0 } },
-        { direction = defines.direction.west, position = { 0, 0 } },
+        { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.east, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.south, position = { 0, 0 }, hide_connection_info = true },
+        { direction = defines.direction.west, position = { 0, 0 }, hide_connection_info = true },
       },
-      hide_connection_info = true,
     },
     pictures = pipepictures_green(),
 
@@ -1972,15 +1967,15 @@ data:extend({
       volume = 100,
       --pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { direction = defines.direction.north, position = { 0, 0 } },
+        { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
         {
           connection_type = "underground",
+          hide_connection_info = true,
           direction = defines.direction.south,
           position = { 0, 0 },
           max_underground_distance = 25,
         },
       },
-      hide_connection_info = true,
     },
     impact_category = "metal",
     pictures = {
