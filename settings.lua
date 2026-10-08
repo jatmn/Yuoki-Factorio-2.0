@@ -48,3 +48,16 @@ data:extend({
 		order = "f",
 	},
 })
+
+if mods["bobinserters"] or mods["Smart_Inserters"]
+	or mods["quick-adjustable-inserters"] or mods["Inserter_Config"] then
+	data:extend({
+		{
+			type = "bool-setting",
+			name = "yuoki-inserter-cleanup",
+			setting_type = "startup",
+			default_value = false,
+			order = "g",
+		},
+	})
+end
