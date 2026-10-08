@@ -110,5 +110,4 @@ CI has read-only contents permissions and downloads no Factorio binaries or
 dependency mods. These checks do not prove game API compatibility, save
 migration, recipe correctness, graphics or gameplay. Engine validation remains
 local and must use the appropriate Factorio/mod versions for behavioral work.
-The imported Pullfrog authorization helper and regressions retain the owner-command
-policy used on `main`; this branch does not install the agent workflow.
+The separate [Pullfrog workflow](pullfrog.md) retains its owner-command policy.
