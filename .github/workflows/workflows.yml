@@ -1,37 +1,24 @@
-name: Pullfrog checks
+name: Workflows
 
-# These checks validate the integration; they never launch the agent.
 on:
-  pull_request:
-    paths:
-      - '.github/workflows/**'
-      - 'tools/pullfrog_command.py'
-      - 'tools/test_pullfrog_command.py'
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/**'
-      - 'tools/pullfrog_command.py'
-      - 'tools/test_pullfrog_command.py'
+  workflow_call:
 
 permissions:
   contents: read
 
 jobs:
-  validate:
+  actionlint:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
-      - name: Test owner command authorization
-        run: python3 tools/test_pullfrog_command.py
-      - name: Validate workflows
+      - name: Validate workflows with actionlint
         env:
-          ACTIONLINT_VERSION: '1.7.12'
+          ACTIONLINT_VERSION: 1.7.12
         run: |
-          curl --fail --location --silent --show-error \
+          curl --fail --silent --show-error --location --retry 3 \
             "https://github.com/rhysd/actionlint/releases/download/v${ACTIONLINT_VERSION}/actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz" \
             -o "$RUNNER_TEMP/actionlint.tar.gz"
           echo "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8  $RUNNER_TEMP/actionlint.tar.gz" |

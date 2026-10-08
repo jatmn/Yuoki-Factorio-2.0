@@ -18,8 +18,9 @@ issues and PRs too.
 This follows the working setup in
 [yuoki-quinityn](https://github.com/jatmn/yuoki-quinityn/blob/3be55808903e820839cdd515c9ef8c79f036e327/docs/pullfrog.md).
 Opening a PR does not launch Pullfrog. Its agent workflow has no PR, push,
-schedule or `workflow_dispatch` trigger. The separate **Pullfrog checks**
-workflow only runs authorization tests and workflow validation.
+schedule or `workflow_dispatch` trigger. The separate **CI** dispatcher runs
+authorization tests in its Python job and workflow validation in its actionlint
+job; these validation jobs never launch the agent.
 
 ## Account and repository setup
 
