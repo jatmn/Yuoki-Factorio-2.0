@@ -1,10 +1,12 @@
+local assembler_pictures = require("__base__.prototypes.entity.assembler-pictures")
+
 data:extend({
 
 	-- Standard-Mode
 	{
 		type = "recipe",
 		name = "y_reactor_mf1",
-		category = "yuoki_mf", -- mechanical force -obninsk
+		categories = { "yuoki_mf" }, -- mechanical force -obninsk
 		enabled = true,
 		energy_required = 1.00,
 		ingredients = {
@@ -24,7 +26,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y_reactor_mox1",
-		category = "yuoki_mf", -- mechanical force -obninsk
+		categories = { "yuoki_mf" }, -- mechanical force -obninsk
 		enabled = true,
 		energy_required = 15.00,
 		ingredients = {
@@ -46,7 +48,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y_reactor_mox2",
-		category = "yuoki_mf", -- mechanical force -obninsk
+		categories = { "yuoki_mf" }, -- mechanical force -obninsk
 		enabled = true,
 		energy_required = 20.00,
 		ingredients = {
@@ -79,7 +81,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
@@ -92,7 +94,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "output",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = 1,

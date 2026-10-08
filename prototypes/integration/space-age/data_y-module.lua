@@ -1,4 +1,4 @@
-if mods["space-age"] then
+if mods["space-age"] and mods["quality"] then
 	data:extend({
 
 		{

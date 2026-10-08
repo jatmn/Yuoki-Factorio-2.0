@@ -3,7 +3,7 @@ if mods["space-age"] then
 		{
 			type = "recipe",
 			name = "j_crushing_to_n4",
-			category = "crushing",
+			categories = { "crushing" },
 			subgroup = "space-crushing",
 			enabled = true,
 			energy_required = 5.00,
@@ -13,8 +13,8 @@ if mods["space-age"] then
 			},
 			results = {
 				{ type = "item", name = "y-res1", amount = 20.0 },
-				{ type = "item", name = "metallic-asteroid-chunk", amount = 1, probability = 0.2 },
-				{ type = "item", name = "oxide-asteroid-chunk", amount = 1, probability = 0.2 },
+				{ type = "item", name = "metallic-asteroid-chunk", amount = 1, independent_probability = 0.2 },
+				{ type = "item", name = "oxide-asteroid-chunk", amount = 1, independent_probability = 0.2 },
 			},
 			main_product = "y-res1",
 			icons = yi.lib.recipe.crushing.asteroid_2(
@@ -33,7 +33,7 @@ if mods["space-age"] then
 		{
 			type = "recipe",
 			name = "j_crushing_to_f7",
-			category = "crushing",
+			categories = { "crushing" },
 			subgroup = "space-crushing",
 			enabled = true,
 			energy_required = 5.00,
@@ -43,8 +43,8 @@ if mods["space-age"] then
 			},
 			results = {
 				{ type = "item", name = "y-res2", amount = 20.0 },
-				{ type = "item", name = "carbonic-asteroid-chunk", amount = 1, probability = 0.2 },
-				{ type = "item", name = "oxide-asteroid-chunk", amount = 1, probability = 0.2 },
+				{ type = "item", name = "carbonic-asteroid-chunk", amount = 1, independent_probability = 0.2 },
+				{ type = "item", name = "oxide-asteroid-chunk", amount = 1, independent_probability = 0.2 },
 			},
 			main_product = "y-res2",
 			icons = yi.lib.recipe.crushing.asteroid_2(

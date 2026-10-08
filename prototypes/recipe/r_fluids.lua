@@ -3,7 +3,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y-coaltoliquid-bergius-recipe",
-		category = "chemistry",
+		categories = { "chemistry" },
 		energy_required = 6,
 		enabled = true, 
 		ingredients =
@@ -24,7 +24,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y-coaltoliquid-fischer-recipe",
-		category = "chemistry",
+		categories = { "chemistry" },
 		energy_required = 8,
 		enabled = true, 
 		ingredients =
@@ -45,7 +45,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y-wood-gas-recipe",
-		category = "chemistry",
+		categories = { "chemistry" },
 		energy_required = 6,
 		enabled = true,
 		ingredients =
@@ -66,7 +66,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y-sulfuric-acid",
-		category = "yuoki-archaeology-wash",
+		categories = { "yuoki-archaeology-wash" },
 		--category = "chemistry",
 		energy_required = 4,
 		ingredients = {
@@ -84,7 +84,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "y-water-gen-fluid",
-		category = "yuoki-watergen",
+		categories = { "yuoki-watergen" },
 		energy_required = 2,
 		ingredients = {},
 		results = { { type = "fluid", name = "water", amount = 1200 } },

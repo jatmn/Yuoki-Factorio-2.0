@@ -1,3 +1,5 @@
+local assembler_pictures = require("__base__.prototypes.entity.assembler-pictures")
+
 data:extend({
 
 	--y-obninsk-reactor
@@ -42,7 +44,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 50,
 				height = 2,
@@ -56,7 +58,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "output",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 5,
 				height = 2,
@@ -600,7 +602,7 @@ data:extend({
 		input_fluid_box = {
 			volume = 200,
 			production_type = "input-output",
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = assembler_pictures.assembler2pipepictures,
 			pipe_covers = pipecoverspictures(),
 			base_area = 1,
 			pipe_connections = {

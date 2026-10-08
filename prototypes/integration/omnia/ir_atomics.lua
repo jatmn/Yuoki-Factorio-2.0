@@ -15,7 +15,7 @@ if mods["omnia"] then
 			},
 			main_product = "y-unicomp-a2",
 			subgroup = "j-y-atomics-4",
-			category = "yuoki-atomics",
+			categories = { "yuoki-atomics" },
 			icons = {
 				{
 
@@ -45,7 +45,7 @@ if mods["omnia"] then
 			},
 			main_product = "omnite",
 			subgroup = "j-y-atomics-13",
-			category = "yuoki-atomics",
+			categories = { "yuoki-atomics" },
 			icons = {
 				{
 					icon = "__omnia__/graphics/icons/omnite.png",

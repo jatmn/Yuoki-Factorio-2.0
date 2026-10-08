@@ -157,7 +157,7 @@ function yi.lib.item.get_basic_type_simple(name) --assumes type is item, even if
 	return item_type
 end
 
---Same as ingredient, but has support for amount_min, amount_max and probability
+--Same as ingredient, but has support for amount_min, amount_max and independent_probability
 function yi.lib.item.result_simple(inputs)
 	local item = {}
 
@@ -181,8 +181,8 @@ function yi.lib.item.result_simple(inputs)
 			return nil
 		end
 
-		if inputs.probability then
-			item.probability = inputs.probability
+		if inputs.independent_probability then
+			item.independent_probability = inputs.independent_probability
 		end
 
 		if inputs.type then
@@ -271,8 +271,8 @@ function yi.lib.item.combine(item1_in, item2_in)
 			item.amount_max = item1.amount_max + item2.amount_max
 		end
 
-		if item1.probability and item2.probability then
-			item.probability = (item1.probability + item2.probability) / 2
+		if item1.independent_probability and item2.independent_probability then
+			item.independent_probability = (item1.independent_probability + item2.independent_probability) / 2
 		end
 
 		item.ignored_by_productivity = item1.ignored_by_productivity or item2.ignored_by_productivity
@@ -544,7 +544,7 @@ function yi.lib.recipe.atomics.recipes_make_item(icon_name, size, item_amount, u
 		results = { { type = "item", name = "y-unicomp-a2", amount = unicomp } },
 		main_product = "y-unicomp-a2",
 		subgroup = selected.g1,
-		category = "yuoki-atomics",
+		categories = { "yuoki-atomics" },
 		icons = yi.lib.recipe.atomics.item_down(item_n, size),
 		auto_recycle = false,
 		allow_quality = false,
@@ -560,7 +560,7 @@ function yi.lib.recipe.atomics.recipes_make_item(icon_name, size, item_amount, u
 		results = { { type = "item", name = item_n, amount = item_amt } },
 		main_product = item_n,
 		subgroup = selected.g2,
-		category = "yuoki-atomics",
+		categories = { "yuoki-atomics" },
 		icons = yi.lib.recipe.atomics.item_up(item_n, size),
 		auto_recycle = false,
 		allow_quality = false,
@@ -602,7 +602,7 @@ function yi.lib.recipe.atomics.recipes_make_fluid(icon_name, size, item_amount, 
 		results = { { type = "item", name = "y-unicomp-a2", amount = unicomp } },
 		main_product = "y-unicomp-a2",
 		subgroup = selected.g1,
-		category = "yuoki-atomics",
+		categories = { "yuoki-atomics" },
 		icons = yi.lib.recipe.atomics.fluid_down(item_n, size),
 		auto_recycle = false,
 		allow_quality = false,
@@ -618,7 +618,7 @@ function yi.lib.recipe.atomics.recipes_make_fluid(icon_name, size, item_amount, 
 		results = { { type = "fluid", name = item_n, amount = item_amt } },
 		main_product = item_n,
 		subgroup = selected.g2,
-		category = "yuoki-atomics",
+		categories = { "yuoki-atomics" },
 		icons = yi.lib.recipe.atomics.fluid_up(item_n, size),
 		auto_recycle = false,
 		allow_quality = false,

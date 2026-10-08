@@ -1,3 +1,5 @@
+local assembler_pictures = require("__base__.prototypes.entity.assembler-pictures")
+
 data:extend({
 	--[[
 	{
@@ -186,7 +188,7 @@ data:extend({
 		input_fluid_box = {
 			volume = 200,
 			production_type = "input-output",
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = assembler_pictures.assembler2pipepictures,
 			pipe_covers = pipecoverspictures(),
 			base_area = 1,
 			pipe_connections = {
@@ -266,7 +268,7 @@ data:extend({
 		input_fluid_box = {
 			volume = 200,
 			production_type = "input-output",
-			pipe_picture = assembler2pipepictures(),
+			pipe_picture = assembler_pictures.assembler2pipepictures,
 			pipe_covers = pipecoverspictures(),
 			base_area = 1,
 			pipe_connections = {
@@ -395,7 +397,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
@@ -407,7 +409,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "output",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = 1,
@@ -471,7 +473,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler3pipepictures(),
+				pipe_picture = assembler_pictures.assembler3pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
@@ -482,7 +484,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "output",
-				pipe_picture = assembler3pipepictures(),
+				pipe_picture = assembler_pictures.assembler3pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = 1,
@@ -559,7 +561,7 @@ data:extend({
 				production_type = "output",
 				base_area = 80,
 				base_level = 5,
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_connections = {
 					{ flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } },
 					{ flow_direction = "output", direction = defines.direction.north, position = { 0, -1 } },
@@ -779,7 +781,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
@@ -790,7 +792,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
@@ -801,7 +803,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "output",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_level = 1,
 				pipe_connections = { { direction = defines.direction.north, position = { 0.5, -0.5 } } },
@@ -809,7 +811,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "output",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_level = 1,
 				pipe_connections = { { direction = defines.direction.north, position = { -0.5, -0.5 } } },
@@ -835,7 +837,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "input",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = -1,
@@ -846,7 +848,7 @@ data:extend({
 			{
 				volume = 200,
 				production_type = "output",
-				pipe_picture = assembler2pipepictures(),
+				pipe_picture = assembler_pictures.assembler2pipepictures,
 				pipe_covers = pipecoverspictures(),
 				base_area = 10,
 				base_level = 1,

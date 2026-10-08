@@ -17,7 +17,7 @@ data:extend({
 		main_product = "y-fuel-cell-c",
 		group = "yuoki-energy",
 		subgroup = "y-fuel",
-		category = "yuoki-stargate",
+		categories = { "yuoki-stargate" },
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/fuel_cell_c.png",
 	},
@@ -29,7 +29,7 @@ data:extend({
 		icon_size = 64,
 		icon = "__Yuoki__/graphics/icons/fuel_cell_c.png",
 		subgroup = "y-fuel",
-		fuel_category = "chemical",
+		fuel_categories = { "chemical" },
 		fuel_value = "10GJ",
 		stack_size = 500,
 	},
@@ -47,7 +47,7 @@ data:extend({
 		},
 		main_product = "y-fame",
 		subgroup = "y-stargate-4",
-		category = "yuoki-fame",
+		categories = { "yuoki-fame" },
 	},
 
 	{
@@ -64,7 +64,7 @@ data:extend({
 		},
 		main_product = "y-fame",
 		subgroup = "y-stargate-4",
-		category = "yuoki-fame",
+		categories = { "yuoki-fame" },
 	},
 
 	-- fame
