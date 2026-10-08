@@ -1,0 +1,57 @@
+name: Lua
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  lua:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install Lua 5.2
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install --no-install-recommends -y lua5.2
+      - name: Test Lua file selection
+        run: >-
+          python3 tools/test_ci_changes.py
+          RoutingTests.test_lua_workflow_selects_type_changes
+          RoutingTests.test_lua_workflow_checks_option_like_names
+      - name: Select Lua files for this event
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          mkdir -p .cache
+          git diff --check "$BASE" HEAD
+          # Enforce changed files on both events until the legacy baseline is done.
+          git diff --no-renames --name-only --diff-filter=ACMRT -z "$BASE" HEAD -- '*.lua' > .cache/ci-lua-files
+      - name: Check Lua syntax
+        run: |
+          luac5.2 -p .luacheckrc
+          xargs -0 -r -n1 luac5.2 -p -- < .cache/ci-lua-files
+      - name: Lint Lua
+        uses: lunarmodules/luacheck@cc089e3f65acdd1ef8716cc73a3eca24a6b845e4 # v1.2.0
+        with:
+          # This action runs args through sh. Parse the config even for an empty
+          # file list; pass filenames as NUL-delimited data, never shell source.
+          args: >-
+            --filename control.lua - < /dev/null &&
+            xargs -0 -r luacheck -- < .cache/ci-lua-files
+      - name: Install StyLua
+        uses: JohnnyMorganz/stylua-action@76fd70c03e6340ceaf673366712db9b20560b402 # v5
+        with:
+          token: ${{ github.token }}
+          version: v2.5.2
+          args: 'false'
+      - name: Check Lua formatting
+        run: |
+          # Parse the configuration even when only CI/configuration changed.
+          printf 'return true\n' | stylua --check --config-path .stylua.toml -
+          xargs -0 -r stylua --check --config-path .stylua.toml -- < .cache/ci-lua-files

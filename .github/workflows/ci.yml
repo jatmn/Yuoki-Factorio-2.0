@@ -1,0 +1,64 @@
+name: CI
+
+# Do not use event-level path filters: GitHub truncates their changed-file list.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  changes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    outputs:
+      lua: ${{ steps.paths.outputs.lua }}
+      python: ${{ steps.paths.outputs.python }}
+      package: ${{ steps.paths.outputs.package }}
+      workflows: ${{ steps.paths.outputs.workflows }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Route the complete Git diff
+        id: paths
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          git diff --check "$BASE" HEAD
+          # An edited router must not decide whether its own checks run.
+          git ls-tree "$BASE" -- tools/ci_changes.py > "$RUNNER_TEMP/ci-router-entry"
+          if [ -s "$RUNNER_TEMP/ci-router-entry" ]; then
+            git show "$BASE:tools/ci_changes.py" > "$RUNNER_TEMP/ci-router.py"
+            python3 "$RUNNER_TEMP/ci-router.py" --base "$BASE" >> "$GITHUB_OUTPUT"
+          else
+            # The initial installation has no base router: validate everything.
+            printf '%s\n' lua=true python=true package=true workflows=true >> "$GITHUB_OUTPUT"
+          fi
+
+  lua:
+    needs: changes
+    if: needs.changes.outputs.lua == 'true'
+    uses: ./.github/workflows/lua.yml
+
+  python:
+    needs: changes
+    if: needs.changes.outputs.python == 'true'
+    uses: ./.github/workflows/python.yml
+
+  package:
+    needs: changes
+    if: needs.changes.outputs.package == 'true'
+    uses: ./.github/workflows/package.yml
+
+  actionlint:
+    needs: changes
+    if: needs.changes.outputs.workflows == 'true'
+    uses: ./.github/workflows/workflows.yml

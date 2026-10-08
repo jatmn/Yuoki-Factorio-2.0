@@ -1,0 +1,34 @@
+name: Python
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Check Python syntax without executing game tests
+        run: |
+          python3 - <<'PY'
+          import ast
+          import subprocess
+          from pathlib import Path
+
+          files = subprocess.check_output(['git', 'ls-files', '-z', '*.py']).decode().split('\0')
+          for name in filter(None, files):
+              ast.parse(Path(name).read_bytes(), filename=name)
+              print('PASS', name)
+          PY
+      - name: Test CI change routing
+        run: python3 tools/test_ci_changes.py
+      - name: Test Pullfrog owner authorization
+        run: python3 tools/test_pullfrog_command.py
+      - name: Test package source boundaries
+        run: python3 tools/test_package.py
