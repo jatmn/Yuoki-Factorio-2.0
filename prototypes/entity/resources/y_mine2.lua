@@ -1,15 +1,15 @@
 data:extend({
-	{
-		type = "item",
-		name = "y-res2",
-		icon_size = 64,
-		icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png",
-		subgroup = "raw-resource",
-		order = "r",
-		stack_size = 250,
-	},
+  {
+    type = "item",
+    name = "y-res2",
+    icon_size = 64,
+    icon = "__Yuoki__/graphics/icons/yi-res-2-pur.png",
+    subgroup = "raw-resource",
+    order = "r",
+    stack_size = 250,
+  },
 
-	--[[
+  --[[
 	{
 		type = "autoplace-control",
 		name = "y-res2",
@@ -18,7 +18,7 @@ data:extend({
 		category = "resource",
 		has_starting_area_placement = true,
 	},
-	
+
 	{
 		type = "resource",
 		name = "y-res2",
@@ -51,10 +51,10 @@ data:extend({
 			},
 			starting_area_size = 5,
 			starting_area_amount = 1500,
-			
+
 		},
 		stage_counts = {4000, 2000, 1500, 900, 300, 75, 25, 10},
-		stages = { 
+		stages = {
 			sheet = {
 				filename = "__Yuoki__/graphics/entity/resources/yellow_sheet.png",
 				priority = "extra-high",

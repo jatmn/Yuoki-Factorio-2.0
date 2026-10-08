@@ -1,5 +1,5 @@
 data:extend({
-	--[[
+  --[[
 	{
 		type = "recipe",
 		name = "y_basement_5x5a",
