@@ -51,7 +51,7 @@ end
 -- internal helper to scan ingredients
 local function get_old_quantity(ingredients, old)
   local amount = 0
-  for i, ingredient in pairs(ingredients) do
+  for _, ingredient in pairs(ingredients) do
     local item = yi.lib.item.ingredient_simple(ingredient)
     if item then
       if item.name == old then
@@ -420,7 +420,7 @@ end
 
 function yi.lib.recipe.replace_ingredient_in_all(old, new)
   if type(old) == "string" and type(new) == "string" then
-    for i, recipe in pairs(data.raw.recipe) do
+    for _, recipe in pairs(data.raw.recipe) do
       yi.lib.recipe.replace_ingredient(recipe.name, old, new)
     end
   end
@@ -630,7 +630,7 @@ end
 
 -- Update Atomics recipes with up or down arrow
 -- This function requires the source and target types to be declared
-function yi.lib.recipe.atomics.update_d_icon(source_type, source_name, target_type, target_name, direction)
+function yi.lib.recipe.atomics.update_d_icon(_source_type, source_name, target_type, target_name, direction)
   local target = data.raw[target_type] and data.raw[target_type][target_name]
   if not target then
     return

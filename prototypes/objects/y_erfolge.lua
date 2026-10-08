@@ -1,5 +1,5 @@
 if false then
-  data:extend({
+  data:extend({ -- luacheck: ignore 511 (legacy achievements intentionally disabled)
 
     -- items
     --[[ disabled because the matching recipe is commented out

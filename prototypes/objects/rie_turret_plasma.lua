@@ -1,4 +1,4 @@
-local function make_plasma_sounds(volume)
+local function make_plasma_sounds(_volume)
   return {
     {
       filename = "__Yuoki__/sounds/plasma-1.ogg",

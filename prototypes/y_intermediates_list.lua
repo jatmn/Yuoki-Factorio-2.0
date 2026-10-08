@@ -87,7 +87,7 @@ end
 --			recipe.allow_productivity = true
 --end
 
-for k, v in pairs(productivity_item_list) do
+for _, v in pairs(productivity_item_list) do
   if data.raw.recipe[v] then
     data.raw.recipe[v].allow_productivity = true
   --data.raw.recipe["y-inserter-s4"].order = "c"

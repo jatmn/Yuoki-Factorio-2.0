@@ -22,8 +22,8 @@
 --
 
 local resource_autoplace = require("resource-autoplace")
-local sounds = require("__base__.prototypes.entity.sounds")
-local simulations = require("__base__.prototypes.factoriopedia-simulations")
+require("__base__.prototypes.entity.sounds")
+require("__base__.prototypes.factoriopedia-simulations")
 
 --local noise = require("noise")
 --local tne = noise.to_noise_expression
@@ -42,35 +42,10 @@ data.raw.planet.nauvis.map_gen_settings.autoplace_controls["y-res2"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["y-res1"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["y-res2"] = {}
 
-local function autoplace_settings(name, order, coverage)
-  return {
-    order = order,
-    control = name,
-    sharpness = 15 / 16,
-    richness_multiplier = 1500,
-    richness_multiplier_distance_bonus = 20,
-    richness_base = 10,
-    coverage = coverage,
-    peaks = {
-      {
-        noise_layer = name,
-        noise_octaves_difference = -0.85,
-        noise_persistence = 0.4,
-      },
-    },
-    starting_area_size = 5500 * coverage,
-    starting_area_amount = 1600,
-  }
-end
-
 local function resource(resource_parameters, autoplace_parameters)
   local gfx_size, frame_count = 38, 4
   if resource_parameters.name == "y-res2" then
     gfx_size, frame_count = 40, 8
-  end
-
-  if coverage == nil then
-    coverage = 0.02
   end
 
   if resource_parameters.name == "y-res2" then

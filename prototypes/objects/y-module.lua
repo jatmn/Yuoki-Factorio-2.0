@@ -93,7 +93,6 @@ data:extend({
     order = "m-g1",
     stack_size = 100,
     effect = { consumption = -0.25 },
-    limitation = production,
     weight = 20 * kg,
   },
 
@@ -129,7 +128,6 @@ data:extend({
     order = "m-g2",
     stack_size = 100,
     effect = { consumption = -0.35 },
-    limitation = production,
     weight = 20 * kg,
   },
 
@@ -166,7 +164,6 @@ data:extend({
     order = "m-g3",
     stack_size = 100,
     effect = { consumption = -0.80 },
-    limitation = production,
     auto_recycle = false,
     weight = 20 * kg,
   },
@@ -239,7 +236,6 @@ data:extend({
     order = "m-x1",
     stack_size = 100,
     effect = { speed = 0.30, consumption = -0.15 },
-    limitation = production,
     weight = 20 * kg,
   },
 

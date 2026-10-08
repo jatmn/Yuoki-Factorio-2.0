@@ -110,10 +110,8 @@ data:extend({
         },
       },
     },
-    walking_sound = concrete_sounds,
     map_color = { r = 90, g = 70, b = 50 },
     ageing = 0,
-    vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
   },
   {
     type = "tile",
@@ -158,10 +156,8 @@ data:extend({
         },
       },
     },
-    walking_sound = concrete_sounds,
     map_color = { r = 90, g = 70, b = 50 },
     ageing = 0,
-    vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
   },
 
   {
@@ -219,10 +215,8 @@ data:extend({
         },
       },
     },
-    walking_sound = concrete_sounds,
     map_color = { r = 90, g = 70, b = 50 },
     ageing = 0,
-    vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
   },
 
   {
@@ -268,10 +262,8 @@ data:extend({
         },
       },
     },
-    walking_sound = concrete_sounds,
     map_color = { r = 50, g = 50, b = 50 },
     ageing = 0,
-    vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
   },
 
   {
@@ -317,9 +309,7 @@ data:extend({
         },
       },
     },
-    walking_sound = concrete_sounds,
     map_color = { r = 0, g = 0, b = 100 },
     ageing = 1,
-    vehicle_friction_modifier = stone_path_vehicle_speed_modifier,
   },
 })

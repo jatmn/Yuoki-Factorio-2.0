@@ -1338,48 +1338,6 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    circuit_wire_connection_points = {
-      {
-        shadow = {
-          red = { 2.0, 1.0 },
-          green = { 2.0, 1.0 },
-        },
-        wire = {
-          red = { 1.0, -0.0 },
-          green = { 1.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 1.0 },
-          green = { 0.0, 1.0 },
-        },
-        wire = {
-          red = { -1, -0.25 },
-          green = { -1, -0.25 },
-        },
-      },
-      {
-        shadow = {
-          red = { 2.0, 1.0 },
-          green = { 2.0, 1.0 },
-        },
-        wire = {
-          red = { 1.0, -0.0 },
-          green = { 1.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 1.0 },
-          green = { 0.0, 1.0 },
-        },
-        wire = {
-          red = { -1, -0.25 },
-          green = { -1, -0.25 },
-        },
-      },
-    },
     circuit_wire_max_distance = 7.5,
     working_sound = {
       sound = {
@@ -1470,48 +1428,6 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    circuit_wire_connection_points = {
-      {
-        shadow = {
-          red = { 2.0, 1.0 },
-          green = { 2.0, 1.0 },
-        },
-        wire = {
-          red = { 1.0, -0.0 },
-          green = { 1.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 1.0 },
-          green = { 0.0, 1.0 },
-        },
-        wire = {
-          red = { -1, -0.25 },
-          green = { -1, -0.25 },
-        },
-      },
-      {
-        shadow = {
-          red = { 2.0, 1.0 },
-          green = { 2.0, 1.0 },
-        },
-        wire = {
-          red = { 1.0, -0.0 },
-          green = { 1.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 1.0 },
-          green = { 0.0, 1.0 },
-        },
-        wire = {
-          red = { -1, -0.25 },
-          green = { -1, -0.25 },
-        },
-      },
-    },
     circuit_wire_max_distance = 7.5,
     working_sound = {
       sound = {
@@ -1623,48 +1539,6 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    circuit_wire_connection_points = {
-      {
-        shadow = {
-          red = { 2.0, 1.0 },
-          green = { 2.0, 1.0 },
-        },
-        wire = {
-          red = { 1.0, -0.0 },
-          green = { 1.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 1.0 },
-          green = { 0.0, 1.0 },
-        },
-        wire = {
-          red = { -1, -0.25 },
-          green = { -1, -0.25 },
-        },
-      },
-      {
-        shadow = {
-          red = { 2.0, 1.0 },
-          green = { 2.0, 1.0 },
-        },
-        wire = {
-          red = { 1.0, -0.0 },
-          green = { 1.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 1.0 },
-          green = { 0.0, 1.0 },
-        },
-        wire = {
-          red = { -1, -0.25 },
-          green = { -1, -0.25 },
-        },
-      },
-    },
     circuit_wire_max_distance = 7.5,
     working_sound = {
       sound = {
@@ -1883,48 +1757,6 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    circuit_wire_connection_points = {
-      {
-        shadow = {
-          red = { 0.0, 0.0 },
-          green = { 0.0, 0.0 },
-        },
-        wire = {
-          red = { 0.0, -0.0 },
-          green = { 0.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 0.0 },
-          green = { 0.0, 0.0 },
-        },
-        wire = {
-          red = { 0.0, -0.0 },
-          green = { 0.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 0.0 },
-          green = { 0.0, 0.0 },
-        },
-        wire = {
-          red = { 0.0, -0.0 },
-          green = { 0.0, -0.0 },
-        },
-      },
-      {
-        shadow = {
-          red = { 0.0, 0.0 },
-          green = { 0.0, 0.0 },
-        },
-        wire = {
-          red = { 0.0, -0.0 },
-          green = { 0.0, -0.0 },
-        },
-      },
-    },
     circuit_wire_max_distance = 15,
     working_sound = {
       sound = {

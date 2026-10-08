@@ -453,48 +453,6 @@ data:extend({
       },
     },
     flow_length_in_ticks = 360,
-    circuit_wire_connection_points = {
-      {
-        shadow = {
-          red = { -0.55, -0.15 },
-          green = { -0.75, -0.15 },
-        },
-        wire = {
-          red = { -0.55, -0.15 },
-          green = { -0.75, -0.15 },
-        },
-      },
-      {
-        shadow = {
-          red = { -0.55, -0.15 },
-          green = { -0.75, -0.15 },
-        },
-        wire = {
-          red = { -0.55, -0.15 },
-          green = { -0.75, -0.15 },
-        },
-      },
-      {
-        shadow = {
-          red = { -0.55, -0.15 },
-          green = { -0.75, -0.15 },
-        },
-        wire = {
-          red = { -0.55, -0.15 },
-          green = { -0.75, -0.15 },
-        },
-      },
-      {
-        shadow = {
-          red = { -0.55, -0.15 },
-          green = { -0.75, -0.15 },
-        },
-        wire = {
-          red = { -0.55, -0.15 },
-          green = { -0.75, -0.15 },
-        },
-      },
-    },
     circuit_wire_max_distance = 15,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
