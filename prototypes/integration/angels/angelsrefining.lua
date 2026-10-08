@@ -13,7 +13,7 @@ if mods["angelsrefining"] then
 
 	yi.lib.item.hide("y-slag")
 
-	if mods["quality"] then
+	if mods["recycler"] then
 		if data.raw.item["y-slag"] then
 			local slag = data.raw.item["y-slag"]
 			local removed_recipes = {}
