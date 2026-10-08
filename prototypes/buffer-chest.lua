@@ -1,5 +1,5 @@
---[[Add buffer chest to Yuoki Industries 
-Copyright © Michael Cowgill July 2020 
+--[[Add buffer chest to Yuoki Industries
+Copyright © Michael Cowgill July 2020
 Updated by JATMN Oct 2024
 --]]
 

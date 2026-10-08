@@ -1,11 +1,12 @@
 --require "defines"
 require("scripts.add_yi_suit")
+script.on_configuration_changed(require("scripts.inserter-cleanup"))
 
 remote.add_interface("yuoki", {
-	spawn = function()
-		game.regenerate_entity("y-res1")
-		game.regenerate_entity("y-res2")
-	end,
+  spawn = function()
+    game.regenerate_entity("y-res1")
+    game.regenerate_entity("y-res2")
+  end,
 })
 
 --[[

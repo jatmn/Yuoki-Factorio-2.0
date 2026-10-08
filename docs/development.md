@@ -3,12 +3,12 @@
 The lightweight CI follows the merged tooling work in
 [Quinityn PR #10](https://github.com/jatmn/yuoki-quinityn/pull/10) and
 [PR #11](https://github.com/jatmn/yuoki-quinityn/pull/11), adapted for standalone
-Yuoki. It runs on pull requests and pushes to `main`. The dispatcher reads the
+Yuoki. It runs on pull requests and pushes to `main` and `release/1.3.0`. The dispatcher reads the
 complete Git diff and calls only affected reusable workflows. It avoids
 GitHub's capped event path filters, does not duplicate runs on topic-branch
-pushes, and cancels superseded runs for the same PR. Each `main` push has a
+pushes, and cancels superseded runs for the same PR. Each branch push has a
 separate concurrency group so a later documentation-only push cannot cancel
-an earlier push's incremental Lua checks. The router is loaded from the
+an earlier push's full Lua checks. The router is loaded from the
 comparison revision, so edits to the PR's router cannot disable their own
 validation. Initial installation runs all checks when that revision has no router.
 
@@ -33,19 +33,27 @@ old and new paths; deletions select their affected surface. Missing comparison
 revisions fail CI. The change job also checks diff whitespace.
 
 Lua checks use **Lua 5.2**, **Luacheck 1.2.0**, and **StyLua 2.5.2**. They check
-added/modified Lua files, including renamed files and regular-file/symlink type
-changes, on both PRs and pushes to `main`. Deleted Lua files are excluded from
-the file manifest. Configuration is parsed even when no Lua files changed.
+added/modified Lua files on PRs, including renamed files and regular-file/symlink
+type changes. Relevant pushes to `main` and `release/1.3.0` check all tracked Lua
+files, including when only the lint/formatter configuration changes. Deleted Lua
+files are excluded from the manifest. Configuration is parsed even when no Lua
+files changed.
 Filenames are passed as NUL-delimited data rather than shell source.
 
-This differs temporarily from Quinityn's completed baseline: Yuoki's bulk
-formatting and existing lint debt are deferred to
-[issue #15](https://github.com/jatmn/Yuoki-Factorio-2.x/issues/15). After that
-baseline passes, relevant `main` pushes can check all tracked Lua files while
-PRs continue to check changed files. No legacy warnings are suppressed to
-install this CI. Factorio stage globals and intentional shared Yuoki exports
-are declared in `.luacheckrc`; other warnings remain actionable when touching
-their files.
+The repository-wide baseline from
+[issue #15](https://github.com/jatmn/Yuoki-Factorio-2.x/issues/15) is complete on
+`release/1.3.0`. Unrelated documentation/Python changes still do not select Lua.
+Factorio stage globals and intentional shared Yuoki exports are declared in
+`.luacheckrc`. The sole warning exemption is attached to the deliberately disabled
+legacy achievement definition; unknown globals and other warnings remain errors.
+
+The baseline uses StyLua AST verification and matching normalized Lua 5.2
+instructions/constants for the mechanical formatting. Separate lint cleanup
+removes overwritten connector literals and obsolete nil-valued prototype fields,
+unused resource code and an unused local item list. Unused helper parameters keep
+their argument positions. Real Factorio 2.1.21 prototype dumps are compared before
+and after cleanup, both with base and with Space Age. These checks preserve the
+effective prototype definitions; they do not test every third-party mod combination.
 
 ## Local commands
 

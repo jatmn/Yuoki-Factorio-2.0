@@ -1,8 +1,8 @@
 if false then
-data:extend({
+  data:extend({ -- luacheck: ignore 511 (legacy achievements intentionally disabled)
 
-	-- items
-	--[[ disabled because the matching recipe is commented out
+    -- items
+    --[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "yi_obelisk_A3_5X",
@@ -16,7 +16,7 @@ data:extend({
 	},
 	]]
 
-	--[[
+    --[[
 	{
 		type = "recipe",
 		name = "yi_obelisk_A3_5X",
@@ -38,7 +38,7 @@ data:extend({
 		order = "la",
 	},
 	]]
-	--[[ disabled because the matching recipe is commented out
+    --[[ disabled because the matching recipe is commented out
 	{
 		type = "lamp",
 		name = "yi_obelisk_A3_5X",
@@ -79,9 +79,9 @@ data:extend({
 	},
 	]]
 
-	-- the bug -1
-	-- items
-	--[[ disabled because the matching recipe is commented out
+    -- the bug -1
+    -- items
+    --[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "yi_bug1",
@@ -95,8 +95,8 @@ data:extend({
 	},
 	]]
 
-	-- recipe
-	--[[
+    -- recipe
+    --[[
 	{
 		type = "recipe",
 		name = "yi_bug1",
@@ -118,7 +118,7 @@ data:extend({
 		order = "2a",
 	},
 	]]
-	--[[ disabled because the matching recipe is commented out
+    --[[ disabled because the matching recipe is commented out
 	{
 		type = "lamp",
 		name = "yi_bug1",
@@ -158,9 +158,9 @@ data:extend({
 	},
 	]]
 
-	-- feuerwerk
-	-- items
-	--[[ disabled because the matching recipe is commented out
+    -- feuerwerk
+    -- items
+    --[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "yi_hny1",
@@ -173,8 +173,8 @@ data:extend({
 		order = "2a",
 	},
 	]]
-	-- recipe
-	--[[
+    -- recipe
+    --[[
 	{
 		type = "recipe",
 		name = "yi_hny1",
@@ -196,7 +196,7 @@ data:extend({
 		order = "4a",
 	},
 	]]
-	--[[ disabled because the matching recipe is commented out
+    --[[ disabled because the matching recipe is commented out
 	{
 		type = "radar",
 		name = "yi_hny1",
@@ -238,9 +238,9 @@ data:extend({
 	},
 	]]
 
-	-- säule
-	-- items
-	--[[ disabled because the matching recipe is commented out
+    -- säule
+    -- items
+    --[[ disabled because the matching recipe is commented out
 	{
 		type = "item",
 		name = "yi_hny2",
@@ -253,8 +253,8 @@ data:extend({
 		order = "4b",
 	},
 	]]
-	-- recipe
-	--[[
+    -- recipe
+    --[[
 	{
 		type = "recipe",
 		name = "yi_hny2",
@@ -276,7 +276,7 @@ data:extend({
 		order = "4b",
 	},
 	]]
-	--[[ disabled because the matching recipe is commented out
+    --[[ disabled because the matching recipe is commented out
 	{
 		type = "assembling-machine",
 		name = "yi_hny2",
@@ -317,5 +317,5 @@ data:extend({
 		},
 	},
 	]]
-})
+  })
 end

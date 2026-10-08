@@ -15,9 +15,8 @@ a PR update; rerun affected checks after repairs. See
 - Lua: format each added or modified file with **StyLua 2.5.2** and the root
   `.stylua.toml`, then check it with `luac5.2 -p`, **Luacheck 1.2.0** and
   `stylua --check --config-path .stylua.toml`. Also syntax-check `.luacheckrc`.
-  Resolve warnings in touched files without blanket suppressions. Leave
-  untouched Lua files alone: the repository-wide baseline is deferred to
-  [issue #15](https://github.com/jatmn/Yuoki-Factorio-2.x/issues/15).
+  Resolve warnings in touched files without blanket suppressions. The Lua
+  baseline is established; preserve it without reformatting unrelated files.
 - Python/tools: parse tracked Python files without importing or executing game
   code and run `python3 tools/test_ci_changes.py` plus
   `python3 tools/test_pullfrog_command.py` and `python3 tools/test_package.py`.
@@ -28,7 +27,8 @@ a PR update; rerun affected checks after repairs. See
   `python3 tools/validate_package.py`. Inspect the intended ZIP contents.
 - Documentation: verify links, commands and the resulting diff.
 
-Lua CI currently checks changed files on both PRs and relevant pushes to `main`.
+Lua CI checks changed files on PRs and all tracked Lua files on relevant pushes
+to `main` and `release/1.3.0`, including lint/formatter configuration changes.
 Formatting a touched file can create a mechanical diff within that file; keep
 it separate from behavioral edits where practical. Do not reformat the whole
 repository during ordinary contribution work.

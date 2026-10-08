@@ -24,14 +24,19 @@ jobs:
           python3 tools/test_ci_changes.py
           RoutingTests.test_lua_workflow_selects_type_changes
           RoutingTests.test_lua_workflow_checks_option_like_names
+          RoutingTests.test_lua_workflow_pr_and_push_manifests
       - name: Select Lua files for this event
         env:
           BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           mkdir -p .cache
           git diff --check "$BASE" HEAD
-          # Enforce changed files on both events until the legacy baseline is done.
-          git diff --no-renames --name-only --diff-filter=ACMRT -z "$BASE" HEAD -- '*.lua' > .cache/ci-lua-files
+          if [ "$EVENT_NAME" = pull_request ]; then
+            git diff --no-renames --name-only --diff-filter=ACMRT -z "$BASE" HEAD -- '*.lua' > .cache/ci-lua-files
+          else
+            git ls-files -z -- '*.lua' > .cache/ci-lua-files
+          fi
       - name: Check Lua syntax
         run: |
           luac5.2 -p .luacheckrc

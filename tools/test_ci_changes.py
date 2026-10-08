@@ -76,7 +76,7 @@ class RoutingTests(unittest.TestCase):
             git('add', '.'); git('commit', '-qm', 'option-like Lua name')
             for name in ('Select Lua files for this event', 'Check Lua syntax'):
                 subprocess.run(['bash', '-e', '-o', 'pipefail', '-c', workflow_block('lua.yml', name)],
-                               cwd=root, env={**os.environ, 'BASE': base}, check=True)
+                               cwd=root, env={**os.environ, 'BASE': base, 'EVENT_NAME': 'pull_request'}, check=True)
 
     def test_lua_workflow_selects_type_changes(self):
         workflow = ROUTER.parents[1] / '.github/workflows/lua.yml'
@@ -118,7 +118,52 @@ class RoutingTests(unittest.TestCase):
                 for event in ('pull_request', 'push'):
                     subprocess.run(['bash', '-e', '-o', 'pipefail', '-c', selection], cwd=root,
                                    env={**os.environ, 'BASE': base, 'EVENT_NAME': event}, check=True)
-                    self.assertEqual((root / '.cache/ci-lua-files').read_bytes(), b'control.lua\0')
+                    self.assertEqual((root / '.cache/ci-lua-files').read_bytes(),
+                                     b'control.lua\0' if event == 'pull_request'
+                                     else b'control.lua\0untouched.lua\0')
+
+    def test_lua_workflow_pr_and_push_manifests(self):
+        selection = workflow_block('lua.yml', 'Select Lua files for this event')
+        with tempfile.TemporaryDirectory(prefix='yuoki-lua-manifest-') as directory:
+            root = Path(directory)
+
+            def git(*args):
+                return subprocess.check_output([
+                    'git', '-c', 'user.name=CI test', '-c', 'user.email=ci@example.invalid', *args
+                ], cwd=root, text=True).strip()
+
+            def select(base, event):
+                subprocess.run(['bash', '-e', '-o', 'pipefail', '-c', selection], cwd=root,
+                               env={**os.environ, 'BASE': base, 'EVENT_NAME': event}, check=True)
+                return set(filter(None, (root / '.cache/ci-lua-files').read_bytes().split(b'\0')))
+
+            git('init', '-q')
+            for name in ('untouched.lua', 'deleted.lua', 'old.lua'):
+                (root / name).write_text('return true\n')
+            git('add', '.'); git('commit', '-qm', 'base')
+            # Configuration-only changes must check the full baseline on a push.
+            for config in ('.luacheckrc', '.stylua.toml'):
+                base = git('rev-parse', 'HEAD')
+                (root / config).write_text('# manifest fixture\n')
+                git('add', '.'); git('commit', '-qm', 'configuration')
+                self.assertEqual(select(base, 'pull_request'), set())
+                self.assertEqual(select(base, 'push'),
+                                 {b'untouched.lua', b'deleted.lua', b'old.lua'})
+            base = git('rev-parse', 'HEAD')
+            unusual = 'new file\nwith $shell; characters.lua'
+            git('mv', 'old.lua', unusual)
+            git('rm', 'deleted.lua')
+            (root / '-added.lua').write_text('return false\n')
+            (root / 'untracked.lua').write_text('return true\n')
+            git('add', '--', '-added.lua'); git('commit', '-qm', 'rename, delete and add')
+            self.assertEqual(select(base, 'pull_request'), {os.fsencode(unusual), b'-added.lua'})
+            self.assertEqual(select(base, 'push'),
+                             {os.fsencode(unusual), b'-added.lua', b'untouched.lua'})
+            for event in ('pull_request', 'push'):
+                failed = subprocess.run(['bash', '-e', '-o', 'pipefail', '-c', selection],
+                                        cwd=root, capture_output=True,
+                                        env={**os.environ, 'BASE': 'missing-revision', 'EVENT_NAME': event})
+                self.assertNotEqual(failed.returncode, 0)
 
     def test_surface_selection(self):
         cases = [

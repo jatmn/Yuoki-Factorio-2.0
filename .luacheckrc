@@ -9,7 +9,7 @@ not_globals = {"io", "os", "dofile", "loadfile", "coroutine"}
 max_line_length = false
 exclude_files = {"build/**", ".cache/**"}
 
--- Factorio 2.0 data-stage helpers and intentional Yuoki cross-file exports.
+-- Factorio 2.1 data-stage helpers and intentional Yuoki cross-file exports.
 local data_reads = {
   "mods", "util", "kg", "sound_variations", "pipecoverspictures", "assembler2pipepictures", "assembler3pipepictures",
   "circuit_connector_definitions", "default_circuit_wire_max_distance",
@@ -23,6 +23,7 @@ local data_reads = {
 files["data*.lua"].globals = {"data"}
 files["data*.lua"].read_globals = data_reads
 files["settings*.lua"].globals = {"data"}
+files["settings*.lua"].read_globals = {"mods"}
 files["prototypes/**"].globals = {"data"}
 files["prototypes/**"].read_globals = data_reads
 files["lib/yi-tools.lua"].globals = {"data", "yi", "yi_energy_usage_quality_multiplier", "blank_sprite"}
@@ -43,3 +44,6 @@ files["scripts/**"].globals = {"game", "storage"}
 files["scripts/**"].read_globals = {"script", "remote", "rendering", "prototypes", "helpers"}
 files["migrations/**"].globals = {"game", "storage"}
 files["migrations/**"].read_globals = {"script", "remote", "prototypes", "yi"}
+
+-- Core lualib/sound-util.lua exports this helper before mod data.lua runs.
+files["prototypes/entity/y_entities.lua"].read_globals = {"volume_multiplier"}
